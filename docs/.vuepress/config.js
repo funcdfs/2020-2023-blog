@@ -3,9 +3,7 @@ module.exports = {
   title: 'psychonaut', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
   description: 'vuepress 文档',
-
   theme: 'antdocs',
-
   head: [
     [
       "meta",
@@ -25,7 +23,7 @@ module.exports = {
   ],
   
   markdown: {
-    // 代码显示行号
+    // 代码不显示行号
     lineNumbers: false,
     // markdown-it-anchor 的选项
     anchor: { permalink: true },
@@ -48,20 +46,19 @@ module.exports = {
       smoothScroll: true,
       //展示全部标题
       displayAllHeaders: true,
-      sidebarDepth: 2,
+      sidebarDepth: 3,
       //github
       lastUpdated: 'Last Updated', 
-
       nav: [  //导航栏
-          { text: '首页', link: '/' },
-
+          { text: 'Home', link: '/' },
           {text: 'Resolved Bug',link: '/Resolved_bug/',
             items: [
-              {text: 'vscode',link: '/工具的使用/vscode/' },
+              {text: 'Git',link: '/Resolved_bug/Git/' },
+              {text: 'vscode',link: '/Resolved_bug/vscode/' },
             ]
           },
 
-          { text: '编程基础', 
+          { text: 'Programming Basics', 
             items: [
             {text: 'markdown',link: '/编程基础/markdown/' },
             {text: 'cpp',link: '/编程基础/cpp/' },
@@ -70,7 +67,7 @@ module.exports = {
             {text: '深入理解计算机系统',link: '/操作系统/深入理解计算机系统/' },
             ]
           },
-          
+
           {text: 'Math', //数学导航栏
               items: 
               [
@@ -83,16 +80,18 @@ module.exports = {
               ]
           },
           
-          {text: '算法',
+          {text: 'Algorithm',
           items: [
+            {text: '一堆题解',link: '/算法/一堆题解/'},
             {text: '算法竞赛入门经典',link: '/算法/算法竞赛入门经典/'},
             {text: '算法竞赛入门经典训练指南',link: '/算法/算法竞赛入门经典训练指南/'},
             {text: '值得一记的算法',link: '/算法/值得一记的算法/'},
             {text: '有趣的算法问题',link: '/算法/有趣的算法问题/'},
+            {text: 'codeforces题解',link: '/算法/codeforces题解/'},
             ]
           },
 
-          {text: '前端攻城狮',
+          {text: 'Front-end engineer',
           items: [
             {text: 'html',link: '/前端/html/'},
             {text: 'css',link: '/前端/css/'},
@@ -102,17 +101,16 @@ module.exports = {
             {text: 'vuepress',link: '/前端/vuepress/'},
             {text: 'csharp',link: '/前端/csharp/'},
             {text: 'kotlin',link: '/前端/kotlin/'},
-            {text: 'Jekyll',link: '/前端/jekyll/'},
             ]
           },
 
           { text: 'Contact', 
             items:
             [
-              {text:'Gmail',link: 'mailto:psychonaut1f@gmail.com'},
+              {text:'Gmail',link: 'https://mailto:psychonaut1f@gmail.com'},
               {text:'leetcode',link: 'https://leetcode-cn.com/u/weirdo-21/'},
               {text:'GitHub',link: 'https://github.com/fengwei2002'},
-              {text:'codeforce',link: '//codeforces.com/profile/KONNG'},
+              {text:'codeforce',link: 'https://codeforces.com/profile/KONNG'},
               {text:'微信',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'},
               {text:'网易云音乐',link: 'https://music.163.com/#/user/home?id=440040659'},
               {text:'QQ',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'},
@@ -121,25 +119,24 @@ module.exports = {
             ]
           },
  
-          {text: 'More', //杂记导航栏
+          {text: '🎉MORE🎉', //杂记导航栏
             items: 
             [
-              {text: '💝Tool usage tips💝', 
+              {text: 'Tool Usage Tips', 
                 items: 
                 [
-                  {text: 'Chrome',link: '/工具的使用/chrome/'},
-                  {text: 'GitHub',link: '/工具的使用/github/'},
-                  {text: 'Git',link: '/工具的使用/git/'},
-                  {text: 'vscode',link: '/工具的使用/vscode/'},
+                  {text: '🧾Chrome',link: '/工具的使用/chrome/'},
+                  {text: '📄GitHub',link: '/工具的使用/github/'},
+                  {text: '📜Git',link: '/工具的使用/git/'},
+                  {text: '📗vscode',link: '/工具的使用/vscode/'},
                 ]
               },
-
               
-              {text: '✨idea✨', 
+              {text: 'idea', 
                 items: 
                 [
-                  {text: '杂项note',link: '/杂项note/'},
-                  {text: '想法',link: '/想法/'},
+                  {text: '📖杂项note',link: '/杂项note/'},
+                  {text: '😜想法',link: '/想法/'},
                 ]
               }
     
@@ -150,17 +147,10 @@ module.exports = {
 
       plugins: [ //插件的相关配置
       "cursor-effects",  //鼠标点击特效
+
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
       }, //自动生成侧边栏
-
-      "dynamic-title",{
-        showIcon: "/favicon.ico",
-        showText: "(ฅ>ω<*ฅ)欢迎回来！",
-        hideIcon: "/failure.ico",
-        hideText: "( ๑ˊ•̥▵•)੭₎₎不要走呀！",
-        recoverTime: 2000
-      },
 
       ["go-top"], //悬挂喵返回顶部
       '@vuepress/active-header-links', {
@@ -174,7 +164,6 @@ module.exports = {
       ['@vuepress/medium-zoom'],
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],
-      'vuepress-plugin-reading-time',
       'vuepress-plugin-baidu-autopush'
     ]
 }

@@ -2,37 +2,41 @@
 title: 构建方式
 ---
 
+## 官方文档
+
+[vuepress官方文档](https://vuepress.vuejs.org/zh/guide/#%E5%AE%83%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F)
+
+以下是我的配置：
+
 ## 创建GitHub仓库
 
 创建一个gitignore为node的仓库
+
 License随便选一个
 
 ## 构建框架
 
 [vuepress官方文档](https://vuepress.vuejs.org/zh/guide/#%E5%AE%83%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F)
+
+基础框架构建步骤：
 ``` sh
 npm init -y
-
 # 安装
 yarn global add vuepress # 或者：npm install -g vuepress
 # 将 VuePress 作为一个本地依赖安装
 yarn add -D vuepress # 或者：npm install -D vuepress
-
 # 新建一个 docs 文件夹
 mkdir docs
-
 # 新建一个 markdown 文件
 echo '# Hello VuePress!' > docs/README.md
-
 # 开始写作
 npx vuepress dev docs
-
 # 构建静态文件
 vuepress build .
 ```
-## package.json 
+## package.json脚本
 
-修改三个脚本用来简化操作
+添加三个脚本命令用来简化操作
 
 ```sh 3
 "scripts": {
@@ -52,9 +56,43 @@ yarn docs:dev # 或者：npm run docs:dev
 ```sh
 yarn docs:build # 或者：npm run docs:build
 ```
+## deploy.sh 
+
+::: details 我的 deploy.sh 配置
+
+```sh 
+#!/usr/bin/env sh
+
+# 确保脚本抛出遇到的错误
+set -e
+
+# 生成静态文件
+npm run docs:build
+
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+
+echo 'feng-w.cn' > CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 发布到 https://<USERNAME>.github.io
+git push -f git@github.com:fengwei2002/fengwei2002.github.io.git master
+
+cd -
+``` 
+
+::: 
+
 
 ## config.js 
-``` JS
+
+::: details 我的 config 配置
+
+```js
+
 module.exports = {
   title: 'psychonaut', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
@@ -81,8 +119,8 @@ module.exports = {
   ],
   
   markdown: {
-    // 代码显示行号
-    lineNumbers: true,
+    // 代码不显示行号
+    lineNumbers: false,
     // markdown-it-anchor 的选项
     anchor: { permalink: true },
     // markdown-it-toc 的选项
@@ -100,11 +138,13 @@ module.exports = {
   themeConfig: { //主题配置项
       logo: '/zhuye.png',
       //自动生成侧边栏
+
       sidebar: 'auto',
+
       smoothScroll: true,
       //展示全部标题
       displayAllHeaders: true,
-      sidebarDepth: 2,
+      sidebarDepth: 3,
       //github
       lastUpdated: 'Last Updated', 
 
@@ -165,10 +205,10 @@ module.exports = {
           { text: 'Contact', 
             items:
             [
-              {text:'Gmail',link: 'mailto:psychonaut1f@gmail.com'},
+              {text:'Gmail',link: 'https://mailto:psychonaut1f@gmail.com'},
               {text:'leetcode',link: 'https://leetcode-cn.com/u/weirdo-21/'},
               {text:'GitHub',link: 'https://github.com/fengwei2002'},
-              {text:'codeforce',link: '//codeforces.com/profile/KONNG'},
+              {text:'codeforce',link: 'https://codeforces.com/profile/KONNG'},
               {text:'微信',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'},
               {text:'网易云音乐',link: 'https://music.163.com/#/user/home?id=440040659'},
               {text:'QQ',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'},
@@ -177,25 +217,25 @@ module.exports = {
             ]
           },
  
-          {text: 'More', //杂记导航栏
+          {text: '🎉More🎉', //杂记导航栏
             items: 
             [
-              {text: 'Tool usage tips', 
+              {text: 'Tool Usage Tips', 
                 items: 
                 [
-                  {text: 'Chrome',link: '/工具的使用/chrome/'},
-                  {text: 'GitHub',link: '/工具的使用/github/'},
-                  {text: 'Git',link: '/工具的使用/git/'},
-                  {text: 'vscode',link: '/工具的使用/vscode/'},
+                  {text: '🧾Chrome',link: '/工具的使用/chrome/'},
+                  {text: '📄GitHub',link: '/工具的使用/github/'},
+                  {text: '📜Git',link: '/工具的使用/git/'},
+                  {text: '📗vscode',link: '/工具的使用/vscode/'},
                 ]
               },
 
               
-              {text: '✨✨', 
+              {text: '✨idea✨', 
                 items: 
                 [
-                  {text: '杂项note',link: '/杂项note/'},
-                  {text: '想法',link: '/想法/'},
+                  {text: '📖杂项note',link: '/杂项note/'},
+                  {text: '😜想法',link: '/想法/'},
                 ]
               }
     
@@ -206,34 +246,34 @@ module.exports = {
 
       plugins: [ //插件的相关配置
       "cursor-effects",  //鼠标点击特效
+
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
       }, //自动生成侧边栏
-      "dynamic-title",{
-        showIcon: "/favicon.ico",
-        showText: "(ฅ>ω<*ฅ)欢迎回来！",
-        hideIcon: "/failure.ico",
-        hideText: "( ๑ˊ•̥▵•)੭₎₎不要走呀！",
-        recoverTime: 2000
-      },
 
       ["go-top"], //悬挂喵返回顶部
-      "ribbon", //背后彩带
-      {
-         size: 90, // 彩带的宽度，默认为 90
-         opacity: 0.8, // 彩带的不透明度，默认为 0.3
-         zIndex: -1 // 彩带的 z-index 属性，默认值为 -1
+      '@vuepress/active-header-links', {
+        sidebarLinkSelector: '.sidebar-link',
+        headerAnchorSelector: '.header-anchor'
       },
-      "@vuepress/active-header-links",
-      ['@vuepress/nprogress'],
+
+      '@vuepress/last-updated',
+
+      '@vuepress/nprogress',
       ['@vuepress/medium-zoom'],
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],
-
+      'vuepress-plugin-baidu-autopush'
     ]
 }
 
 ```
+
+:::
+
+## antdocs
+
+[antdocs官方文档](https://antdocs.seeyoz.cn/guide/using-antd.html)
 
 ::: danger STOP
 危险区域，禁止通行
@@ -246,30 +286,60 @@ console.log('你好，VuePress！')
 ```
 :::
 
-## 以下是需要安装的依赖插件包（无先后次序）
+## 我的json配置（无先后次序）
 
-```sh
-//markdown 扩展
-yarn add -D markdown-it
-yarn add -D markdown-it-anchor
-yarn add -D markdown-it-toc
-yarn add -D @iktakahiro/markdown-it-katex
-yarn add -D markdown-it-mark
-yarn add -D markdown-it-task-list
-yarn add -D markdown-it-vuepress-code-snippet-enhanced
+```json {10}{11}{12}
+  {
+  "name": "vuepress_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengwei2002/vuepress_final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengwei2002/vuepress_final/issues"
+  },
+  "homepage": "https://github.com/fengwei2002/vuepress_final#readme",
+  "devDependencies": {
+    "@iktakahiro/markdown-it-katex": "^3.1.0",
+    "@vuepress/plugin-medium-zoom": "^1.4.0",
+    "@vuepress/plugin-nprogress": "^1.4.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-mark": "^3.0.0",
+    "markdown-it-task-list": "^0.1.2",
+    "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-toc": "^1.1.0",
+    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-auto-sidebar": "^1.3.1",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
+    "vuepress-plugin-cursor-effects": "^0.0.4",
+    "vuepress-plugin-go-top": "^0.0.2",
+    "vuepress-plugin-reading-progress": "^1.0.8",
+    "vuepress-plugin-seo": "^0.1.2"
+  },
+  "dependencies": {
+    "vuepress-theme-antdocs": "^0.1.2-beta"
+  }
+}
+```
 
-//花里胡哨
-yarn add -D vuepress-plugin-cursor-effects
-yarn add -D vuepress-plugin-go-top
-yarn add vuepress-plugin-dynamic-title -D
+## 使用
 
-//fangbian
-yarn add -D vuepress-plugin-auto-sidebar
+如果按照我的配置，侧边栏会自动生成，按照md文件标题数字可直接排序侧边栏
 
-yarn add -D @vuepress/plugin-active-header-links
-yarn add -D vuepress-plugin-reading-progress
-yarn add -D @vuepress/plugin-medium-zoom
-yarn add -D vuepress-plugin-seo
-yarn add -D @vuepress/plugin-nprogress
-yarn add -D vuepress-plugin-reading-time
 

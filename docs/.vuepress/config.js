@@ -58,7 +58,7 @@ module.exports = {
             ]
           },
 
-          { text: 'Programming Basics', 
+          { text: 'Basics', 
             items: [
             {text: 'markdown',link: '/编程基础/markdown/' },
             {text: 'cpp',link: '/编程基础/cpp/' },
@@ -91,7 +91,7 @@ module.exports = {
             ]
           },
 
-          {text: 'Front-end engineer',
+          {text: 'Front-end',
           items: [
             {text: 'html',link: '/前端/html/'},
             {text: 'css',link: '/前端/css/'},
@@ -119,7 +119,7 @@ module.exports = {
             ]
           },
  
-          {text: '🎉MORE🎉', //杂记导航栏
+          {text: 'MORE', //杂记导航栏
             items: 
             [
               {text: 'Tool Usage Tips', 

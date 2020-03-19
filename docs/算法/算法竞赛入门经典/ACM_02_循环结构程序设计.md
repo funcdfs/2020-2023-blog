@@ -1,0 +1,242 @@
+---
+layout: post
+title: 第二章：循环结构程序设计
+tags: [算法竞赛入门经典]
+date: 2020-02-05
+---
+
+***
+
+## 输出所有形为aabb的完全平方数
+
+* 当需要循环遍历一个数字时，要用多重循环，而不应该单层循环直接跑完, 使用哪些数字就应该循环出哪些数字，不做无用功
+* 要使用伪代码思考和描述算法
+* 判断一个数是否为完全平方数时，使用开平方后判断是否为整数的方法
+  + floor函数：取不大于x的最大整数<math.h> 一般改成四舍五入就是floor（x+0.5），减小误差的影响
+  + sqrt函数：math.h头文件的函数原型为 float sqrt (float), double sqrt (double), double long sqrt(double long) 返回值可以为int，函数参数不能为int
+
+``` cpp
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main (){
+    for (int a=1;a<=9;a++){
+        for (int b=0;b<=9;b++){
+            int n=a*1100+b*11;
+            int m=floor(sqrt(n)+0.5);
+            if(m*m==n)printf("%d\n",n);
+            /*
+            if(sqrt(n)==floor(sqrt(n)))printf("%d",n);
+            */
+        }
+    }
+    return 0;
+}
+```
+
+> 第二种情况时，内部储存中1->0.99999；floor值就为0， 浮点数运算可能存在误差，在进行浮点数比较时，应考虑到浮点误差  
+
+枚举，避免开平方根操作  
+for循环里添加if(<1000) continue ; if(>9999) break，控制条件更简洁  
+32*32=1024  
+
+## [3n+1猜想](https://zh.wikipedia.org/wiki/%E8%80%83%E6%8B%89%E5%85%B9%E7%8C%9C%E6%83%B3)
+
+奇数变为3n+1，否则变为一半，最后变为1，输入n输出变换次数  
+n%2==1循环终止条件在计算之后而不是计算之前就使用do while 循环  
+
+## 阶乘之和
+
+> 计算$S=1！+2！+3！+n!$的末六位（不含前导0）$n<=10^6$
+
+1. 直接计算后对100000取余（溢出）
+2. 要计算只包含加法减法和乘法的整数表达式除以正整数$n$的余数,可以在*每次运算*后对n取余，结果不变（解决了溢出问题）
+3. 使用time.h来获取程序运行时间（每秒）` ` ` (double)clock()/CLOCK_PER_SEC ` ` `, 使用这个来大概估计n的规模和运行时间的关系
+4. 打表查看后发现940313最后开始一直不变，这是因为$25!$末尾有6个0，所以添加` ` ` if(n>25) n=25; ` ` `（解决了效率问题）
+
+``` cpp
+#include<iostream>
+using namespace std; 
+#include<time.h>
+int main (){
+    const int MOD=1000000;
+    int n,s=0;
+    cin>>n;
+    if(n>25) n=25;
+    for(int i=1;i<=n;i++){
+        int factorial=1;
+        for(int j=1;j<=i;j++){
+             factroial=(factorial * i % MOD);
+            s=(s + factorial) % MOD;
+        }
+    }
+    cout<<s;
+    cout<<(double)clock()/CLOCK_PER_SEC;
+    return 0;
+}
+```
+
+## 输入输出
+
+INF=1000000000，max=-INF，min=INF，这样避免了人为的“假想无穷大值”，并且程序界面更加美观
+
+在main函数入口处添加
+
+``` cpp
+freopen("input.txt',"r",stdin);
+freopen("ourput.txt","w",stdout);
+```
+
+### 示例：
+
+``` c
+#define LOCAL
+#include<stdio.h>
+#define INF 1000000000
+int main (){
+    #ifdef LOCAL
+        freopen("input.txt',"r",stdin);
+        freopen("ourput.txt","w",stdout);
+    #endif //只有定义了符号LOCAl，才编译两条freopen语句
+    然后正常写main函数
+}
+```
+
+只要在比赛提交时删除` ` ` #define LOCAL ` ` `即可，重要的测试语句要注释掉而不是删除掉  
+
+### 当要求文件输入输出，但禁止重定向
+
+fout fin fopen fscanf fprintf fclose 
+
+``` c
+int main(){
+    FILE *fin,*fout;
+    fin=fopen("data.in","rb");
+    fout=fopen("data.out","wb");
+    while(fscanf(fin,"%d",&x)==1){
+
+    }
+    fprintf(fout,"%d",max);
+    fclose(fin);
+    fclose(fout);
+}
+```
+
+> 多数据处理时，计算完一组数据要重置部分变量
+
+## 习题 P 34
+
+### 水仙花数
+
+double pow(double x, double y)
+
+``` cpp
+#include <iostream>
+using namespace std;
+int main() {
+	for (int a = 1; a < 10; a++) {
+		for (int b = 0; b < 10; b++) {
+			for (int c = 0; c < 10; c++) {
+				int median = a * 100 + b * 10 + c;
+				if (pow(a, 3) + pow(b, 3) + pow(c, 3) == median) {
+					cout << median<<" ";
+				}
+			}
+		}
+	}
+	return 0;
+}
+```
+
+### 韩信点兵
+
+韩信点兵的计算方法，它的意思是：凡是用3个一数剩下的余数，将它用70去乘（因为70是5与7的倍数，而又是以3去除余1的数）；5个一数剩下的余数，将它用21去乘（因为21是3与7的倍数，又是以5去除余1的数）；7个一数剩下的余数，将它用15去乘（因为15是3与5的倍数，又是以7去除余1的数），将这些数加起来，若超过105，就减掉105，如果剩下来的数目还是比105大，就再减去105，直到得数比105小为止。这样，所得的数就是原来的数了
+
+* 循环遍历，出现符合条件的break即可， `for (int i=10;i<=100;i++)` 
+* 中国剩余定理 `70`  `21`  `15`  `105` 
+
+### 倒三角形
+
+``` cpp
+#include<iostream>
+using namespace std;
+int main() {
+    int n = 0;
+    cin >> n;
+    for (int i = 0; i<=n ; i++){
+        for (int m = 0; m<i ; m++) {
+            cout << ' ';
+        }
+        for (int j = n-i; j >=0; j--) {
+            cout << "# ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+```
+
+### 子序列的和
+
+* n=m=0; 这个条件要分开写，不支持连等操作；
+
+``` cpp
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() {
+    int n, m;
+    for(;;){
+        cin >> n >> m;
+        if (n == 0&&m==0 )break;
+        double end = 0;
+        for (int i = n; i <= m; i++) {
+            end = (1.0 / pow((double)i, 2.0)) + end;
+        }
+        printf("%.5lf", end);
+    }
+    return 0;
+}
+```
+
+### 分数化小数
+
+* 输入正整数a，b，c ；输出a/b的小数形式，精确到小数点后c位，$a，b<=10^6, c<=100$
+
+``` cpp
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() {
+    int a = 0, b = 0, c = 0;//c<=100
+    for (;;) {
+        cin >> a >> b >> c;
+        if (a == 0 && b == 0 && c == 0) {
+            break;
+        }
+        int MOD[100] = { 0 };//用来模拟除法运算
+        cout << (int)((double)a / b) << '.';
+        for (int i=0;i<c;i++) {
+            a = (a % b)*10;
+            MOD[i] = a / b;
+        }
+        for (int i = 0; i < c-1; i++) {
+            cout << MOD[i];
+        }
+        if (MOD[c-1] >= 5) {
+            cout << MOD[c-1] + 1;
+        }
+        else {
+            cout << MOD[c-1];
+        }
+        cout << endl;
+    }
+    return 0;
+}
+```
+
+### 排列
+
+```cpp
+```
+

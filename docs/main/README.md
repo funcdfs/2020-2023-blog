@@ -1,4 +1,60 @@
+---
+title: 构建方式
+---
 
+## 创建GitHub仓库
+
+创建一个gitignore为node的仓库
+License随便选一个
+
+## 构建框架
+
+[vuepress官方文档](https://vuepress.vuejs.org/zh/guide/#%E5%AE%83%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F)
+``` sh
+npm init -y
+
+# 安装
+yarn global add vuepress # 或者：npm install -g vuepress
+# 将 VuePress 作为一个本地依赖安装
+yarn add -D vuepress # 或者：npm install -D vuepress
+
+# 新建一个 docs 文件夹
+mkdir docs
+
+# 新建一个 markdown 文件
+echo '# Hello VuePress!' > docs/README.md
+
+# 开始写作
+npx vuepress dev docs
+
+# 构建静态文件
+vuepress build .
+```
+## package.json 
+
+修改三个脚本用来简化操作
+
+```sh 3
+"scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+```
+然后就可以开始写作了:
+
+```sh
+yarn docs:dev # 或者：npm run docs:dev
+```
+
+要生成静态的 HTML 文件，运行：
+
+```sh
+yarn docs:build # 或者：npm run docs:build
+```
+
+## config.js 
+``` JS
 module.exports = {
   title: 'psychonaut', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
@@ -26,7 +82,7 @@ module.exports = {
   
   markdown: {
     // 代码显示行号
-    lineNumbers: false,
+    lineNumbers: true,
     // markdown-it-anchor 的选项
     anchor: { permalink: true },
     // markdown-it-toc 的选项
@@ -124,7 +180,7 @@ module.exports = {
           {text: 'More', //杂记导航栏
             items: 
             [
-              {text: '💝Tool usage tips💝', 
+              {text: 'Tool usage tips', 
                 items: 
                 [
                   {text: 'Chrome',link: '/工具的使用/chrome/'},
@@ -135,7 +191,7 @@ module.exports = {
               },
 
               
-              {text: '✨idea✨', 
+              {text: '✨✨', 
                 items: 
                 [
                   {text: '杂项note',link: '/杂项note/'},
@@ -153,7 +209,6 @@ module.exports = {
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
       }, //自动生成侧边栏
-
       "dynamic-title",{
         showIcon: "/favicon.ico",
         showText: "(ฅ>ω<*ฅ)欢迎回来！",
@@ -163,18 +218,58 @@ module.exports = {
       },
 
       ["go-top"], //悬挂喵返回顶部
-      '@vuepress/active-header-links', {
-        sidebarLinkSelector: '.sidebar-link',
-        headerAnchorSelector: '.header-anchor'
+      "ribbon", //背后彩带
+      {
+         size: 90, // 彩带的宽度，默认为 90
+         opacity: 0.8, // 彩带的不透明度，默认为 0.3
+         zIndex: -1 // 彩带的 z-index 属性，默认值为 -1
       },
-
-      '@vuepress/last-updated',
-
-      '@vuepress/nprogress',
+      "@vuepress/active-header-links",
+      ['@vuepress/nprogress'],
       ['@vuepress/medium-zoom'],
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],
-      'vuepress-plugin-reading-time',
-      'vuepress-plugin-baidu-autopush'
+
     ]
 }
+
+```
+
+::: danger STOP
+危险区域，禁止通行
+:::
+
+::: details 点击查看代码
+
+```js
+console.log('你好，VuePress！')
+```
+:::
+
+## 以下是需要安装的依赖插件包（无先后次序）
+
+```sh
+//markdown 扩展
+yarn add -D markdown-it
+yarn add -D markdown-it-anchor
+yarn add -D markdown-it-toc
+yarn add -D @iktakahiro/markdown-it-katex
+yarn add -D markdown-it-mark
+yarn add -D markdown-it-task-list
+yarn add -D markdown-it-vuepress-code-snippet-enhanced
+
+//花里胡哨
+yarn add -D vuepress-plugin-cursor-effects
+yarn add -D vuepress-plugin-go-top
+yarn add vuepress-plugin-dynamic-title -D
+
+//fangbian
+yarn add -D vuepress-plugin-auto-sidebar
+
+yarn add -D @vuepress/plugin-active-header-links
+yarn add -D vuepress-plugin-reading-progress
+yarn add -D @vuepress/plugin-medium-zoom
+yarn add -D vuepress-plugin-seo
+yarn add -D @vuepress/plugin-nprogress
+yarn add -D vuepress-plugin-reading-time
+

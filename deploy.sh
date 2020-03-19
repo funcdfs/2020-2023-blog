@@ -9,8 +9,6 @@ npm run docs:build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# 绑定自定义域名，根据个人实际域名修改。
-# 如果不需要绑定自定义域名，可将下面这行代码注释掉，例如博主的是www.honkerzhou.com
 echo 'feng-w.cn' > CNAME
 
 git init

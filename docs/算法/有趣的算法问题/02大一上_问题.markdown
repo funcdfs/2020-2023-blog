@@ -35,14 +35,14 @@ date: 2020-02-05
 ## 生日蜡烛
 
 ***
-某君从某年开始每年都举办一次生日party，并且每次都要吹熄与年龄相同根数的蜡烛。
+某君从某年开始每年都举办一次生日party,并且每次都要吹熄与年龄相同根数的蜡烛。
 
-现在算起来，他一共吹熄了236根蜡烛。
+现在算起来,他一共吹熄了236根蜡烛。
 
-请问，他从多少岁开始过生日party的？
+请问,他从多少岁开始过生日party的？
 
 请填写他开始过生日party的年龄数。  
-注意：你提交的应该是一个整数，不要填写任何多余的内容或说明性文字。
+注意：你提交的应该是一个整数,不要填写任何多余的内容或说明性文字。
 
 //写两次循环累加
 if  累加外循环减累加内循环==256
@@ -51,7 +51,7 @@ printf
 ## 爬楼梯
 
 题目描述
-一个人, 这天他要去软件楼上课, 走到楼梯口他突然想到, 这楼梯共M级，刚开始时晓鹏在第一级，若每次只能跨上一级或二级，要走上第M级，共有多少种走法？
+一个人, 这天他要去软件楼上课, 走到楼梯口他突然想到, 这楼梯共M级,刚开始时晓鹏在第一级,若每次只能跨上一级或二级,要走上第M级,共有多少种走法？
 
 输入  
 输入一个数字M.
@@ -72,8 +72,8 @@ printf
 ## 字符串取头尾
 
 题目: 输入一个字符串, 同时输入帧头和帧尾(可以是多个字符), 将该字符串中合法的帧识别出来.
-举例: 输入帧 头 和 帧 尾 分 别 是 head 和 tail ，则字符串” asdheadchinaisoktail7777”  
-中headchinaisoktail 是合法帧，将headchinaisoktail输出  
+举例: 输入帧 头 和 帧 尾 分 别 是 head 和 tail ,则字符串” asdheadchinaisoktail7777”  
+中headchinaisoktail 是合法帧,将headchinaisoktail输出  
 
 ``` cpp
 #define _CRT_SECURE_NO_WARNINGS
@@ -81,7 +81,7 @@ printf
 #include <string.h>
 int main()
 {
-    //输入三个字符串，3输出1-2中间的（包括1，2）
+    //输入三个字符串,3输出1-2中间的（包括1,2）
     printf("请输入三个字符串；回车代表输入完成一个\n");
     char head[100];
     char tail[100];
@@ -93,7 +93,7 @@ int main()
 	strcpy(tail, "wuwu");
 	strcpy(input, "asdshahamwuwu");*/
     int H = 0;
-    int num = 0; //进行计数，看看相等的数量一样不；
+    int num = 0; //进行计数,看看相等的数量一样不；
     for (int j = 0; j < strlen(input); j++)
     {
         if (input[j] == head[0])
@@ -109,14 +109,14 @@ int main()
             break;
         }
     }
-    printf("head相同的个数 %d，head开始的数字%d\n", num, H);
+    printf("head相同的个数 %d,head开始的数字%d\n", num, H);
     int T = 0;
     int num2 = 0;
     for (int m = H; m < strlen(input); m++)
     {
         if (input[m] == tail[0])
         {          //开始
-            T = m; //计下来，tail开始时候的数字;下面输出head到tail时候用
+            T = m; //计下来,tail开始时候的数字;下面输出head到tail时候用
             for (int i = 0; i < strlen(tail); i++, m++)
             {
                 if (input[m] == tail[i])
@@ -127,10 +127,10 @@ int main()
             break;
         }
     }
-    printf("tail相同的个数 %d，tail开始的数字%d\n", num2, T);
+    printf("tail相同的个数 %d,tail开始的数字%d\n", num2, T);
     if (num == strlen(head) && num2 == strlen(tail))
     {
-        //如果head   和  tail完全相等，开始利用前面记录下来的 H，T 进行输出字符串
+        //如果head   和  tail完全相等,开始利用前面记录下来的 H,T 进行输出字符串
         for (int i = H; i < T + strlen(tail); i++)
         {
             printf("%c", input[i]);
@@ -148,9 +148,9 @@ int main()
 ## 字符串删除
 
 ``` c
-	/*编写一个程序，先输入一个字符串 str1（长度不超过 20），
-		再输入一个单独的字符 ch， 然后程序会把字符串 str 当中出现的
-		所有的 ch 字符都删掉，从而得到一个新的字符串 str2， 然后把这个字符串打印出来*/
+	/*编写一个程序,先输入一个字符串 str1（长度不超过 20）,
+		再输入一个单独的字符 ch, 然后程序会把字符串 str 当中出现的
+		所有的 ch 字符都删掉,从而得到一个新的字符串 str2, 然后把这个字符串打印出来*/
 	char str1[20];
 	char str2[20];
 	int n = 0;
@@ -192,7 +192,7 @@ int main()
 用2-sqrt(x)来试商；  
 x=a*b  
 若 a>=sqrt(x), 则 b<=sqrt（x）; 
-所以如果b不存在，那么a也不存在  
+所以如果b不存在,那么a也不存在  
 
 ``` c
 #define _CRT_SECURE_NO_WARNINGS
@@ -202,8 +202,8 @@ x=a*b
 #define N 100
 int main() {
 	//初始化数组元素为1-100
-	//筛选掉a中所有a[i]--sqrt(N)的倍数，置为0;
-	//输出数组中余下的！=0的数
+	//筛选掉a中所有a[i]--sqrt(N)的倍数,置为0;
+	//输出数组中余下的!=0的数
 	int began[N + 1];
 	for (int i = 0; i <= N; i++) {
 		began[i] = i;
@@ -254,7 +254,7 @@ int main()
         {
             printf("#");
 
-            //注意这个倒序输出，用满变量减去当前循环值
+            //注意这个倒序输出,用满变量减去当前循环值
         }
         for (j = 0; j < i; j++)
         {
@@ -268,5 +268,5 @@ int main()
 }
 ```
 
-## 最大公约数，最小公倍数
+## 最大公约数,最小公倍数
 

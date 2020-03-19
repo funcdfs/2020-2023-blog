@@ -4,9 +4,9 @@ title: string类
 
 ## string类:
 
-之所以抛弃char*的字符串而选用C++标准程序库中的string类，是因为他和前者比较起来，不必担心内存是否足够、字符串长度等等，而且作为一个泛型类出现，他集成的操作函数足以完成我们大多数情况下(甚至是100%)的需要。我们可以用 = 进行赋值操作，== 进行比较，+ 做串联（是不是很简单?）。我们尽可以把它看成是C++的基本数据类型。
+之所以抛弃char*的字符串而选用C++标准程序库中的string类,是因为他和前者比较起来,不必担心内存是否足够、字符串长度等等,而且作为一个泛型类出现,他集成的操作函数足以完成我们大多数情况下(甚至是100%)的需要。我们可以用 = 进行赋值操作,== 进行比较,+ 做串联（是不是很简单?）。我们尽可以把它看成是C++的基本数据类型。
 
-使用 vs 编辑 string 类时，会有参数类型自动提醒功能，输入函数名后就🆗
+使用 vs 编辑 string 类时,会有参数类型自动提醒功能,输入函数名后就🆗
 
 ### string对象的初始化:
 
@@ -14,16 +14,16 @@ title: string类
 
     string Str;
 
-这样我们就声明了一个字符串变量，但既然是一个类，就有构造函数和析构函数。上面的声明没有传入参数，所以就直接使用了string的默认的构造函数，这个函数所作的就是把Str初始化为一个空字符串。String类的构造函数和析构函数如下：
+这样我们就声明了一个字符串变量,但既然是一个类,就有构造函数和析构函数。上面的声明没有传入参数,所以就直接使用了string的默认的构造函数,这个函数所作的就是把Str初始化为一个空字符串。String类的构造函数和析构函数如下：
 a) `string s;` //生成一个空字符串s
 b) `string s(str)` //拷贝构造函数 生成str的复制品
 c) `string s(str,stridx)` //将字符串str内“始于位置stridx”的部分当作字符串的初值
 d) `string s(str,stridx,strlen)` //将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值
 e) `string s(cstr)` //将C字符串作为s的初值
 f) `string s(chars,chars_len)` //将C字符串前chars_len个字符作为字符串s的初值。
-g) `string s(num,c)` //生成一个字符串，包含num个c字符
+g) `string s(num,c)` //生成一个字符串,包含num个c字符
 h) `string s(beg,end)` //以区间beg; end(不包含end)内的字符作为字符串s的初值
-i) `s.~string()` //销毁所有字符，释放内存
+i) `s.~string()` //销毁所有字符,释放内存
 
 ### 成员函数 `s.length();`  `getline()` 
 
@@ -38,9 +38,9 @@ istream& getline (istream&  is, string& str);
 istream& getline (istream&& is, string& str); 
 
 函数的变量：  
-is    ：表示一个输入流，例如cin。  
-str   ：string类型的引用，用来存储输入流中的流信息。  
-delim ：char类型的变量，所设置的截断字符；在不自定义设置的情况下，遇到’\n’，则终止输入。  
+is    ：表示一个输入流,例如cin。  
+str   ：string类型的引用,用来存储输入流中的流信息。  
+delim ：char类型的变量,所设置的截断字符；在不自定义设置的情况下,遇到’\n’,则终止输入。  
 
 ``` cpp
 #include<iostream>
@@ -70,7 +70,7 @@ s3.assign(s1,1,3);
 `string` 里面的at成员函数 和 []
 
 ``` cpp
-成员函数at会有越界范围检查,会抛出越界异常提醒，下标运算符 [ ] 没有越界范围检查
+成员函数at会有越界范围检查,会抛出越界异常提醒,下标运算符 [ ] 没有越界范围检查
 for (int i=0;i<s.length();i++){
     cout<<s.at(i)<<endl;
 }
@@ -87,13 +87,13 @@ string s1("Good"),S2("morning");
 s1.append(s2);
 cout<<s1;
 s2.append(s1,3,s1.size());//s1.size();s1的字符数
-//下标为三开始，s1.size()个字符，如果字符串中没有足够字符，则复制  
+//下标为三开始,s1.size()个字符,如果字符串中没有足够字符,则复制  
 //到字符串的最后一个字符
 ```
 
 ### == > >= < <= !=
 
-返回值都为bool类型，成立为true ，否则为false
+返回值都为bool类型,成立为true ,否则为false
 成员函数 `compare()` 
 可以挑其中的一部分进行比较
 
@@ -128,7 +128,7 @@ string s1("fengwei");
 s1.find("wei");
 ```
 
-`rfind();` 逆序查找，但都是返回查找字符串第一次出现的首字母的地址
+`rfind();` 逆序查找,但都是返回查找字符串第一次出现的首字母的地址
 
 ``` cpp
 string s1("fengwei");
@@ -192,7 +192,7 @@ string &insert(int p0,const string &s, int pos, int n);——在p0位置插入�
 
 string &insert(int p0, int n, char c);//在p0处插入n个字符c
 
-iterator insert(iterator it, char c);//在it处插入字符c，返回插入后迭代器的位置
+iterator insert(iterator it, char c);//在it处插入字符c,返回插入后迭代器的位置
 
 void insert(iterator it, const_iterator first, const_iteratorlast);//在it处插入从first开始至last-1的所有字符
 

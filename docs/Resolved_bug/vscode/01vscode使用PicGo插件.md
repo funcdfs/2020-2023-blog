@@ -10,7 +10,7 @@ date: 2020-02-13
 
 > 之前用了四五种上传图片 , 都不方便
 
-vscode加PicGo插件 (找了好长时间，这个方法最好用
+vscode加PicGo插件 (找了好长时间,这个方法最好用
 
 ## 配置方法：  
 
@@ -27,17 +27,17 @@ vscode加PicGo插件 (找了好长时间，这个方法最好用
 
 ![20200305170541.png](https://raw.githubusercontent.com/fengwei2002/picgotest/master/img/20200305170541.png)
 
-然后试一下热键，发现就成功了  　　
-跳回你的GitHub里面看一下，就会发现仓库下面已经有这个图片了  
-没必要非得在主仓库里面用，减少主仓库体积   
+然后试一下热键,发现就成功了  　　
+跳回你的GitHub里面看一下,就会发现仓库下面已经有这个图片了  
+没必要非得在主仓库里面用,减少主仓库体积   
 
-以后上传就使用本地文件夹 `img_for_blogs` ，使用 `ctrl+Alt+e` 查看目录选中文件进行上传  
+以后上传就使用本地文件夹 `img_for_blogs` ,使用 `ctrl+Alt+e` 查看目录选中文件进行上传  
 
-也可以使用剪切板中的图片，也是快捷键一步完成，多舒服，图片大小比较大时，上传就会5-6秒左右，慢一点点（当第一次开始上传时也会有点慢）
+也可以使用剪切板中的图片,也是快捷键一步完成,多舒服,图片大小比较大时,上传就会5-6秒左右,慢一点点（当第一次开始上传时也会有点慢）
 
 ## 上传图片快捷键
 
-在VScode编辑器中直接使用以下快捷键，将自动完成上传并将图片链接自动插入到Markdown页面中
+在VScode编辑器中直接使用以下快捷键,将自动完成上传并将图片链接自动插入到Markdown页面中
 
 从剪贴板上传图像（非常常用）
 Windows / Unix： **`Ctrl + Alt + u`**
@@ -50,9 +50,9 @@ Windows / Unix： `Ctrl + Alt + o`
 
 ## 一些问题
 
-* 文件名里不能有 ‘+’ 号，有 ‘+’ 就上传不成功 //因为剪切板中的文件名是乱码
+* 文件名里不能有 ‘+’ 号,有 ‘+’ 就上传不成功 //因为剪切板中的文件名是乱码
 * 当上传重复文件时会报错
-* 有时剪切板会上传失败(image uploading 卡住) ，这时需要采用本地文件夹进行上传 **`Ctrl + Alt + e`**
+* 有时剪切板会上传失败(image uploading 卡住) ,这时需要采用本地文件夹进行上传 **`Ctrl + Alt + e`**
 
 ![aaaa.png](https://raw.githubusercontent.com/fengwei2002/picture/master/fengwei2002/pictureaaaaaaaaaaaaaaaaaaaaaa.png)
 
@@ -71,6 +71,6 @@ Windows / Unix： `Ctrl + Alt + o`
 
 ![20200305170620.png](https://raw.githubusercontent.com/fengwei2002/picgotest/master/img/20200305170620.png)
 
-成功 ！  
+成功 !  
 PS：QQ 设置热键可以 win 中可以实现快速截图
 

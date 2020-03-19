@@ -12,15 +12,15 @@ date: 2020-03-03
 
 ***
 
-今天发现了这个超级方便的插件，有好多好多使markdown变美观的功能
+今天发现了这个超级方便的插件,有好多好多使markdown变美观的功能
 
 > 这是个提高markdown写作效率的工具, 不仅为 markdown 使用者提供了相对统一的格式, 并且提供了一些快捷功能.
 
-然后这个插件因为功能都是自定义的，所以不能安装完成后直接使用，需要在 setting.json 里面进行个性化的配置 然鹅我看了[文档](https://github.com/sumnow/markdown-formatter/blob/master/README_CN.md)还是没弄好; 一直报错
+然后这个插件因为功能都是自定义的,所以不能安装完成后直接使用,需要在 setting.json 里面进行个性化的配置 然鹅我看了[文档](https://github.com/sumnow/markdown-formatter/blob/master/README_CN.md)还是没弄好; 一直报错
 
-然后不小心 CTRL C 把 setting.json 全删了 ，还不能恢复，
+然后不小心 CTRL C 把 setting.json 全删了 ,还不能恢复,
 
-我就直接全部卸载了 vscode [重装](https://blog.csdn.net/jpch89/article/details/89789247)了一遍 ，正好插件40+特别乱，删了后重新弄一遍就简洁了许多
+我就直接全部卸载了 vscode [重装](https://blog.csdn.net/jpch89/article/details/89789247)了一遍 ,正好插件40+特别乱,删了后重新弄一遍就简洁了许多
 
 但每天不明不白的用VSCODE；属实不爽；所以想着解析一下vscode的构造和setting.json的具体中文使用方法
 
@@ -36,7 +36,7 @@ date: 2020-03-03
 // 自动格式化标点
 "markdownFormatter.fullWidthTurnHalfWidth": "auto",
 // 中文标点格式化为英文
-// "markdownFormatter.fullWidthTurnHalfWidth": "，：；！“”‘’（）？。",
+// "markdownFormatter.fullWidthTurnHalfWidth": ",：；!“”‘’（）？。",
 "markdownFormatter.formatOpt": {
   "indent_size": 2
 },
@@ -99,13 +99,13 @@ vscode让我把错误setting删除后它自己进行写入操作 然后出现弹
 
 删除即可
 
-没有报错，NOW重启一次vscode
+没有报错,NOW重启一次vscode
 
 现在使用 `shift + alt + F` 就可以快速格式化 markdown 文本了 而使用markdown编写时也发现出现了智能提示；优化了书写体验
 
 发现应用成功(　获得神器 QAQ　)
 
-> 但我重装vscode导致picgo插件失效，所以又安装了一遍 picgo... 
+> 但我重装vscode导致picgo插件失效,所以又安装了一遍 picgo... 
 
 现在就可以愉快的使用了~
 

@@ -21,8 +21,8 @@ date: 2020-02-19
 ``` git
 在一个仓库中 git bash here  然后执行以下两行
 git config --global credential.helper store
-git pull /git push (这里需要输入用户名和密码，以后就不用啦)
-执行完gitpush再测试一次，就完美解决了
+git pull /git push (这里需要输入用户名和密码,以后就不用啦)
+执行完gitpush再测试一次,就完美解决了
 ```
 
 git config --global credential.helper store
@@ -34,13 +34,13 @@ git config --global user.name [username]
 git config --global user.email [email]
 
 * ssh-keygen -t rsa -C "2480417969@qq.com"
-* 然后成功后会在User文件夹对应的用户下创建.ssh文件夹，其中有一个id_rsa.pub文件，复制其中的key:
-* 之后返回github，进入 Account Settings（账户配置），左边选择SSH and GPG Keys选项
-* 验证是否绑定本地成功，在git-bash中验证，输入指令： 
+* 然后成功后会在User文件夹对应的用户下创建.ssh文件夹,其中有一个id_rsa.pub文件,复制其中的key:
+* 之后返回github,进入 Account Settings（账户配置）,左边选择SSH and GPG Keys选项
+* 验证是否绑定本地成功,在git-bash中验证,输入指令： 
 
  
 ssh -T git@github.com  
-如果第一次执行该指令，则会提示是否continue继续，如果我们输入yes就会看到成功信息  
+如果第一次执行该指令,则会提示是否continue继续,如果我们输入yes就会看到成功信息  
 HI... ..
 
 ### **github** **仓库徽标**
@@ -55,7 +55,7 @@ HI... ..
 
 ### git push 和 git fetch 的区别
 
-因为vscode插件弹出来一个提醒，是否每隔一段时间运行 git fetch  
+因为vscode插件弹出来一个提醒,是否每隔一段时间运行 git fetch  
 所以有时间需要温习一次git操作原理
 
 ***
@@ -118,7 +118,7 @@ git add .
 
 $ git log --pretty=short
 
-(显示log日志的第一行，操作人和地址信息，不返回操作时间)
+(显示log日志的第一行,操作人和地址信息,不返回操作时间)
 
 $ git log -p README.md
 
@@ -130,7 +130,7 @@ $ ls
 
 $ code README.md
 
-(使用vscode打开README，替换传统vim)
+(使用vscode打开README,替换传统vim)
 
 $ git diff
 
@@ -150,7 +150,7 @@ $ git checkout -b A
 
 $ git checkout -B <new_branch>
 
-(该命令主要加了一个可选参数B，如果已经存在了同名的分支，使用 git checkout -b <new_branch>会提示错误，加入-B可选参数后会强制创建新分支，并且会覆盖原来存在的同名分支)
+(该命令主要加了一个可选参数B,如果已经存在了同名的分支,使用 git checkout -b <new_branch>会提示错误,加入-B可选参数后会强制创建新分支,并且会覆盖原来存在的同名分支)
 
 $ =git branch newBranch +git checkout newBranch=git checkout -b\|-B <new_branch> [<start point>]
 
@@ -160,7 +160,7 @@ $ git checkout master
 
 $ git checkout --orphan <new_branch>
 
-(假如你的某个分支上，积累了无数次的提交，你也懒得去打理，打印出的log也让你无力吐槽，那么这个命令将是你的神器，它会基于当前所在分支新建一个赤裸裸的分支，没有任何的提交历史，但是当前分支的内容一一俱全。新建的分支，严格意义上说，还不是一个分支，因为HEAD指向的引用中没有commit值，只有在进行一次提交后，它才算得上真正的分支)
+(假如你的某个分支上,积累了无数次的提交,你也懒得去打理,打印出的log也让你无力吐槽,那么这个命令将是你的神器,它会基于当前所在分支新建一个赤裸裸的分支,没有任何的提交历史,但是当前分支的内容一一俱全。新建的分支,严格意义上说,还不是一个分支,因为HEAD指向的引用中没有commit值,只有在进行一次提交后,它才算得上真正的分支)
 
 $ git checkout -
 

@@ -51,7 +51,7 @@ vuepress build .
 yarn docs:dev # 或者：npm run docs:dev
 ```
 
-要生成静态的 HTML 文件，运行：
+要生成静态的 HTML 文件,运行：
 
 ```sh
 yarn docs:build # 或者：npm run docs:build
@@ -276,13 +276,13 @@ module.exports = {
 [antdocs官方文档](https://antdocs.seeyoz.cn/guide/using-antd.html)
 
 ::: danger STOP
-危险区域，禁止通行
+危险区域,禁止通行
 :::
 
 ::: details 点击查看代码
 
 ```js
-console.log('你好，VuePress！')
+console.log('你好,VuePress!')
 ```
 :::
 
@@ -340,6 +340,6 @@ console.log('你好，VuePress！')
 
 ## 使用
 
-如果按照我的配置，侧边栏会自动生成，按照md文件标题数字可直接排序侧边栏
+如果按照我的配置,侧边栏会自动生成,按照md文件标题数字可直接排序侧边栏
 
 

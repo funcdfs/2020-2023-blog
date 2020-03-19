@@ -13,7 +13,7 @@ date: 2020-01-28
 
 hjkl移动
 
-dd，j，esc，u，
+dd,j,esc,u,
 
 ：wq sample.txt
 
@@ -38,5 +38,5 @@ gg G 0 $ j (n)yy p  (n)dd  (n)x
 vim [文件名][文件名]
 n . N切换
 
-一般模式，ctrl v进入可视模式，提供可用光标
+一般模式,ctrl v进入可视模式,提供可用光标
 

@@ -29,7 +29,7 @@ date: 2020-02-12 01:30:56
 }
 ```
 
-若成员变量中存在指针，构造等号操作符时就需要额外开辟一个空间，供新变量使用
+若成员变量中存在指针,构造等号操作符时就需要额外开辟一个空间,供新变量使用
 
 ## 自定义的数组类重载 `[ ]` 
 
@@ -50,9 +50,9 @@ ostream &operator<<(ostream &os,MyArray &array){
 }
 ```
 
-`getlen()` 中的函数参数是非 const 的指针如果传入函数的为 const, 就会不安全，报错 
+`getlen()` 中的函数参数是非 const 的指针如果传入函数的为 const, 就会不安全,报错 
 
-实际操作中不建议重载并且或者操作符，因为存在短路现象
+实际操作中不建议重载并且或者操作符,因为存在短路现象
 
 ## 自定义智能指针
 
@@ -66,7 +66,7 @@ int main (){
 }
 ```
 
-正常\*p 需要delete，这样构造的 \*ptr 指针不需要手动释放  
+正常\*p 需要delete,这样构造的 \*ptr 指针不需要手动释放  
 实现过程是通过 具有一个释放空间的析构函数 的类 实现的
 
 # 练习
@@ -81,7 +81,7 @@ my_string.h
 
 ``` cpp
 #pragma once
-//默认就有字符串类，include <string>
+//默认就有字符串类,include <string>
 class my_string
 {
 public:
@@ -95,7 +95,7 @@ public:
 	char& operator[](int a);
 	//重载 ==
 	bool operator==(const my_string& another);
-	//重载 ！=
+	//重载 !=
 	bool operator!=( const my_string& another);
 	//重载 =
 	my_string& operator=(const my_string& another);

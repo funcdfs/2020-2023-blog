@@ -32,6 +32,8 @@ module.exports = {
       md.use(require("markdown-it-mark"));
       md.use(require("markdown-it-task-lists"));
       md.use(require("markdown-it-vuepress-code-snippet-enhanced"));
+      md.use(require("markdown-it-footnote"));
+      md.use(require("markdown-it-kbd"));
     }
   },
 

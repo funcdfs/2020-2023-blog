@@ -2,9 +2,13 @@
 title: 清华OJ数据结构习题解析
 ---
 
-***
 
-# [范围查询(Range)]
+## 清华Oj使用
+
+[共有四次作业](https://dsa.cs.tsinghua.edu.cn/oj/foyer.shtml)
+
+
+## [范围查询(Range)]
 
 数轴上有n个点,对于任一闭区间 [a, b],试计算落在其内的点数。
 ***

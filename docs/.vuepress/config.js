@@ -27,6 +27,7 @@ module.exports = {
     lineNumbers: false,
     // markdown 插件
     extendMarkdown: md => {
+      md.set({ breaks: true }) //将段落中的 '\n' 转换为 <br>
       md.set({ html: true });
       md.use(require("@iktakahiro/markdown-it-katex"));
       md.use(require("markdown-it-mark"));

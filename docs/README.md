@@ -2,16 +2,18 @@
 home: true
 heroImage: /zhuye.png
 heroText: psychonaut
-tagline: 文档, 博客
+tagline: 1.75x speed
 actionText: 进入笔记 →
 actionLink: /fengwei/
+footer: MIT Licensed | Copyright © 2020-present Feng Wei 
 ---
 
-::: danger feng-w.cn
-
-这根本不是什么博客,仅仅是一个个人笔记本而已。
-
-:::
-<a-button type="primary">一个没有用的按钮</a-button>
-
-<a-rate :defaultValue="4.5" allowHalf />
+<template>
+  <div>
+    <a-timeline pending="Recording..." :reverse="reverse">
+      <a-timeline-item>Created a Jekyll blog 2020-01-20</a-timeline-item>
+      <a-timeline-item>Start building vuepress blog 2020-03-15</a-timeline-item>
+      <a-timeline-item>vuepress blog build all done 2020-03-21</a-timeline-item>
+    </a-timeline>
+  </div>
+</template>

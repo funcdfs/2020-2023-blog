@@ -58,6 +58,8 @@ yarn docs:build # 或者：npm run docs:build
 ```
 ## deploy.sh 
 
+一些脚本用来简化操作
+
 ::: details 我的 deploy.sh 配置
 
 ```sh 
@@ -97,9 +99,7 @@ module.exports = {
   title: 'psychonaut', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
   description: 'vuepress 文档',
-
   theme: 'antdocs',
-
   head: [
     [
       "meta",
@@ -121,10 +121,6 @@ module.exports = {
   markdown: {
     // 代码不显示行号
     lineNumbers: false,
-    // markdown-it-anchor 的选项
-    anchor: { permalink: true },
-    // markdown-it-toc 的选项
-    toc: { includeLevel: [1, 2, 3] },
     // markdown 插件
     extendMarkdown: md => {
       md.set({ html: true });
@@ -138,26 +134,23 @@ module.exports = {
   themeConfig: { //主题配置项
       logo: '/zhuye.png',
       //自动生成侧边栏
-
       sidebar: 'auto',
-
       smoothScroll: true,
       //展示全部标题
       displayAllHeaders: true,
       sidebarDepth: 3,
       //github
       lastUpdated: 'Last Updated', 
-
       nav: [  //导航栏
-          { text: '首页', link: '/' },
-
+          { text: 'Home', link: '/' },
           {text: 'Resolved Bug',link: '/Resolved_bug/',
             items: [
-              {text: 'vscode',link: '/工具的使用/vscode/' },
+              {text: 'Git',link: '/Resolved_bug/Git/' },
+              {text: 'vscode',link: '/Resolved_bug/vscode/' },
             ]
           },
 
-          { text: '编程基础', 
+          { text: 'Basics', 
             items: [
             {text: 'markdown',link: '/编程基础/markdown/' },
             {text: 'cpp',link: '/编程基础/cpp/' },
@@ -166,7 +159,7 @@ module.exports = {
             {text: '深入理解计算机系统',link: '/操作系统/深入理解计算机系统/' },
             ]
           },
-          
+
           {text: 'Math', //数学导航栏
               items: 
               [
@@ -179,16 +172,18 @@ module.exports = {
               ]
           },
           
-          {text: '算法',
+          {text: 'Algorithm',
           items: [
+            {text: '一堆题解',link: '/算法/一堆题解/'},
             {text: '算法竞赛入门经典',link: '/算法/算法竞赛入门经典/'},
             {text: '算法竞赛入门经典训练指南',link: '/算法/算法竞赛入门经典训练指南/'},
             {text: '值得一记的算法',link: '/算法/值得一记的算法/'},
             {text: '有趣的算法问题',link: '/算法/有趣的算法问题/'},
+            {text: 'codeforces题解',link: '/算法/codeforces题解/'},
             ]
           },
 
-          {text: '前端攻城狮',
+          {text: 'Front-end',
           items: [
             {text: 'html',link: '/前端/html/'},
             {text: 'css',link: '/前端/css/'},
@@ -198,26 +193,10 @@ module.exports = {
             {text: 'vuepress',link: '/前端/vuepress/'},
             {text: 'csharp',link: '/前端/csharp/'},
             {text: 'kotlin',link: '/前端/kotlin/'},
-            {text: 'Jekyll',link: '/前端/jekyll/'},
-            ]
-          },
-
-          { text: 'Contact', 
-            items:
-            [
-              {text:'Gmail',link: 'https://mailto:psychonaut1f@gmail.com'},
-              {text:'leetcode',link: 'https://leetcode-cn.com/u/weirdo-21/'},
-              {text:'GitHub',link: 'https://github.com/fengwei2002'},
-              {text:'codeforce',link: 'https://codeforces.com/profile/KONNG'},
-              {text:'微信',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'},
-              {text:'网易云音乐',link: 'https://music.163.com/#/user/home?id=440040659'},
-              {text:'QQ',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'},
-              {text:'知乎',link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'},
-              {text:'bilibili',link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'},
             ]
           },
  
-          {text: '🎉More🎉', //杂记导航栏
+          {text: 'MORE', //杂记导航栏
             items: 
             [
               {text: 'Tool Usage Tips', 
@@ -229,9 +208,8 @@ module.exports = {
                   {text: '📗vscode',link: '/工具的使用/vscode/'},
                 ]
               },
-
               
-              {text: '✨idea✨', 
+              {text: 'idea', 
                 items: 
                 [
                   {text: '📖杂项note',link: '/杂项note/'},
@@ -241,6 +219,22 @@ module.exports = {
     
             ]
         },
+        
+        { text: 'Contact', 
+        items:
+        [
+          {text:'Gmail',link: 'https://mailto:psychonaut1f@gmail.com'},
+          {text:'leetcode',link: 'https://leetcode-cn.com/u/weirdo-21/'},
+          {text:'GitHub',link: 'https://github.com/fengwei2002'},
+          {text:'codeforce',link: 'https://codeforces.com/profile/KONNG'},
+          {text:'微信',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'},
+          {text:'网易云音乐',link: 'https://music.163.com/#/user/home?id=440040659'},
+          {text:'QQ',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'},
+          {text:'知乎',link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'},
+          {text:'bilibili',link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'},
+        ]
+      },
+      
         ],
       },
 
@@ -251,16 +245,7 @@ module.exports = {
         titleMode: "uppercase"
       }, //自动生成侧边栏
 
-      ["go-top"], //悬挂喵返回顶部
-      '@vuepress/active-header-links', {
-        sidebarLinkSelector: '.sidebar-link',
-        headerAnchorSelector: '.header-anchor'
-      },
-
       '@vuepress/last-updated',
-
-      '@vuepress/nprogress',
-      ['@vuepress/medium-zoom'],
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],
       'vuepress-plugin-baidu-autopush'
@@ -271,20 +256,6 @@ module.exports = {
 
 :::
 
-## antdocs
-
-[antdocs官方文档](https://antdocs.seeyoz.cn/guide/using-antd.html)
-
-::: danger STOP
-危险区域,禁止通行
-:::
-
-::: details 点击查看代码
-
-```js
-console.log('你好,VuePress!')
-```
-:::
 
 ## 我的json配置（无先后次序）
 
@@ -315,21 +286,16 @@ console.log('你好,VuePress!')
   "homepage": "https://github.com/fengwei2002/vuepress_final#readme",
   "devDependencies": {
     "@iktakahiro/markdown-it-katex": "^3.1.0",
-    "@vuepress/plugin-medium-zoom": "^1.4.0",
-    "@vuepress/plugin-nprogress": "^1.4.0",
     "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.5",
     "markdown-it-mark": "^3.0.0",
     "markdown-it-task-list": "^0.1.2",
     "markdown-it-task-lists": "^2.1.1",
-    "markdown-it-toc": "^1.1.0",
     "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
     "vuepress": "^1.4.0",
     "vuepress-plugin-auto-sidebar": "^1.3.1",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-cursor-effects": "^0.0.4",
-    "vuepress-plugin-go-top": "^0.0.2",
-    "vuepress-plugin-reading-progress": "^1.0.8",
+    "vuepress-plugin-reading-progress": "^1.0.9",
     "vuepress-plugin-seo": "^0.1.2"
   },
   "dependencies": {
@@ -341,7 +307,6 @@ console.log('你好,VuePress!')
 ## 使用
 
 如果按照我的配置,侧边栏会自动生成,按照md文件标题数字可直接排序侧边栏
-
 
 ```cpp
  _______ _______ _       _______ 

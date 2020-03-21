@@ -25,10 +25,6 @@ module.exports = {
   markdown: {
     // 代码不显示行号
     lineNumbers: false,
-    // markdown-it-anchor 的选项
-    anchor: { permalink: true },
-    // markdown-it-toc 的选项
-    toc: { includeLevel: [1, 2, 3] },
     // markdown 插件
     extendMarkdown: md => {
       md.set({ html: true });
@@ -103,21 +99,6 @@ module.exports = {
             {text: 'kotlin',link: '/前端/kotlin/'},
             ]
           },
-
-          { text: 'Contact', 
-            items:
-            [
-              {text:'Gmail',link: 'https://mailto:psychonaut1f@gmail.com'},
-              {text:'leetcode',link: 'https://leetcode-cn.com/u/weirdo-21/'},
-              {text:'GitHub',link: 'https://github.com/fengwei2002'},
-              {text:'codeforce',link: 'https://codeforces.com/profile/KONNG'},
-              {text:'微信',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'},
-              {text:'网易云音乐',link: 'https://music.163.com/#/user/home?id=440040659'},
-              {text:'QQ',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'},
-              {text:'知乎',link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'},
-              {text:'bilibili',link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'},
-            ]
-          },
  
           {text: 'MORE', //杂记导航栏
             items: 
@@ -142,6 +123,22 @@ module.exports = {
     
             ]
         },
+        
+        { text: 'Contact', 
+        items:
+        [
+          {text:'Gmail',link: 'https://mailto:psychonaut1f@gmail.com'},
+          {text:'leetcode',link: 'https://leetcode-cn.com/u/weirdo-21/'},
+          {text:'GitHub',link: 'https://github.com/fengwei2002'},
+          {text:'codeforce',link: 'https://codeforces.com/profile/KONNG'},
+          {text:'微信',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'},
+          {text:'网易云音乐',link: 'https://music.163.com/#/user/home?id=440040659'},
+          {text:'QQ',link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'},
+          {text:'知乎',link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'},
+          {text:'bilibili',link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'},
+        ]
+      },
+      
         ],
       },
 
@@ -152,16 +149,7 @@ module.exports = {
         titleMode: "uppercase"
       }, //自动生成侧边栏
 
-      ["go-top"], //悬挂喵返回顶部
-      '@vuepress/active-header-links', {
-        sidebarLinkSelector: '.sidebar-link',
-        headerAnchorSelector: '.header-anchor'
-      },
-
       '@vuepress/last-updated',
-
-      '@vuepress/nprogress',
-      ['@vuepress/medium-zoom'],
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],
       'vuepress-plugin-baidu-autopush'

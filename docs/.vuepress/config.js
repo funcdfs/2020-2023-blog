@@ -121,7 +121,7 @@ module.exports = {
               {text: 'idea', 
                 items: 
                 [
-                  {text: '📓Life',link: '/杂项note/life'},
+                  {text: '📓Life',link: '/杂项note/life/'},
                   {text: '✨想法',link: '/杂项note/想法/'},
                 ]
               },

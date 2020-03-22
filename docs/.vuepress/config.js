@@ -80,12 +80,13 @@ module.exports = {
           
           {text: 'Algorithm',
           items: [
+            {text: '力扣题解',link: '/算法/力扣题解/'},
             {text: '一堆题解',link: '/算法/一堆题解/'},
+            {text: 'codeforces GYM',link: '/算法/codeforces题解/'},
             {text: '算法竞赛入门经典',link: '/算法/算法竞赛入门经典/'},
             {text: '算法竞赛入门经典训练指南',link: '/算法/算法竞赛入门经典训练指南/'},
             {text: '值得一记的算法',link: '/算法/值得一记的算法/'},
             {text: '有趣的算法问题',link: '/算法/有趣的算法问题/'},
-            {text: 'codeforces题解',link: '/算法/codeforces题解/'},
             ]
           },
 
@@ -105,6 +106,8 @@ module.exports = {
           {text: 'MORE', //杂记导航栏
             items: 
             [
+              {text: 'About me',link: '/杂项note/About/'},
+
               {text: 'Tool Usage Tips', 
                 items: 
                 [
@@ -114,16 +117,16 @@ module.exports = {
                   {text: '📗vscode',link: '/工具的使用/vscode/'},
                 ]
               },
-              
+
               {text: 'idea', 
                 items: 
                 [
-                  {text: '📓杂项note',link: '/杂项note/'},
-                  {text: '✨想法',link: '/想法/'},
+                  {text: '📓Life',link: '/杂项note/life'},
+                  {text: '✨想法',link: '/杂项note/想法/'},
                 ]
-              }
-    
+              },
             ]
+          
         },
         
         { text: 'Contact', 
@@ -150,7 +153,7 @@ module.exports = {
         "vuepress-plugin-live2d",
         {
           "modelName": "koharu",
-          "mobileShow": true,
+          "mobileShow": false,
         }
       ],
       "vuepress-plugin-auto-sidebar", {

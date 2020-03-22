@@ -26,7 +26,6 @@ module.exports = {
     // 代码不显示行号
     lineNumbers: false,
     // markdown 插件
-
     extendMarkdown: md => {
       md.set({ html: true });
       md.set({ breaks: true }) ;//将段落中的 '\n' 转换为 <br>
@@ -147,7 +146,13 @@ module.exports = {
 
       plugins: [ //插件的相关配置
       "cursor-effects",  //鼠标点击特效
-
+      [
+        "vuepress-plugin-live2d",
+        {
+          "modelName": "koharu",
+          "mobileShow": true,
+        }
+      ],
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
       }, //自动生成侧边栏

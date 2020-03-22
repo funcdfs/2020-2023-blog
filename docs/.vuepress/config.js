@@ -26,15 +26,15 @@ module.exports = {
     // 代码不显示行号
     lineNumbers: false,
     // markdown 插件
+
     extendMarkdown: md => {
-      md.set({ breaks: true }) //将段落中的 '\n' 转换为 <br>
       md.set({ html: true });
-      md.use(require("@iktakahiro/markdown-it-katex"));
-      md.use(require("markdown-it-mark"));
-      md.use(require("markdown-it-task-lists"));
-      md.use(require("markdown-it-vuepress-code-snippet-enhanced"));
-      md.use(require("markdown-it-footnote"));
-      md.use(require("markdown-it-kbd"));
+      md.set({ breaks: true }) ;//将段落中的 '\n' 转换为 <br>
+      md.use(require('markdown-it-mark'));
+      md.use(require('@iktakahiro/markdown-it-katex'));
+      md.use(require('markdown-it-task-lists'));
+      md.use(require('markdown-it-footnote'));
+      md.use(require('markdown-it-kbd'));
     }
   },
 
@@ -110,7 +110,7 @@ module.exports = {
                 items: 
                 [
                   {text: '🧾Chrome',link: '/工具的使用/chrome/'},
-                  {text: '📄GitHub',link: '/工具的使用/github/'},
+                  {text: '📖GitHub',link: '/工具的使用/github/'},
                   {text: '📜Git',link: '/工具的使用/git/'},
                   {text: '📗vscode',link: '/工具的使用/vscode/'},
                 ]
@@ -119,8 +119,8 @@ module.exports = {
               {text: 'idea', 
                 items: 
                 [
-                  {text: '📖杂项note',link: '/杂项note/'},
-                  {text: '😜想法',link: '/想法/'},
+                  {text: '📓杂项note',link: '/杂项note/'},
+                  {text: '✨想法',link: '/想法/'},
                 ]
               }
     
@@ -151,7 +151,7 @@ module.exports = {
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
       }, //自动生成侧边栏
-
+      ['flowchart'],
       '@vuepress/last-updated',
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],

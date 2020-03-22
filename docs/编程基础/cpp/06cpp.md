@@ -1,15 +1,10 @@
 ---
-layout: post
 title: cpp06(继承)
-tags: [cpp+STL]
-date: 2020-02-12 01:31:56
 ---
-
-***高内聚,低耦合
 
 ## 类和类之间的关系
 
-***
+高内聚,低耦合
 
 ``` cpp
 #include<iostream>

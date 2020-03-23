@@ -2,7 +2,7 @@
 home: true
 heroImage: /zhuye.png
 heroText: psychonaut1f
-tagline: 学了忘，忘了学，学了还得忘，忘了还得学
+tagline: fengwei's blog
 actionText: 进入笔记 →
 actionLink: /fengwei/
 ---

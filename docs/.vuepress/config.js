@@ -4,6 +4,7 @@ module.exports = {
   logo: '/public/favicon.ico',
   description: 'vuepress 文档',
   theme: 'antdocs',
+
   head: [
     [
       "meta",
@@ -23,17 +24,16 @@ module.exports = {
   ],
   
   markdown: {
-    // 代码不显示行号
-    lineNumbers: false,
+    lineNumbers: false,    // 代码不显示行号
     // markdown 插件
     extendMarkdown: md => {
       md.set({ html: true });
       md.set({ breaks: true }) ;//将段落中的 '\n' 转换为 <br>
-      md.use(require('markdown-it-mark'));
-      md.use(require('@iktakahiro/markdown-it-katex'));
-      md.use(require('markdown-it-task-lists'));
-      md.use(require('markdown-it-footnote'));
-      md.use(require('markdown-it-kbd'));
+      md.use(require('markdown-it-mark'));//高亮
+      md.use(require('@iktakahiro/markdown-it-katex'));//math
+      md.use(require('markdown-it-task-lists'));//todo
+      md.use(require('markdown-it-footnote'));//角标
+      md.use(require('markdown-it-kbd'));//按键
     }
   },
 
@@ -45,14 +45,13 @@ module.exports = {
       //展示全部标题
       displayAllHeaders: true,
       sidebarDepth: 3,
-      //github
       lastUpdated: 'Last Updated', 
       nav: [  //导航栏
           { text: 'Home', link: '/' },
-          {text: 'Resolved Bug',link: '/Resolved_bug/',
+          {text: 'Template',link: '/Template/',
             items: [
-              {text: 'Git',link: '/Resolved_bug/Git/' },
-              {text: 'vscode',link: '/Resolved_bug/vscode/' },
+              {text: 'Git',link: '/Template/Git/' },
+              {text: 'vscode',link: '/Template/vscode/' },
             ]
           },
 
@@ -113,8 +112,6 @@ module.exports = {
                 [
                   {text: '🧾Chrome',link: '/gong-ju-de-shi-yong/chrome/'},
                   {text: '📖GitHub',link: '/gong-ju-de-shi-yong/github/'},
-                  {text: '📜Git',link: '/gong-ju-de-shi-yong/git/'},
-                  {text: '📗vscode',link: '/gong-ju-de-shi-yong/vscode/'},
                 ]
               },
 
@@ -148,49 +145,28 @@ module.exports = {
       },
 
       plugins: [ //插件的相关配置
-      "cursor-effects",  //鼠标点击特效
 
-
-      [
-        "vuepress-plugin-live2d",
-        {
-          "modelName": "koharu",
-          "mobileShow": false,
+//美化相关：
+      ["cursor-effects"],                  //鼠标点击特效
+      ['vuepress-plugin-reading-progress'],//顶部进度条
+      ["vuepress-plugin-live2d",{          //live2d配置
+          "modelName": "koharu",           //模型名字
+          "mobileShow": false,             //移动端不显示
         }
       ],
+      '@vuepress/last-updated',            //显示文章最后更新时间
+      ['vuepress-plugin-code-copy', true], //代码块复制按钮
 
-
+//功能添加：
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
-      }, //自动生成侧边栏
+      },                          //自动生成侧边栏
+      ['flowchart'],              //流程图支持
 
-
-      ['flowchart'],
-      '@vuepress/last-updated',
+      ['vuepress-plugin-baidu-autopush'],//百度推送
       ['vuepress-plugin-seo'],
-      ['vuepress-plugin-reading-progress'],
-      ['vuepress-plugin-baidu-autopush'],
 
-
-
-         
-
-      [
-        'gitalk-maker',
-        {
-          gitalkConfig: {
-            clientID: '41838d2c0c6de7b23c93',
-            clientSecret: '0b2e618cba35a4d121640b5a81f15bd63ab7623e',
-            repo: 'vuepress_final',
-            owner: 'fengwei2002',
-            admin: ['fengwei2002'],
-            distractionFreeMode: true
-          },
-        },
-      ],
-
-
-      [
+      [ //gitalk评论插件
         'vuepress-plugin-mygitalk', {
           // 是否启用(关闭请设置为false)(default: true)
           enable: true,
@@ -210,16 +186,12 @@ module.exports = {
             admin: ['fengwei2002'],
             // 设置语言(default: zh-CN)
             language: 'zh-CN',
-            distractionFreeMode: true,
-            
+            distractionFreeMode: 'true',
           }
         }
       ],
 
-      
-          ['vuepress-plugin-code-copy', true],
-
-          'permalink-pinyin',{
+          'permalink-pinyin',{ //转换链接汉字为英文的插件，配合 gitalk 使用消除汉字url过长导致的 bug😀
             lowercase: true, // Converted into lowercase, default: true
             separator: '-' // Separator of the slug, default: '-'
           }

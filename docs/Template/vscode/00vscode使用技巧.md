@@ -1,9 +1,5 @@
 ---
-layout: post
 title: vscode使用技巧
-tags: [杂项note]
-categories: [VScode]
-date: 2020-02-23
 ---
 
 ***

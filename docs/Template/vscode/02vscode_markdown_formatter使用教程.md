@@ -1,9 +1,5 @@
 ---
-layout: post
 title: VScode使用markdown-formatter插件提高写作效率
-tags: [Resolved bug]
-categories: [VScode]
-date: 2020-03-03
 ---
 
 ***

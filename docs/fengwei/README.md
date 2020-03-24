@@ -143,10 +143,10 @@ module.exports = {
       lastUpdated: 'Last Updated', 
       nav: [  //导航栏
           { text: 'Home', link: '/' },
-          {text: 'Resolved Bug',link: '/Resolved_bug/',
+          {text: 'Resolved Bug',link: '/Template/',
             items: [
-              {text: 'Git',link: '/Resolved_bug/Git/' },
-              {text: 'vscode',link: '/Resolved_bug/vscode/' },
+              {text: 'Git',link: '/Template/Git/' },
+              {text: 'vscode',link: '/Template/vscode/' },
             ]
           },
 

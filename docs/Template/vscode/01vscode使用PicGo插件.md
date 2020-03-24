@@ -1,9 +1,5 @@
 ---
-layout: post
 title: VScode使用PicGo插件搭建github稳定图床
-tags: [Resolved bug]
-categories: [VScode]
-date: 2020-02-13
 ---
 
 ***

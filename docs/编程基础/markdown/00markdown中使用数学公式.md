@@ -1,21 +1,13 @@
 ---
-layout: post
 title: Markdown书写数学公式
-tags: [模板]
-date: 2020-03-10
 ---
+#  Markdown书写数学公式
+> 博客目前就是用来记笔记回顾的一个方式：而笔记中 数学笔记肯定要占居相当比例；而脱离手写后繁杂公式想显示在博文中便有些不易；所以做了这一篇整理；以便查阅
 
-***
 
-> 博客目前就是用来记笔记的一个方式：而笔记中 数学笔记肯定要占居相当比例；而脱离手写后繁杂公式想显示在博文中便有些不易；所以做了这一篇整理；以便查阅
+vscode使用 [[ctrl]] + [[M]] 唤醒
 
-## markdown数学公式基本构造
-
-行间插入公式 a + b : \(a + b\)
-
-特点就是通过 `(` 和 `)` 包含要写的公式,然后为了模板引擎能够区分该 `( ` 不是普通文本的 `(` 而是公式的 `(` ,所以就通过 `\` 符号 转义括号；例如 ： `a + b : \(a + b\)` 。这样应该就很好理解这个语法构成了
-
-### **行间与另起一行**
+## **行间与另起一行**
 
 ``` markdown
 $a + b$
@@ -30,7 +22,7 @@ $a + b$
 
 $$a + b$$
 
-### **次幂**
+## **次幂**
 
 先下标后上标的写法；如果次幂是一个式子那么就用大括号包含起来
 
@@ -59,7 +51,7 @@ $$x_{22}^{(n)}$$
 
 $${}^*x^*$$
 
-### **分式**
+## **分式**
 
 两种格式
 
@@ -81,7 +73,7 @@ $$\frac{x+y}{2}$$
 
 $$\frac{1}{1+\frac{1}{2}}$$
 
-### **根式**
+## **根式**
 
 ``` cpp
 $\sqrt{2}<\sqrt[3]{3}$
@@ -101,11 +93,7 @@ $$\sqrt{1+\sqrt[^p\!]{1+a^2}}$$
 
 > 第二和第三个的区别在于为了美观微调位置 
 
-## 常用符号
-
-以下就是markdown数学公式高级语法了
-
-### 求和和积分
+## 求和和积分
 
 $\sum_{k=1}^{n}\frac{k}{1}$ 和 $\int_{a}^{b}$
 
@@ -131,7 +119,7 @@ $\int_{\frac{1}{k}}^{\Zeta} f(x)dx$
 因为是上标；所以终点大括号前需要添加 `^` 符号  
 这里很容易看出求和函数表达式 `\sum_{起点}^{终点}后续表达式 ` 积分函数表达式 `\int_下限^上限 被积函数d被积量(后续表达式) ` 。有趣的是行间的公式都被压缩了（ `mini` ）。
 
-### **基本运算符**
+## **基本运算符**
 
 加减运算,符号：\pm,如： 
 
@@ -161,7 +149,7 @@ $x \ast y=z$
 
 如：$\vert x+y\vert$
 
-### **高级运算符**
+## **高级运算符**
 
 平均数运算,符号：\overline{算式},如：$\overline{xyz}$
 
@@ -183,7 +171,37 @@ $\vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n}$
 
 $$\vec{x} \stackrel{\mathrm{def}}{=}{x_1, \dots, x_n}$$
 
-### **括号符**
+## **希腊字母表**
+
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+{\alpha} & {\backslash alpha} & {\theta} & {\backslash theta} & {o} & {o} & {\upsilon} & {\backslash upsilon} \\\\
+\hline
+{\beta} & {\backslash beta} & {\vartheta} & {\backslash vartheta} & {\pi} & {\backslash pi} & {\phi} & {\backslash phi} \\\\
+\hline
+{\gamma} & {\backslash gamma} & {\iota} & {\backslash iota} & {\varpi} & {\backslash varpi} & {\varphi} & {\backslash varphi} \\\\
+\hline
+{\delta} & {\backslash delta} & {\kappa} & {\backslash kappa} & {\rho} & {\backslash rho} & {\chi} & {\backslash chi} \\\\
+\hline
+{\epsilon} & {\backslash epsilon} & {\lambda} & {\backslash lambda} & {\varrho} & {\backslash varrho} & {\psi} & {\backslash psi} \\\\
+\hline
+{\varepsilon} & {\backslash varepsilon} & {\mu} & {\backslash mu} & {\sigma} & {\backslash sigma} & {\omega} & {\backslash omega} \\\\
+\hline
+{\zeta} & {\backslash zeta} & {\nu} & {\backslash nu} & {\varsigma} & {\backslash varsigma} & {} & {} \\\\
+\hline
+{\eta} & {\backslash eta} & {\xi} & {\backslash xi} & {\tau} & {\backslash tau} & {} & {} \\\\
+\hline
+{\Gamma} & {\backslash Gamma} & {\Lambda} & {\backslash Lambda} & {\Sigma} & {\backslash Sigma} & {\Psi} & {\backslash Psi} \\\\
+\hline
+{\Delta} & {\backslash Delta} & {\Xi} & {\backslash Xi} & {\Upsilon} & {\backslash Upsilon} & {\Omega} & {\backslash Omega} \\\\
+\hline
+{\Omega} & {\backslash Omega} & {\Pi} & {\backslash Pi} & {\Phi} & {\backslash Phi} & {} & {} \\\\
+\hline
+\end{array}
+$$
+
+## **括号符**
 
 下划线符号,符号：\underline,如：$\underline{x+y}$
 
@@ -212,7 +230,15 @@ $\left(\sum_{k=\frac{1}{2}}^{N^2}\frac{1}{k}\right)$
 
 $$\left(\sum_{k=\frac{1}{2}}^{N^2}\frac{1}{k}\right)$$
 
-### **逻辑运算符**
+## **三角运算符**
+
+垂直符号, 符号 `\bot` $\bot$
+
+角	符号 `\angle` $\angle$
+
+30度角  符号 $30^\circ$
+
+## **逻辑运算符**
 
 存在： 符号 \exists
 
@@ -236,7 +262,7 @@ $$\left(\sum_{k=\frac{1}{2}}^{N^2}\frac{1}{k}\right)$$
 
 恒定等于运算,符号：\equiv,如：$x+y \equiv z$
 
-### **集合运算符**
+## **集合运算符**
 
 属于运算,符号：\in,如：$x \in y$
 
@@ -276,15 +302,7 @@ $$\left(\sum_{k=\frac{1}{2}}^{N^2}\frac{1}{k}\right)$$
 
 空集,符号：\emptyset,如： $\emptyset$
 
-### **三角运算符**
-
-垂直符号, 符号 `\bot` $\bot$
-
-角	符号 `\angle` $\angle$
-
-30度角  符号 $30^\circ$
-
-### **数学符号**
+## **数学符号**
 
 矢量符号,符号\vec{a},如：$\vec{a}$
 
@@ -298,25 +316,6 @@ $$\left(\sum_{k=\frac{1}{2}}^{N^2}\frac{1}{k}\right)$$
 
 虚数,符号：\jmath,如：$\jmath$
 
-数学符号,符号\hat{a},如：$\hat{a}$
-
-数学符号,符号\check{a},如：$\check{a}$
-
-数学符号,符号\breve{a},如：$\breve{a}$
-
-数学符号,符号\tilde{a},如：$\tilde{a}$
-
-数学符号,符号\bar{a},如：$\bar{a}$
-
-数学符号,符号\acute{a},如：$\acute{a}$
-
-数学符号,符号\grave{a},如：$\grave{a}$
-
-数学符号,符号\mathring{a},如：$\mathring{a}$
-
-一阶导数符号,符号\dot{a},如：$\dot{a}$
-
-二阶导数符号,符号\ddot{a},如：$\ddot{a}$
 
 上箭头,符号：\uparrow,如：$\uparrow$
 
@@ -341,6 +340,8 @@ $$\left(\sum_{k=\frac{1}{2}}^{N^2}\frac{1}{k}\right)$$
 斜对齐的省略号,符号：\ddots,如：$\ddots$
 
 ### **矩阵**
+
+使用括号界定符和空白矩阵来书写
 
 ``` markdown
 $A=
@@ -368,9 +369,9 @@ $$
 
 `\left\ \right\` 用来表示矩阵括号, `\begin \end` 用来表示矩阵开始处和结束处； `&` 区分行间元素, `\\` 用来矩阵换行； 需要记忆 matrix：矩阵 这个单词
 
-`\begin{matrix}1 & 2\\\\3 & 4\end{matrix}` $\begin{matrix}1 & 2\\\\3 & 4\end{matrix}$
+`\begin{matrix}1 & 2\\3 & 4\end{matrix}` $\begin{matrix}1 & 2\\\\3 & 4\end{matrix}$
 
-### **空格美化效果**
+## **空格美化效果**
 
 ``` cpp
 紧贴 $a\!b$
@@ -389,33 +390,3 @@ quad空格 $a\quad b$
 大空格 $a\ b$    
 quad空格 $a\quad b$     
 两个quad空格 $a\qquad b$     
-
-### **希腊字母表**
-
-$$
-\begin{array}{|c|c|c|c|c|c|c|c|}
-\hline
-{\alpha} & {\backslash alpha} & {\theta} & {\backslash theta} & {o} & {o} & {\upsilon} & {\backslash upsilon} \\\\
-\hline
-{\beta} & {\backslash beta} & {\vartheta} & {\backslash vartheta} & {\pi} & {\backslash pi} & {\phi} & {\backslash phi} \\\\
-\hline
-{\gamma} & {\backslash gamma} & {\iota} & {\backslash iota} & {\varpi} & {\backslash varpi} & {\varphi} & {\backslash varphi} \\\\
-\hline
-{\delta} & {\backslash delta} & {\kappa} & {\backslash kappa} & {\rho} & {\backslash rho} & {\chi} & {\backslash chi} \\\\
-\hline
-{\epsilon} & {\backslash epsilon} & {\lambda} & {\backslash lambda} & {\varrho} & {\backslash varrho} & {\psi} & {\backslash psi} \\\\
-\hline
-{\varepsilon} & {\backslash varepsilon} & {\mu} & {\backslash mu} & {\sigma} & {\backslash sigma} & {\omega} & {\backslash omega} \\\\
-\hline
-{\zeta} & {\backslash zeta} & {\nu} & {\backslash nu} & {\varsigma} & {\backslash varsigma} & {} & {} \\\\
-\hline
-{\eta} & {\backslash eta} & {\xi} & {\backslash xi} & {\tau} & {\backslash tau} & {} & {} \\\\
-\hline
-{\Gamma} & {\backslash Gamma} & {\Lambda} & {\backslash Lambda} & {\Sigma} & {\backslash Sigma} & {\Psi} & {\backslash Psi} \\\\
-\hline
-{\Delta} & {\backslash Delta} & {\Xi} & {\backslash Xi} & {\Upsilon} & {\backslash Upsilon} & {\Omega} & {\backslash Omega} \\\\
-\hline
-{\Omega} & {\backslash Omega} & {\Pi} & {\backslash Pi} & {\Phi} & {\backslash Phi} & {} & {} \\\\
-\hline
-\end{array}
-$$

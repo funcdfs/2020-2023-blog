@@ -58,71 +58,71 @@ module.exports = {
 
           { text: 'Basics', 
             items: [
-            {text: 'markdown',link: '/编程基础/markdown/' },
-            {text: 'cpp',link: '/编程基础/cpp/' },
-            {text: '数据结构',link: '/编程基础/数据结构/' },
-            {text: '计算机网络',link: '/编程基础/计算机网络/' },
-            {text: '深入理解计算机系统',link: '/操作系统/深入理解计算机系统/' },
+            {text: 'markdown',link: '/bian-cheng-ji-chu/markdown/' },
+            {text: 'cpp',link: '/bian-cheng-ji-chu/cpp/' },
+            {text: '数据结构',link: '/bian-cheng-ji-chu/shu-ju-jie-gou/' },
+            {text: '计算机网络',link: '/bian-cheng-ji-chu/ji-suan-ji-wang-luo/' },
+            {text: '深入理解计算机系统',link: '/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/' },
             ]
           },
 
           {text: 'Math', //数学导航栏
               items: 
               [
-                {text: '常用知识点',link: '/Math/常用知识点/'},
+                {text: '常用知识点',link: '/Math/chang-yong-zhi-shi-dian/'},
                 {text: '高数笔记', 
                   items: 
-                  [{text: '高数上',link: '/Math/高数上/'},
-                    {text: '高数下',link: '/Math/高数下/'},]
+                  [{text: '高数上',link: '/Math/gao-shu-shang/'},
+                    {text: '高数下',link: '/Math/gao-shu-xia/'},]
                 }
               ]
           },
           
           {text: 'Algorithm',
           items: [
-            {text: '力扣题解',link: '/算法/力扣题解/'},
-            {text: '一堆题解',link: '/算法/一堆题解/'},
-            {text: 'codeforces GYM',link: '/算法/codeforces题解/'},
-            {text: '算法竞赛入门经典',link: '/算法/算法竞赛入门经典/'},
-            {text: '算法竞赛入门经典训练指南',link: '/算法/算法竞赛入门经典训练指南/'},
-            {text: '值得一记的算法',link: '/算法/值得一记的算法/'},
-            {text: '有趣的算法问题',link: '/算法/有趣的算法问题/'},
+            {text: '力扣题解',link: '/suan-fa/li-kou-ti-jie/'},
+            {text: '一堆题解',link: '/suan-fa/yi-dui-ti-jie/'},
+            {text: 'codeforces GYM',link: '/suan-fa/codeforces-GYM/'},
+            {text: '算法竞赛入门经典',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'},
+            {text: '算法竞赛入门经典训练指南',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'},
+            {text: '值得一记的算法',link: '/suan-fa/zhi-de-yi-ji-de-suan-fa/'},
+            {text: '有趣的算法问题',link: '/suan-fa/you-qu-de-suan-fa-wen-ti/'},
             ]
           },
 
           {text: 'Front-end',
           items: [
-            {text: 'html',link: '/前端/html/'},
-            {text: 'css',link: '/前端/css/'},
-            {text: 'JavaScript',link: '/前端/JavaScript/'},
-            {text: 'Node.js',link: '/前端/node.js/'},
-            {text: 'vue',link: '/前端/vue/'},
-            {text: 'vuepress',link: '/前端/vuepress/'},
-            {text: 'csharp',link: '/前端/csharp/'},
-            {text: 'kotlin',link: '/前端/kotlin/'},
+            {text: 'html',link: '/qian-duan/html/'},
+            {text: 'css',link: '/qian-duan/css/'},
+            {text: 'JavaScript',link: '/qian-duan/JavaScript/'},
+            {text: 'Node.js',link: '/qian-duan/node.js/'},
+            {text: 'vue',link: '/qian-duan/vue/'},
+            {text: 'vuepress',link: '/qian-duan/vuepress/'},
+            {text: 'csharp',link: '/qian-duan/csharp/'},
+            {text: 'kotlin',link: '/qian-duan/kotlin/'},
             ]
           },
  
           {text: 'MORE', //杂记导航栏
             items: 
             [
-              {text: 'About me',link: '/杂项note/About/'},
+              {text: 'About me',link: '/za-xiang-bi-ji/About/'},
 
               {text: 'Tool Usage Tips', 
                 items: 
                 [
-                  {text: '🧾Chrome',link: '/工具的使用/chrome/'},
-                  {text: '📖GitHub',link: '/工具的使用/github/'},
-                  {text: '📜Git',link: '/工具的使用/git/'},
-                  {text: '📗vscode',link: '/工具的使用/vscode/'},
+                  {text: '🧾Chrome',link: '/gong-ju-de-shi-yong/chrome/'},
+                  {text: '📖GitHub',link: '/gong-ju-de-shi-yong/github/'},
+                  {text: '📜Git',link: '/gong-ju-de-shi-yong/git/'},
+                  {text: '📗vscode',link: '/gong-ju-de-shi-yong/vscode/'},
                 ]
               },
 
               {text: 'idea', 
                 items: 
                 [
-                  {text: '📓Life',link: '/杂项note/life/'},
-                  {text: '✨想法',link: '/杂项note/想法/'},
+                  {text: '📓Life',link: '/za-xiang-bi-ji/life/'},
+                  {text: '✨想法',link: '/za-xiang-bi-ji/xiang-fa/'},
                 ]
               },
             ]
@@ -149,6 +149,8 @@ module.exports = {
 
       plugins: [ //插件的相关配置
       "cursor-effects",  //鼠标点击特效
+
+
       [
         "vuepress-plugin-live2d",
         {
@@ -156,13 +158,69 @@ module.exports = {
           "mobileShow": false,
         }
       ],
+
+
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"
       }, //自动生成侧边栏
+
+
       ['flowchart'],
       '@vuepress/last-updated',
       ['vuepress-plugin-seo'],
       ['vuepress-plugin-reading-progress'],
-      'vuepress-plugin-baidu-autopush'
+      ['vuepress-plugin-baidu-autopush'],
+
+
+
+         
+
+      [
+        'gitalk-maker',
+        {
+          gitalkConfig: {
+            clientID: '41838d2c0c6de7b23c93',
+            clientSecret: '0b2e618cba35a4d121640b5a81f15bd63ab7623e',
+            repo: 'vuepress_final',
+            owner: 'fengwei2002',
+            admin: ['fengwei2002'],
+            distractionFreeMode: true
+          },
+        },
+      ],
+
+
+      [
+        'vuepress-plugin-mygitalk', {
+          // 是否启用(关闭请设置为false)(default: true)
+          enable: true,
+          // 是否开启首页评论(default: true)
+          home: false,
+          // Gitalk配置
+          gitalk: {
+            // GitHub Application Client ID.
+            clientID: '41838d2c0c6de7b23c93',
+            // GitHub Application Client Secret.
+            clientSecret: '0b2e618cba35a4d121640b5a81f15bd63ab7623e',
+            // GitHub repository. 存储评论的 repo
+            repo: 'vuepress_final',
+            // GitHub repository 所有者，可以是个人或者组织。
+            owner: 'fengwei2002',
+            // GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。(不配置默认是owner配置)
+            admin: ['fengwei2002'],
+            // 设置语言(default: zh-CN)
+            language: 'zh-CN',
+          }
+        }
+      ],
+
+      
+          ['vuepress-plugin-code-copy', true],
+
+          'permalink-pinyin',{
+            lowercase: true, // Converted into lowercase, default: true
+            separator: '-' // Separator of the slug, default: '-'
+          }
+
     ]
 }

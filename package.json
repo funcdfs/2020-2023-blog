@@ -35,10 +35,13 @@
     "vuepress-plugin-cursor-effects": "^0.0.4",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-live2d": "^0.0.7",
+    "vuepress-plugin-permalink-pinyin": "^1.0.0",
     "vuepress-plugin-reading-progress": "^1.0.9",
     "vuepress-plugin-seo": "^0.1.2"
   },
   "dependencies": {
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-mygitalk": "^1.0.5",
     "vuepress-theme-antdocs": "^0.1.2-beta"
   }
 }

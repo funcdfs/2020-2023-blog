@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  codeforce的快乐
-tags: [杂项note]
-date: 2020-02-10
 ---
 
+# codeforce的快乐
 <!-- date: 2020-02-08 23:16:11 -->
 
 ***

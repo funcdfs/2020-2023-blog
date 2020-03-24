@@ -5,10 +5,11 @@ title: 首页
 # Markdown
 
 ::: tip 
-markdown 的使用
+高阶 markdown 的使用
 :::
 
 ## 参考资料：
+
 ***
 - [Markdown数学公式语法](https://www.jianshu.com/p/e74eb43960a1)
 - [LATEX数学公式基本语法](https://www.cnblogs.com/houkai/p/3399646.html)

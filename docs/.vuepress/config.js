@@ -210,6 +210,8 @@ module.exports = {
             admin: ['fengwei2002'],
             // 设置语言(default: zh-CN)
             language: 'zh-CN',
+            distractionFreeMode: true,
+            
           }
         }
       ],

@@ -1,6 +1,6 @@
 
 module.exports = {
-  title: 'psychonaut', //左上角的博客标题以及网站显示的标题  
+  title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
   description: 'vuepress 文档',
   theme: 'antdocs',
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
-      logo: 'https://fengwei2002.coding.net/s/64b8c787-1b7d-44c6-9c25-0e866c8c0c3f',
+      logo: 'logo.webp',
       //自动生成侧边栏
       //sidebar: 'auto',
       smoothScroll: true,

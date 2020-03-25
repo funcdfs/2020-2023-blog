@@ -38,7 +38,7 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
-      logo: '/zhuye.png',
+      logo: '/logo.png',
       //自动生成侧边栏
       sidebar: 'auto',
       smoothScroll: true,

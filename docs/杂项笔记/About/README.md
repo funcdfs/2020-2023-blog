@@ -4,4 +4,14 @@ title: About
 
 # About
 
-等有时间完完整整的介绍一下自己
+Software Engineering at Shanxi University Grade 19 
+
+## hobby
+
+Like to sleep
+
+Like cat
+
+Like everything beautiful
+
+~~Like games~~

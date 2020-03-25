@@ -4,6 +4,7 @@ title: flowchart
 
 # flowchart
 
+流程图结构很清晰，每一个节点都衍生出一条线，所以若需要树图之类的还得使用其他工具进行截图
 
 ## 流程图节点实现：
 
@@ -29,18 +30,18 @@ tag=type:content:url
 定义好一些变量后开始绘图，而不是边写边定义
 
 使用`-`符号
-在代码块标志```后加上flow即可：vuepress中使用：@flowchart
+在代码块标志```后加上flow即可：vuepress中使用：@flowstart @flowend
 
 ```markdown
 s=start:开始
 e=end:结束
 o=operation:操作项
-s-o-e
+s->o->e
 ```
 
 ## end
 
-当然，MarkDown画流程图这种对思维逻辑要求比较高，一般简单图绘画即可，复杂的还是用OneNote或者其他绘画工具再截图比较好
+MarkDown画流程图一般简单图绘画即可，复杂的还是用OneNote或者其他绘画工具再截图比较好
 
 
 

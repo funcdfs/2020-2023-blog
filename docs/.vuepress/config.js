@@ -38,9 +38,9 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
-      logo: '/logo.png',
+      logo: 'https://fengwei2002.coding.net/s/64b8c787-1b7d-44c6-9c25-0e866c8c0c3f',
       //自动生成侧边栏
-      sidebar: 'auto',
+      //sidebar: 'auto',
       smoothScroll: true,
       //展示全部标题
       displayAllHeaders: true,

@@ -38,7 +38,7 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
-      logo: 'logo.webp',
+      logo: '/logo.webp',
       //自动生成侧边栏
       //sidebar: 'auto',
       smoothScroll: true,
@@ -166,35 +166,35 @@ module.exports = {
       ['vuepress-plugin-baidu-autopush'],//百度推送
       ['vuepress-plugin-seo'],
 
-      [ //gitalk评论插件
+
+      [
         'vuepress-plugin-mygitalk', {
           // 是否启用(关闭请设置为false)(default: true)
           enable: true,
           // 是否开启首页评论(default: true)
-          home: false,
+          home: true,
           // Gitalk配置
           gitalk: {
-            // GitHub Application Client ID.
-            clientID: '41838d2c0c6de7b23c93',
+            clientID: '4fa61ad780811a1bae4e',
             // GitHub Application Client Secret.
-            clientSecret: '0b2e618cba35a4d121640b5a81f15bd63ab7623e',
+            clientSecret: 'cf1c6aab41da1d93c59b988292ea80494d5ad68b',
             // GitHub repository. 存储评论的 repo
-            repo: 'vuepress_final',
+            repo: 'mygitalk',
             // GitHub repository 所有者，可以是个人或者组织。
             owner: 'fengwei2002',
             // GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。(不配置默认是owner配置)
             admin: ['fengwei2002'],
             // 设置语言(default: zh-CN)
             language: 'zh-CN',
-            distractionFreeMode: 'true',
           }
         }
       ],
 
-          'permalink-pinyin',{ //转换链接汉字为英文的插件，配合 gitalk 使用消除汉字url过长导致的 bug😀
+      ['permalink-pinyin',{ //转换链接汉字为英文的插件，配合 vssue 使用消除汉字url过长导致的 bug😀
             lowercase: true, // Converted into lowercase, default: true
             separator: '-' // Separator of the slug, default: '-'
           }
-
+        ],
+        
     ]
 }

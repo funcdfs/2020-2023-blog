@@ -1,5 +1,5 @@
 ---
-title: 首页
+title: Linux
 ---
 
 # Linux学习笔记

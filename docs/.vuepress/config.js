@@ -102,7 +102,7 @@ module.exports = {
             ]
           },
  
-          {text: 'MORE', //杂记导航栏
+          {text: 'More', //杂记导航栏
             items: 
             [
               {text: 'About me',link: '/za-xiang-bi-ji/About/'},

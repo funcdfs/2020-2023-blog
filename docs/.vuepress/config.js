@@ -79,12 +79,12 @@ module.exports = {
           
           {text: 'Algorithm',
           items: [
-            {text: '力扣题解',link: '/suan-fa/li-kou-ti-jie/'},
-            {text: '一堆题解',link: '/suan-fa/yi-dui-ti-jie/'},
-            {text: 'codeforces GYM',link: '/suan-fa/codeforces-GYM/'},
             {text: '算法竞赛入门经典',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'},
             {text: '算法竞赛入门经典训练指南',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'},
             {text: '值得一记的算法',link: '/suan-fa/zhi-de-yi-ji-de-suan-fa/'},
+            {text: '力扣题解',link: '/suan-fa/li-kou-ti-jie/'},
+            {text: '一堆题解',link: '/suan-fa/yi-dui-ti-jie/'},
+            {text: 'codeforces GYM',link: '/suan-fa/codeforces-GYM/'},
             {text: '有趣的算法问题',link: '/suan-fa/you-qu-de-suan-fa-wen-ti/'},
             ]
           },

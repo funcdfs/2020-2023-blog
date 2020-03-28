@@ -4,8 +4,6 @@ title: live2d模型预览
 
 # live2d模型预览
 
-## live2d模型使用
-
 ```sh
 yarn add -D vuepress-plugin-live2d 
 ```
@@ -18,8 +16,6 @@ yarn add -D vuepress-plugin-live2d
           "position": "right" // 显示在左下角还是右下角}
       ],
 ```
-
-## live2d模型：
 
 z16，
 ![20200322114118.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200322114118.png)

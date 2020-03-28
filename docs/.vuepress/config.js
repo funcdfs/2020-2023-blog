@@ -148,15 +148,15 @@ module.exports = {
 
 //美化相关：
       ["cursor-effects"],                  //鼠标点击特效
+      //["go-top"],                          // 悬挂猫返回顶部
       ['vuepress-plugin-reading-progress'],//顶部进度条
-      ["vuepress-plugin-live2d",{          //live2d配置
-          "modelName": "koharu",           //模型名字
-          "mobileShow": false,             //移动端不显示
-        }
-      ],
       '@vuepress/last-updated',            //显示文章最后更新时间
       ['vuepress-plugin-code-copy', true], //代码块复制按钮
-
+      // ["vuepress-plugin-live2d",{          //live2d配置
+      //     "modelName": "",           //模型名字 koharu
+      //     "mobileShow": false,             //移动端不显示
+      //   }
+      // ],yarn add -D vuepress-plugin-live2d
 //功能添加：
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"

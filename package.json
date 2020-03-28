@@ -34,7 +34,7 @@
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-cursor-effects": "^0.0.4",
     "vuepress-plugin-flowchart": "^1.4.3",
-    "vuepress-plugin-live2d": "^0.0.7",
+    "vuepress-plugin-go-top": "^1.0.0",
     "vuepress-plugin-permalink-pinyin": "^1.0.0",
     "vuepress-plugin-reading-progress": "^1.0.9",
     "vuepress-plugin-seo": "^0.1.2"

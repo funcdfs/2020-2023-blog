@@ -7967,10 +7967,10 @@ vuepress-plugin-flowchart@^1.4.3:
   dependencies:
     flowchart.js "^1.11.3"
 
-vuepress-plugin-live2d@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-live2d/download/vuepress-plugin-live2d-0.0.7.tgz#e09d415c018c3fad871c03151d6e5124e7c56946"
-  integrity sha1-4J1BXAGMP62HHAMVHW5RJOfFaUY=
+vuepress-plugin-go-top@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-go-top/download/vuepress-plugin-go-top-1.0.0.tgz#d18db397da9732e18860c96f8a3033e8e91c63e7"
+  integrity sha1-0Y2zl9qXMuGIYMlvijAz6OkcY+c=
 
 vuepress-plugin-mygitalk@^1.0.5:
   version "1.0.5"

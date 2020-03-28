@@ -1,9 +1,9 @@
 ---
-layout: post
-title: 三种排序
-categories: [算法]
-date: 2020-02-05
+title: 排序算法
 ---
+
+
+## 排序算法
 
 ***
 数据结构里面有一种bool类型的冒泡排序,很巧妙

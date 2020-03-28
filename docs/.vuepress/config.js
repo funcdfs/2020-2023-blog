@@ -81,11 +81,11 @@ module.exports = {
           items: [
             {text: '算法竞赛入门经典',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'},
             {text: '算法竞赛入门经典训练指南',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'},
-            {text: '值得一记的算法',link: '/suan-fa/zhi-de-yi-ji-de-suan-fa/'},
+            {text: '算法模板',link: '/suan-fa/suan-fa-mo-ban/'},
             {text: '力扣题解',link: '/suan-fa/li-kou-ti-jie/'},
             {text: '一堆题解',link: '/suan-fa/yi-dui-ti-jie/'},
             {text: 'codeforces GYM',link: '/suan-fa/codeforces-GYM/'},
-            {text: '有趣的算法问题',link: '/suan-fa/you-qu-de-suan-fa-wen-ti/'},
+            {text: '有`东西的算法问题',link: '/suan-fa/you-qu-de-suan-fa-wen-ti/'},
             ]
           },
 
@@ -148,15 +148,16 @@ module.exports = {
 
 //美化相关：
       ["cursor-effects"],                  //鼠标点击特效
-      //["go-top"],                          // 悬挂猫返回顶部
       ['vuepress-plugin-reading-progress'],//顶部进度条
       '@vuepress/last-updated',            //显示文章最后更新时间
       ['vuepress-plugin-code-copy', true], //代码块复制按钮
-      // ["vuepress-plugin-live2d",{          //live2d配置
-      //     "modelName": "",           //模型名字 koharu
+      
+      ["go-top"],                          // 悬挂猫返回顶部,yarn add -D vuepress-plugin-go-top
+      // ["vuepress-plugin-live2d",{          //live2d看板娘，yarn add -D vuepress-plugin-live2d
+      //     "modelName": "",                 //模型名字 koharu
       //     "mobileShow": false,             //移动端不显示
       //   }
-      // ],yarn add -D vuepress-plugin-live2d
+      // ],
 //功能添加：
       "vuepress-plugin-auto-sidebar", {
         titleMode: "uppercase"

@@ -1046,7 +1046,7 @@
     markdown-it-table-of-contents "^0.4.0"
     prismjs "^1.13.0"
 
-"@vuepress/plugin-active-header-links@^1.3.1", "@vuepress/plugin-active-header-links@^1.4.0":
+"@vuepress/plugin-active-header-links@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.4.0.tgz#b43fdad67ef42c383a84642f7914e22c56189089"
   integrity sha1-tD/a1n70LDg6hGQveRTiLFYYkIk=
@@ -1060,7 +1060,7 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-nprogress@^1.3.1", "@vuepress/plugin-nprogress@^1.4.0":
+"@vuepress/plugin-nprogress@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.4.0.tgz#90bb16ab8d43321e5911dea489986de25adb56d1"
   integrity sha1-kLsWq41DMh5ZEd6kiZht4lrbVtE=
@@ -1074,7 +1074,7 @@
   dependencies:
     "@vuepress/shared-utils" "^1.4.0"
 
-"@vuepress/plugin-search@^1.3.1", "@vuepress/plugin-search@^1.4.0":
+"@vuepress/plugin-search@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-search/download/@vuepress/plugin-search-1.4.0.tgz#26a02e3409e6ea6830f9fc7e6d87fc45ba46c579"
   integrity sha1-JqAuNAnm6mgw+fx+bYf8RbpGxXk=
@@ -4725,12 +4725,13 @@ less-loader@^5.0.0:
     loader-utils "^1.1.0"
     pify "^4.0.1"
 
-less@3.10.3:
-  version "3.10.3"
-  resolved "https://registry.npm.taobao.org/less/download/less-3.10.3.tgz?cache=0&sync_timestamp=1581400805472&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fless%2Fdownload%2Fless-3.10.3.tgz#417a0975d5eeecc52cff4bcfa3c09d35781e6792"
-  integrity sha1-QXoJddXu7MUs/0vPo8CdNXgeZ5I=
+less@^3.10.3:
+  version "3.11.1"
+  resolved "https://registry.npm.taobao.org/less/download/less-3.11.1.tgz?cache=0&sync_timestamp=1581400805472&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fless%2Fdownload%2Fless-3.11.1.tgz#c6bf08e39e02404fe6b307a3dfffafdc55bd36e2"
+  integrity sha1-xr8I454CQE/mswej3/+v3FW9NuI=
   dependencies:
     clone "^2.1.2"
+    tslib "^1.10.0"
   optionalDependencies:
     errno "^0.1.1"
     graceful-fs "^4.1.2"
@@ -6950,7 +6951,7 @@ slash@^2.0.0:
   resolved "https://registry.npm.taobao.org/slash/download/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
   integrity sha1-3lUoUaF1nfOo8gZTVEL17E3eq0Q=
 
-smoothscroll-polyfill@^0.4.3:
+smoothscroll-polyfill@^0.4.3, smoothscroll-polyfill@^0.4.4:
   version "0.4.4"
   resolved "https://registry.npm.taobao.org/smoothscroll-polyfill/download/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
   integrity sha1-OiWRMdxpMObKgAA+HLA7YDtpq/g=
@@ -7548,7 +7549,7 @@ transliteration@^2.1.2:
   dependencies:
     yargs "^15.0.2"
 
-tslib@^1.9.0:
+tslib@^1.10.0, tslib@^1.9.0:
   version "1.11.1"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha1-6xXRKIJ/vuKEFUnhcfRe0zisfjU=
@@ -7948,7 +7949,7 @@ vuepress-plugin-code-copy@^1.0.6:
   resolved "https://registry.npm.taobao.org/vuepress-plugin-code-copy/download/vuepress-plugin-code-copy-1.0.6.tgz#6431dab764b48b5b203e4936d98b1943651ce4ad"
   integrity sha1-ZDHat2S0i1sgPkk22YsZQ2Uc5K0=
 
-vuepress-plugin-container@^2.0.2:
+vuepress-plugin-container@^2.0.2, vuepress-plugin-container@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.1.2.tgz?cache=0&sync_timestamp=1575025498034&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuepress-plugin-container%2Fdownload%2Fvuepress-plugin-container-2.1.2.tgz#688c1e5a9709a1b8658605bcaee580b3abb19d16"
   integrity sha1-aIweWpcJobhlhgW8ruWAs6uxnRY=
@@ -8004,23 +8005,30 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-theme-antdocs@^0.1.2-beta:
-  version "0.1.2-beta"
-  resolved "https://registry.npm.taobao.org/vuepress-theme-antdocs/download/vuepress-theme-antdocs-0.1.2-beta.tgz#99226d965af6b969b367635c1869382a21421e1e"
-  integrity sha1-mSJtllr2uWmzZ2NcGGk4KiFCHh4=
+vuepress-plugin-smooth-scroll@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-smooth-scroll/download/vuepress-plugin-smooth-scroll-0.0.9.tgz#6c5d01db60def3d7b976b53404e56b97da9e8f39"
+  integrity sha1-bF0B22De89e5drU0BOVrl9qejzk=
   dependencies:
-    "@vuepress/plugin-active-header-links" "^1.3.1"
-    "@vuepress/plugin-nprogress" "^1.3.1"
-    "@vuepress/plugin-search" "^1.3.1"
+    smoothscroll-polyfill "^0.4.4"
+
+vuepress-theme-antdocs@^1.0.0-beta.1:
+  version "1.0.0-beta.1"
+  resolved "https://registry.npm.taobao.org/vuepress-theme-antdocs/download/vuepress-theme-antdocs-1.0.0-beta.1.tgz#bd7ed1bf6b48b9d6a48920947636b1621d760408"
+  integrity sha1-vX7Rv2tIudakiSCUdjaxYh12BAg=
+  dependencies:
+    "@vuepress/plugin-active-header-links" "^1.4.0"
+    "@vuepress/plugin-nprogress" "^1.4.0"
+    "@vuepress/plugin-search" "^1.4.0"
     ant-design-vue "^1.4.11"
     core-js "^2.6.11"
     docsearch.js "^2.5.2"
-    less "3.10.3"
+    less "^3.10.3"
     less-loader "^5.0.0"
     lodash "^4.17.15"
-    vuepress-plugin-container "^2.0.2"
-    vuepress-plugin-smooth-scroll "^0.0.3"
-    vuex "^3.1.2"
+    vuepress-plugin-container "^2.1.2"
+    vuepress-plugin-smooth-scroll "^0.0.9"
+    vuex "^3.1.3"
 
 vuepress@^1.4.0:
   version "1.4.0"
@@ -8034,7 +8042,7 @@ vuepress@^1.4.0:
     opencollective-postinstall "^2.0.2"
     update-notifier "^4.0.0"
 
-vuex@^3.1.2:
+vuex@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.1.3.tgz#f2ad73e3fb73691698b38c93f66e58e267947180"
   integrity sha1-8q1z4/tzaRaYs4yT9m5Y4meUcYA=

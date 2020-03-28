@@ -42,6 +42,6 @@
   "dependencies": {
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-mygitalk": "^1.0.5",
-    "vuepress-theme-antdocs": "^0.1.2-beta"
+    "vuepress-theme-antdocs": "^1.0.0-beta.1"
   }
 }

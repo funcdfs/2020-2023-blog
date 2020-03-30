@@ -85,6 +85,7 @@ module.exports = {
             {text: '力扣题解',link: '/suan-fa/li-kou-ti-jie/'},
             {text: '一堆题解',link: '/suan-fa/yi-dui-ti-jie/'},
             {text: 'codeforces GYM & contest',link: '/suan-fa/codeforces-GYM/'},
+            {text: '常用算法',link: '/suan-fa/chang-yong-suan-fa/'},
             ]
           },
 

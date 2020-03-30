@@ -1,5 +1,5 @@
 ---
-title: B－M
+title: HDU 1016 B－M
 ---
 
 # [HDU1181](http://acm.hdu.edu.cn/showproblem.php?pid=1181)

@@ -172,9 +172,10 @@ module.exports = {
           // 是否启用(关闭请设置为false)(default: true)
           enable: true,
           // 是否开启首页评论(default: true)
-          home: true,
+          home: false,
           // Gitalk配置
           gitalk: {
+            //id: '<%= page.date %>',
             clientID: '4fa61ad780811a1bae4e',
             // GitHub Application Client Secret.
             clientSecret: 'cf1c6aab41da1d93c59b988292ea80494d5ad68b',

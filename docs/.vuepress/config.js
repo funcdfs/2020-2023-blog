@@ -24,7 +24,7 @@ module.exports = {
   ],
   
   markdown: {
-    lineNumbers: false,    // 代码不显示行号
+    lineNumbers: true,    // 代码行号
     // markdown 插件
     extendMarkdown: md => {
       md.set({ html: true });
@@ -81,11 +81,10 @@ module.exports = {
           items: [
             {text: '算法竞赛入门经典',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'},
             {text: '算法竞赛入门经典训练指南',link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'},
-            {text: '算法模板',link: '/suan-fa/suan-fa-mo-ban/'},
+            {text: '算法专项练习',link: '/suan-fa/suan-fa-zhuan-xiang-lian-xi/'},
             {text: '力扣题解',link: '/suan-fa/li-kou-ti-jie/'},
             {text: '一堆题解',link: '/suan-fa/yi-dui-ti-jie/'},
-            {text: 'codeforces GYM',link: '/suan-fa/codeforces-GYM/'},
-            {text: '有`东西的算法问题',link: '/suan-fa/you-qu-de-suan-fa-wen-ti/'},
+            {text: 'codeforces GYM & contest',link: '/suan-fa/codeforces-GYM/'},
             ]
           },
 

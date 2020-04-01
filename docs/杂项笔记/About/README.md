@@ -1,11 +1,12 @@
 ---
 title: About
 sidebar: false
+navbar: false
 ---
 
-# About
+# ABOUT
 
-Software Engineering at Shanxi University Grade 19 
+Software Engineering at Shanxi University Grade 19
 
 ## hobby
 

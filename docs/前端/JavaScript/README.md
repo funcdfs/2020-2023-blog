@@ -2,9 +2,6 @@
 title: JavaScript 部分
 ---
 
-# ``` JS
-// JavaScript
-```
- 的操作
+# ``` JS 
 
-花里胡哨的一些操作
+JavaScript

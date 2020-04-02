@@ -1,5 +1,5 @@
 ---
-title: HDU 1181 B－M
+title: DFS HDU 1181 B－M
 ---
 
 # [HDU1181](http://acm.hdu.edu.cn/showproblem.php?pid=1181)

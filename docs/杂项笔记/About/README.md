@@ -1,18 +1,19 @@
 ---
 title: About
 sidebar: false
-navbar: false
 ---
 
-# ABOUT
+# About
+
+***
 
 Software Engineering at Shanxi University Grade 19
 
-## hobby
+## Hobby
 
-Like to sleep
+Like to sleep ~~10.00pm-10.00am is Best~~
 
-Like cat
+Like cat 
 
 Like everything beautiful
 

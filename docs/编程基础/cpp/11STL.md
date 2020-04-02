@@ -422,7 +422,7 @@ empty();//判断容器是否为空
 
 > **set 插入和删除操作**
 
-``` CPP
+``` cpp
 insert(elem);//在容器中插入元素。 
 clear();//清除所有元素 
 erase(pos);//删除 pos 迭代器所指的元素,返回下一个元素的迭代器。 
@@ -431,7 +431,7 @@ erase(beg, end);//删除区间[beg,end)的所有元素 ,返回下一个元素的
 
 > **set 查找操作**
 
-``` CPP
+``` cpp
 find(key);//查找键 key 是否存在,若存在,返回该键的元素的迭代器；若不存在,返回 map.end(); 
 lower_bound(keyElem);//返回第一个 key>=keyElem 元素的迭代器。 
 upper_bound(keyElem);//返回第一个 key>keyElem 元素的迭代器。 
@@ -479,7 +479,7 @@ map也是以红黑树为底层实现机制。
 
 > map 构造函数
 
-``` CPP
+``` cpp
 map<T1, T2> mapTT;//map 默认构造函数: 
 //要传入两种模板参数key value
 map(const map &mp);//拷贝构造函数
@@ -487,7 +487,7 @@ map(const map &mp);//拷贝构造函数
 
 > map 赋值, 大小操作
 
-``` CPP
+``` cpp
 map& operator=(const map &mp);//重载等号操作符 
 swap(mp);//交换两个集合容器
 empty();//判断容器是否为空

@@ -53,15 +53,19 @@ module.exports = {
         link: '/'
       },
       {
-        text: 'Template',
-        link: '/Template/',
+        text: 'Tips',
+        link: '/Tips/',
         items: [{
-            text: 'Git',
-            link: '/Template/Git/'
+            text: 'Git & Github',
+            link: '/Tips/Git/'
           },
           {
-            text: 'vscode',
-            link: '/Template/vscode/'
+            text: 'Vscode',
+            link: '/Tips/vscode/'
+          },
+          {
+            text: 'Chrome',
+            link: '/Tips/Chrome/'
           },
         ]
       },

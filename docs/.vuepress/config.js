@@ -249,19 +249,29 @@ module.exports = {
     ],
   },
 
-  plugins: [ //插件的相关配置
+  plugins: [
     //美化相关：
+
+
     ["cursor-effects"], //鼠标点击特效
     ['vuepress-plugin-reading-progress'], //顶部进度条
     '@vuepress/last-updated', //显示文章最后更新时间
-    ['@dovyp/vuepress-plugin-clipboard-copy', true],
+    ["vuepress-plugin-code-copy", {
+      //selector: "",
+      //align: "top",
+      color: "#6D7EAD",
+      successText: "🌈Copy success🌈",
+    }],
     ["go-top"], // 悬挂猫返回顶部,yarn add -D vuepress-plugin-go-top
+
+
+
+
     //功能添加：
-    "vuepress-plugin-auto-sidebar", {
+    ["vuepress-plugin-auto-sidebar", {
       titleMode: "uppercase"
-    }, //自动生成侧边栏
-    ['flowchart'], //流程图支持
-    ['vuepress-plugin-reading-time'],
+    }], //自动生成侧边栏
+    ['flowchart'], //流程图渲染
     ['vuepress-plugin-baidu-autopush'], //百度推送
     ['vuepress-plugin-seo'],
     [
@@ -288,7 +298,7 @@ module.exports = {
       }
     ],
 
-    ['permalink-pinyin', { //转换链接汉字为英文的插件，配合评论使用，消除汉字url过长导致的 bug😀
+    ['permalink-pinyin', { //转换链接汉字为英文的插件，配合评论使用，消除汉字url过长导致的 bug
       lowercase: true, // Converted into lowercase, default: true
       separator: '-' // Separator of the slug, default: '-'
     }],

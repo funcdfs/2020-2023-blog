@@ -45,7 +45,7 @@ module.exports = {
     searchMaxSuggestions: 20,
     logo: '/logo.webp',
     smoothScroll: true, //平滑滚动
-    displayAllHeaders: true, //控制是否为点击展开，我感觉true用的方便
+    displayAllHeaders: true, //控制是否为点击展开, 我感觉true用的方便
     sidebarDepth: 2,
     lastUpdated: 'Last Updated',
     nav: [ //导航栏

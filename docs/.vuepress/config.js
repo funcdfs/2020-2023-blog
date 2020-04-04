@@ -1,6 +1,6 @@
 module.exports = {
   title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
-  logo: '/public/logo.webp',
+  logo: '/public/rainbow.png/',
   description: '使用vuepress搭建的个人博客',
   theme: 'antdocs',
 

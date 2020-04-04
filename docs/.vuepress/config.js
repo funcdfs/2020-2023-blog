@@ -1,6 +1,6 @@
 module.exports = {
   title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
-  logo: '/public/favicon.ico',
+  logo: '/public/logo.webp',
   description: '使用vuepress搭建的个人博客',
   theme: 'antdocs',
 
@@ -42,6 +42,7 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
+    searchMaxSuggestions: 20,
     logo: '/logo.webp',
     smoothScroll: true, //平滑滚动
     displayAllHeaders: true, //控制是否为点击展开，我感觉true用的方便
@@ -272,40 +273,15 @@ module.exports = {
 
 
     //功能添加：
+    ['flowchart'], //流程图渲染
+    ['vuepress-plugin-seo'],
+    ['vuepress-plugin-baidu-autopush'], //百度推送
     ["vuepress-plugin-auto-sidebar", {
       titleMode: "uppercase"
     }], //自动生成侧边栏
-    ['flowchart'], //流程图渲染
-    ['vuepress-plugin-baidu-autopush'], //百度推送
-    ['vuepress-plugin-seo'],
-    [
-      'vuepress-plugin-mygitalk', {
-        // 是否启用(关闭请设置为false)(default: true)
-        enable: false,
-        // 是否开启首页评论(default: true)
-        home: false,
-        // Gitalk配置
-        gitalk: {
-          //id: '<%= page.date %>',
-          clientID: '4fa61ad780811a1bae4e',
-          // GitHub Application Client Secret.
-          clientSecret: 'cf1c6aab41da1d93c59b988292ea80494d5ad68b',
-          // GitHub repository. 存储评论的 repo
-          repo: 'mygitalk',
-          // GitHub repository 所有者，可以是个人或者组织。
-          owner: 'fengwei2002',
-          // GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。(不配置默认是owner配置)
-          admin: ['fengwei2002'],
-          // 设置语言(default: zh-CN)
-          language: 'zh-CN',
-        }
-      }
-    ],
-
-    ['permalink-pinyin', { //转换链接汉字为英文的插件，配合评论使用，消除汉字url过长导致的 bug
-      lowercase: true, // Converted into lowercase, default: true
-      separator: '-' // Separator of the slug, default: '-'
-    }],
-
+    ['permalink-pinyin', {
+      lowercase: true,
+      separator: '-'
+    }], //转换链接汉字为英文的插件
   ]
 }

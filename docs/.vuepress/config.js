@@ -214,7 +214,7 @@ module.exports = {
         text: 'Contact',
         items: [{
             text: 'Gmail',
-            link: 'mailto:psychonaut1f@gmail.com',
+            link: 'https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png',
           },
           {
             text: 'leetcode',

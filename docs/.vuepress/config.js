@@ -1,6 +1,6 @@
 module.exports = {
   title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
-  logo: '/public/rainbow.png/',
+  logo: '/public/favicon.ico',
   description: '使用vuepress搭建的个人博客',
   theme: 'antdocs',
 
@@ -273,6 +273,9 @@ module.exports = {
 
 
     //功能添加：
+    ['@vuepress/medium-zoom', {
+      selector: '.content__default img',
+    }],
     ['flowchart'], //流程图渲染
     ['vuepress-plugin-seo'],
     ['vuepress-plugin-baidu-autopush'], //百度推送

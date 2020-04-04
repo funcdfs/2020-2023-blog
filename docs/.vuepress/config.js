@@ -281,7 +281,7 @@ module.exports = {
     [
       'vuepress-plugin-mygitalk', {
         // 是否启用(关闭请设置为false)(default: true)
-        enable: true,
+        enable: false,
         // 是否开启首页评论(default: true)
         home: false,
         // Gitalk配置

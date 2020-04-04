@@ -4,11 +4,11 @@ title: Blog_ToDo
 
 # Blog_ToDo 
 
-以下是我想做的功能，能力达到后会以vuepress插件形式发布
+以下是我想做的功能, 能力达到后会以vuepress插件形式发布
 
 ## 开一个 vuepress_blog 主题 <Badge text="首要任务"/>
 
-模式切换开关，阅读模式（全屏，去掉侧边栏）和查看模式（内容和侧边栏距离拉近，右侧距离缩短）
+模式切换开关, 阅读模式（全屏, 去掉侧边栏）和查看模式（内容和侧边栏距离拉近, 右侧距离缩短）
 
 首页去除按钮。变成更像blog的模式
 
@@ -32,11 +32,11 @@ title: Blog_ToDo
 
 一篇文章的访问量和字数统计
 
-应该在标题下显示两个数据，供读者参考和我自己的记录
+应该在标题下显示两个数据, 供读者参考和我自己的记录
 
 ## 动态的个性签名显示
 
-vuepress的个性签名展示太过简单，我寻思加点动效，其他地方不做改动
+vuepress的个性签名展示太过简单, 我寻思加点动效, 其他地方不做改动
 
 ![20200327114119.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200327114119.png =300x100)
 ![20200327112137.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200327112137.png =400x100)
@@ -70,10 +70,10 @@ vuepress的个性签名展示太过简单，我寻思加点动效，其他地方
 
 ## 打字特效
 
-==鼠标特效的一个打字特效，挺花里胡哨好像,优化评论者的体验？
+==鼠标特效的一个打字特效, 挺花里胡哨好像,优化评论者的体验？
 
 ![20200327112442.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200327112442.png)
 
 ## 国内访问速度的优化
 
-coding可以考虑，或者放在雨云的主机上
+coding可以考虑, 或者放在雨云的主机上

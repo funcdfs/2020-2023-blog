@@ -9,5 +9,5 @@ PRO版
 ## 参考资料：
 
 ***
-- [算法竞赛入门经典第二版，刘汝佳](https://book.douban.com/subject/25902102/)
+- [算法竞赛入门经典第二版, 刘汝佳](https://book.douban.com/subject/25902102/)
 - [算法竞赛入门经典训练指南](https://book.douban.com/subject/20254543/)

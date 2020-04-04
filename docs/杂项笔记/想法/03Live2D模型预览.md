@@ -17,11 +17,11 @@ yarn add -D vuepress-plugin-live2d
       ],
 ```
 
-z16，
+z16, 
 ![20200322114118.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200322114118.png)
-Epsilon2.1，
+Epsilon2.1, 
 ![20200322114341.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200322114341.png)
-izumi，
+izumi, 
 ![20200322114559.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200322114559.png)
 koharu  ✨
 ![20200322115058.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200322115058.png)
@@ -34,4 +34,4 @@ hijiki
 tororo
 ![20200322115826.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200322115826.png)
 
-没啥用，删了。
+没啥用, 删了。

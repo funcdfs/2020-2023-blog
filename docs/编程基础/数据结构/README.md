@@ -4,9 +4,11 @@ title: 数据结构
 
 # 数据结构
 
-清华大学邓俊辉学堂在线数据结构课程学习笔记
+数据结构那必然要滚瓜烂熟
 
-以及我个人的理解
+清华大学邓俊辉学堂在线数据结构课程学习笔记（刷个 n 遍）
+
+以及我个人的理解（在不断完善）
 
 ## 参考链接：
 
@@ -15,4 +17,3 @@ title: 数据结构
 [学堂在线_数据结构上](https://www.xuetangx.com/courses/course-v1:TsinghuaX+30240184+sp/about)
 
 [学堂在线_数据结构下](https://www.xuetangx.com/courses/course-v1:TsinghuaX+30240184_2X+sp/about)
-

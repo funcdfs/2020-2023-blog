@@ -148,12 +148,12 @@ module.exports = {
             link: '/suan-fa/yi-dui-ti-jie/'
           },
           {
-            text: 'codeforces GYM & contest',
-            link: '/suan-fa/codeforces-GYM/'
-          },
-          {
             text: '常用算法',
             link: '/suan-fa/chang-yong-suan-fa/'
+          },
+          {
+            text: 'codeforces GYM & contest',
+            link: '/suan-fa/codeforces-GYM/'
           },
         ]
       },

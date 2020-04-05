@@ -53,32 +53,57 @@ module.exports = {
         text: 'Home',
         link: '/'
       },
+
+
       {
-        text: 'Tips',
-        link: '/Tips/',
-        items: [{
-            text: 'Git & Github',
-            link: '/Tips/Git/'
-          },
+        text: 'Notes',
+        items: [
+
           {
-            text: 'Vscode',
-            link: '/Tips/vscode/'
+            text: 'Math_notes', //数学导航栏
+            items: [{
+                text: '常用知识点',
+                link: '/Math/chang-yong-zhi-shi-dian/'
+              },
+              {
+                text: '高数上',
+                link: '/Math/gao-shu-shang/'
+              },
+              {
+                text: '高数下',
+                link: '/Math/gao-shu-xia/'
+              },
+            ]
           },
+
           {
-            text: 'Chrome',
-            link: '/Tips/Chrome/'
+            text: 'Tips',
+            items: [{
+                text: 'Git & Github',
+                link: '/Tips/Git/'
+              },
+              {
+                text: 'VsCode',
+                link: '/Tips/vscode/'
+              },
+              {
+                text: 'Chrome',
+                link: '/Tips/Chrome/'
+              },
+            ]
           },
+
         ]
       },
 
       {
         text: 'Basics',
         items: [{
-            text: 'markdown',
+            text: 'Markdown',
             link: '/bian-cheng-ji-chu/markdown/'
           },
           {
-            text: 'cpp',
+            text: 'C++',
             link: '/bian-cheng-ji-chu/cpp/'
           },
           {
@@ -93,27 +118,10 @@ module.exports = {
             text: '深入理解计算机系统',
             link: '/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
           },
-        ]
-      },
-
-      {
-        text: 'Math', //数学导航栏
-        items: [{
-            text: '常用知识点',
-            link: '/Math/chang-yong-zhi-shi-dian/'
-          },
           {
-            text: '高数笔记',
-            items: [{
-                text: '高数上',
-                link: '/Math/gao-shu-shang/'
-              },
-              {
-                text: '高数下',
-                link: '/Math/gao-shu-xia/'
-              },
-            ]
-          }
+            text: 'Linux',
+            link: '/cao-zuo-xi-tong/Linux/'
+          },
         ]
       },
 
@@ -124,11 +132,11 @@ module.exports = {
             link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'
           },
           {
-            text: '算法竞赛入门经典训练指南',
+            text: '算法竞赛训练指南',
             link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
           },
           {
-            text: '算法专项练习',
+            text: '专项练习',
             link: '/suan-fa/suan-fa-zhuan-xiang-lian-xi/'
           },
           {
@@ -151,13 +159,13 @@ module.exports = {
       },
 
       {
-        text: 'Front-end',
+        text: 'Designer',
         items: [{
-            text: 'html',
+            text: 'HTML５',
             link: '/qian-duan/html/'
           },
           {
-            text: 'css',
+            text: 'CSS３',
             link: '/qian-duan/css/'
           },
           {
@@ -169,7 +177,7 @@ module.exports = {
             link: '/qian-duan/node.js/'
           },
           {
-            text: 'vue',
+            text: 'vue.js',
             link: '/qian-duan/vue/'
           },
           {
@@ -185,6 +193,11 @@ module.exports = {
             link: '/qian-duan/kotlin/'
           },
         ]
+      },
+
+      {
+        text: 'Bugs',
+        link: '/za-xiang-bi-ji/Bugs/'
       },
 
       {
@@ -206,50 +219,53 @@ module.exports = {
               },
             ]
           },
+
+          {
+            text: 'Contact',
+            items: [{
+                text: 'Gmail',
+                link: 'https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png',
+              },
+              {
+                text: 'GitHub',
+                link: 'https://github.com/fengwei2002'
+              },
+              {
+                text: 'Leetcode',
+                link: 'https://leetcode-cn.com/u/weirdo-21/'
+              },
+              {
+                text: 'Codeforces',
+                link: 'https://codeforces.com/profile/KONNG'
+              },
+              {
+                text: 'Wechat',
+                link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'
+              },
+
+              {
+                text: 'QQ',
+                link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'
+              },
+              {
+                text: 'zhi_hu',
+                link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'
+              },
+              {
+                text: 'Bilibili',
+                link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'
+              },
+              {
+                text: 'NetEase Cloud Music',
+                link: 'https://music.163.com/#/user/home?id=440040659'
+              },
+            ]
+          },
         ]
 
       },
 
-      {
-        text: 'Contact',
-        items: [{
-            text: 'Gmail',
-            link: 'https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png',
-          },
-          {
-            text: 'leetcode',
-            link: 'https://leetcode-cn.com/u/weirdo-21/'
-          },
-          {
-            text: 'GitHub',
-            link: 'https://github.com/fengwei2002'
-          },
-          {
-            text: 'codeforce',
-            link: 'https://codeforces.com/profile/KONNG'
-          },
-          {
-            text: '微信',
-            link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'
-          },
-          {
-            text: '网易云音乐',
-            link: 'https://music.163.com/#/user/home?id=440040659'
-          },
-          {
-            text: 'QQ',
-            link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'
-          },
-          {
-            text: '知乎',
-            link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'
-          },
-          {
-            text: 'bilibili',
-            link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'
-          },
-        ]
-      },
+
 
     ],
   },

@@ -60,23 +60,6 @@ module.exports = {
         items: [
 
           {
-            text: 'Math_notes', //数学导航栏
-            items: [{
-                text: '常用知识点',
-                link: '/Math/chang-yong-zhi-shi-dian/'
-              },
-              {
-                text: '高数上',
-                link: '/Math/gao-shu-shang/'
-              },
-              {
-                text: '高数下',
-                link: '/Math/gao-shu-xia/'
-              },
-            ]
-          },
-
-          {
             text: 'Tips',
             items: [{
                 text: 'Git & Github',
@@ -93,7 +76,28 @@ module.exports = {
             ]
           },
 
+          {
+            text: 'Math_notes', //数学导航栏
+            items: [{
+                text: '常用知识点',
+                link: '/Math/chang-yong-zhi-shi-dian/'
+              },
+              {
+                text: '高数上',
+                link: '/Math/gao-shu-shang/'
+              },
+              {
+                text: '高数下',
+                link: '/Math/gao-shu-xia/'
+              },
+            ]
+          },
+
         ]
+      },
+      {
+        text: 'Bugs',
+        link: '/za-xiang-bi-ji/Bugs/'
       },
 
       {
@@ -196,11 +200,6 @@ module.exports = {
       },
 
       {
-        text: 'Bugs',
-        link: '/za-xiang-bi-ji/Bugs/'
-      },
-
-      {
         text: 'More',
         items: [{
             text: 'About me',
@@ -217,6 +216,11 @@ module.exports = {
                 text: '✨Idea',
                 link: '/za-xiang-bi-ji/xiang-fa/'
               },
+              {
+                text: '🌈Pleasure',
+                link: '/za-xiang-bi-ji/pleasure/'
+              },
+
             ]
           },
 
@@ -250,10 +254,6 @@ module.exports = {
               {
                 text: 'zhi_hu',
                 link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'
-              },
-              {
-                text: 'Bilibili',
-                link: 'https://space.bilibili.com/434632190?share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583733735020'
               },
               {
                 text: 'NetEase Cloud Music',

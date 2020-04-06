@@ -43,6 +43,6 @@
   },
   "dependencies": {
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-theme-antdocs": "^1.0.0-beta.1"
+    "vuepress-theme-antdocs": "^1.0.0"
   }
 }

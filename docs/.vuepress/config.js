@@ -53,8 +53,6 @@ module.exports = {
         text: 'Home',
         link: '/'
       },
-
-
       {
         text: 'Notes',
         items: [
@@ -264,34 +262,23 @@ module.exports = {
         ]
 
       },
-
-
-
     ],
   },
 
   plugins: [
     //美化相关：
-
-
     ["cursor-effects"], //鼠标点击特效
     ['vuepress-plugin-reading-progress'], //顶部进度条
-    '@vuepress/last-updated', //显示文章最后更新时间
+    ['@vuepress/last-updated'], //显示文章最后更新时间
     ["vuepress-plugin-code-copy", {
-      //selector: "",
-      //align: "top",
       color: "#6D7EAD",
       successText: "🌈Copy success🌈",
     }],
     ["go-top"], // 悬挂猫返回顶部,yarn add -D vuepress-plugin-go-top
-
-
-
-
     //功能添加：
     ['@vuepress/medium-zoom', {
       selector: '.content__default img',
-    }],
+    }], //图片放大
     ['flowchart'], //流程图渲染
     ['vuepress-plugin-seo'],
     ['vuepress-plugin-baidu-autopush'], //百度推送

@@ -1,7 +1,6 @@
 module.exports = {
   title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
-  description: '使用vuepress搭建的个人博客',
   theme: 'antdocs',
 
   head: [
@@ -24,7 +23,6 @@ module.exports = {
 
   markdown: {
     lineNumbers: true, // 代码行号
-    // markdown 插件
     extendMarkdown: md => {
       md.set({
         html: true
@@ -42,10 +40,10 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
-    searchMaxSuggestions: 20,
+    searchMaxSuggestions: 15,
     logo: '/logo.webp',
     smoothScroll: true, //平滑滚动
-    displayAllHeaders: true, //控制是否为点击展开, 我感觉true用的方便
+    displayAllHeaders: true, //控制是否为点击展开, true用的方便
     sidebarDepth: 2,
     lastUpdated: 'Last Updated',
     nav: [ //导航栏
@@ -93,6 +91,7 @@ module.exports = {
 
         ]
       },
+
       {
         text: 'Bugs',
         link: '/post/za-xiang-bi-ji/Bugs/'
@@ -131,31 +130,31 @@ module.exports = {
         text: 'Algorithm',
         items: [{
             text: '算法竞赛入门经典',
-            link: '/post/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'
+            link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian/'
           },
           {
             text: '算法竞赛训练指南',
-            link: '/post/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
+            link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
           },
           {
             text: '专项练习',
-            link: '/post/suan-fa/suan-fa-zhuan-xiang-lian-xi/'
+            link: '/post/suan-fa-xue-xi/suan-fa-zhuan-xiang-lian-xi/'
           },
           {
             text: '力扣题解',
-            link: '/post/suan-fa/li-kou-ti-jie/'
+            link: '/post/suan-fa-xue-xi/li-kou-ti-jie/'
           },
           {
             text: '一堆题解',
-            link: '/post/suan-fa/yi-dui-ti-jie/'
+            link: '/post/suan-fa-xue-xi/yi-dui-ti-jie/'
           },
           {
             text: '常用算法',
-            link: '/post/suan-fa/chang-yong-suan-fa/'
+            link: '/post/suan-fa-xue-xi/chang-yong-suan-fa/'
           },
           {
             text: 'codeforces GYM & contest',
-            link: '/post/suan-fa/codeforces-GYM/'
+            link: '/post/suan-fa-xue-xi/codeforces-GYM/'
           },
         ]
       },
@@ -164,35 +163,35 @@ module.exports = {
         text: 'Designer',
         items: [{
             text: 'HTML５',
-            link: '/post/qian-duan/html/'
+            link: '/post/Designer/html/'
           },
           {
             text: 'CSS３',
-            link: '/post/qian-duan/css/'
+            link: '/post/Designer/css/'
           },
           {
             text: 'JavaScript',
-            link: '/post/qian-duan/JavaScript/'
+            link: '/post/Designer/JavaScript/'
           },
           {
             text: 'Node.js',
-            link: '/post/qian-duan/node.js/'
+            link: '/post/Designer/node.js/'
           },
           {
             text: 'vue.js',
-            link: '/post/qian-duan/vue/'
+            link: '/post/Designer/vue/'
           },
           {
             text: 'vuepress',
-            link: '/post/qian-duan/vuepress/'
+            link: '/post/Designer/vuepress/'
           },
           {
             text: 'csharp',
-            link: '/post/qian-duan/csharp/'
+            link: '/post/Designer/csharp/'
           },
           {
             text: 'kotlin',
-            link: '/post/qian-duan/kotlin/'
+            link: '/post/Designer/kotlin/'
           },
         ]
       },

@@ -1,12 +1,14 @@
 ---
-title: 介绍一些vuepress对markdown的优化
+title: vuepress-use-markdown 
 ---
 
-# vuepress对markdown的优化
+# vuepress-use-markdown 
 
 有时间总结一次
 
-## 对前端人员非常友好
+## 使用vue以及js语法：
+
+markdown中可以直接使用vue语法：
 
  Vue <Badge text="2.5.0+"/> 
  Vuex <Badge text="beta" type="warn" vertical="top"/> 
@@ -36,3 +38,12 @@ window.onload = function() {
   dom.className = 'box'
 }
 </script>
+
+## 使用vscode中的插件进行美化
+
+文章开头使用`insert time stamp`插入如下信息：分别代表开始日期和结束日期
+
+###### Tue Apr 7 21:48:31 CST 2020
+###### Tue Apr 7 21:49:01 CST 2020
+
+………………

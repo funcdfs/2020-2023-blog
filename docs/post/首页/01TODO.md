@@ -2,6 +2,8 @@
 title: Blog_ToDo
 ---
 
+###### Tue Apr 7 21:36:41 CST 2020
+###### Tue Apr 7 21:57:50 CST 2020
 # Blog_ToDo 
 
 以下是我想做的功能, 能力达到后会以vuepress插件形式发布
@@ -9,7 +11,6 @@ title: Blog_ToDo
 **做一个动态学习编程路线时间轴**越好看越好（用index.html做一个)
 
 > c->1c++->1.1数据结构 1.2Jekyll ->2算法 ->vuepress ->html->css->JavaScript
-
 
 
 ## 开一个 vuepress_blog 主题 <Badge text="首要任务"/>

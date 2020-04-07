@@ -1,12 +1,10 @@
 ---
 title: Hello World
-date: 2020-01-11
-tags: 
-  - JavaScript
-author: Billyyyyy3320
 ---
 
 ## Feng Wei's Blog
+
+![20200407185700](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200407185700.png)
 
 ```cpp
  _______ _______ _       _______ 
@@ -32,7 +30,6 @@ author: Billyyyyy3320
                          
 ```
 
-`psychonaut1f@gmail.com`
+通过Gmail联系我：`psychonaut1f@gmail.com`
 
 ![MyGmail](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png =200x200)
-

@@ -61,15 +61,15 @@ module.exports = {
             text: 'Tips',
             items: [{
                 text: 'Git & Github',
-                link: '/Tips/Git/'
+                link: '/post/Tips/Git/'
               },
               {
                 text: 'VsCode',
-                link: '/Tips/vscode/'
+                link: '/post/Tips/vscode/'
               },
               {
                 text: 'Chrome',
-                link: '/Tips/Chrome/'
+                link: '/post/Tips/Chrome/'
               },
             ]
           },
@@ -78,15 +78,15 @@ module.exports = {
             text: 'Math_notes', //数学导航栏
             items: [{
                 text: '常用知识点',
-                link: '/Math/chang-yong-zhi-shi-dian/'
+                link: '/post/Math/chang-yong-zhi-shi-dian/'
               },
               {
                 text: '高数上',
-                link: '/Math/gao-shu-shang/'
+                link: '/post/Math/gao-shu-shang/'
               },
               {
                 text: '高数下',
-                link: '/Math/gao-shu-xia/'
+                link: '/post/Math/gao-shu-xia/'
               },
             ]
           },
@@ -95,34 +95,34 @@ module.exports = {
       },
       {
         text: 'Bugs',
-        link: '/za-xiang-bi-ji/Bugs/'
+        link: '/post/za-xiang-bi-ji/Bugs/'
       },
 
       {
         text: 'Basics',
         items: [{
             text: 'Markdown',
-            link: '/bian-cheng-ji-chu/markdown/'
+            link: '/post/bian-cheng-ji-chu/markdown/'
           },
           {
             text: 'C++',
-            link: '/bian-cheng-ji-chu/cpp/'
+            link: '/post/bian-cheng-ji-chu/cpp/'
           },
           {
             text: '数据结构',
-            link: '/bian-cheng-ji-chu/shu-ju-jie-gou/'
+            link: '/post/bian-cheng-ji-chu/shu-ju-jie-gou/'
           },
           {
             text: '计算机网络',
-            link: '/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
+            link: '/post/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
           },
           {
             text: '深入理解计算机系统',
-            link: '/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
+            link: '/post/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
           },
           {
             text: 'Linux',
-            link: '/cao-zuo-xi-tong/Linux/'
+            link: '/post/cao-zuo-xi-tong/Linux/'
           },
         ]
       },
@@ -131,31 +131,31 @@ module.exports = {
         text: 'Algorithm',
         items: [{
             text: '算法竞赛入门经典',
-            link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'
+            link: '/post/suan-fa/suan-fa-jing-sai-ru-men-jing-dian/'
           },
           {
             text: '算法竞赛训练指南',
-            link: '/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
+            link: '/post/suan-fa/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
           },
           {
             text: '专项练习',
-            link: '/suan-fa/suan-fa-zhuan-xiang-lian-xi/'
+            link: '/post/suan-fa/suan-fa-zhuan-xiang-lian-xi/'
           },
           {
             text: '力扣题解',
-            link: '/suan-fa/li-kou-ti-jie/'
+            link: '/post/suan-fa/li-kou-ti-jie/'
           },
           {
             text: '一堆题解',
-            link: '/suan-fa/yi-dui-ti-jie/'
+            link: '/post/suan-fa/yi-dui-ti-jie/'
           },
           {
             text: '常用算法',
-            link: '/suan-fa/chang-yong-suan-fa/'
+            link: '/post/suan-fa/chang-yong-suan-fa/'
           },
           {
             text: 'codeforces GYM & contest',
-            link: '/suan-fa/codeforces-GYM/'
+            link: '/post/suan-fa/codeforces-GYM/'
           },
         ]
       },
@@ -164,35 +164,35 @@ module.exports = {
         text: 'Designer',
         items: [{
             text: 'HTML５',
-            link: '/qian-duan/html/'
+            link: '/post/qian-duan/html/'
           },
           {
             text: 'CSS３',
-            link: '/qian-duan/css/'
+            link: '/post/qian-duan/css/'
           },
           {
             text: 'JavaScript',
-            link: '/qian-duan/JavaScript/'
+            link: '/post/qian-duan/JavaScript/'
           },
           {
             text: 'Node.js',
-            link: '/qian-duan/node.js/'
+            link: '/post/qian-duan/node.js/'
           },
           {
             text: 'vue.js',
-            link: '/qian-duan/vue/'
+            link: '/post/qian-duan/vue/'
           },
           {
             text: 'vuepress',
-            link: '/qian-duan/vuepress/'
+            link: '/post/qian-duan/vuepress/'
           },
           {
             text: 'csharp',
-            link: '/qian-duan/csharp/'
+            link: '/post/qian-duan/csharp/'
           },
           {
             text: 'kotlin',
-            link: '/qian-duan/kotlin/'
+            link: '/post/qian-duan/kotlin/'
           },
         ]
       },
@@ -201,22 +201,22 @@ module.exports = {
         text: 'More',
         items: [{
             text: 'About me',
-            link: '/za-xiang-bi-ji/About/'
+            link: '/post/za-xiang-bi-ji/About/'
           },
 
           {
             text: 'Article',
             items: [{
                 text: '📓Life',
-                link: '/za-xiang-bi-ji/life/'
+                link: '/post/za-xiang-bi-ji/life/'
               },
               {
                 text: '✨Idea',
-                link: '/za-xiang-bi-ji/xiang-fa/'
+                link: '/post/za-xiang-bi-ji/xiang-fa/'
               },
               {
                 text: '🌈Pleasure',
-                link: '/za-xiang-bi-ji/pleasure/'
+                link: '/post/za-xiang-bi-ji/pleasure/'
               },
 
             ]
@@ -271,7 +271,7 @@ module.exports = {
     ['vuepress-plugin-reading-progress'], //顶部进度条
     ['@vuepress/last-updated'], //显示文章最后更新时间
     ["vuepress-plugin-code-copy", {
-      color: "#6D7EAD",
+      color: "#9400D3",
       successText: "🌈Copy success🌈",
     }],
     ["go-top"], // 悬挂猫返回顶部,yarn add -D vuepress-plugin-go-top

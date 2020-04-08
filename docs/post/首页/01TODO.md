@@ -12,6 +12,7 @@ title: Blog_ToDo
 
 > c->1c++->1.1数据结构 1.2Jekyll ->2算法 ->vuepress ->html->css->JavaScript
 
+首页可以放一个GitHub版本的日历，用博文数量来跳转
 
 ## 开一个 vuepress_blog 主题 <Badge text="首要任务"/>
 

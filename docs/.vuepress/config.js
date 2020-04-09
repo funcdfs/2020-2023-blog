@@ -162,7 +162,7 @@ module.exports = {
       {
         text: 'Designer',
         items: [{
-            text: 'HTML５',
+            text: 'html5',
             link: '/post/Designer/html/'
           },
           {

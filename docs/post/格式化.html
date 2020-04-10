@@ -1,0 +1,37 @@
+<template>
+    <small>C/C++</small>
+    <div>
+        <a-progress :strokeColor="{
+            from: '#108ee9',
+            to: '#87d068',
+          }" :percent="80" :format="percent => `${percent} percent`" status="active" />
+        <small>Data Structures and Algorithms</small>
+        <a-progress :strokeColor="{
+            from: '#a31420',
+            to: '#8068d0',
+          }" percent="40" status="active" />
+        <small>HTMl & CSS & JavaScript</small>
+        <a-progress :percent="33" status="active" />
+    </div>
+</template>
+
+
+
+
+
+<style scoped>
+    .spin-content {
+        border: 1px solid #91d5ff;
+        background-color: #e6f7ff;
+        padding: 30px;
+    }
+</style>
+<template>
+    <div>
+        <a-spin tip="Loading...">
+            <div class="spin-content">
+                我的描述文案是自定义的。。。
+            </div>
+        </a-spin>
+    </div>
+</template>

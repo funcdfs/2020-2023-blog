@@ -9,6 +9,10 @@ preactionText: ✨ Project ✨
 preactionLink: /post/xiang-mu/
 ---
  
+$$
+\qquad
+$$
+
 <template>
     <div>
         <small>C/C++</small>
@@ -31,26 +35,5 @@ preactionLink: /post/xiang-mu/
             from: '#f7f428',
             to: '#b35678',
           }" :percent="19"  status="active" />
-    </div>
-</template>
-
-$$
-\qquad
-$$
-
-<style scoped>
-    .spin-content {
-        border: 1px solid #91d5ff;
-        background-color: #e6f7ff;
-        padding: 30px;
-    }
-</style>
-<template>
-    <div>
-        <a-spin tip="Loading...">
-            <div class="spin-content">
-                Life goes on.
-            </div>
-        </a-spin>
     </div>
 </template>

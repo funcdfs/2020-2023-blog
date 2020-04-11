@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
+  title: 'if(i&1<<j))', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico',
   theme: 'antdocs',
 
@@ -40,12 +40,12 @@ module.exports = {
   },
 
   themeConfig: { //主题配置项
-    searchMaxSuggestions: 15,
+    searchMaxSuggestions: 10,
     logo: '/logo.webp',
     smoothScroll: true, //平滑滚动
-    displayAllHeaders: true, //控制是否为点击展开, true用的方便
+    displayAllHeaders: true, //控制是否为点击展开, true查找起来很方便
     sidebarDepth: 2,
-    lastUpdated: 'Last Updated',
+    lastUpdated: 'Last Updated by fengwei',
     nav: [ //导航栏
       {
         text: 'Home',
@@ -100,11 +100,11 @@ module.exports = {
       {
         text: 'Basics',
         items: [{
-            text: 'Markdown',
+            text: 'Markdown_Pro',
             link: '/post/bian-cheng-ji-chu/markdown/'
           },
           {
-            text: 'C++',
+            text: 'C/C++',
             link: '/post/bian-cheng-ji-chu/cpp/'
           },
           {
@@ -116,7 +116,7 @@ module.exports = {
             link: '/post/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
           },
           {
-            text: '深入理解计算机系统',
+            text: '计算机系统',
             link: '/post/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
           },
           {
@@ -206,7 +206,7 @@ module.exports = {
           {
             text: 'Article',
             items: [{
-                text: '📓Life',
+                text: '📘Life',
                 link: '/post/za-xiang-bi-ji/life/'
               },
               {
@@ -214,7 +214,7 @@ module.exports = {
                 link: '/post/za-xiang-bi-ji/xiang-fa/'
               },
               {
-                text: '🌈Pleasure',
+                text: '💬Pleasure',
                 link: '/post/za-xiang-bi-ji/pleasure/'
               },
 
@@ -269,7 +269,7 @@ module.exports = {
     ["cursor-effects"], //鼠标点击特效
     ['vuepress-plugin-reading-progress'], //顶部进度条
     ['@vuepress/last-updated'], //显示文章最后更新时间
-    ["vuepress-plugin-code-copy", {
+    ["vuepress-plugin-code-copy", { //代码块复制按钮，以后会重写一个
       color: "#9400D3",
       successText: "🌈Copy success🌈",
     }],
@@ -287,6 +287,6 @@ module.exports = {
     ['permalink-pinyin', {
       lowercase: true,
       separator: '-'
-    }], //转换链接汉字为英文的插件
+    }], //转换链接汉字为拼音
   ]
 }

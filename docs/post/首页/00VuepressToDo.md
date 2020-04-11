@@ -9,7 +9,7 @@ title: Vuepress_ToDo
 <template>
   <a-timeline>
     <a-timeline-item>
-      <a-tag color="#87d068">没事干的时候可以玩一玩</a-tag>
+      <a-tag color="#87d068">没事干的时候可以做着玩一玩</a-tag>
       <p>
         已开发<br/>
       </p>

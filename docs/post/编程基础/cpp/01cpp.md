@@ -5,30 +5,32 @@ title: cpp01(c->cpp)
 ## 背景知识
 
 1983--1998年,一个歪果人发明了一种新的程序语言 c++
-（发明多久了都）
-
-> c++ primer
+c语言用的是gcc编译器    c++用的是g++编译器
 
 ## c++的Helloworld
 
-c-->gcc     c++-->g++
+### 头文件
 
-``` cpp
-#include <iostream> //提供命名空间
- using namespace std,
- using std::count,using std::endl,
- using namespace和using是两个关键字,//命名空间,类似于c中的函数库
+C++中的头文件函数的有两种使用方式：
+
+``` cpp {2,3}
+#include <iostream> //提供库
+using namespace std,
+using std::cout,using std::endl,
 ```
+要区分的是`using namespace`和`using`是两个不同的关键字，`using` 后面跟的是具体的函数；`using namespace` 后面跟的是一个`namespace`变量
 
-只用一个函数的时候就std::cout
+如果只想调用一个函数的时候就用`std::cout`这种方式，一般用不到
 
-``` cpp
-cout<<" hello world" <<endl(这个回车兼容所有系统)
-cout （就是黑屏幕,可以用<< a<<b连着输出不同类型的字符串或者变量值
-```
+### 输入输出
 
-cin>>a    //读入一个变量值
+`cout<<" hello world" <<endl(这个回车兼容所有系统)`
 
+`cout==printf_pro`，省去了输出类型的说明，用`<<`分隔两个不同类型的元素即可
+
+对应`cout`也有`cin>>a` 同样省去了类型说明，用`>>`分隔两个不同类型的元素即可
+
+一个完整的Hello World:
 ``` cpp
 #include <iostream>
 using namespace std;
@@ -37,14 +39,9 @@ int main() {
 	return 0;
 }
 ```
+### namespace 
 
-_g_t代表不同变量类型,以后用特殊格式变量就加前缀后缀,
-
-## 命名空间
-
-> 注：using 后面跟的是具体的变量；using namespace后面跟的是一个命名空间 是两个不同的关键字
-
-定义一个命名空间
+也可以自定义一个`namespace`，同时使用自定义`namespace`中的变量或者函数
 
 ``` cpp
 #include <iostream>
@@ -65,7 +62,7 @@ int main() {
 }
 ```
 
- 2. 嵌套namespace后使用结构体变量
+嵌套namespace后使用结构体变量
  
 
 ``` cpp
@@ -87,59 +84,58 @@ int main() {// 用这种使用命名空间的写法比较方便
 }
 ```
 
-## c++对于c语言的增强部分
+## c++的实用增强部分
 
-变量随用随定义  
-添加对重定义全局变量检测  
-c++中结构体类型变量在定义的时可以不用加strcut关键字  
+添加了面向对象的规则，可以使程序更加完美
 
-> （有类这种东西就基本不用strcut关键字了叭,（猜  
+变量随用随定义`for(int i = 0; i < 10; i++)`  ~~（我C语言一直用的就是这个规则导致C语言考试...~~
 
-要用的函数必须有类型,并且对于函数参数个数编译时有检查  
-添加bool布尔类型关键字,bool flag=true; flag=false; 非0还为1,一字节大小
+添加了`bool`类型关键字,内存只有一字节大小，`true&false`
 
-> 冒泡排序可以用bool类型当旗帜
+### 三目运算符可作为左值
 
-## 三目运算符
+C语言中：`*(a<b? &a : &b)=50;`
 
-` ` ` *(a<b? &a : &b)=50; ` ` `
+在c++中整个式子可以直接当做左值,不用操作地址也可以实现相同目的
 
-在c++中整个式子可以直接当做左值,不用操作地址也可
+`(a<b?:a:b)=50`
 
 ## const加强
 
 `const int a` 和 `int const a` 一样  
-`const int *c` 指向常整形数的指针  
+
+我一般写`const int a`
+
+`const int *c` 指向常整形数的指针
+
 （所指向的内存数据不能被修改,但c数据本身可以修改）  
 
-> 就是马上会看到的引用实质,常指针,const int *a；
+> 就是引用实质,常指针,const int *a；
 
 int *const d  
+
 指向的地址可以修改,数据本身不能修改
 
-那么 `const int * const e` 两个内容就都不能修改
+`const int * const e` 两个内容就都不能修改
 ***
 c语言中用const后还可以用指针来改变const变量值的大小
 const int a 仍然是一个可以改变的变量（通过指针操作
 
-但c++中 const int a=10; (编译器处理)是通过常量区的符号表进行的文本替换,只读且不可修改  
+但`c++`中 `const int a=10;` (编译器处理)是通过常量区的符号表进行的文本替换,只读且不可修改  
 
 > 真正意义上的const  
 
-所以 c++中const可以用来定义数组
+所以 `c++`中可以用`const`可以用来定义数组
 
-## 真正的枚举（使用频率极低
+### 真正的枚举（使用频率极低
 
 enum season ... 
-c++中枚举变量赋值必须为枚举成员  
 
-## c++对于c语言语法方面的扩展
+c++中枚举变量赋值必须为枚举成员，不能用1234赋值
 
-引用（yinyong）
+## 引用（yin yong）
 
-> 注：引用的实质类似常指针
-
-int *const p=&a; 
+实质：`int *const p = &a;`
 
 类型名&引用名=某变量名
 
@@ -149,14 +145,12 @@ int& r = n;
 ```
 
 int &就是r的类型, r相当于n的别名  
-引用必须初始化；  
-定义引用时只能将其初始化为一个变量；*从一而终*； 
-
-> 常指针的本性
+**引用必须初始化**
+定义引用时只能将其初始化为一个变量；**从一而终**； 
 
 可对引用再次引用。  
 
-引用应用实例
+引用应用实例1：
 （交换两个int的一个swap函数）
 
 ``` cpp
@@ -179,7 +173,7 @@ int main() {
 	return 0;
 }
 ```
-
+引用应用实例2：
 引用作为函数的返回值
 
 ``` cpp
@@ -195,117 +189,3 @@ int main() {
 	return 0;
 }
 ```
-
-作业
-**1**. 简述C++中命名空间的作用。  
-
-答：类似于c语言里面的函数库；把要用到的东西需要先using出来,using using namespace是两个不同的关键字要区分
-
-**2**. 定义两个命名空间A 和 B 分别在A中和B中定义变量value
-   在main函数中将两个空间的value打印出来。
-答：
-
-``` cpp
-#include <iostream>
-using namespace std;
-namespace spaceA{
-	namespace spaceB {
-		int value = 10;
-	}
-	namespace spaceC {
-		int value2 = 20;
-	}
-}
-int main() {
-	using spaceA::spaceB::value;
-	cout << value << endl;
-	using namespace spaceA::spaceC;//using会覆盖using namespace相同变量
-	cout << value2 << endl;
-	return 0;
-}
-```
-
-> 注：特指using的优先级大于泛指using namespace（两个value时）
-
-**3**. C语言的三目运算符 ? : , 可以当左值么？ C++的是否可以？ 为什么？
-
-答: c中得用前面写的指针
-c++简化指针为直接调用可以做为左值
-
-**4**. 下面哪条语句是错误的？为什么？
- 
-(1 < 2? a: b) = 100; 
-   
-(1 < 2? 10: 20) = 100 x因为不能让10等于100
-
-**5**.const int a; 在C++编译器中是否需要初始化,为什么？
-  答: 需要 ,符号表中必须存在可以调用的值
-`int *p = (int*)&a;` 
-`*p  = 20;` 
-在C++编译器中能够修改a的值。  
- *p实际上是修改谁的值？  
-答:a（若试图用指针修改const int的值,那么系统就会在相邻空间赋值一份数据,供用户修改,但该地址下的原值不变）
-
-**6**. 简述引用的特点？
- 常指针简化版
-
-**7**. 如下写法是否正确,
-int &a; 
-答: 不对
-**8**.
-
-``` cpp
-void swap1(int &a, int &b)
-{
-	int temp = a;
-	 a = b;
-	 b = temp;
-}
-void swap2(int a, int b)
-{
-	int temp = a;
-  	a = b;
- 	b = temp;
-}
-void swap3(int *a, int *b)
-{
-	 int temp = *a;
-	 *a = *b;
-	 *b = temp;
-}
-```
-
-swap1, swap2 swap3三个函数哪些是正确的。
-1.3
-
-**9**. 函数返回值如果是引用类型,为什么可以将 函数当左值？
-   什么情况函数返回值不能当左值？
-int& get(){
-
-	  int a;
-	  return a;
-
-}
-
-答：因为函数返回值是引用类型时, 返回值就相当于一个可操作的变量,所以可以当作左值  
-当函数返回值为常量时
-
-**10**. 以下代码
-
-``` cpp
-int a = 20;
-const int &re_a = a;
-re_a = 30;
-```
-
-是否正确。为什么
-答: 不正确,const修饰后不能再进行赋值
-
-**11**. 以下写法是否正确,如果不正确,如何修改？
-
-`int &a = 40;` 
-
-改正：
-int b=40; 
-int &a=b; 
-

@@ -108,8 +108,8 @@ module.exports = {
             link: '/post/bian-cheng-ji-chu/cpp/'
           },
           {
-            text: '数据结构',
-            link: '/post/bian-cheng-ji-chu/shu-ju-jie-gou/'
+            text: '数据结构与算法',
+            link: '/post/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/'
           },
           {
             text: '计算机网络',
@@ -135,10 +135,6 @@ module.exports = {
           {
             text: '算法竞赛训练指南',
             link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
-          },
-          {
-            text: 'Java & 算法4',
-            link: '/post/suan-fa-xue-xi/suan-fa-si/'
           },
           {
             text: '专项练习',

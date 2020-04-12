@@ -1,11 +1,71 @@
 ---
-layout: post
-title: cpp02(面向对象编程,类)
-tags: [cpp+STL]
-date: 2020-02-12 01:29:57
+title: class & 函数扩充
 ---
 
-***
+## C++中对函数的扩充
+
+有时一个函数如果可以存在不同的参数接口，那么都写在一个函数里面就会显得繁杂
+
+所以就出现了C++中重名函数不同参数接口代表不同函数的功能
+
+即函数重载的功能
+
+### 默认参数
+
+添加这个扩展的目的是为了提高程序的可扩充性
+
+函数参数列表存在一个默认参数时，当不给函数传参数时对应值就是那个值,给函数传入参数后和正常函数一样正常使用
+
+```cpp
+int func(int a = 10) {
+	cout << a << endl;
+	return 0;
+}
+int main() {
+	func();
+	func(20);//这两种调用方式都正确，省去了再写一个函数重载的步骤
+	return 0;
+}
+```
+
+默认实参必须在形参列表的结尾
+
+![](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/%0D%0A.png)
+
+``` cpp
+int func1(int b,int c = 0,int a = 10) {
+	cout << "方式1" << endl;
+	return 0;
+}
+int func2(int b = 100, int c = 0, int a = 100) {
+	cout << "方式2" << endl;
+}
+int main() {
+	func1(2);//正确 可选123
+	func2(2);//正确，可选0123
+	return 0;
+}
+```
+
+### 占位参数
+
+实际操作中一般不用
+
+用途就是区分不同函数
+
+`int x ,int` 这种情况下调用时只能存在两个int值，虽然第二个int值没有实际意义
+`int x ,int=0,`当函数列表使用这种占位参数，函数调用可以传两个参数也可以传一个参数
+
+```cpp
+int func(int b,int) {
+	cout << b << endl;
+	return 0;
+}
+int main() {
+	func(1, 2);
+	return 0;
+}
+```
 
 ## 内联函数
 
@@ -41,60 +101,6 @@ date: 2020-02-12 01:29:57
 * 不能过于庞大
 
 以牺牲代码空间为代价 ,提高程序的运行时间效率
-
-## 默认参数
-
-目的：提高程序的可扩充性
-
-一个参数时
-
-函数参数直接赋值,当不传参数时就是那个值,传后正常使用
-
-```cpp
-int func(int a = 10) {
-	cout << a << endl;
-	return 0;
-}
-int main() {
-	func();
-	func(20);
-	return 0;
-}
-```
-
-从右到左默认参数才能使用
-
-``` cpp
-int func1(int b,int c = 0,int a = 10) {
-	cout << "方式1" << endl;
-	return 0;
-}
-int func2(int b = 100, int c = 0, int a = 100) {
-	cout << "方式2" << endl;
-}
-int main() {
-	func1(2);//正确
-	func2(2);//正确
-	return 0;
-}
-```
-
-## 占位参数
-
-``` cpp
-int x ,int
-用途就是区分不同函数,调用时也得多一个参数
-int x ,int=0,
-可传两个可传一个,
-int func(int b,int) {
-	cout << b << endl;
-	return 0;
-}
-int main() {
-	func(1, 2);
-	return 0;
-}
-```
 
 ## 函数重载
 

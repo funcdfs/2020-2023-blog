@@ -137,6 +137,10 @@ module.exports = {
             link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
           },
           {
+            text: 'Java & 算法4',
+            link: '/post/suan-fa-xue-xi/suan-fa-si/'
+          },
+          {
             text: '专项练习',
             link: '/post/suan-fa-xue-xi/suan-fa-zhuan-xiang-lian-xi/'
           },

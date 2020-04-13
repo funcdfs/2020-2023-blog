@@ -93,11 +93,6 @@ module.exports = {
       },
 
       {
-        text: 'Bugs',
-        link: '/post/za-xiang-bi-ji/Bugs/'
-      },
-
-      {
         text: 'Basics',
         items: [{
             text: 'Markdown_Pro',
@@ -197,70 +192,10 @@ module.exports = {
       },
 
       {
-        text: 'More',
-        items: [{
-            text: 'About me',
-            link: '/post/za-xiang-bi-ji/About/'
-          },
-
-          {
-            text: 'Article',
-            items: [{
-                text: '📘Life',
-                link: '/post/za-xiang-bi-ji/life/'
-              },
-              {
-                text: '✨Idea',
-                link: '/post/za-xiang-bi-ji/xiang-fa/'
-              },
-              {
-                text: '💬Pleasure',
-                link: '/post/za-xiang-bi-ji/pleasure/'
-              },
-
-            ]
-          },
-
-          {
-            text: 'Contact',
-            items: [{
-                text: 'Gmail',
-                link: 'https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png',
-              },
-              {
-                text: 'GitHub',
-                link: 'https://github.com/fengwei2002'
-              },
-              {
-                text: 'Leetcode',
-                link: 'https://leetcode-cn.com/u/weirdo-21/'
-              },
-              {
-                text: 'Codeforces',
-                link: 'https://codeforces.com/profile/KONNG'
-              },
-              {
-                text: 'Wechat',
-                link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg'
-              },
-
-              {
-                text: 'QQ',
-                link: 'https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg'
-              },
-              {
-                text: 'zhi_hu',
-                link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba'
-              },
-              {
-                text: 'NetEase Cloud Music',
-                link: 'https://music.163.com/#/user/home?id=440040659'
-              },
-            ]
-          },
-        ]
-
+        text: 'About',
+        link: '/post/za-xiang-bi-ji/About/'
       },
+
     ],
   },
 
@@ -269,10 +204,6 @@ module.exports = {
     ["cursor-effects"], //鼠标点击特效
     ['vuepress-plugin-reading-progress'], //顶部进度条
     ['@vuepress/last-updated'], //显示文章最后更新时间
-    ["vuepress-plugin-code-copy", { //代码块复制按钮，以后会重写一个
-      color: "#9400D3",
-      successText: "🌈Copy success🌈",
-    }],
     ["go-top"], // 悬挂猫返回顶部,yarn add -D vuepress-plugin-go-top
     //功能添加：
     ['@vuepress/medium-zoom', {

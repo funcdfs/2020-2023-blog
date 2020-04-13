@@ -42,7 +42,6 @@
     "vuepress-plugin-seo": "^0.1.2"
   },
   "dependencies": {
-    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-theme-antdocs": "^1.0.0"
   }
 }

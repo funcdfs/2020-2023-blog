@@ -18,6 +18,8 @@ Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https
 
 Non-exhaustive list of stuff I work on:
 
+[Projects](https://feng-w.cn/post/xiang-mu/)
+
 ## This blog
 
 I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/). It's completely static (for now) and you can find the source [here](https://github.com/fengwei2002/vuepress_final)

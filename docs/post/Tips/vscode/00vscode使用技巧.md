@@ -35,7 +35,6 @@ $$
 ## 中英文添加空格间隙
 
 ![20200402222107](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200402222107.png =580x97)
->[使用教程]()
 
 ## 美化插件
 
@@ -46,4 +45,3 @@ $$
 ### 全局透明
 
 ![20200402222219](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200402222219.png)
->[使用教程]()

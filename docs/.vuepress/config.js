@@ -95,7 +95,7 @@ module.exports = {
       {
         text: 'Basics',
         items: [{
-            text: 'Markdown_Pro',
+            text: 'Markdown-Pro',
             link: '/post/bian-cheng-ji-chu/markdown/'
           },
           {
@@ -128,28 +128,36 @@ module.exports = {
       {
         text: 'Algorithm',
         items: [{
-            text: '算法竞赛入门经典',
-            link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian/'
+            text: '🎧算法详解',
+            link: '/post/suan-fa-xue-xi/suan-fa-xiang-jie/'
           },
           {
-            text: '算法竞赛训练指南',
-            link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
+            text: 'Aoapc-Bac2nd',
+            items: [{
+                text: 'Bac2nd',
+                link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian/'
+              },
+              {
+                text: 'TrainingGuide',
+                link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
+              },
+              {
+                text: 'UVa',
+                link: '/post/suan-fa-xue-xi/UVa/'
+              },
+            ],
           },
           {
             text: '专项练习',
             link: '/post/suan-fa-xue-xi/suan-fa-zhuan-xiang-lian-xi/'
           },
           {
-            text: '力扣题解',
+            text: 'Leetcode',
             link: '/post/suan-fa-xue-xi/li-kou-ti-jie/'
           },
           {
-            text: '一堆题解',
+            text: 'Online Judge',
             link: '/post/suan-fa-xue-xi/yi-dui-ti-jie/'
-          },
-          {
-            text: '常用算法',
-            link: '/post/suan-fa-xue-xi/chang-yong-suan-fa/'
           },
           {
             text: 'codeforces GYM & contest',

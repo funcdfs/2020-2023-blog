@@ -4,7 +4,7 @@ title: 算法竞赛经典训练指南
 
 # 算法竞赛经典训练指南
 
-PRO版
+[算法竞赛经典训练指南UVa题库](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=442)
 
 ## 参考资料：
 

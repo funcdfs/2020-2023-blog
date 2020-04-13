@@ -16,6 +16,7 @@ sidebar: false
     <a-timeline-item>
       <p>
         待开发：<br/>
+        &emsp;- <a-tag color="purple">待添加</a-tag> 自定义一个vscode插入当前时间的插件，可选配置应该弄很多<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> Code-Copy-Pro创建一个自定义的代码块复制按钮<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> Reading-Process-Pro<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> 自定义vuepress主题（优化首页, 添加Timeline）<br/>

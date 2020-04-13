@@ -107,6 +107,10 @@ module.exports = {
             link: '/post/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/'
           },
           {
+            text: 'Python',
+            link: '/post/bian-cheng-ji-chu/Python/'
+          },
+          {
             text: '计算机网络',
             link: '/post/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
           },

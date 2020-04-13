@@ -18,17 +18,17 @@ C++中的头文件函数的有两种使用方式：
 using namespace std,
 using std::cout,using std::endl,
 ```
-要区分的是`using namespace`和`using`是两个不同的关键字，`using` 后面跟的是具体的函数；`using namespace` 后面跟的是一个`namespace`变量
+要区分的是`using namespace`和`using`是两个不同的关键字, `using` 后面跟的是具体的函数；`using namespace` 后面跟的是一个`namespace`变量
 
-如果只想调用一个函数的时候就用`std::cout`这种方式，一般用不到
+如果只想调用一个函数的时候就用`std::cout`这种方式, 一般用不到
 
 ### 输入输出
 
 `cout<<" hello world" <<endl(这个回车兼容所有系统)`
 
-`cout==printf_pro`，省去了输出类型的说明，用`<<`分隔两个不同类型的元素即可
+`cout==printf_pro`, 省去了输出类型的说明, 用`<<`分隔两个不同类型的元素即可
 
-对应`cout`也有`cin>>a` 同样省去了类型说明，用`>>`分隔两个不同类型的元素即可
+对应`cout`也有`cin>>a` 同样省去了类型说明, 用`>>`分隔两个不同类型的元素即可
 
 一个完整的Hello World:
 ``` cpp
@@ -41,7 +41,7 @@ int main() {
 ```
 ### namespace 
 
-也可以自定义一个`namespace`，同时使用自定义`namespace`中的变量或者函数
+也可以自定义一个`namespace`, 同时使用自定义`namespace`中的变量或者函数
 
 ``` cpp
 #include <iostream>
@@ -86,11 +86,11 @@ int main() {// 用这种使用命名空间的写法比较方便
 
 ## c++的实用增强部分
 
-添加了面向对象的规则，可以使程序更加完美
+添加了面向对象的规则, 可以使程序更加完美
 
 变量随用随定义`for(int i = 0; i < 10; i++)`  ~~（我C语言一直用的就是这个规则导致C语言考试...~~
 
-添加了`bool`类型关键字,内存只有一字节大小，`true&false`
+添加了`bool`类型关键字,内存只有一字节大小, `true&false`
 
 ### 三目运算符可作为左值
 
@@ -131,7 +131,7 @@ const int a 仍然是一个可以改变的变量（通过指针操作
 
 enum season ... 
 
-c++中枚举变量赋值必须为枚举成员，不能用1234赋值
+c++中枚举变量赋值必须为枚举成员, 不能用1234赋值
 
 ## 引用（yin yong）
 

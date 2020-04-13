@@ -17,7 +17,7 @@ title: Hello World
         待开发：<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> Code-Copy-Pro创建一个自定义的代码块复制按钮<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> Reading-Process-Pro<br/>
-        &emsp;- <a-tag color="purple">待添加</a-tag> 自定义vuepress主题（优化首页，添加Timeline）<br/>
+        &emsp;- <a-tag color="purple">待添加</a-tag> 自定义vuepress主题（优化首页, 添加Timeline）<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> 自定义评论框架<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> 添加评论区打字特效<br/>
         &emsp;- <a-tag color="purple">待添加</a-tag> 图片和文字边缘优化为圆形（行高加高）<br/>

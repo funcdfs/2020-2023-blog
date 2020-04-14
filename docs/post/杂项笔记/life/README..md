@@ -1,5 +1,5 @@
 ---
-title: strive
+title: Life
 ---
 
 ###### Sat Apr 11 11:02:51 CST 2020

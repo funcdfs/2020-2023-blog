@@ -74,8 +74,4 @@ I am very tall? ~~187 centimeter~~
 
 ## Article
 
-[📘Life](/post/za-xiang-bi-ji/life/)
-
-[💬Pleasure](/post/za-xiang-bi-ji/pleasure/)
-
-[✨Idea](/post/za-xiang-bi-ji/xiang-fa/)
+[📘Life](/post/za-xiang-bi-ji/life/)$\quad$[💬Pleasure](/post/za-xiang-bi-ji/pleasure/)$\quad$[✨Idea](/post/za-xiang-bi-ji/xiang-fa/)

@@ -4,7 +4,6 @@ title: VScode 使用 markdown-formatter 插件
 
 # VScode 使用 markdown-formatter 插件
 
-***
 
 ![162P01455-7.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/fengwei2002/picture162P01455-7.jpg)
 
@@ -20,7 +19,7 @@ title: VScode 使用 markdown-formatter 插件
 
 但每天不明不白的用 VSCODE；属实不爽；所以想着解析一下 vscode 的构造和 setting.json 的具体中文使用方法
 
-## markdown_formatter 的使用
+### markdown_formatter 的使用
 
 ``` json
 // settings.json

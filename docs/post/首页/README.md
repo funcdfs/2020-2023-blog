@@ -3,7 +3,7 @@ title: Hello World
 sidebar: false
 ---
 
-## ToDo
+## Hello World
 
 <template>
   <a-timeline>
@@ -41,35 +41,5 @@ sidebar: false
 
 ## Gmail
 
-![MyGmail](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png =400x400)
+![MyGmail](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png =250x250)
 
-
-## Desktop
-
-
-![桌面](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200407185700.png)
-
-
-```sh
- _______ _______ _       _______ 
-(  ____ (  ____ ( (    /(  ____ \
-| (    \| (    \|  \  ( | (    \/
-| (__   | (__   |   \ | | |      
-|  __)  |  __)  | (\ \) | | ____ 
-| (     | (     | | \   | | \_  )
-| )     | (____/| )  \  | (___) |
-|/      (_______|/    )_(_______)
-                                 
-```
-
-```sh
-         ________________
-|\     /(  ____ \__   __/
-| )   ( | (    \/  ) (   
-| | _ | | (__      | |   
-| |( )| |  __)     | |   
-| || || | (        | |   
-| () () | (____/___) (___
-(_______(_______\_______/
-                         
-```

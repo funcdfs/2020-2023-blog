@@ -45,7 +45,7 @@ module.exports = {
     smoothScroll: true, //平滑滚动
     displayAllHeaders: true, //控制是否为点击展开, true查找起来很方便
     sidebarDepth: 2,
-    lastUpdated: 'Last Updated by fengwei',
+    lastUpdated: 'Last Updated By Fengwei',
     nav: [ //导航栏
       {
         text: 'Home',

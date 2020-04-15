@@ -22,8 +22,8 @@ Non-exhaustive list of stuff I work on:
 ## This blog
 
 I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/).     
-It's completely static (for now) and you can find the source [here](https://github.com/fengwei2002/vuepress_final)  
-Blog has been established {{ dist_times }} 
+It's completely static (for now) and you can find the source [here](https://github.com/fengwei2002/vuepress_final).  
+Blog has been established {{ dist_times }} .
 
 ## Hobby
 
@@ -75,7 +75,15 @@ I am very tall? ~~187 centimeter~~
 
 ## Article
 
-[📘Life](/post/za-xiang-bi-ji/life/)$\quad$[💬Pleasure](/post/za-xiang-bi-ji/pleasure/)$\quad$[✨Idea](/post/za-xiang-bi-ji/xiang-fa/)
+<center> <a href="/post/za-xiang-bi-ji/life/">📘Life</a></center>
+
+$\qquad$
+
+<center><a href="/post/za-xiang-bi-ji/pleasure/">💬Pleasure</a></center>
+
+$\qquad$
+
+<center><a href="/post/za-xiang-bi-ji/xiang-fa/">✨Idea</a></center>
 
 
 

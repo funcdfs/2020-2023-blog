@@ -2,7 +2,10 @@
 title: About
 sidebar: false
 ---
+
 ## :book: 
+
+</br>
 
 Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
 
@@ -13,7 +16,7 @@ Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https
 >- [Codeforces](https://codeforces.com/profile/KONNG)
 >- [NetEase Cloud Music](https://music.163.com/#/user/home?id=440040659)
 
-## Open Source
+## Open Source Project
 
 Non-exhaustive list of stuff I work on:
 
@@ -41,7 +44,7 @@ I am very young?  ~~2002~~
 
 I am very tall? ~~187 centimeter~~
 
-## skills
+## Skills
 
 <template>
     <div>

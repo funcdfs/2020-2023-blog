@@ -153,11 +153,11 @@ module.exports = {
           },
           {
             text: 'Leetcode',
-            link: '/post/suan-fa-xue-xi/li-kou-ti-jie/'
+            link: '/post/suan-fa-xue-xi/Leetcode/'
           },
           {
             text: 'Online Judge',
-            link: '/post/suan-fa-xue-xi/yi-dui-ti-jie/'
+            link: '/post/suan-fa-xue-xi/online-judge/'
           },
           {
             text: 'codeforces GYM & contest',

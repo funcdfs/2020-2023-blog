@@ -59,15 +59,15 @@ module.exports = {
             text: 'Tips',
             items: [{
                 text: 'Git & Github',
-                link: '/post/Tips/Git/'
+                link: '/_posts/Tips/Git/'
               },
               {
                 text: 'VsCode',
-                link: '/post/Tips/vscode/'
+                link: '/_posts/Tips/vscode/'
               },
               {
                 text: 'Chrome',
-                link: '/post/Tips/Chrome/'
+                link: '/_posts/Tips/Chrome/'
               },
             ]
           },
@@ -76,15 +76,15 @@ module.exports = {
             text: 'Math_notes', //数学导航栏
             items: [{
                 text: '常用知识点',
-                link: '/post/Math/chang-yong-zhi-shi-dian/'
+                link: '/_posts/Math/chang-yong-zhi-shi-dian/'
               },
               {
                 text: '高数上',
-                link: '/post/Math/gao-shu-shang/'
+                link: '/_posts/Math/gao-shu-shang/'
               },
               {
                 text: '高数下',
-                link: '/post/Math/gao-shu-xia/'
+                link: '/_posts/Math/gao-shu-xia/'
               },
             ]
           },
@@ -96,31 +96,31 @@ module.exports = {
         text: 'Basics',
         items: [{
             text: 'Markdown-Pro',
-            link: '/post/bian-cheng-ji-chu/markdown/'
+            link: '/_posts/bian-cheng-ji-chu/markdown/'
           },
           {
             text: 'C/C++',
-            link: '/post/bian-cheng-ji-chu/cpp/'
+            link: '/_posts/bian-cheng-ji-chu/cpp/'
           },
           {
             text: '数据结构与算法',
-            link: '/post/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/'
+            link: '/_posts/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/'
           },
           {
             text: 'Python',
-            link: '/post/bian-cheng-ji-chu/Python/'
+            link: '/_posts/bian-cheng-ji-chu/Python/'
           },
           {
             text: '计算机网络',
-            link: '/post/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
+            link: '/_posts/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
           },
           {
             text: '计算机系统',
-            link: '/post/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
+            link: '/_posts/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
           },
           {
             text: 'Linux',
-            link: '/post/cao-zuo-xi-tong/Linux/'
+            link: '/_posts/cao-zuo-xi-tong/Linux/'
           },
         ]
       },
@@ -129,39 +129,39 @@ module.exports = {
         text: 'Algorithm',
         items: [{
             text: '🎧算法详解🎧',
-            link: '/post/suan-fa-xue-xi/suan-fa-xiang-jie/'
+            link: '/_posts/suan-fa-xue-xi/suan-fa-xiang-jie/'
           },
           {
             text: 'Aoapc-Bac2nd',
             items: [{
                 text: 'Bac2nd',
-                link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian/'
+                link: '/_posts/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian/'
               },
               {
                 text: 'TrainingGuide',
-                link: '/post/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
+                link: '/_posts/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
               },
               {
                 text: 'UVa',
-                link: '/post/suan-fa-xue-xi/UVa/'
+                link: '/_posts/suan-fa-xue-xi/UVa/'
               },
             ],
           },
           {
             text: '专项练习',
-            link: '/post/suan-fa-xue-xi/suan-fa-zhuan-xiang-lian-xi/'
+            link: '/_posts/suan-fa-xue-xi/suan-fa-zhuan-xiang-lian-xi/'
           },
           {
             text: 'Leetcode',
-            link: '/post/suan-fa-xue-xi/Leetcode/'
+            link: '/_posts/suan-fa-xue-xi/Leetcode/'
           },
           {
             text: 'Online Judge',
-            link: '/post/suan-fa-xue-xi/online-judge/'
+            link: '/_posts/suan-fa-xue-xi/online-judge/'
           },
           {
             text: 'codeforces GYM & contest',
-            link: '/post/suan-fa-xue-xi/codeforces-GYM/'
+            link: '/_posts/suan-fa-xue-xi/codeforces-GYM/'
           },
         ]
       },
@@ -170,42 +170,42 @@ module.exports = {
         text: 'Designer',
         items: [{
             text: 'html5',
-            link: '/post/Designer/html/'
+            link: '/_posts/Designer/html/'
           },
           {
             text: 'CSS３',
-            link: '/post/Designer/css/'
+            link: '/_posts/Designer/css/'
           },
           {
             text: 'JavaScript',
-            link: '/post/Designer/JavaScript/'
+            link: '/_posts/Designer/JavaScript/'
           },
           {
             text: 'Node.js',
-            link: '/post/Designer/node.js/'
+            link: '/_posts/Designer/node.js/'
           },
           {
             text: 'vue.js',
-            link: '/post/Designer/vue/'
+            link: '/_posts/Designer/vue/'
           },
           {
             text: 'vuepress',
-            link: '/post/Designer/vuepress/'
+            link: '/_posts/Designer/vuepress/'
           },
           {
             text: 'csharp',
-            link: '/post/Designer/csharp/'
+            link: '/_posts/Designer/csharp/'
           },
           {
             text: 'kotlin',
-            link: '/post/Designer/kotlin/'
+            link: '/_posts/Designer/kotlin/'
           },
         ]
       },
 
       {
         text: 'About',
-        link: '/post/za-xiang-bi-ji/About/'
+        link: '/_posts/za-xiang-bi-ji/About/'
       },
 
     ],

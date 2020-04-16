@@ -22,7 +22,7 @@ module.exports = {
   ],
 
   markdown: {
-    lineNumbers: true, // 代码行号
+    lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
     extendMarkdown: md => {
       md.set({
         html: true

@@ -3,9 +3,7 @@ title: About
 sidebar: false
 ---
 
-## 
-
-</br>
+# 
 
 Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
 

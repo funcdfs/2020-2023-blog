@@ -3,8 +3,9 @@ home: true
 heroText: psychonaut1f
 tagline: fengwei's blog
 footer: psychonaut1f@gmail.com
+actionText: Enter 
+actionLink: /_posts/Home/
 ---
-
 # 
 
 ***

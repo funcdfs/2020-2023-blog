@@ -139,7 +139,7 @@ module.exports = {
               },
               {
                 text: 'TrainingGuide',
-                link: '/_posts/Algorithm/TrainingGuide/'
+                link: '/_posts/Algorithm/training-guide/'
               },
               {
                 text: 'UVa',

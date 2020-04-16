@@ -1,15 +1,60 @@
 ---
 home: true
-heroImage: none
 heroText: psychonaut1f
 tagline: fengwei's blog
-actionText: 🌈 Enter 🌈
-actionLink: /_posts/Home/
+footer: psychonaut1f@gmail.com
 ---
 
-</br>
+# 
 
-<center>{{ dist_times }} </center>
+***
+
+Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail.](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
+
+> And Other active platform accounts:
+> >- [NetEase Cloud Music.](https://music.163.com/#/user/home?id=440040659)
+>> [zhihu](https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba).
+>> [QQ.](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg)
+>> [Leetcode.cn.](https://leetcode-cn.com/u/weirdo-21/)
+>> [Codeforces.](https://codeforces.com/profile/KONNG)
+
+## Open Source Project
+
+Non-exhaustive list of stuff I work on:
+
+[Projects](https://feng-w.cn/_posts/Projects/)
+
+## This blog
+
+I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/).     
+It's completely static (for now) and If you encounter problems in using vuepress, you can also ask me.
+My blog has been established {{ dist_times }} .
+
+## Hobby
+
+Like cat 
+
+~~Like games~~
+
+Like everything beautiful
+
+Like to sleep ~~10.00pm-10.00am is Best~~
+
+## Advantages
+
+I am very young?  ~~2002~~
+
+I am very tall? ~~187 centimeter~~
+
+## Article
+
+> <center> <a href="/_posts/Notes/life/">📘Life</a></center>
+
+> <center><a href="/_posts/Notes/pleasure/">💬Pleasure</a></center>
+
+> <center><a href="/_posts/Notes/Idea/">✨Idea</a></center>
+
+
 
 <script>
 export default {

@@ -1,5 +1,6 @@
 ---
 title: 首页
+navbar: false
 ---
 
 # 算法竞赛入门经典 

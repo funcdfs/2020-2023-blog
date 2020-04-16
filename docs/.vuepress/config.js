@@ -75,15 +75,15 @@ module.exports = {
           {
             text: 'Math_notes', //数学导航栏
             items: [{
-                text: '常用知识点',
+                text: 'Common-knowledge-points',
                 link: '/_posts/Math/Common-knowledge-points/'
               },
               {
-                text: '高数上',
+                text: 'advanced-mathematics1',
                 link: '/_posts/Math/advanced-mathematics1/'
               },
               {
-                text: '高数下',
+                text: 'advanced-mathematics2',
                 link: '/_posts/Math/advanced-mathematics2/'
               },
             ]
@@ -128,26 +128,6 @@ module.exports = {
       {
         text: 'Algorithm',
         items: [{
-            text: '🎧算法详解🎧',
-            link: '/_posts/Algorithm/detailed-algorithm/'
-          },
-          {
-            text: 'Aoapc-Bac2nd',
-            items: [{
-                text: 'Bac2nd',
-                link: '/_posts/Algorithm/Bac2nd/'
-              },
-              {
-                text: 'TrainingGuide',
-                link: '/_posts/Algorithm/training-guide/'
-              },
-              {
-                text: 'UVa',
-                link: '/_posts/Algorithm/UVa/'
-              },
-            ],
-          },
-          {
             text: 'Exercises',
             link: '/_posts/Algorithm/exercises/'
           },
@@ -158,6 +138,26 @@ module.exports = {
           {
             text: 'Online Judge',
             link: '/_posts/Algorithm/online-judge/'
+          },
+          {
+            text: 'Detailed algorithm',
+            link: '/_posts/Algorithm/detailed-algorithm/'
+          },
+          {
+            text: 'Aoapc-Bac2nd',
+            items: [{
+                text: 'TrainingGuide',
+                link: '/_posts/Algorithm/training-guide/'
+              },
+              {
+                text: 'Bac2nd',
+                link: '/_posts/Algorithm/Bac2nd/'
+              },
+              {
+                text: 'UVa',
+                link: '/_posts/Algorithm/UVa/'
+              },
+            ],
           },
         ]
       },
@@ -198,12 +198,6 @@ module.exports = {
           },
         ]
       },
-
-      {
-        text: 'About',
-        link: '/_posts/About/'
-      },
-
     ],
   },
 

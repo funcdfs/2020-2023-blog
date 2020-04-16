@@ -39,7 +39,7 @@
     "vuepress-plugin-go-top": "^1.0.0",
     "vuepress-plugin-reading-progress": "^1.0.9",
     "vuepress-plugin-seo": "^0.1.2",
-    "vuepress-theme-antdocs": "^1.0.0"
+    "vuepress-theme-thindark": "^1.0.1"
   },
   "dependencies": {}
 }

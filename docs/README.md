@@ -1,12 +1,10 @@
 ---
 home: true
-heroImage: logo.webp
+heroImage: none
 heroText: psychonaut1f
 tagline: fengwei's blog
 actionText: 🌈 Enter 🌈
 actionLink: /_posts/Home/
-preactionText: ✨ Project ✨
-preactionLink: /_posts/projects/
 ---
 
 </br>

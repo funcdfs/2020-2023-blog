@@ -1,8 +1,8 @@
 module.exports = {
   title: 'if(i&1<<j))', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico', //图标尽量小，加快国内访问
-  theme: 'antdocs', //自定义后标题下添加下划线，行高加大
-
+  //theme: 'antdocs', //自定义后标题下添加下划线，行高加大
+  theme: 'thindark',
   head: [
     [
       "meta",

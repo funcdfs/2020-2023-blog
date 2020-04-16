@@ -5,26 +5,26 @@ sidebar: false
 
 # 
 
-Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
+Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail.](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
 
 > And Other active platform accounts:
->- [zhihu](https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba).
->- [QQ](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg)
->- [Leetcode.cn](https://leetcode-cn.com/u/weirdo-21/)
->- [Codeforces](https://codeforces.com/profile/KONNG)
->- [NetEase Cloud Music](https://music.163.com/#/user/home?id=440040659)
+> >- [NetEase Cloud Music.](https://music.163.com/#/user/home?id=440040659)
+>> [zhihu](https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba).
+>> [QQ.](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/tim.jpg)
+>> [Leetcode.cn.](https://leetcode-cn.com/u/weirdo-21/)
+>> [Codeforces.](https://codeforces.com/profile/KONNG)
 
 ## Open Source Project
 
 Non-exhaustive list of stuff I work on:
 
-[Projects](https://feng-w.cn/post/xiang-mu/)
+[Projects](https://feng-w.cn/_posts/Projects/)
 
 ## This blog
 
 I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/).     
-It's completely static (for now) and you can find the source [here](https://github.com/fengwei2002/vuepress_final).  
-Blog has been established {{ dist_times }} .
+It's completely static (for now) and If you encounter problems in using vuepress, you can also ask me.
+My blog has been established {{ dist_times }} .
 
 ## Hobby
 

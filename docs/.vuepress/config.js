@@ -1,7 +1,7 @@
 module.exports = {
   title: 'if(i&1<<j))', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico', //图标尽量小，加快国内访问
-  //theme: 'antdocs', //自定义后标题下添加下划线，行高加大
+  //theme: 'antdocs',
   theme: 'thindark',
   head: [
     [
@@ -56,7 +56,7 @@ module.exports = {
         items: [
 
           {
-            text: 'Tips',
+            text: 'Tips:',
             items: [{
                 text: 'Git & Github',
                 link: '/_posts/Tips/Git/'
@@ -73,7 +73,7 @@ module.exports = {
           },
 
           {
-            text: 'Math_notes', //数学导航栏
+            text: 'Math_notes:', //数学导航栏
             items: [{
                 text: 'Common-knowledge-points',
                 link: '/_posts/Math/Common-knowledge-points/'
@@ -144,7 +144,7 @@ module.exports = {
             link: '/_posts/Algorithm/detailed-algorithm/'
           },
           {
-            text: 'Aoapc-Bac2nd',
+            text: 'Aoapc-Bac2nd:',
             items: [{
                 text: 'TrainingGuide',
                 link: '/_posts/Algorithm/training-guide/'
@@ -181,11 +181,11 @@ module.exports = {
             link: '/_posts/Designer/node.js/'
           },
           {
-            text: 'vue.js',
+            text: 'Vue.js',
             link: '/_posts/Designer/vue/'
           },
           {
-            text: 'vuepress',
+            text: 'VuePress',
             link: '/_posts/Designer/vuepress/'
           },
           {

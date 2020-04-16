@@ -2,15 +2,13 @@
 home: true
 heroText: psychonaut1f
 tagline: fengwei's blog
-footer: psychonaut1f@gmail.com
-actionText: Enter 
-actionLink: /_posts/Home/
+footer: psychonaut1f@gmail.com 
 ---
 # 
 
 ***
 
-Welcome to my personal website. I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail.](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
+Welcome to [my personal website](/_posts/Home/). I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail.](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
 
 > And Other active platform accounts:
 > >- [NetEase Cloud Music.](https://music.163.com/#/user/home?id=440040659)

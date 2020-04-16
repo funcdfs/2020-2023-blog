@@ -1,6 +1,68 @@
-// 鼠标指针
+//文字选中效果
+p::selection {
+    background:#ccc;
+    color:#FFD733;
+}
+p::-moz-selection {
+    background:#ccc;
+    color:#FFD733;
+}
+p::-webkit-selection {
+    background:#ccc;
+    color:#FFD733;
+}
+
+// 标题颜色的修改
+.h1
+    color: #b4b4b4;
+.h2
+    color: #b4b4b4;
+.h3
+    color: #b4b4b4;
+.h4
+    color: #b4b4b4;
+.title
+    color: #b4b4b4;
+.head
+  color: #b4b4b4;
+.li
+    color: #b4b4b4;
+
+//sidebar优化
+.sidebar
+    color: #9400D3 !important;
+    background-color: #E4E4E5;//sidebar背景颜色
+    box-shadow: inset 0px 0px 10px black;
+    font-size: 16px;
+    background-color: #fff;
+    width: 15.5rem;
+    border-right: 0px solid #eaecef;
+a.sidebar-link.active {
+    text-shadow: 0 0 0px black;//sidebar当前浏览去除文字阴影
+}
+
+
+//navbar优化
+.navbar .links {
+    text-shadow: 0 0 20px black;
+}
+.navbar {
+    border-bottom: 0px solid #eaecef;
+}
+
+//全局颜色的修改
+html, body {
+    color: #b4b4b4;
+    background-color: #232323;
+}//footer部分的颜色
+
+
+
+
+//指针特效
 body
-  background-color #eee;
+  color: #b4b4b4;
+  background-color #232323;//整体背景颜色
   cursor: url('/pointer/default.cur'), auto;
 body
   .header

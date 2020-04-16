@@ -3,7 +3,7 @@ title: About
 sidebar: false
 ---
 
-## :book: 
+## 
 
 </br>
 

@@ -76,15 +76,15 @@ module.exports = {
             text: 'Math_notes', //数学导航栏
             items: [{
                 text: '常用知识点',
-                link: '/_posts/Math/chang-yong-zhi-shi-dian/'
+                link: '/_posts/Math/Common-knowledge-points/'
               },
               {
                 text: '高数上',
-                link: '/_posts/Math/gao-shu-shang/'
+                link: '/_posts/Math/advanced-mathematics1/'
               },
               {
                 text: '高数下',
-                link: '/_posts/Math/gao-shu-xia/'
+                link: '/_posts/Math/advanced-mathematics2/'
               },
             ]
           },
@@ -96,31 +96,31 @@ module.exports = {
         text: 'Basics',
         items: [{
             text: 'Markdown-Pro',
-            link: '/_posts/bian-cheng-ji-chu/markdown/'
+            link: '/_posts/Basics/markdown/'
           },
           {
             text: 'C/C++',
-            link: '/_posts/bian-cheng-ji-chu/cpp/'
+            link: '/_posts/Basics/cpp/'
           },
           {
-            text: '数据结构与算法',
-            link: '/_posts/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/'
+            text: 'Data-Structures',
+            link: '/_posts/Basics/Data-Structures-and-Algorithms/'
           },
           {
             text: 'Python',
-            link: '/_posts/bian-cheng-ji-chu/Python/'
+            link: '/_posts/Basics/Python/'
           },
           {
-            text: '计算机网络',
-            link: '/_posts/bian-cheng-ji-chu/ji-suan-ji-wang-luo/'
+            text: 'Network',
+            link: '/_posts/Basics/computer-network/'
           },
           {
-            text: '计算机系统',
-            link: '/_posts/cao-zuo-xi-tong/shen-ru-li-jie-ji-suan-ji-xi-tong/'
+            text: 'Computer-system',
+            link: '/_posts/computer-system/deep-understanding-of-computer-system/'
           },
           {
             text: 'Linux',
-            link: '/_posts/cao-zuo-xi-tong/Linux/'
+            link: '/_posts/computer-system/Linux/'
           },
         ]
       },
@@ -129,39 +129,35 @@ module.exports = {
         text: 'Algorithm',
         items: [{
             text: '🎧算法详解🎧',
-            link: '/_posts/suan-fa-xue-xi/suan-fa-xiang-jie/'
+            link: '/_posts/Algorithm/detailed-algorithm/'
           },
           {
             text: 'Aoapc-Bac2nd',
             items: [{
                 text: 'Bac2nd',
-                link: '/_posts/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian/'
+                link: '/_posts/Algorithm/Bac2nd/'
               },
               {
                 text: 'TrainingGuide',
-                link: '/_posts/suan-fa-xue-xi/suan-fa-jing-sai-ru-men-jing-dian-xun-lian-zhi-nan/'
+                link: '/_posts/Algorithm/TrainingGuide/'
               },
               {
                 text: 'UVa',
-                link: '/_posts/suan-fa-xue-xi/UVa/'
+                link: '/_posts/Algorithm/UVa/'
               },
             ],
           },
           {
-            text: '专项练习',
-            link: '/_posts/suan-fa-xue-xi/suan-fa-zhuan-xiang-lian-xi/'
+            text: 'Exercises',
+            link: '/_posts/Algorithm/exercises/'
           },
           {
             text: 'Leetcode',
-            link: '/_posts/suan-fa-xue-xi/Leetcode/'
+            link: '/_posts/Algorithm/Leetcode/'
           },
           {
             text: 'Online Judge',
-            link: '/_posts/suan-fa-xue-xi/online-judge/'
-          },
-          {
-            text: 'codeforces GYM & contest',
-            link: '/_posts/suan-fa-xue-xi/codeforces-GYM/'
+            link: '/_posts/Algorithm/online-judge/'
           },
         ]
       },
@@ -205,7 +201,7 @@ module.exports = {
 
       {
         text: 'About',
-        link: '/_posts/za-xiang-bi-ji/About/'
+        link: '/_posts/About/'
       },
 
     ],
@@ -227,9 +223,5 @@ module.exports = {
     ["vuepress-plugin-auto-sidebar", {
       titleMode: "uppercase"
     }], //自动生成侧边栏
-    ['permalink-pinyin', {
-      lowercase: true,
-      separator: '-'
-    }], //转换链接汉字为拼音
   ]
 }

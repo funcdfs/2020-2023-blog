@@ -4,9 +4,9 @@ heroImage: logo.webp
 heroText: psychonaut1f
 tagline: fengwei's blog
 actionText: 🌈 Enter 🌈
-actionLink: /_posts/shou-ye/
+actionLink: /_posts/Home/
 preactionText: ✨ Project ✨
-preactionLink: /_posts/xiang-mu/
+preactionLink: /_posts/projects/
 ---
 
 </br>

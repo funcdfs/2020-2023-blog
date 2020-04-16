@@ -78,15 +78,15 @@ I am very tall? ~~187 centimeter~~
 
 ## Article
 
-<center> <a href="/post/za-xiang-bi-ji/life/">📘Life</a></center>
+<center> <a href="/_posts/Notes/life/">📘Life</a></center>
 
 $\qquad$
 
-<center><a href="/post/za-xiang-bi-ji/pleasure/">💬Pleasure</a></center>
+<center><a href="/_posts/Notes/pleasure/">💬Pleasure</a></center>
 
 $\qquad$
 
-<center><a href="/post/za-xiang-bi-ji/xiang-fa/">✨Idea</a></center>
+<center><a href="/_posts/Notes/Idea/">✨Idea</a></center>
 
 
 

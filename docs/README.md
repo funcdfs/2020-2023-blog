@@ -25,9 +25,10 @@ Non-exhaustive list of stuff I work on:
 
 ## This blog
 
-I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/).     
-It's completely static (for now) and If you encounter problems in using vuepress, you can also ask me.
 This blog has been established {{ dist_times }} .
+I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/).   
+Creative inspiration comes from the dark mode of WeChat.  
+It's completely static (for now) and If you encounter problems in using VuePress, you can also ask me.
 
 ## Hobby
 

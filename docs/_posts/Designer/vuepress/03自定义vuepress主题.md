@@ -73,7 +73,6 @@ navbar应该只存在四项 home  tags timeline about
   </a-timeline>
 </template>
 
-> 2020-04-15 完结目标
 
-
+也算是2021-6月份之前的终极flag了吧！加油
 

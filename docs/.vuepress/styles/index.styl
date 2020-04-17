@@ -19,8 +19,7 @@ p::-webkit-selection {
 
 // 文字颜色的修改
 .theme-default-content code
-    color: #3eaf7c;
-    text-shadow: 0px 0px 13px black;
+    color: #fad381;//采用vscode代码块预览颜色
 .h1
     color: #b4b4b4;
 .h2
@@ -40,11 +39,9 @@ p::-webkit-selection {
 .sidebar
     color: #9400D3 !important;
     background-color: #E4E4E5;//sidebar背景颜色
-    box-shadow: inset 0px 0px 10px black;
-    font-size: 16px;
-    background-color: #fff;
-    width: 15.5rem;
-    border-right: 0px solid #eaecef;
+    box-shadow: inset 0px 0px 10px black;//内嵌阴影
+    width: 15.5rem;//宽度调整
+    border-right: 0px solid #eaecef;//去除白色边框
 a.sidebar-link.active {
     text-shadow: 0 0 0px black;//sidebar当前浏览去除文字阴影
 }
@@ -52,17 +49,17 @@ a.sidebar-link.active {
 
 //navbar优化
 .navbar .links {
-    text-shadow: 0 0 20px black;
+    text-shadow: 0 0 20px black;//navbar添加链接
 }
 .navbar {
-    border-bottom: 0px solid #eaecef;
+    border-bottom: 0px solid #eaecef;//去除白色边框
 }
 
 //全局颜色的修改
 html, body {
     color: #b4b4b4;
     background-color: #232323;
-}//footer部分的颜色
+}//footer部分的背景颜色
 
 
 
@@ -83,3 +80,13 @@ body
         cursor: url('/pointer/default.cur'), auto;
 a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   cursor: url('/pointer/link.cur'), auto;
+
+
+/*滚动条效果-start*/
+  ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  }

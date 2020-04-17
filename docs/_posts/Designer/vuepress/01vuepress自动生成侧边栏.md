@@ -4,7 +4,7 @@ title: vuepress 自动生成侧边栏
 
 #### Created:  2020-04-14 22:33:30
 
-# 介绍 vuepress-plugin-auto-sidebar
+# vuepress-plugin-auto-sidebar
 
 vuepress 构建完成后我发现得手动配置 sidebar？？？, 虽然自由度高了些, 但我~~觉得没什么必要~~懒
 

@@ -1,6 +1,5 @@
 ---
 title: 首页
-navbar: false
 ---
 
 # 算法竞赛入门经典 
@@ -17,7 +16,6 @@ navbar: false
 
 ## 参考资料：
 
-***
 - [算法竞赛入门经典第二版, 刘汝佳](https://book.douban.com/subject/25902102/)
 - [算法竞赛入门经典训练指南](https://book.douban.com/subject/20254543/)
 

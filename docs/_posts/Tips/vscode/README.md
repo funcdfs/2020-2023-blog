@@ -8,5 +8,4 @@ title: VsCode
 
 ## 参考资料
 
-***
 1. [VSCode](https://code.visualstudio.com/docs)

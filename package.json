@@ -38,8 +38,7 @@
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-go-top": "^1.0.0",
     "vuepress-plugin-reading-progress": "^1.0.9",
-    "vuepress-plugin-seo": "^0.1.2",
-    "vuepress-theme-thindark": "^1.0.1"
+    "vuepress-plugin-seo": "^0.1.2"
   },
   "dependencies": {}
 }

@@ -1,3 +1,20 @@
+
+@media screen and (max-width: 960px){
+  /* 手机端CSS代码,用来调整暗色navbar */
+  .dropdown-wrapper .nav-dropdown .dropdown-item h4, .dropdown-wrapper .nav-dropdown .dropdown-item > a {
+    color:#b4b4b4 !important;
+    }
+    .dropdown-wrapper .nav-dropdown .dropdown-item a {
+    line-height: 2.7rem !important;
+    text-shadow: 0 0 13px black;
+    }
+    .nav-links a {
+    color: #b4b4b4!important;
+    }
+}
+
+
+
 //文字选中效果
 p::selection {
     background:#cccccce3;
@@ -12,56 +29,66 @@ p::-webkit-selection {
     color:#000000;
 }
 
-//提示块文字颜色的显示
-.custom-block.tip, .custom-block.warning, .custom-block.danger
-    color: #2c3e50;
-    box-shadow: inset 0px 0px 9px black;
 
 // 文字颜色的修改
 .theme-default-content code
-    color: #fad381;//采用vscode代码块预览颜色
-.h1
-    color: #b4b4b4;
-.h2
-    color: #b4b4b4;
-.h3
-    color: #b4b4b4;
-.h4
-    color: #b4b4b4;
-.title
-    color: #b4b4b4;
-.head
-  color: #b4b4b4;
-.li
-    color: #b4b4b4;
+    color: #dbb953;//采用vscode代码块预览颜色
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #b4b4b4  !important;
+}
+div[class*="language-"]::before {
+    color: #82AAFF;//代码块右上角颜色
+}
+.custom-block.tip, .custom-block.warning, .custom-block.danger{
+    color: #2c3e50;
+   -webkit-border-radius: 15px;//vue容器颜色
+}
 
 //sidebar优化
 .sidebar
-    color: #9400D3 !important;
-    background-color: #E4E4E5;//sidebar背景颜色
-    box-shadow: inset 0px 0px 10px black;//内嵌阴影
-    width: 15.5rem;//宽度调整
+    color: #82AAFF !important;
+    background-color: #232323;//sidebar背景颜色
+    width: 18rem;//宽度调整
     border-right: 0px solid #eaecef;//去除白色边框
+a.sidebar-link {
+    color: #b4b4b4 !important;
+}
 a.sidebar-link.active {
-    text-shadow: 0 0 0px black;//sidebar当前浏览去除文字阴影
+    color: #82AAFF !important;//sidebar当前元素颜色
+    border-left-color: #82AAFF !important;
+}
+
+@media screen and (min-width: 960px){
+    .sidebar {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 140px;
+    }
 }
 
 
 //navbar优化
-.navbar .links {
-    text-shadow: 0 0 20px black;//navbar添加链接
-}
 .navbar {
-    border-bottom: 0px solid #eaecef;//去除白色边框
+    box-shadow: 0 0 10px 0px white;
+}
+.dropdown-wrapper .nav-dropdown .dropdown-item a {
+    line-height: 2.7rem !important;
+    text-shadow: 0 0 13px black;
+}
+.nav-links a {
+    color: #232323 !important;
 }
 
-//全局颜色的修改
+//全局背景颜色的修改
 html, body {
-    color: #b4b4b4;
-    background-color: #232323;
-}//footer部分的背景颜色
-
-
+    background-color: #232323;//footer部分的背景颜色
+}
 
 
 //指针特效
@@ -80,13 +107,73 @@ body
         cursor: url('/pointer/default.cur'), auto;
 a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   cursor: url('/pointer/link.cur'), auto;
-
+//指针特效end
 
 /*滚动条效果-start*/
-  ::-webkit-scrollbar {
-      width: 4px;
-      height: 4px;
-    }
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+::-webkit-scrollbar {
+    width:3px; 
+    height:3px; 
+}
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+    height: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
+}
+
+
+// 引用修改
+blockquote {
+    color: #aaa;
+    background-color: #99999947;
+   -webkit-border-radius: 15px;
+}
+
+//添加圆角
+.theme-default-content:not(.custom) img {
+   -webkit-border-radius: 15px;
+}
+
+//粘性球css
+.sticky-container {
+  background: #232323;
+  overflow: hidden;
+  
+  .blurfield {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #232323;
+    filter: blur(10px) contrast(30);
   }
+
+  .ball1,
+  .ball2 {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+    animation: ball 10s infinite;
+    border-radius: 100%;
+  }
+
+  .ball2 {
+    animation-delay: -2s;
+  }
+}
+
+@keyframes ball {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+//粘性球end

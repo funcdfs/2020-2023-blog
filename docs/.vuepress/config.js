@@ -1,7 +1,6 @@
 module.exports = {
   title: 'psychonaut1f', //左上角的博客标题以及网站显示的标题  
   logo: '/public/favicon.ico', //图标尽量小，加快国内访问
-  theme: 'thindark',
   head: [
     [
       "meta",
@@ -52,49 +51,37 @@ module.exports = {
       },
       {
         text: 'Notes',
-        items: [
-
-          {
-            text: 'Tips :',
-            items: [{
-                text: 'Git & Github',
-                link: '/_posts/Tips/Git/'
-              },
-              {
-                text: 'VsCode',
-                link: '/_posts/Tips/vscode/'
-              },
-              {
-                text: 'Chrome',
-                link: '/_posts/Tips/Chrome/'
-              },
-            ]
+        items: [{
+            text: 'Git & Github',
+            link: '/_posts/Tips/Git/'
           },
-
           {
-            text: 'Math_notes :', //数学导航栏
-            items: [{
-                text: 'Common-knowledge-points',
-                link: '/_posts/Math/Common-knowledge-points/'
-              },
-              {
-                text: 'advanced-mathematics1',
-                link: '/_posts/Math/advanced-mathematics1/'
-              },
-              {
-                text: 'advanced-mathematics2',
-                link: '/_posts/Math/advanced-mathematics2/'
-              },
-            ]
+            text: 'VsCode',
+            link: '/_posts/Tips/vscode/'
           },
-
+          {
+            text: 'Chrome',
+            link: '/_posts/Tips/Chrome/'
+          },
+          {
+            text: 'Math Knowledge',
+            link: '/_posts/Math/Common-knowledge-points/'
+          },
+          {
+            text: 'Advanced Mathematics1',
+            link: '/_posts/Math/advanced-mathematics1/'
+          },
+          {
+            text: 'Advanced Mathematics2',
+            link: '/_posts/Math/advanced-mathematics2/'
+          },
         ]
       },
 
       {
         text: 'Basics',
         items: [{
-            text: 'Markdown-Pro',
+            text: 'Markdown Pro',
             link: '/_posts/Basics/markdown/'
           },
           {
@@ -102,7 +89,7 @@ module.exports = {
             link: '/_posts/Basics/cpp/'
           },
           {
-            text: 'Data-Structures',
+            text: 'Data Structures',
             link: '/_posts/Basics/Data-Structures-and-Algorithms/'
           },
           {
@@ -114,7 +101,7 @@ module.exports = {
             link: '/_posts/Basics/computer-network/'
           },
           {
-            text: 'Computer-system',
+            text: 'Computer System',
             link: '/_posts/computer-system/deep-understanding-of-computer-system/'
           },
           {
@@ -139,24 +126,20 @@ module.exports = {
             link: '/_posts/Algorithm/online-judge/'
           },
           {
-            text: 'Detailed algorithm',
+            text: 'Detailed Algorithm',
             link: '/_posts/Algorithm/detailed-algorithm/'
           },
           {
-            text: 'Aoapc-Bac2nd :',
-            items: [{
-                text: 'TrainingGuide',
-                link: '/_posts/Algorithm/training-guide/'
-              },
-              {
-                text: 'Bac2nd',
-                link: '/_posts/Algorithm/Bac2nd/'
-              },
-              {
-                text: 'UVa',
-                link: '/_posts/Algorithm/UVa/'
-              },
-            ],
+            text: 'TrainingGuide',
+            link: '/_posts/Algorithm/training-guide/'
+          },
+          {
+            text: 'Bac2nd',
+            link: '/_posts/Algorithm/Bac2nd/'
+          },
+          {
+            text: 'UVa',
+            link: '/_posts/Algorithm/UVa/'
           },
         ]
       },

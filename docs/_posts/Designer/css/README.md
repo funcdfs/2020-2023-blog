@@ -4,6 +4,16 @@ title: Css基础
 
 # [css的使用](https://baike.baidu.com/item/CSS/5457)
 
+>CSS样例
+
+<div class="sticky-container">
+   <div class="blurfield">
+     <div class="ball1"></div>
+     <div class="ball2"></div>
+   </div>
+ </div>
+
+
 层叠样式表(英文全称：Cascading Style Sheets)
 
 参考资料：

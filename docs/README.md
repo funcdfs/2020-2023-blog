@@ -79,11 +79,3 @@ export default {
 </script>
 
 <link rel="stylesheet" href="https://ico.z01.com/zico.min.css">
-
-
-<div class="sticky-container">
-   <div class="blurfield">
-     <div class="ball1"></div>
-     <div class="ball2"></div>
-   </div>
- </div>

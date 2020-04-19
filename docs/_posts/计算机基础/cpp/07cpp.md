@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2020-02-14
 title: cpp07(多态和抽象类)
 category: basics
 tags:

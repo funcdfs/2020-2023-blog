@@ -1,10 +1,9 @@
 ---
-layout: post
+date: 2020-01-23
 title: cpp04(this,友元)
 category: basics
 tags:
   - C++
-date: 2020-02-12 01:29:59
 ---
 
 ***

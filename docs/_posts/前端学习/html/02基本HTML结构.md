@@ -1,11 +1,10 @@
 ---
+date: 2020-04-08
 title: 基本 HTML 结构
 category: 前端
 tags:
   - HTML5
 ---
-
-#### Created:  2020-04-08 22:02:34
 
 ## 构建框架 
 

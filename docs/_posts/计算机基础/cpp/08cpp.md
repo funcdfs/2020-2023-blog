@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2020-02-15
 title: cpp08(模板函数. 模板类)
 category: basics
 tags:

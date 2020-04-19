@@ -1,4 +1,5 @@
 ---
+date: 2020-02-25
 title: string类
 category: basics
 tags:

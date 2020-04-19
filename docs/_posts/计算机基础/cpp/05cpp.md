@@ -1,10 +1,9 @@
 ---
-layout: post
+date: 2020-02-12
 title: cpp05(操作符重载)
 category: basics
 tags:
   - C++
-date: 2020-02-12 01:30:56
 ---
 
 ***

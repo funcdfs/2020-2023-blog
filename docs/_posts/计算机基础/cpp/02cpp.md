@@ -1,5 +1,6 @@
 ---
 title: class & 函数 & 案例
+date: 2020-01-21
 category: basics
 tags:
   - C++

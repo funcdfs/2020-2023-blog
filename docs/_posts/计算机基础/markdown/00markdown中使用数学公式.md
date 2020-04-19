@@ -1,4 +1,5 @@
 ---
+date: 2020-03-09
 title: Markdown书写数学公式
 category: basics
 tags:

@@ -1,5 +1,8 @@
 ---
 title: Bugs
+category: Tips
+tags:
+  - Bugs
 ---
 
-# 记录一些解决过的重大 bug
+# 记录一些解决过的 bug

@@ -1,5 +1,8 @@
 ---
 title: vscode使用insert-time-string插件
+category: Tips
+tags:
+  - vscode
 ---
 
 #### Created:  2020-04-14 22:37:21

@@ -1,5 +1,8 @@
 ---
 title: Chrome
+category: Tips
+tags:
+  - Chrome
 ---
 
 # Chrome

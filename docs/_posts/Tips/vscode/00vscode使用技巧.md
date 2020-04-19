@@ -1,5 +1,8 @@
 ---
 title: vscode 使用技巧
+category: Tips
+tags:
+  - vscode
 ---
 
 # vscode 使用技巧

@@ -1,5 +1,8 @@
 ---
-title: 使用 ZEIT 加速国内 GitHubpage 的访问。md
+title: 使用 ZEIT 加速国内 GitHubpage 的访问
+category: Tips
+tags:
+  - GitHub
 ---
 
 #### Created:  2020-04-15 12:51:47

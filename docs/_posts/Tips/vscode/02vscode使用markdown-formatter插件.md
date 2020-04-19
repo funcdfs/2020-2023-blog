@@ -1,5 +1,8 @@
 ---
 title: VScode 使用 markdown-formatter 插件
+category: Tips
+tags:
+  - vscode
 ---
 
 # VScode 使用 markdown-formatter 插件

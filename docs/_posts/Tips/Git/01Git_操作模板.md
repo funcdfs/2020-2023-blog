@@ -1,5 +1,8 @@
 ---
 title:  Git 模板
+category: Tips
+tags:
+  - Git
 ---
 
 # Git 模板

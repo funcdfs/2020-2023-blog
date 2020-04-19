@@ -1,5 +1,8 @@
 ---
 title: VScode 使用 PicGo 插件搭建 github 稳定图床
+category: Tips
+tags:
+  - vscode
 ---
 
 # VScode 使用 PicGo 插件搭建 github 稳定图床

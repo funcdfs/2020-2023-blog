@@ -46,9 +46,6 @@ I am very tall? ~~187 centimeter~~
 
 > <center><a href="/_posts/Notes/pleasure/">Pleasure</a></center>
 
-> <center><a href="/_posts/Notes/Idea/">Idea</a></center>
-
-
 
 <script>
 export default {

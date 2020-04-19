@@ -189,6 +189,17 @@ module.exports = {
     ['@vuepress/last-updated'], //显示文章最后更新时间
     ["go-top"], // 悬挂猫返回顶部,yarn add -D vuepress-plugin-go-top
     //功能添加：
+    ['vuepress-plugin-comment', {
+      choosen: 'valine',
+      options: {
+        el: '#valine-vuepress-comment',
+        appId: 'knrVGOWRf1Me7yfh37oInEV8-gzGzoHsz',
+        appKey: 'eXvwvoCQgzxKX1LJyeLmcjul',
+        notify: false,
+        verify: false,
+        placeholder: "网址为点击昵称跳转网址，使用 Gravatar 作为评论列表头像. 所以评论时，留下在Gravatar注册时所使用的邮箱即可。输入时的同一行内容不宜过多，评论时应该分行评论,评论支持markdown语法",
+      }
+    }],
     ['@vuepress/medium-zoom', {
       selector: '.content__default img',
     }], //图片放大

@@ -9,7 +9,6 @@ module.exports = {
         content: "width=device-width,initial-scale=1,user-scalable=no"
       }
     ],
-
     [
       "link",
       {
@@ -27,7 +26,7 @@ module.exports = {
       });
       md.set({
         breaks: true
-      }); //将段落中的 '\n' 转换为 <br>
+      });
       md.use(require('markdown-it-mark')); //高亮渲染
       md.use(require('@iktakahiro/markdown-it-katex')); //math渲染
       md.use(require('markdown-it-task-lists')); //todo渲染
@@ -65,7 +64,7 @@ module.exports = {
           },
           {
             text: 'Math Knowledge',
-            link: '/_posts/Math/Common-knowledge-points/'
+            link: '/_posts/Math/math-knowledge/'
           },
           {
             text: 'Advanced Mathematics1',

@@ -19,9 +19,7 @@ Welcome to [my personal website](/_posts/Home/). I'm Feng Wei. You can reach me 
 
 ## Open Source Project
 
-Non-exhaustive list of stuff I work on:
-
-[Projects](https://feng-w.cn/_posts/Projects/)
+Non-exhaustive list of stuff I work on: [View](/_posts/Projects/).
 
 ## This blog
 

@@ -1,4 +1,5 @@
 ---
+top: 2
 title:  Git 模板
 category: Tips
 tags:
@@ -39,13 +40,3 @@ git config --global user.email [email]
 ssh -T git@github.com  
 如果第一次执行该指令, 则会提示是否 continue 继续, 如果我们输入 yes 就会看到成功信息  
 HI... ..
-
-## **github** **仓库徽标**
-
-` https://img.shields.io/badge/{徽标标题}-{徽标内容}-{徽标颜色}.svg ` 
-
-如果我们在写 markdown 的时候想为我们的徽章或者进度条添加点击跳转的超链接, 可以使用超链接和图片的语法嵌套来写
-
-``` 
-    [![](徽章/进度条 URL)]（点击超链接）
-```

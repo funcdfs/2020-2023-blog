@@ -3,9 +3,8 @@ title: GitHub-pages
 category: Tips
 tags:
   - Github
+date: 2020-04-07
 ---
-
-###### Tue Apr 7 21:40:09 CST 2020
 
 # 记录一些GitHubpage的相关操作
 

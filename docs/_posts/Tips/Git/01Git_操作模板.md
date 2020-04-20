@@ -1,13 +1,12 @@
 ---
-top: 2
 title:  Git 模板
 category: Tips
 tags:
   - Git
 ---
 
-# Git 模板
-
+记录一些常用操作
+<!-- more -->
 ## 当某次提交出现 bug 后悔时
 
 * `git log` 查看历史 ID

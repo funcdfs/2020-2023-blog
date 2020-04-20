@@ -4,7 +4,8 @@ category: Tips
 tags:
   - vscode
 ---
-
+>宇宙第一
+<!-- more -->
 # vscode 使用技巧
 
 以下是我多年使用的经验（虽然现在没用多久）
@@ -19,7 +20,7 @@ tags:
 
 [[ctrl]]+[[shift]]+[[s]] 另存为
 
-## markdown
+## markdown扩充
 
 ### PicGo 插件
 
@@ -54,8 +55,16 @@ tags:
 
 ![20200414225032](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200414225032.png)
 
-![20200414225046](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200414225046.png)
-
 ### 全局透明
 
 ![20200402222219](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200402222219.png)
+
+### 我的插件
+
+![2020-04-20-21-39-59](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-39-59.png)
+
+![2020-04-20-21-40-23](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-40-23.png)
+
+![2020-04-20-21-40-44](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-40-44.png)
+
+![2020-04-20-21-41-09](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-41-09.png)

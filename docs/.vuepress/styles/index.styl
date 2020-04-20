@@ -13,13 +13,14 @@ body
 a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   cursor: url('/pointer/link.cur'), auto;
 
-// 标题
+//标题添加阴影
 .header
   .banner
     .container
       h1
-        color: #edebdf;
-        text-shadow: 1px 2px 20px black;
+        color: #FAFAFA;
+        text-shadow: 0px 0px 28px black;
+
 // 隐藏原有返回顶部按钮
 .go-to-top
   display none
@@ -40,7 +41,7 @@ p::-webkit-selection {
 
 //全局背景颜色的修改
 html, body {
-    background-color: #232323;//footer部分的背景颜色
+    background-color: #2F2A2A;//footer部分的背景颜色
 }
 
 /*滚动条效果-start*/
@@ -65,4 +66,19 @@ blockquote {
 }
 .content img {
    -webkit-border-radius: 13px;
+}
+
+//头像区添加阴影
+.info-card .info-card-header .info-avatar{
+  box-shadow: 0 0 10px #6a737d !important;
+}
+
+//首页图片去除白色边框
+.banner {
+    border-bottom: 0px solid #eaecef !important;
+}
+.footer {
+    padding-bottom: 1.5rem;
+    text-align: center;
+    border-top: 0px solid #eaecef !important;
 }

@@ -3,6 +3,7 @@ title: DFS HDU 1016 素数环
 category: Algorithm
 tags:
   - OJ
+  - DFS
 ---
 
 # [HDU 1016 素数环](http://acm.hdu.edu.cn/showproblem.php?pid=1016)

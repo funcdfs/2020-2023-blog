@@ -3,6 +3,7 @@ title: BFS HDU 1072 噩梦迷宫
 category: Algorithm
 tags:
   - OJ
+  - BFS
 ---
 
 #### Created:  2020-04-15 16:07:51
@@ -36,4 +37,3 @@ There are five integers which indicate the different type of area in the labyrin
 please tell Ignatius whether he could get out of the labyrinth, if he could, output the minimum time that he has to use to find the exit of the labyrinth, else output -1.
 For each test case, if Ignatius can get out of the labyrinth, you should output the minimum time he needs, else you should just output -1.
 :::
-

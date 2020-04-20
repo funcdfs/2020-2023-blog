@@ -3,6 +3,7 @@ title: DFS HDU 1181 B－M
 category: Algorithm
 tags:
   - OJ
+  - DFS
 ---
 
 # [HDU1181](http://acm.hdu.edu.cn/showproblem.php?pid=1181)

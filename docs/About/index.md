@@ -4,19 +4,17 @@ title: About
 ---
 
 
-Welcome to [my personal website](/_posts/Home/). I'm Feng Wei. You can reach me on [Wechat](https://raw.githubusercontent.com/fengwei2002/fengwei2002.github.io/master/public/image/weixin.jpg), [Github](https://github.com/fengwei2002), or [Gmail.](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
+Welcome to [my personal website](../../). I'm Feng Wei. You can reach me on [Wechat](https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg), [QQ](https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg), or [Gmail.](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200404154822.png)
 
 ## Open Source Project
 
 Non-exhaustive list of stuff I work on:
-
 ..
-
 ## This blog
 
-This blog has been established {{ dist_times }} .
-I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/).   
-It's completely static (for now) and If you encounter problems in using VuePress, you can also ask me.
+I built this blog using [Vue's](https://vuejs.org) static site generator [Vuepress](https://vuepress.vuejs.org/) 
+and this blog has been established {{ dist_times }} .
+
 
 ## Hobby
 

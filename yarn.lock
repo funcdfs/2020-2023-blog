@@ -1084,10 +1084,10 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-medium-zoom@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.npm.taobao.org/@vuepress/plugin-medium-zoom/download/@vuepress/plugin-medium-zoom-1.4.0.tgz#42017b3c88f0a08a5070208219ea14371ca7170f"
-  integrity sha1-QgF7PIjwoIpQcCCCGeoUNxynFw8=
+"@vuepress/plugin-medium-zoom@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npm.taobao.org/@vuepress/plugin-medium-zoom/download/@vuepress/plugin-medium-zoom-1.4.1.tgz#5665561be3382246ae883c0ad77d91c7913e01da"
+  integrity sha1-VmVWG+M4IkauiDwK132Rx5E+Ado=
   dependencies:
     medium-zoom "^1.0.4"
 
@@ -7641,7 +7641,7 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-container@^2.1.2:
+vuepress-plugin-container@^2.1.2, vuepress-plugin-container@^2.1.3:
   version "2.1.3"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.1.3.tgz#b5873cb8d21b66bd62f7fb15ab254e55dcfeff78"
   integrity sha1-tYc8uNIbZr1i9/sVqyVOVdz+/3g=
@@ -7666,6 +7666,11 @@ vuepress-plugin-flowchart@^1.4.3:
   integrity sha1-FpKAclfJugL3ZM7Qyvkwxif2W9s=
   dependencies:
     flowchart.js "^1.11.3"
+
+vuepress-plugin-go-top@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-go-top/download/vuepress-plugin-go-top-1.0.0.tgz#d18db397da9732e18860c96f8a3033e8e91c63e7"
+  integrity sha1-0Y2zl9qXMuGIYMlvijAz6OkcY+c=
 
 vuepress-plugin-nprogress@^1.1.6:
   version "1.1.6"

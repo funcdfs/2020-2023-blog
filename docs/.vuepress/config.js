@@ -1,6 +1,6 @@
 module.exports = {
   title: 'psychonaut1f',
-  logo: '/public/logo.webp',
+  logo: '/public/logo.ico',
   plugins: [
     ["cursor-effects", ],
     ["vuepress-plugin-reading-progress"],

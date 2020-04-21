@@ -21,9 +21,10 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag
         color: #FAFAFA;
         text-shadow: 0px 0px 28px black;
 
-// 隐藏原有返回顶部按钮
-.go-to-top
-  display none
+// 宽屏隐藏原有返回顶部按钮
+@media screen and (min-width: 960px)
+  .go-to-top
+    display none;
 
 //文字选中效果
 p::selection {
@@ -50,8 +51,8 @@ html, body {
     height:3px; 
 }
 .sidebar::-webkit-scrollbar {
-    width: 4px;
-    height: 12px;
+    width: 3px;
+    height: 3px;
 }
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
@@ -67,13 +68,18 @@ blockquote {
 .content img {
    -webkit-border-radius: 13px;
 }
-
+.header[data-v-37748d8c] {
+   -webkit-border-radius: 10px;
+}
+.banner[data-v-4572c5f4] {
+   -webkit-border-radius: 10px;
+}
 //头像区添加阴影
 .info-card .info-card-header .info-avatar{
   box-shadow: 0 0 10px #6a737d !important;
 }
 
-//首页图片去除白色边框
+//去除白色边框
 .banner {
     border-bottom: 0px solid #eaecef !important;
 }

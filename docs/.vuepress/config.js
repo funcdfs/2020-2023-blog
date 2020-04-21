@@ -58,11 +58,11 @@ module.exports = {
   themeConfig: { //主题配置项
     locales: {
       '/': {
-        lang: 'zh-CN',
+        lang: 'en-US',
       },
     },
-    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
-      home: `Welcome to Fengwei's Homepage`,
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
+      home: `Hi.`,
       posts: 'My Posts',
     }),
     nav: [{

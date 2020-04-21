@@ -1,8 +1,7 @@
 ---
 title: Luna
-category: Notes
 tags:
-  - Life
+  - 娱乐
 ---
 
 # luna

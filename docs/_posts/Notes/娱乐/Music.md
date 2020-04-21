@@ -1,8 +1,7 @@
 ---
 title: Music
-category: Notes
 tags:
-  - Life
+  - 娱乐
 ---
 
 ### 程嘉敏！！！

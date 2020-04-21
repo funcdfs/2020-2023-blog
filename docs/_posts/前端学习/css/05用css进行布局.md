@@ -87,8 +87,7 @@ em {
 ```html
 test<em style="display: inline-block; background: lightgreen; width: 200px;">testem  </em> test
 ```
-test<em style="display: inline-block; background: lightgreen; width: 200px;">
-testem  </em> test
+![2020-04-21-14-36-43](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-21-14-36-43.png =366x84)
 
 设置为 inline 的元素会忽略任何 width、height、margin-top 和 margin-bottom 设置。不过，设置为 inline-block 的元素可以使用这些属性，如这里的 em 可以设置 width。
 
@@ -270,11 +269,7 @@ float 属性不是继承的。
 ```
 渲染效果：
 
-<h4>Relative Positioning</h1>
-<p>When you position an element relatively,you <span style="position: relative;
- top: 35px;
- left: 100px;">position it</span> relative to its normal location.</p>
-<span style="position: static;> </span>
+![2020-04-21-14-36-00](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-21-14-36-00.png =685x165)
 
 偏移自然流中元素的步骤
 1. 输入 `position: relative;`。

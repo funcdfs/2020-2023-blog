@@ -5,6 +5,10 @@ module.exports = {
     ['@vuepress/google-analytics', {
       'ga': 'UA-161392801-2',
     }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
     ["cursor-effects", ],
     ["vuepress-plugin-reading-progress"],
     ["@vuepress/medium-zoom", {

@@ -6,7 +6,7 @@ tags:
   - vuepress
 ---
 
->只针对使用 vuepress 默认框架构建的项目
+只针对使用 vuepress 默认框架构建的项目
 <!-- more -->
 ## vuepress-plugin-auto-sidebar
 

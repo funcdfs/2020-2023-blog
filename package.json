@@ -24,6 +24,7 @@
   "homepage": "https://github.com/fengwei2002/vuepress_final#readme",
   "devDependencies": {
     "@iktakahiro/markdown-it-katex": "^3.1.0",
+    "@vuepress/plugin-google-analytics": "^1.4.1",
     "@vuepress/plugin-medium-zoom": "^1.4.1",
     "markdown-it": "^10.0.0",
     "markdown-it-footnote": "^3.0.2",

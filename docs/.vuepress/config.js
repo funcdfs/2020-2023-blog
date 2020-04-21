@@ -2,6 +2,9 @@ module.exports = {
   title: 'psychonaut1f',
   logo: '/public/logo.ico',
   plugins: [
+    ['@vuepress/google-analytics', {
+      'ga': 'UA-161392801-2',
+    }],
     ["cursor-effects", ],
     ["vuepress-plugin-reading-progress"],
     ["@vuepress/medium-zoom", {

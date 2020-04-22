@@ -2,27 +2,26 @@ module.exports = {
   title: 'psychonaut1f',
   logo: '/public/logo.ico',
   plugins: [
-    ['@vuepress/google-analytics', {
-      'ga': 'UA-161392801-2',
-    }],
-    ['@vuepress/pwa', {
+    //功能添加
+    ['@vuepress/pwa', { //pwa
       serviceWorker: true,
-      updatePopup: true
+      updatePopup: {
+        message: "发现新内容可用.",
+        buttonText: "刷新"
+      }
     }],
-    ["cursor-effects", ],
-    ["vuepress-plugin-reading-progress"],
-    ["@vuepress/medium-zoom", {
-      selector: '.content__default img',
-    }, ],
-    ['container', {
+    ['container', { //details容器
       type: 'details',
       before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
       after: () => '</details>\n'
     }],
-    ["go-top"],
-    ["flowchart"],
-    ["vuepress-plugin-seo"],
-    ["vuepress-plugin-baidu-autopush"],
+    ["@vuepress/medium-zoom", { //图片点击放大
+      selector: '.content__default img',
+    }],
+    //页面美化
+    ["cursor-effects"], //鼠标特效
+    ["go-top"], //喵
+    ["vuepress-plugin-reading-progress"], //进度条
   ],
   head: [ //math显示
     [
@@ -42,7 +41,7 @@ module.exports = {
   ],
 
   markdown: { //markdown扩展
-    lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
+    lineNumbers: true, // 代码行号应该关闭，要不然手机查看很费劲
     extendMarkdown: md => {
       md.set({
         html: true
@@ -56,6 +55,7 @@ module.exports = {
       md.use(require('markdown-it-footnote')); //角标渲染
       md.use(require('markdown-it-kbd')); //按键渲染
       md.use(require('markdown-it-imsize')); //自定义图片的大小
+      md.use(require("markdown-it-vuepress-code-snippet-enhanced"));
     }
   },
 
@@ -65,13 +65,16 @@ module.exports = {
   themeConfig: { //主题配置项
     locales: {
       '/': {
-        lang: 'en-US',
+        lang: 'zh-CN',
       },
     },
-    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-      home: `Hi.`,
-      posts: 'My Posts',
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
+      主页: `Hi.`,
+      文章: 'All Posts',
     }),
+    pagination: {
+      perPage: 6,
+    },
     nav: [{
         text: 'Home',
         link: '/',
@@ -90,7 +93,7 @@ module.exports = {
     ],
     personalInfo: {
       nickname: 'psychonaut1f',
-      description: 'Life as I understand it is to be with everything I like',
+      description: 'Life as I understand it is</br>to be with everything I like',
       email: 'psychonaut1f@gmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',

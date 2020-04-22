@@ -41,7 +41,7 @@ module.exports = {
   ],
 
   markdown: { //markdown扩展
-    lineNumbers: true, // 代码行号应该关闭，要不然手机查看很费劲
+    lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
     extendMarkdown: md => {
       md.set({
         html: true

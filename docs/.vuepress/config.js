@@ -65,13 +65,13 @@ module.exports = {
   themeConfig: { //主题配置项
     locales: {
       '/': {
-        lang: 'zh-CN',
+        lang: 'en-US',
       },
     },
     lastUpdated: true,
-    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
-      主页: `Hi.`,
-      文章: 'All Posts',
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
+      home: `Hi.`,
+      posts: 'All Posts',
     }),
     pagination: {
       perPage: 6,

@@ -68,6 +68,7 @@ module.exports = {
         lang: 'zh-CN',
       },
     },
+    lastUpdated: true,
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
       主页: `Hi.`,
       文章: 'All Posts',

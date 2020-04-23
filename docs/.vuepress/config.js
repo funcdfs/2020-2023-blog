@@ -77,7 +77,7 @@ module.exports = {
     },
     lastUpdated: true,
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-      home: `we had left the ground..`,
+      home: `Welcome to My Homepage`,
       posts: 'All Posts',
     }),
     pagination: {

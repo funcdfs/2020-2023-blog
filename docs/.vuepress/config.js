@@ -23,7 +23,14 @@ module.exports = {
     ["go-top"], //喵
     ["vuepress-plugin-reading-progress"], //进度条
   ],
-  head: [ //math显示
+  head: [
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap"
+      }
+    ],
     [
       "meta",
       {
@@ -70,7 +77,7 @@ module.exports = {
     },
     lastUpdated: true,
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-      home: `Hi.`,
+      home: `we had left the ground..`,
       posts: 'All Posts',
     }),
     pagination: {

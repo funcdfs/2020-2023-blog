@@ -13,16 +13,25 @@ body
 a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   cursor: url('/pointer/link.cur'), auto;
 
-//标题添加阴影
+//标题美化
 .header
   .banner
     .container
       h1
+        font-family: 'Baloo Paaji 2', cursive;
         color: #FAFAFA;
         text-shadow: 0px 0px 28px black;
 .navbar .navbar-site-name {
+    font-family: 'Baloo Paaji 2', cursive;
     color: #24292e !important;
+    font-size: 1.3rem !important;
 }
+.navbar .navbar-link {
+    font-family: 'Baloo Paaji 2', cursive;
+    color: #24292e !important;
+    font-size: 1.3rem;
+}
+
 // 宽屏隐藏原有返回顶部按钮
 @media screen and (min-width: 960px)
   .go-to-top
@@ -88,4 +97,18 @@ blockquote {
     padding-bottom: 1.5rem;
     text-align: center;
     border-top: 0px solid #eaecef !important;
+}
+
+//个人信息文字
+.info-card .info-card-body .info-nickname {
+    font-size: 1.6rem;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+.info-card .info-card-body .info-desc {
+    font-size: 1rem;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+.info-card .info-card-body .info-contact{
+    font-size: 1rem;
+    font-family: 'Baloo Paaji 2', cursive;
 }

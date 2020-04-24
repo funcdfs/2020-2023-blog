@@ -3,31 +3,28 @@ top: true
 title: About
 ---
 
-
-
 <span style="font-family: 'Baloo Paaji 2', cursive;">
     <p>
-        Welcome to <a href="../../">my personal website</a>,
+        Welcome to my <a href="../../">personal website</a>,
         You can reach me on
-        <a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg">Wechat<a>,
-                <a href="https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg">QQ<a>, or
-                        <a href="mailto:psychonaut1f@gmail.com">Gmail</a>.
+        <a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg">WeChat</a> or
+        <a href="https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg">QQ</a>.
     </p>
     <h2>Open Source Project</h2>
     Non-exhaustive list of stuff I work on:</br>
     ..
-    <h2>This blog</h2>
+    <h2>Blog</h2>
     I built this blog using <a href="https://vuejs.org">Vue's</a> static site generator <a
-        href="https://vuepress.vuejs.org/">VuePress</a>
+        href="https://vuepress.vuejs.org/">VuePress</a>,</br>
     and this blog has been established {{ dist_times }} .
     <h2>Hobby</h2>
     Like cat</br>
-    Like games</br>
+    <s>Like games</s></br>
     Like everything beautiful</br>
-    Like to sleep 10.00pm-10.00am is Best
+    Like to sleep <s>10.00pm-10.00am is Best</s>
     <h2>Advantages</h2>
-    I am very young? 2002</br>
-    I am very tall? 187 centimeter
+    I am very young? <s>2002</s></br>
+    I am very tall? <s>187 centimeter</s>
 </span>
 
 

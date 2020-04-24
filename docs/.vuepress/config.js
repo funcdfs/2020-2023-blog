@@ -30,23 +30,22 @@ module.exports = {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap"
       }
-    ],
+    ], //WEB字体
     [
       "meta",
       {
         name: "viewport",
-        content: "width=device-width,initial-scale=1,user-scalable=no"
+        content: "width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=0.5"
       }
-    ],
+    ], //移动端放大缩小的设置
     [
       "link",
       {
         rel: "stylesheet",
         href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
       }
-    ],
+    ], //Katex
   ],
-
   markdown: { //markdown扩展
     lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
     extendMarkdown: md => {
@@ -59,30 +58,25 @@ module.exports = {
       md.use(require('markdown-it-mark')); //高亮渲染
       md.use(require('@iktakahiro/markdown-it-katex')); //math渲染
       md.use(require('markdown-it-task-lists')); //todo渲染
-      md.use(require('markdown-it-footnote')); //角标渲染
-      md.use(require('markdown-it-kbd')); //按键渲染
       md.use(require('markdown-it-imsize')); //自定义图片的大小
-      md.use(require("markdown-it-vuepress-code-snippet-enhanced"));
+      md.use(require("markdown-it-vuepress-code-snippet-enhanced")); //代码块文件引入
     }
   },
-
-  lastUpdated: true,
-
   theme: 'meteorlxy',
   themeConfig: { //主题配置项
     locales: {
       '/': {
         lang: 'en-US',
       },
-    },
-    lastUpdated: true,
+    }, //US
+    lastUpdated: true, //更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
       home: `Welcome to My Homepage`,
       posts: 'All Posts',
-    }),
+    }), //自定义部分文字
     pagination: {
       perPage: 6,
-    },
+    }, //每页文章数量
     nav: [{
         text: 'Home',
         link: '/',
@@ -98,7 +92,7 @@ module.exports = {
         link: '/About/',
         exact: false
       },
-    ],
+    ], //navbar导航栏
     personalInfo: {
       nickname: 'psychonaut1f',
       description: 'Life as I understand it is</br>to be with everything I like',
@@ -116,23 +110,23 @@ module.exports = {
           link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba',
         },
       },
-    },
+    }, //个人信息
     header: {
       background: {
         url: 'https://pic1.zhimg.com/v2-57e254b82a79f6189dab0a0a3cd146f4_r.jpg',
       },
       showTitle: true,
-    },
+    }, //header设置
     footer: {
       poweredBy: false,
       poweredByTheme: false,
       custom: 'psychonaut1f@gmail.com',
-    },
+    }, //fotter
     infoCard: {
       headerBackground: {
         useGeo: false,
       },
-    },
+    }, //头像后面的背景图
     comments: {
       platform: 'github',
       owner: 'fengwei2002',
@@ -141,6 +135,6 @@ module.exports = {
       clientSecret: '99a3239a0889c4917b47c601f6a642c2cc8e2812',
       prefix: '[Comments] ',
       labels: ['comments'],
-    },
+    }, //vssue配置
   }
 }

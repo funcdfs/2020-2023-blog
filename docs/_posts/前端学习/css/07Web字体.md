@@ -1,7 +1,7 @@
 ---
 date: 2020-04-23
 title: 使用 web 字体
-category: 前端
+category: Designer
 tags:
   - CSS3
 vssue-title: web 字体

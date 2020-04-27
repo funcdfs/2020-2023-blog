@@ -10,15 +10,23 @@ module.exports = {
         buttonText: "刷新"
       }
     }],
+
     ['container', { //details容器
       type: 'details',
       before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
       after: () => '</details>\n'
     }],
+
     ["@vuepress/medium-zoom", { //图片点击放大
       selector: '.content__default img',
     }],
+
     //页面美化
+    ['nest', {
+      color: '151, 54, 255', // color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+      pointColor: '151, 54, 255', // color of points, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+      count: 89, // the number of lines, default: 99.
+    }],
     ["cursor-effects"], //鼠标特效
     ["go-top"], //喵
     ["vuepress-plugin-reading-progress"], //进度条

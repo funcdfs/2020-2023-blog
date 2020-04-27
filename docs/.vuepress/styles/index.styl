@@ -38,22 +38,18 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag
     display none;
 
 //文字选中效果
-p::selection {
-    background:#cccccce3;
-    color:#000000;
-}
-p::-moz-selection {
-    background:#cccccce3;
-    color:#000000;
-}
-p::-webkit-selection {
-    background:#cccccce3c;
-    color:#000000;
-}
+::selection
+    color: #000000;
+    background: #eaf520;
 
 //全局背景颜色的修改
-html, body {
-    background-color: #2F2A2A;//footer部分的背景颜色
+html, body
+  //background-color: #2F2A2A;//footer部分的背景颜色
+
+//文章阴影+透明
+.main-div {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 0 0.85rem rgba(0, 0, 0, 0.1) !important;
 }
 
 /*滚动条效果-start*/
@@ -81,9 +77,7 @@ blockquote {
 .header {
    -webkit-border-radius: 10px !important;
 }
-.banner {
-   -webkit-border-radius: 10px !important;
-}
+
 //头像区添加阴影
 .info-card .info-card-header .info-avatar{
   box-shadow: 0 0 10px #6a737d !important;

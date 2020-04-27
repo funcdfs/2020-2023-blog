@@ -3,6 +3,8 @@ top: true
 title: About
 ---
 
+$1.001^{365}$
+
 <span style="font-family: 'Baloo Paaji 2', cursive;">
     <p>
         Welcome to my <a href="../../">personal website</a>,

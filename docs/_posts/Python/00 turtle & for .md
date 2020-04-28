@@ -1,12 +1,13 @@
 ---
-title: turtle 库在 python 中的使用
+title: turtle 库在 python 中的使用 (pycharm 2020-01)
 date: 2020-04-25
+vssue-title: turtle
 category: basics
 tags:
   - Python
 ---
 
-从一个小 python 的绘制开始
+从一个小 python 的绘制开始 [turtle 库文档](https://docs.python.org/zh-cn/3/library/turtle.html#special-turtle-methods)
 <!-- more -->
 ```py
 import turtle
@@ -141,3 +142,14 @@ __all__ = ['ScrolledCanvas', 'TurtleScreen', 'Screen', 'RawTurtle', 'Turtle', 'R
 ```
 
 然后程序结尾额外添加 `turtle.done()` 即可定格画面（不自动关闭）
+
+## 2020-01 版 pycharm professional 破解
+
+适用于 2020-04-28 前所有的 jetbrains 产品
+
+### GitHub
+
+[github](https://github.com/fengwei2002/cheat-jetbrains)
+
+我把最新的zip发布到了GitHub，因为我自己找了很长时间都没有找到
+

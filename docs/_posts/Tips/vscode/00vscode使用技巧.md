@@ -1,5 +1,6 @@
 ---
 title: vscode 使用技巧
+date: 2020-04-27
 category: Tips
 tags:
   - vscode
@@ -46,6 +47,14 @@ tags:
 
 ![20200414224813](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200414224813.png)
 >用来加快代码块的引入
+
+### Excel to Markdown table
+
+还是有点用处的
+
+`shift+alt+v`
+
+例如绘制复杂表格时就会方便一些
 
 ## 美化
 

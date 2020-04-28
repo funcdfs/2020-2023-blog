@@ -23,9 +23,9 @@ module.exports = {
 
     //页面美化
     ['nest', {
-      color: '151, 54, 255', // color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-      pointColor: '151, 54, 255', // color of points, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-      count: 89, // the number of lines, default: 99.
+      color: '148, 0, 211', // color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+      pointColor: '148, 0, 211', // color of points, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+      count: 92, // the number of lines, default: 99.
     }],
     ["cursor-effects"], //鼠标特效
     ["go-top"], //喵
@@ -86,20 +86,20 @@ module.exports = {
       perPage: 6,
     }, //每页文章数量
     nav: [{
-        text: 'Home',
-        link: '/',
-        exact: true
-      },
-      {
-        text: 'Posts',
-        link: '/posts/',
-        exact: false
-      },
-      {
-        text: 'About',
-        link: '/About/',
-        exact: false
-      },
+      text: 'Home',
+      link: '/',
+      exact: true
+    },
+    {
+      text: 'Posts',
+      link: '/posts/',
+      exact: false
+    },
+    {
+      text: 'About',
+      link: '/About/',
+      exact: false
+    },
     ], //navbar导航栏
     personalInfo: {
       nickname: 'psychonaut1f',
@@ -128,7 +128,7 @@ module.exports = {
     footer: {
       poweredBy: false,
       poweredByTheme: false,
-      custom: 'psychonaut1f@gmail.com',
+      //custom: 'psychonaut1f@gmail.com',
     }, //fotter
     infoCard: {
       headerBackground: {

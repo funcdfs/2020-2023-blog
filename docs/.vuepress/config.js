@@ -32,13 +32,13 @@ module.exports = {
     ["vuepress-plugin-reading-progress"], //进度条
   ],
   head: [
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap"
-      }
-    ], //WEB字体
+    // [
+    //   "link",
+    //   {
+    //     rel: "stylesheet",
+    //     href: "https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap"
+    //   }
+    // ], //WEB字体
     [
       "meta",
       {

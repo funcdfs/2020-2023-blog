@@ -18,16 +18,14 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   .banner
     .container
       h1
-        font-family: 'Baloo Paaji 2', cursive;
-        color: #FAFAFA;
-        text-shadow: 0px 0px 28px black;
+        font-size: 1.7em;
+        color: #fff;
+        text-shadow: 0 0 0.1em, 0 0 0.1em;
 .navbar .navbar-site-name {
-    font-family: 'Baloo Paaji 2', cursive;
     color: #24292e !important;
     font-size: 1.2rem !important;
 }
 .navbar .navbar-link {
-    font-family: 'Baloo Paaji 2', cursive;
     color: #24292e !important;
     font-size: 1.1rem;
 }
@@ -39,8 +37,8 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag
 
 //文字选中效果
 ::selection
-    color: #ffffff;
-    background: #384451;
+    background-color: #79ffe1;
+    color: #000;
 
 //全局背景颜色的修改
 html, body
@@ -49,8 +47,15 @@ html, body
 //文章阴影+透明
 .main-div {
     background-color: rgba(255, 255, 255, 0.6) !important;
-    box-shadow: 0 0 0.85rem rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
 }
+
+//磨砂导航栏
+.navbar
+    backdrop-filter: saturate(180%) blur(5px);
+.navbar.fixed
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: saturate(180%) blur(5px);
 
 /*滚动条效果-start*/
 ::-webkit-scrollbar {
@@ -80,29 +85,14 @@ blockquote {
 
 //头像区添加阴影
 .info-card .info-card-header .info-avatar{
-  box-shadow: 0 0 10px #6a737d !important;
+    box-shadow: 0 0 0px 1px black !important;
 }
 
 //去除白色边框
-.banner {
+.navbar
     border-bottom: 0px solid #eaecef !important;
-}
-.footer {
-    padding-bottom: 1.5rem;
-    text-align: center;
+    box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
+.banner
+    border-bottom: 0px solid #eaecef !important;
+.footer
     border-top: 0px solid #eaecef !important;
-}
-
-//个人信息文字
-.info-card .info-card-body .info-nickname {
-    font-size: 1.6rem;
-    font-family: 'Baloo Paaji 2', cursive;
-}
-.info-card .info-card-body .info-desc {
-    font-size: 1rem;
-    font-family: 'Baloo Paaji 2', cursive;
-}
-.info-card .info-card-body .info-contact{
-    font-size: 1rem;
-    font-family: 'Baloo Paaji 2', cursive;
-}

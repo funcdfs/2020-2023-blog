@@ -3,7 +3,7 @@ top: true
 title: About
 ---
 
-<span style="font-family: 'Baloo Paaji 2', cursive;">
+<span>
     <p>
         Welcome to my <a href="../../">personal website</a>,
         You can reach me on

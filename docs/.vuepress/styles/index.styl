@@ -18,12 +18,12 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   .banner
     .container
       h1
-        font-size: 1.7em;
+        font-size: 1.6em;
         color: #fff;
         text-shadow: 0 0 0.1em, 0 0 0.1em;
 .navbar .navbar-site-name {
     color: #24292e !important;
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
 }
 .navbar .navbar-link {
     color: #24292e !important;
@@ -46,7 +46,7 @@ html, body
 
 //文章阴影+透明
 .main-div {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(255, 255, 255, 0.65) !important;
     box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -59,11 +59,11 @@ html, body
 
 /*滚动条效果-start*/
 ::-webkit-scrollbar {
-    width:3px; 
+    width:4px; 
     height:3px; 
 }
 .sidebar::-webkit-scrollbar {
-    width: 3px;
+    width: 4px;
     height: 3px;
 }
 ::-webkit-scrollbar-thumb {
@@ -96,3 +96,10 @@ blockquote {
     border-bottom: 0px solid #eaecef !important;
 .footer
     border-top: 0px solid #eaecef !important;
+
+//code渲染
+.content code {
+    color: rgba(0,0,0,.66);
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0 0 0 0.7px black;
+}

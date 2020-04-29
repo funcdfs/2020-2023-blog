@@ -19,7 +19,6 @@ title: About
     and this blog has been established {{ dist_times }} .
     <h2>Hobby</h2>
     Like cat</br>
-    <s>Like games</s></br>
     Like to sleep <s>10.00pm-10.00am is Best</s>
     <h2>Advantages</h2>
     I am very young? <s>2002</s></br>

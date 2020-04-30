@@ -5,7 +5,7 @@ title: About
 
 <span>
     <p>
-        Welcome to <a href="../../"> my personal website</a>,I'm feng wei,</br>
+        Welcome to <a href="../../"> my personal website</a>, I'm feng wei,</br>
         this vuepress blog has been established {{ dist_times }},</br>
         and you can reach me on
         <a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg">WeChat</a>,
@@ -25,7 +25,8 @@ title: About
     I am very tall? <s>187 centimeter</s>
     <h2>Blog</h2>
     I built this blog using <a href="https://vuejs.org">Vue's</a> static site generator <a
-    href="https://vuepress.vuejs.org/">VuePress</a> and you can find the source <a herf="">here</a>.</br>
+    href="https://vuepress.vuejs.org/">VuePress</a> ,</br>
+     and you can find the source <a herf="https://github.com/fengwei2002/feng-w.cn">here</a>.</br>
 </span>
 
 

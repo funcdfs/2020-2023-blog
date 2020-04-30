@@ -45,10 +45,12 @@ html, body
   //background-color: #2F2A2A;//footer部分的背景颜色
 
 //文章阴影+透明
-.main-div {
+.main-div
     background-color: rgba(255, 255, 255, 0.65) !important;
     box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
-}
+//配合文章的tag透明色
+.post-tag
+    background-color: hsla(0, 0%, 100%, 0) !important;
 
 //磨砂导航栏
 .navbar
@@ -58,35 +60,29 @@ html, body
     backdrop-filter: saturate(180%) blur(5px);
 
 /*滚动条效果-start*/
-::-webkit-scrollbar {
+::-webkit-scrollbar 
     width:4px; 
     height:3px; 
-}
-.sidebar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar 
     width: 4px;
     height: 3px;
-}
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb 
     background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
-}
+
 /*滚动条效果-end*/
 
 //添加圆角
-blockquote {
+blockquote 
     background:#F3F4F4 !important;
     color:#000000 !important;
-}
-.content img {
+.content img 
    -webkit-border-radius: 13px !important;
-}
-.header {
+.header
    -webkit-border-radius: 10px !important;
-}
 
 //头像区添加阴影
-.info-card .info-card-header .info-avatar{
+.info-card .info-card-header .info-avatar
     box-shadow: 0 0 0px 1px black !important;
-}
 
 //去除白色边框
 .navbar
@@ -98,8 +94,7 @@ blockquote {
     border-top: 0px solid #eaecef !important;
 
 //code渲染
-.content code {
+.content code
     color: rgba(0,0,0,.66);
     background-color: rgba(255,255,255,0);
     box-shadow: 0 0 0 0.7px black;
-}

@@ -77,7 +77,7 @@ module.exports = {
         lang: 'en-US',
       },
     }, //US
-    lastUpdated: true, //更新时间
+    lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
       home: `Welcome to My Homepage`,
       posts: 'All Posts',

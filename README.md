@@ -17,4 +17,4 @@ yarn docs:build
 
 ## Deploy
 
-使用zeit提供的cdn服务 并且绑定自定义域名
+Use https://vercel.com/ (zeit.co) cdn and Tencent Cloud Domain

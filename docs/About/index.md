@@ -2,33 +2,30 @@
 top: true
 title: About
 ---
+Welcome to my personal website, I'm feng wei,
+and you can reach me on [WeChat](https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg), [QQ](https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg),or [Github](https://github.com/fengwei2002).
 
-<span>
-    <p>
-        Welcome to <a href="../../"> my personal website</a>, I'm feng wei,</br>
-        this vuepress blog has been established {{ dist_times }},</br>
-        and you can reach me on
-        <a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg">WeChat</a>,
-        <a href="https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg">QQ</a>,or
-        <a href="https://github.com/fengwei2002">Github</a>.
-    </p>
-    <h2>Project</h2>
-    Non-exhaustive list of stuff I work on:</br>
-    ..
-    </br>
-    <h2>Hobby</h2>
-    Like cat</br>
-    <s>Like Games</s></br>
-    Like to sleep <s>10.00pm-10.00am is Best</s>
-    <h2>Advantages</h2>
-    I am very young? <s>2002-01-20</s></br>
-    I am very tall? <s>187 centimeter</s>
-    <h2>Blog</h2>
-    I built this blog using <a href="https://vuejs.org">Vue's</a> static site generator <a
-    href="https://vuepress.vuejs.org/">VuePress</a> ,</br>
-     and you can find the source <a herf="https://github.com/fengwei2002/feng-w.cn">here</a>.</br>
-</span>
+### Project
 
+Non-exhaustive list of stuff I work on:
+..
+
+### Hobby
+
+Like cat
+~~Like Games~~
+Like to sleep ~~10.00pm-10.00am is Best~~
+
+### Advantages
+
+I am very young? ~~2002-01-20~~
+I am very tall? ~~187 centimeter~~
+
+### Blog
+
+I built this blog using [Vue's](https://vuejs.org) static site generator [VuePress](https://vuepress.vuejs.org/), 
+this vuepress blog has been established {{dist_times}},
+and you can find the source [here](https://github.com/fengwei2002/feng-w.cn).
 
 <script>
     export default {

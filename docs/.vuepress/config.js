@@ -3,14 +3,6 @@ module.exports = {
   logo: '/public/logo.ico',
   plugins: [
     //功能添加
-    ['@vuepress/pwa', { //pwa
-      serviceWorker: true,
-      updatePopup: {
-        message: "发现新内容可用.",
-        buttonText: "刷新"
-      }
-    }],
-
     ['container', { //details容器
       type: 'details',
       before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,

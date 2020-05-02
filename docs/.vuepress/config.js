@@ -8,7 +8,13 @@ module.exports = {
       before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
       after: () => '</details>\n'
     }],
-
+    ['@vuepress/pwa', { //pwa
+      serviceWorker: true,
+      updatePopup: {
+        message: "发现新内容可用.",
+        buttonText: "刷新"
+      }
+    }],//这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
     ["@vuepress/medium-zoom", { //图片点击放大
       selector: '.content__default img',
     }],

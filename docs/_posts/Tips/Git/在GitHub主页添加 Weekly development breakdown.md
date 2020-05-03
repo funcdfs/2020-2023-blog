@@ -1,15 +1,17 @@
 ---
-title: 在 GitHub 主页中添加 📊 Weekly development breakdown
+title: 在 GitHub 主页中添加 📊 Weekly development breakdown (By wakaTIme)
 vusse-title: Git gist
-date: 2020-05-02
-category: Tips
+date: 2020-05-03
+category: Tipsa
 tags:
   - Git
 ---
 
-今天在 [matchai](https://github.com/matchai) 的 GitHub 主页看到一个 [每周不同代码的时间统计](https://github.com/matchai/waka-box)，感觉放在 GitHub 主页挺好，搜了一下也没有教程（因为很少人见过吧），所以总结一下我的使用方法
+今天在 GitHub 看到一个 [每周不同代码的时间统计](https://github.com/matchai/waka-box)，感觉放在 GitHub 主页挺好，搜了一下也没有教程（因为很少人见过吧），所以总结一下我的使用方法
 
 <!-- more -->
+
+>感谢[@sigure](https://www.sigure.xyz/)
 
 ## 效果图：
 
@@ -37,7 +39,7 @@ wakatime 账户用 GitHub 账户登录即可
 
 时间统计肯定是要在本地与电脑的写码软件绑定的
 
-所以　ｗａｋａｔｉｍｅ 平台提供了与市面上的常见 IDE 的插件，安装后配置一个　[KEY](https://wakatime.com/settings/api-key)　即可
+所以　wakaTIme 平台提供了与市面上的常见 IDE 的插件，安装后配置一个　[KEY](https://wakatime.com/settings/api-key)　即可
 
 [https://wakatime.com/plugins](https://wakatime.com/plugins)
 
@@ -69,3 +71,19 @@ Gist https://gist.github.com/ 是 Github 的一个子服务。最简单的功能
 就按照 README 第一步说的创建一个新的公开的 gist 
 
 ## 展示在 GitHub homepage
+
+外展时间统计可以让看到的人了解你敲代码的时间放在主页是个不错的选择
+
+开头提到的 https://github.com/matchai/waka-box 就是利用 gist 服务将这个页面放到主页的
+
+因为 GitHub 提供了在主页展示 gist 的功能
+
+准备一个 gist id ，再准备上面的 wakatime 的 key，再准备一个 gist 的 token id
+
+然后进入Fork 后的项目这里：
+
+![2020-05-03-09-12-54](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-03-09-12-54.png)
+
+按照 readme 的介绍添加两个 secrets 到 fork 后的项目中
+
+等一天即可

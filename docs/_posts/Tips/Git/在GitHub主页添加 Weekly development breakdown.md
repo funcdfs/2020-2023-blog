@@ -7,11 +7,13 @@ tags:
   - Git
 ---
 
-今天在 GitHub 看到一个 [每周不同代码的时间统计](https://github.com/matchai/waka-box)，感觉放在 GitHub 主页挺好，搜了一下也没有教程（因为很少人见过吧），所以总结一下我的使用方法
+[waka-box](https://github.com/matchai/waka-box)官方文档
 
 <!-- more -->
 
->感谢[@sigure](https://www.sigure.xyz/)
+今天在 GitHub 看到一个 [每周不同代码的时间统计](https://github.com/matchai/waka-box)，感觉放在 GitHub 主页挺好，搜了一下也没有教程（因为很少人见过吧），所以总结一下我的使用方法
+
+>感谢 [@sigure](https://www.sigure.xyz/)
 
 ## 效果图：
 
@@ -23,40 +25,35 @@ tags:
 
 wakatime 就是一个专门统计写代码时间的一个平台，很多好用的功能都是免费
 
-可以自己每周看一次（自己看）, 展示在 GitHub 主页中也行
-
-项目 README 的第二步就是获取一个 GitHub 的 token，给予 gist 的创建权限即可
+可以自己每周看一次（自己查看）, 展示在 GitHub 主页中也行（目的）
 
 wakatime 账户用 GitHub 账户登录即可
 
-去 [资料](https://wakatime.com/settings/profile) 里面将下面两个权限　**关闭**　掉
+去 [资料](https://wakatime.com/settings/profile) 里面将下面两个权限　**打开**
 
 ![2020-05-02-22-21-24](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-02-22-21-24.png)
 
-获取的 wakatime API key 和 token 以后保存一下，最后展示到 GitHub 主页时会用到
+token 权限给两个就行，workflow 的和 gist 的
 
 ## 本地 IDE 绑定
 
 时间统计肯定是要在本地与电脑的写码软件绑定的
 
-所以　wakaTIme 平台提供了与市面上的常见 IDE 的插件，安装后配置一个　[KEY](https://wakatime.com/settings/api-key)　即可
+所以　wakaTIme 平台提供了与市面上的常见 IDE 的 [插件](https://wakatime.com/plugins)，安装后本地配置一个　[KEY](https://wakatime.com/settings/api-key)　即可
 
-[https://wakatime.com/plugins](https://wakatime.com/plugins)
-
-与你的所有 IDE 绑定完成后进入控制台就会出现下面的统计图
+与你的所有 IDE 绑定完成后进入[控制台](https://wakatime.com/dashboard)就会出现下面的统计图
 
 ![2020-05-02-23-24-36](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-02-23-24-36.png)
 
-很棒！
 现在可以自己查看你的每周 code time 了，统计图还分 IDE 和语言，每周总结一次，成就感满满
 
-## 新名词 Github·Gist
-
-项目 README 开始的第一行出现了`Create a new public GitHub Gist (https://gist.github.com/)`
+## 新名词 Gist
 
 ![2020-05-02-20-36-05](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-02-20-36-05.png)
 
-Gist https://gist.github.com/ 是 Github 的一个子服务。最简单的功能就是分享代码片段，例如把一些小型脚本放到 Gist 方便分享和管理。不同于大型项目使用 repository 进行管理，Gist 就是小型代码片段的分享。类似的服务还有如 Pastebin 和 Pastie, 但明显出生于 Github 的 Gist 更有优势了。
+项目 README 开始的第一行出现了[Create a new public GitHub Gist](https://gist.github.com/)
+
+[Gist](https://gist.github.com/) 是 Github 的一个子服务。最简单的功能就是分享代码片段，例如把一些小型脚本放到 Gist 方便分享和管理。不同于大型项目使用 repository 进行管理，Gist 就是小型代码片段的分享。类似的服务还有如 Pastebin 和 Pastie, 但明显出生于 Github 的 Gist 更有优势了。
 但是 gist 提供的功能不仅限于此。
 
 - gist 能无限制的免费创建私有代码片段，而不被搜索，只有通过浏览器输入其 URL 才能看见。匿名张贴。您不需要拥有 Github 账号就可以使用 Gist。
@@ -68,7 +65,7 @@ Gist https://gist.github.com/ 是 Github 的一个子服务。最简单的功能
 
 大概了解 gist 是个什么东西后
 
-就按照 README 第一步说的创建一个新的公开的 gist 
+就按照 README 第一步说的创建一个新的公开的 gist  **名字随意**
 
 ## 展示在 GitHub homepage
 
@@ -76,14 +73,25 @@ Gist https://gist.github.com/ 是 Github 的一个子服务。最简单的功能
 
 开头提到的 https://github.com/matchai/waka-box 就是利用 gist 服务将这个页面放到主页的
 
-因为 GitHub 提供了在主页展示 gist 的功能
+因为 GitHub 提供了在主页展示 gist 的功能（展示一个代码片段）
 
-准备一个 gist id ，再准备上面的 wakatime 的 key，再准备一个 gist 的 token id
+准备一个 gist id （公开的就行，名字随意），再准备上面的 wakatime 的 key，再准备一个 前面说的 token 。
 
-然后进入Fork 后的项目这里：
+[fork](https://github.com/fengwei2002/wakatime-box) 这个仓库
 
-![2020-05-03-09-12-54](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-03-09-12-54.png)
+然后进入 Fork 后的项目这里添加三个 key
 
-按照 readme 的介绍添加两个 secrets 到 fork 后的项目中
+![2020-05-04-12-28-41](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-04-12-28-41.png)
 
-等一天即可
+再添加 gist id 到 `.github` 文件夹下面
+
+再查看一下是否打开 GitHub action
+
+![2020-05-04-12-43-13](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-04-12-43-13.png)
+
+
+数据满一天后就会开始更新到指定的gist中了，当发现action有log后
+
+![2020-05-04-12-45-32](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-04-12-45-32.png)
+
+将目标gist展示出来即可

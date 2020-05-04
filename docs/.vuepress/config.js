@@ -11,8 +11,8 @@ module.exports = {
     ['@vuepress/pwa', { //pwa
       serviceWorker: true,
       updatePopup: {
-        message: "🌈Feng Wei Posted New Content🌈",
-        buttonText: "Click To Refresh"
+        message: "🌈New Content🌈",
+        buttonText: "Refresh"
       }
     }],//这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
     ["@vuepress/medium-zoom", { //图片点击放大

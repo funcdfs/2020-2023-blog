@@ -111,6 +111,7 @@ at(int idx); //返回索引 idx 所指的数据，如果 idx 越界，抛出 out
 operator[];//返回索引 idx 所指的数据，越界时，运行直接报错 
 front();//返回容器中第一个数据元素 
 back();//返回容器中最后一个数据元素
+end(); //返回一个指向最后一个元素后一个元素的迭代器
 ```
 
 ``` cpp
@@ -121,7 +122,7 @@ insert(const_iterator pos, int count,ele);//迭代器指向位置 pos 插入 cou
 erase(const_iterator start, const_iterator end);//删除迭代器从 start 到 end 之间的元素 
 clear();//删除容器中所有元素
 ```
-
+<!-- 
 ## **deque**
 
 头文件<deque>  "double-ended-queue"
@@ -554,4 +555,4 @@ size();//返回队列的大小
 或
 `容器类名：:const_iterator 变量名` 
 
-访问一个迭代器所指向的元素，`*迭代器变量名` 
+访问一个迭代器所指向的元素，`*迭代器变量名`  -->

@@ -1,7 +1,6 @@
 ---
 title: Git Bash & GitHub Template
 vusse-title: Git
-top: 1
 category: Tips
 tags:
   - Git

@@ -78,7 +78,7 @@ module.exports = {
     lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
       home: `feng-w.cn`,
-      posts: 'Articles',
+      posts: 'Article',
     }), //自定义部分文字
     pagination: {
       perPage: 6,
@@ -89,7 +89,7 @@ module.exports = {
       exact: true
     },
     {
-      text: '🍕Articles',
+      text: '🍔Article',
       link: '/posts/',
       exact: false
     },

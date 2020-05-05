@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 class Solution
 {
@@ -17,29 +18,21 @@ public:
     {
         vector<int> result;
         vector<int> tem;
+        //tem是排序前的数组
         for (int i = 0; i < nums.size(); i++)
         {
             tem.push_back(nums.at(i));
         }
-        for (int i = 0; i < nums.size() - 1; i++)
-        {
-            for (int j = 0; j < nums.size() - i - 1; j++)
-            {
-                if (nums[i] < nums[j])
-                {
-                    int swap = nums[j];
-                    nums[j] = nums[i];
-                    nums[i] = swap;
-                }
-            }
-        } //冒泡排序和依次对每个元素进行遍历都是O^2的复杂度
+        sort(nums.begin(), nums.end()); //排序算法重新总结，实际操作中用sort函数即可
+        //从小到大排序后输出对应下标
         for (int i = 0; i < nums.size(); i++)
         {
             for (int j = 0; j < nums.size(); j++)
             {
-                if (nums[i] == tem[j])
+                if (tem[i] == nums[j])
                 {
                     result.push_back(j);
+                    break;
                 }
             }
         }

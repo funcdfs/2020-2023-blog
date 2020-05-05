@@ -1,12 +1,9 @@
 ---
-title: STL 总结
-date: 2020-05-04
+title: STL
 category: basics
 tags:
   - Data Structure
 --- 
-
-写 leetcode 的同时总结的一些详细的 C++ STL 用法，不断更新
 
 <!-- more -->
 
@@ -41,87 +38,7 @@ vector 与 deque 的比较：
 
 容器并非已经排序的，插入位置与元素的值无关
 
-## vector
 
-使用的时候需要头文件：`#include<vector>`,一般用来更加方便的解决数组的相关问题
-
-::: tip 作为函数参数的优化
-当一个数组传入函数时不能同时得到数组对的个数，而用 vector 定义的数组可以用。size() 的方法得到元素个数，不用给函数多传入一个参数
-:::
-
-内部实现是一个动态数组，元素在内存内连续存放，随机存取任何元素都能在常数时间内完成，在尾部增删元素具有较佳性能（大部分是常数时间）,vector 是单口容器，所以在尾端插入和删除元素效率较高，在指定位置插入，势必会引起数据元素移动，效率较低。
-
-动态增长基本原理：空间不足默认重新申请二倍空间，拷贝原空间值，释放原空间，将元素插入到新空间，会根据不同类型选择不同增长策略。（二倍比遇到一次泄露加一次内存快很多，并且内存利用率也还行）
-
-###  vector 构造函数
-
-``` cpp
-vector<T> v; //采用模板实现类实现，默认构造函数 
-
-vector(v.begin(), v.end()); //将另一个 vector v[begin(), end()) 区间中的元素拷贝给本身。
-
-vector(n, elem);//构造函数将 n 个 elem 拷贝给本身。自身的缩减
-
-vector(const vector &vec);//拷贝构造函数。
-```
-
-使用部分值的构造函数，可以将一个数组转为 vector，从而直接的利用 vector 的函数
-
-```cpp
-int arr[] = {2,3,4,1,9}; //main函数中常用
-vector<int> arr_to_vector(arr, arr + sizeof(arr) / sizeof(int));
-```
-
-### vector 赋值
-
-``` cpp
-assign(beg, end);//将 [beg, end) 区间中的数据拷贝赋值给本身。 
-assign(n, elem);//将 n 个 elem 拷贝赋值给本身。 
-vector& operator=(const vector &vec);//重载等号操作符 swap(vec);// 将 vec 与本身的元素互换。
-```
-
-第一个赋值函数，可以这么写： 
-```cpp
-vector<int> vector_test;
-int arr[] = { 0, 1, 2, 3, 4 }; 
-vector_test.assign(arr, arr + 5);//使用数组初始化 vector和上面那种构造函数作用一样
-```
-
-### vector 容量大小
-
-``` cpp
-.size();//返回容器中元素的个数 
-.capacity();//容器的容量 , 这两个在一些情况下不一样
-.empty();//判断容器是否为空 
-.resize(int num);//重新指定容器的长度为 num, 若容器变长，则以默认值填充新位置。如果容器变 短，则末尾超出容器长度的元素被删除。 
-.resize(int num, elem);//重新指定容器的长度为 num, 若容器变长，则以 elem 值填充新位置。如 果容器变短，则末尾超出容器长度的元素被删除。
-.reserve(int len);//容器预留 len 个元素长度的空间，预留位置不初始化，元素不可访问。capacity扩大
-```
-
-::: tip 巧用 reserve 增加程序运行效率
-当我们知道我们存储的元素大概有多少的时候，我们就可以使用 reserve 方法，来减少 vector 重新申请内存-拷贝数据-释放旧空间的次数，从而减少程序的运行时间
-:::
-
-### vector 存取插入删除
-
-vector用at函数来读取对应元素，更加规范
-
-``` cpp
-at(int idx); //返回索引 idx 所指的数据，如果 idx 越界，抛出 out_of_range 异常。
-operator[];//返回索引 idx 所指的数据，越界时，运行直接报错 
-front();//返回容器中第一个数据元素 
-back();//返回容器中最后一个数据元素
-end(); //返回一个指向最后一个元素后一个元素的迭代器
-```
-
-``` cpp
-push_back(ele); //尾部插入元素 ele 🍕 
-pop_back();//删除最后一个元素 🍕
-erase(const_iterator pos);//删除迭代器指向的元素 🍕
-insert(const_iterator pos, int count,ele);//迭代器指向位置 pos 插入 count 个元素 ele. 
-erase(const_iterator start, const_iterator end);//删除迭代器从 start 到 end 之间的元素 
-clear();//删除容器中所有元素
-```
 <!-- 
 ## **deque**
 

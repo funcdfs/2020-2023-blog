@@ -119,7 +119,7 @@ module.exports = {
     }, //个人信息
     header: {
       background: {
-        url: 'https://pic4.zhimg.com/v2-4ea71149507ab224cd4dadfc746ff803_r.jpg',
+        url: 'https://pic4.zhimg.com/v2-08e9605f79612c427df4054cd31f67ab_r.jpg',
       },
       showTitle: true,
     }, //header设置

@@ -6,7 +6,7 @@
 
 // @lc code=start
 
-// for (int i = 0; i < nums.size(); i++)
+// for (int i = 0; i < nums.size(); i++);
 //         {
 //             if (2 * i > nums.size() - 2)
 //                 break;

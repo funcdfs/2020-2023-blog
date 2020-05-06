@@ -17,10 +17,7 @@ module.exports = {
       }
     }],//这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
     ['one-click-copy'],
-    // ["@vuepress/medium-zoom", { //图片点击放大
-    //   selector: '.content__default img',
-    // }],
-    //页面美化
+    ["vuepress-plugin-cat"],
     ["cursor-effects"], //鼠标特效
     ["vuepress-plugin-reading-progress"], //进度条
   ],

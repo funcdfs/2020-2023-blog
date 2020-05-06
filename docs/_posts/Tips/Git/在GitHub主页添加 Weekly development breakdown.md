@@ -2,7 +2,7 @@
 title: 在 GitHub 主页中添加 📊 Weekly development breakdown (By wakaTIme)
 vusse-title: Git gist
 date: 2020-05-03
-category: Tipsa
+category: Tips
 tags:
   - Git
 ---

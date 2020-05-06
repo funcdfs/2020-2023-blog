@@ -1,6 +1,7 @@
 module.exports = {
   title: 'psychonaut1f',
   logo: '/public/logo.ico',
+
   plugins: [
     //功能添加
     ['container', { //details容器
@@ -15,10 +16,10 @@ module.exports = {
         buttonText: "Refresh"
       }
     }],//这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
-    ["@vuepress/medium-zoom", { //图片点击放大
-      selector: '.content__default img',
-    }],
-
+    ['one-click-copy'],
+    // ["@vuepress/medium-zoom", { //图片点击放大
+    //   selector: '.content__default img',
+    // }],
     //页面美化
     ['nest', {
       color: '148, 0, 211', // color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
@@ -30,28 +31,23 @@ module.exports = {
     ["vuepress-plugin-reading-progress"], //进度条
   ],
   head: [
-    // [
-    //   "link",
-    //   {
-    //     rel: "stylesheet",
-    //     href: "https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap"
-    //   }
-    // ], //WEB字体
-    [
-      "meta",
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=0.5"
-      }
-    ], //移动端放大缩小的设置
     [
       "link",
       {
         rel: "stylesheet",
         href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
       }
-    ], //Katex
+    ],//katex
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+      }
+    ], //busuanzi
   ],
+
+
   markdown: { //markdown扩展
     lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
     extendMarkdown: md => {
@@ -68,6 +64,8 @@ module.exports = {
       md.use(require("markdown-it-vuepress-code-snippet-enhanced")); //代码块文件引入
     }
   },
+
+
   theme: 'meteorlxy',
   themeConfig: { //主题配置项
     locales: {
@@ -101,7 +99,7 @@ module.exports = {
     ], //navbar导航栏
     personalInfo: {
       nickname: 'psychonaut1f',
-      description: 'Life as I understand it is</br>to be with everything I like',
+      description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=425828457&auto=0&height=32"></iframe>',
       email: 'psychonaut1f@gmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
@@ -126,7 +124,7 @@ module.exports = {
     footer: {
       poweredBy: false,
       poweredByTheme: false,
-      //custom: 'psychonaut1f@gmail.com',
+      custom: ' <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv">view <span id="busuanzi_value_site_pv"></span> times</span>',
     }, //fotter
     infoCard: {
       headerBackground: {

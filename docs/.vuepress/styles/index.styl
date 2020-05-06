@@ -13,6 +13,10 @@ body
 a, button, #goTop, .jump, h1, .info-avatar, .post-tag
   cursor: url('/pointer/link.cur'), auto;
 
+pre
+    max-height: 60vh;
+    overflow: auto;
+
 //标题美化
 .header
   .banner
@@ -39,10 +43,6 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag
     background-color: #79ffe1;
     color: #000;
 
-//全局背景颜色的修改
-html, body
-  //background-color: #2F2A2A;//footer部分的背景颜色
-
 //文章阴影+透明
 .main-div
     background-color: rgba(255, 255, 255, 0.65) !important;
@@ -62,11 +62,11 @@ html, body
 
 /*滚动条效果-start*/
 ::-webkit-scrollbar 
-    width:4px; 
-    height:3px; 
+    width:2px; 
+    height:2px; 
 .sidebar::-webkit-scrollbar 
-    width: 4px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
 ::-webkit-scrollbar-thumb 
     background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
 .reading-progress .progress
@@ -85,7 +85,7 @@ blockquote
 //头像区添加阴影
 .info-card .info-card-header .info-avatar
     box-shadow: 0 0 0px 1px black !important;
-
+ 
 //去除白色边框
 .navbar
     border-bottom: 0px solid #eaecef !important;
@@ -94,11 +94,6 @@ blockquote
     border-bottom: 0px solid #eaecef !important;
 .footer
     border-top: 0px solid #eaecef !important;
-
-//code渲染
-.content code
-    color: rgba(0,0,0,.66);
-    background-color: #eaecef;
 
 //列表移动
 .content ul, .content ol

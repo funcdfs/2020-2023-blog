@@ -1354,13 +1354,6 @@ acorn@^6.2.1:
   resolved "https://registry.npm.taobao.org/acorn/download/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
   integrity sha1-Ux5Yuj9RudrLmmZGyk3r9bFMpHQ=
 
-add-dom-event-listener@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/add-dom-event-listener/download/add-dom-event-listener-1.1.0.tgz#6a92db3a0dd0abc254e095c0f1dc14acbbaae310"
-  integrity sha1-apLbOg3Qq8JU4JXA8dwUrLuq4xA=
-  dependencies:
-    object-assign "4.x"
-
 agentkeepalive@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/agentkeepalive/download/agentkeepalive-2.2.0.tgz?cache=0&sync_timestamp=1570869875271&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fagentkeepalive%2Fdownload%2Fagentkeepalive-2.2.0.tgz#c5d1bd4b129008f1163f236f86e5faea2026e2ef"
@@ -2061,13 +2054,6 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001035, caniuse-lite@^1.0.30001036:
   version "1.0.30001037"
   resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001037.tgz?cache=0&sync_timestamp=1585114993548&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcaniuse-lite%2Fdownload%2Fcaniuse-lite-1.0.30001037.tgz#cf666560b14f8dfa18abc235db1ef2699273af6e"
   integrity sha1-z2ZlYLFPjfoYq8I12x7yaZJzr24=
-
-canvas-nest.js@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.npm.taobao.org/canvas-nest.js/download/canvas-nest.js-2.0.4.tgz#e010075d5dbbf3cbfc1ef18942c266b1af873469"
-  integrity sha1-4BAHXV2788v8HvGJQsJmsa+HNGk=
-  dependencies:
-    size-sensor "^0.2.0"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -5342,7 +5328,7 @@ oauth-sign@~0.9.0:
   resolved "https://registry.npm.taobao.org/oauth-sign/download/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha1-R6ewFrqmi1+g7PPe4IqFxnmsZFU=
 
-object-assign@4.x, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npm.taobao.org/object-assign/download/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
@@ -6742,11 +6728,6 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-size-sensor@^0.2.0:
-  version "0.2.6"
-  resolved "https://registry.npm.taobao.org/size-sensor/download/size-sensor-0.2.6.tgz?cache=0&sync_timestamp=1584176309805&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsize-sensor%2Fdownload%2Fsize-sensor-0.2.6.tgz#6fe43afd570786f097171834002a97fe0b19a3da"
-  integrity sha1-b+Q6/VcHhvCXFxg0ACqX/gsZo9o=
-
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/slash/download/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -7774,19 +7755,6 @@ vuepress-plugin-dehydrate@1.1.3:
   integrity sha1-GRRg7Td2YFuUWudNJjlDOMEtXNc=
   dependencies:
     "@vuepress/shared-utils" "^1.2.0"
-
-vuepress-plugin-go-top@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-go-top/download/vuepress-plugin-go-top-1.0.0.tgz#d18db397da9732e18860c96f8a3033e8e91c63e7"
-  integrity sha1-0Y2zl9qXMuGIYMlvijAz6OkcY+c=
-
-vuepress-plugin-nest@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-nest/download/vuepress-plugin-nest-1.0.2.tgz#842e890ea4e42de7d382ae645e3e66611cfd7020"
-  integrity sha1-hC6JDqTkLefTgq5kXj5mYRz9cCA=
-  dependencies:
-    add-dom-event-listener "^1.1.0"
-    canvas-nest.js "^2.0.4"
 
 vuepress-plugin-nprogress@^1.1.6:
   version "1.1.6"

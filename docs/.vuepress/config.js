@@ -21,13 +21,7 @@ module.exports = {
     //   selector: '.content__default img',
     // }],
     //页面美化
-    ['nest', {
-      color: '148, 0, 211', // color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-      pointColor: '148, 0, 211', // color of points, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-      count: 92, // the number of lines, default: 99.
-    }],
     ["cursor-effects"], //鼠标特效
-    ["go-top"], //喵
     ["vuepress-plugin-reading-progress"], //进度条
   ],
   head: [
@@ -38,13 +32,6 @@ module.exports = {
         href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
       }
     ],//katex
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
-      }
-    ], //busuanzi
   ],
 
 
@@ -124,7 +111,7 @@ module.exports = {
     footer: {
       poweredBy: false,
       poweredByTheme: false,
-      custom: ' <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv">view <span id="busuanzi_value_site_pv"></span> times</span>',
+      custom: 'Powered by <a herf="https://github.com/vuejs/vuepress">VuePress</a> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv"> | View <span id="busuanzi_value_site_pv"></span> Times</span>',
     }, //fotter
     infoCard: {
       headerBackground: {

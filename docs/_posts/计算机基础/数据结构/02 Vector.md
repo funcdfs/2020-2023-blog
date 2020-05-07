@@ -24,39 +24,81 @@ std::vector 的使用和内部实现
 
 动态增长基本原理：空间不足默认重新申请二倍空间，拷贝原空间值，释放原空间，将元素插入到新空间，会根据不同类型选择不同增长策略。（二倍比遇到一次泄露加一次内存快很多，并且内存利用率也还行）
 
-###  vector 构造函数
+###  vector 赋值函数
 
 ``` cpp
-vector<T> v; //采用模板实现类实现，默认构造函数 
+vector<int> a;                       //声明一个int型向量a
+vector<int> a(10);                   //声明一个初始大小为10的向量
+vector<int> a(10, 1);                //声明一个初始大小为10且初始值都为1的向量
+vector<int> b(a);                    //声明并用向量a初始化向量b
+vector<int> b(a.begin(), a.begin()+3);//将a向量中从第0个到第2个(共3个)作为向量b的初始值
 
 vector(v.begin(), v.end()); //将另一个 vector v[begin(), end()) 区间中的元素拷贝给本身。
-vector(n, elem);//构造函数将 n 个 elem 拷贝给本身。自身的缩减
+vector(n, elem);            //构造函数将 n 个 elem 拷贝给本身。自身的缩减
+vector(const vector &vec);  //拷贝构造函数。
 
-vector(const vector &vec);//拷贝构造函数。
-```
-
-使用部分值的构造函数，可以将一个数组转为 vector，从而直接的利用 vector 的函数
-
-```cpp
-int arr[] = {2,3,4,1,9}; //main 函数中常用
-vector<int> arr_to_vector(arr, arr + sizeof(arr) / sizeof(int));
-```
-
-### vector 赋值函数
-
-``` cpp
-.swap(vector&)//: 交换两个同类型向量的数据
-assign(beg, end);//将 [beg, end) 区间中的数据拷贝赋值给本身。 
-assign(n, elem);//将 n 个 elem 拷贝赋值给本身。 
+.swap(vector&)                  //: 交换两个同类型向量的数据
+assign(beg, end);               //将 [beg, end) 区间中的数据拷贝赋值给本身。 
+assign(n, elem);                //将 n 个 elem 拷贝赋值给本身。 
 vector& operator=(const vector &vec);//重载等号操作符 swap(vec);// 将 vec 与本身的元素互换。
 ```
 
-第一个赋值函数，可以这么写： 
+使用部分值的构造函数，可以将一个数组转为 vector，从而直接的利用 vector 中的成员函数
+
+```cpp
+int n[] = {2,3,4,1,9}; //main 函数中常用
+vector<int> a(n, n+5);       //将数组n的前5个元素作为向量a的初值
+vector<int> a(&n[1], &n[4]); //将n[1] - n[4]范围内的元素作为向量a的初值
+vector<int> arr_to_vector(n, n + sizeof(n) / sizeof(int));//数组的全部转为vector
+```
+
+也可以这么写来达到数组转 vector 的目的
 
 ```cpp
 vector<int> vector_test;
 int arr[] = { 0, 1, 2, 3, 4 }; 
 vector_test.assign(arr, arr + 5);//使用数组初始化 vector 和上面那种构造函数作用一样
+```
+
+### vector 二维构造
+
+有时需要一个二维的向量，而不是使用二维数组，因为向量使用更加方便
+
+直接开辟空间：
+
+```cpp
+vector<vector<char> >vec(n,vector<char>(m,'#'));//n*m二维向量
+vector<vector<int>> v(3, vector<int>(4,1));//3*4全为1的二维向量
+```
+
+使用 `resize` 方法：
+
+```cpp
+int main()
+{
+    vector<vector<int>> arr;  //这里也可以直接定义向量的尺寸
+    //初始化
+    int n;
+    int m;
+    cout << "请输入数组的行数和列数：";
+    cin >> n >> m;
+    //下面是给向量分配存储空间
+    arr.resize(n);
+    for (int i = 0; i < n; i++)
+    {
+        arr[i].resize(m);
+    }
+    //存入元素
+    cout << "请输入数组元素：" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin >> arr.at(n).at(m); 
+        }
+    }
+    return 0;
+}
 ```
 
 ### vector 插入删除

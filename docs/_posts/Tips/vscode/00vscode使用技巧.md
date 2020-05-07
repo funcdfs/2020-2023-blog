@@ -68,12 +68,17 @@ tags:
 
 ![20200402222219](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200402222219.png)
 
-### 我的插件
 
-![2020-04-20-21-39-59](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-39-59.png)
+## vscode自定义c++代码缩进规则
 
-![2020-04-20-21-40-23](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-40-23.png)
+写leetcode的时候会用到，看着舒服一些
 
-![2020-04-20-21-40-44](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-40-44.png)
+ctrl+shift+p,setting,clang,
+找到
 
-![2020-04-20-21-41-09](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-04-20-21-41-09.png)
+>C_Cpp: Clang_format_fallback Style
+>如果使用样式 "file" 调用 clang 格式但是找不到 .clang-format 文件，则使用预定义的样式的名称作为回退。可能的值为 Visual Studio、LLVM、Google、>Chromium、Mozilla、WebKit、none，或使用 {key: value, ...} 设置特定参数。例如，"Visual Studio" 样式类似于: { BasedOnStyle: LLVM, UseTab: >Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, >ColumnLimit: 0, AccessModifierOffset: -4 }
+
+配置栏填这一行即可 ：`{ BasedOnStyle: Chromium, IndentWidth: 4}`
+
+![2020-05-07-21-16-13](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-07-21-16-13.png)

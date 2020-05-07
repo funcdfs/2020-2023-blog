@@ -36,7 +36,7 @@
     "vuepress-plugin-cursor-effects": "^0.0.4",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-reading-progress": "^1.0.9",
-    "vuepress-theme-meteorlxy": "^1.8.0"
+    "vuepress-theme-meteorlxy": "^1.9.0"
   },
   "dependencies": {}
 }

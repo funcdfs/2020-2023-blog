@@ -63,7 +63,7 @@ module.exports = {
       posts: 'Article',
     }), //自定义部分文字
     pagination: {
-      perPage: 6,
+      perPage: 5,
     }, //每页文章数量
     nav: [{
       text: '🍀Home',

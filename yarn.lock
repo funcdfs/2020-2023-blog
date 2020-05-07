@@ -7768,11 +7768,6 @@ vuepress-plugin-nprogress@^1.1.6:
   dependencies:
     nprogress "^0.2.0"
 
-vuepress-plugin-one-click-copy@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-one-click-copy/download/vuepress-plugin-one-click-copy-1.0.2.tgz#9731f9d2e7b6d5160e84942b0f1b8c7500589487"
-  integrity sha1-lzH50ue21RYOhJQrDxuMdQBYlIc=
-
 vuepress-plugin-reading-progress@^1.0.9:
   version "1.0.9"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-reading-progress/download/vuepress-plugin-reading-progress-1.0.9.tgz#800cef1ed93abe9ab7aae0147d269d1b1359ef32"

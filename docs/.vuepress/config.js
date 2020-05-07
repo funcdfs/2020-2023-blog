@@ -108,7 +108,6 @@ module.exports = {
     footer: {
       poweredBy: false,
       poweredByTheme: false,
-      custom: 'Powered by <a herf="https://github.com/vuejs/vuepress">VuePress</a> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv"> | View <span id="busuanzi_value_site_pv"></span> Times</span>',
     }, //fotter
     infoCard: {
       headerBackground: {

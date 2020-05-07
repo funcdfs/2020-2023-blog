@@ -24,8 +24,8 @@ I am very tall? ~~187 centimeter~~
 ### Blog
 
 I built this blog using [Vue's](https://vuejs.org) static site generator [VuePress](https://vuepress.vuejs.org/), 
-this vuepress blog has been established {{dist_times}},
-and you can find the source [here](https://github.com/fengwei2002/feng-w.cn).
+and this vuepress blog has been established {{dist_times}},
+<!-- you can find the source [here](https://github.com/fengwei2002/feng-w.cn). -->
 
 <script>
     export default {

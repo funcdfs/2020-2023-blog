@@ -1,5 +1,6 @@
 ---
 title: Git Bash & GitHub Template
+date: 2020-05-06
 vusse-title: Git
 category: Tips
 tags:

@@ -150,3 +150,16 @@ $ git config --global core.safecrlf true
 
 也就是让代码仓库使用统一的换行符 (LF)，如果代码中包含 CRLF 类型的文件时将无法提交，需要用 dos2unix 或者其他工具手动转换文件类型。当然，可以根据自己的需要进行更为合适的配置！
 
+## yarn 更新依赖包
+
+```sh
+// 先下载
+yarn global add npm-check-updates
+// 更新包（yarn.lock和package.json同步更新）
+ncu --upgrade --upgradeAll && yarn upgrade
+```
+
+```sh
+yarn upgrade-interactive --latest
+// 需要手动选择升级的依赖包，按空格键选择，a 键切换所有，i 键反选选择
+```

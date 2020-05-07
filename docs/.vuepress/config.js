@@ -112,7 +112,7 @@ module.exports = {
     }, //fotter
     infoCard: {
       headerBackground: {
-        useGeo: false,
+        useGeo: true,
       },
     }, //头像后面的背景图
     comments: {

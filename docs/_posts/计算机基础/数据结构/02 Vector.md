@@ -184,7 +184,7 @@ int main ()
 
 ### vector 高级用法
 
-::: detail `std::vector::shrink_to_fit`
+::: details `std::vector::shrink_to_fit`
 
 适用于重新规定向量大小后回收剩余空间，最大程度优化空间利用率
 
@@ -205,7 +205,7 @@ int main ()
 ```
 :::
 
-::: detail `get_allocator()`
+::: details `get_allocator()`
 
 适用于为向量的开辟空间的一种简便方法
 
@@ -233,7 +233,7 @@ int main ()
 ```
 :::
 
-::: detail `std::vector::emplace` & `std::vector::emplace_back`
+::: details `std::vector::emplace` & `std::vector::emplace_back`
 
 插入单个元素的高级使用，返回插入后位置对的迭代器
 

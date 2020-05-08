@@ -3,7 +3,7 @@ top: true
 title: About
 ---
 
-## Contact
+## 📌 Contact 
 
 <span class="hvr-wobble-skew">
 <a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg">| &nbsp Wechat &nbsp | </a>
@@ -37,29 +37,30 @@ title: About
 <a href="http://music.163.com/m/user/home?id=440040659">  &nbsp NetEase Cloud Music &nbsp | </a>
 </span>
 
+</br>
 
-## Project
+## 🎈 Project 
 
 Non-exhaustive list of stuff I work on:
 
 >- [personal homepage](https://feng-w.cn)
 >- ..
 
-## Hobby
+## 🍀 Blog
+
+I built this blog using [Vue's](https://vuejs.org) static site generator [VuePress](https://vuepress.vuejs.org/), 
+and this blog has been established {{dist_times}}.
+
+## 🎨 Hobby
 
 Like cat
 ~~Like Games~~
 Like to sleep ~~10.00pm-10.00am is Best~~
 
-## Advantages
+## 🍖 Advantages
 
 I am very young? ~~2002-01-20~~
 I am very tall? ~~187 centimeter~~
-
-## Blog
-
-I built this blog using [Vue's](https://vuejs.org) static site generator [VuePress](https://vuepress.vuejs.org/), 
-and this blog has been established {{dist_times}}.
 
 <script>
     export default {

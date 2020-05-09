@@ -9,3 +9,15 @@ tags:
 Leetcode 
 
 <!-- more -->
+
+## 
+
+@[code lang=cpp](@/code/leetcode//)
+
+## 
+
+@[code lang=cpp](@/code/leetcode//)
+
+## 
+
+@[code lang=cpp](@/code/leetcode//)

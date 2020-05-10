@@ -106,7 +106,7 @@ blockquote
 }
 
 /* Wobble Skew */
-@-webkit-keyframes hvr-wobble-skew {
+@-webkit-keyframes contact {
   16.65% {
     -webkit-transform: skew(-12deg);
     transform: skew(-12deg);
@@ -132,7 +132,7 @@ blockquote
     transform: skew(0);
   }
 }
-@keyframes hvr-wobble-skew {
+@keyframes contact {
   16.65% {
     -webkit-transform: skew(-12deg);
     transform: skew(-12deg);
@@ -158,20 +158,56 @@ blockquote
     transform: skew(0);
   }
 }
-.hvr-wobble-skew {
+.contact {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px #9400d3;
 }
-.hvr-wobble-skew:hover, .hvr-wobble-skew:focus, .hvr-wobble-skew:active {
-  -webkit-animation-name: hvr-wobble-skew;
-  animation-name: hvr-wobble-skew;
+.contact:hover, .contact:focus, .contact:active {
+  -webkit-animation-name: contact;
+  animation-name: contact;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+}
+
+/* Bubble Float Left */
+.project {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  background-color: #E1E1E1;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.project:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: calc(50% - 10px);
+  left: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #e1e1e1 transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.project:hover, .project:focus, .project:active {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.project:hover:before, .project:focus:before, .project:active:before {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
 }

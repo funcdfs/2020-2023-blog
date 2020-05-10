@@ -20,6 +20,7 @@ module.exports = {
     ["cursor-effects"], //鼠标特效
     ["vuepress-plugin-reading-progress"], //进度条
   ],
+
   head: [
     [
       "link",

@@ -5,36 +5,36 @@ title: About
 
 ## 📌 Contact 
 
-<span class="hvr-wobble-skew">
-<a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg">| &nbsp Wechat &nbsp | </a>
+<span class="contact">
+<a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg"> &nbsp Wechat &nbsp  </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg"> &nbsp QQ &nbsp| </a>
+<span class="contact">
+<a href="https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg"> &nbsp QQ &nbsp </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="https://leetcode-cn.com/u/fengwei2002/"> &nbsp leetcode.cn &nbsp | </a>
+<span class="contact">
+<a href="https://leetcode-cn.com/u/fengwei2002/"> &nbsp leetcode.cn &nbsp </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="https://github.com/fengwei2002"> &nbsp Github &nbsp | </a>
+<span class="contact">
+<a href="https://github.com/fengwei2002"> &nbsp Github &nbsp </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="https://wakatime.com/@fengwei2002"> &nbsp wakatime &nbsp | </a>
+<span class="contact">
+<a href="https://wakatime.com/@fengwei2002"> &nbsp wakatime &nbsp </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="http://codeforces.com/profile/KONNG#"> &nbsp codeforce &nbsp | </a>
+<span class="contact">
+<a href="http://codeforces.com/profile/KONNG#"> &nbsp codeforce &nbsp </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="https://www.zhihu.com/people/kwmwmwnw"> &nbsp zhihu &nbsp | </a>
+<span class="contact">
+<a href="https://www.zhihu.com/people/kwmwmwnw"> &nbsp zhihu &nbsp </a>
 </span>
 
-<span class="hvr-wobble-skew">
-<a href="http://music.163.com/m/user/home?id=440040659">  &nbsp NetEase Cloud Music &nbsp | </a>
+<span class="contact">
+<a href="http://music.163.com/m/user/home?id=440040659">  &nbsp NetEase Cloud Music &nbsp </a>
 </span>
 
 </br>
@@ -43,13 +43,31 @@ title: About
 
 Non-exhaustive list of stuff I work on:
 
->- [personal homepage](https://feng-w.cn)
->- ..
+<span class="project">
+<a href="https://feng-w.cn">  &nbsp Personal Homepage &nbsp </a> >>  using <a href="https://vuejs.org">Vue's</a> static site generator 
+<a href="https://vuepress.vuejs.org/">VuePress </a>. &nbsp  
+</span>
+
+
+
+</br>
+
+
+
+<span class="project">
+<a href="https://github.com/fengwei2002/wakatime-box">  &nbsp Wakatime Box &nbsp </a> >> 📊 Update a pinned 
+<a href="https://gist.github.com/fengwei2002/4e0a4c7d83a9c47ff03755f20b656de4">gist</a> 
+to contain your 
+<a href="https://wakatime.com/dashboard">weekly WakaTime stats</a>
+ . &nbsp  
+</span>
+
+</br>
+
 
 ## 🍀 Blog
 
-I built this blog using [Vue's](https://vuejs.org) static site generator [VuePress](https://vuepress.vuejs.org/), 
-and this blog has been established {{dist_times}}.
+This blog has been established {{dist_times}} , and you can find source [here](https://github.com/fengwei2002/feng-w.cn).
 
 ## 🎨 Hobby
 

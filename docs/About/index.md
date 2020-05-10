@@ -1,5 +1,4 @@
 ---
-top: true
 title: About
 ---
 
@@ -39,11 +38,7 @@ title: About
 
 </br>
 
-## 🎈 Project 
-
-Non-exhaustive list of stuff I work on:
-
-..
+<!-- ## 🎈 Project Non-exhaustive list of stuff I work on:.. -->
 
 ## 🍀 Blog
 

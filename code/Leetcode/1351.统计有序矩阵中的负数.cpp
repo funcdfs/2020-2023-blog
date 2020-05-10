@@ -8,16 +8,14 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-class Solution
-{
-public:
-    int countNegatives(vector<vector<int>> &grid)
-    {
+class Solution {
+   public:
+    int countNegatives(vector<vector<int>>& grid) {
         int NegativeTotal = 0;
-        for (int i = 0; i < grid.size(); i++)
-        {
-            for (int j = 0; j < grid.at(0).size(); j++)
-            { //使用vscode自动补全时看一下循环变量是否已经修改，否则会浪费很多时间
+        for (int i = 0; i < grid.size(); i++) {
+            for (
+                int j = 0; j < grid.at(0).size();
+                j++) {  //使用vscode自动补全时看一下循环变量是否已经修改，否则会浪费很多时间
                 if (grid.at(i).at(j) < 0)
                     NegativeTotal++;
             }

@@ -8,11 +8,9 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-class Solution
-{
-public:
-    vector<bool> kidsWithCandies(vector<int> &candies, int extraCandies)
-    {
+class Solution {
+   public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
         const int max = *max_element(begin(candies), end(candies));
         /*一种判断向量中最大元素比较快并且简洁的一种方式*/
         vector<bool> result(candies.size());

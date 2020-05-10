@@ -9,23 +9,18 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-class Solution
-{
-public:
+class Solution {
+   public:
     /*写一个循环得到每个数字的位数*/
-    int findNumbers(vector<int> &nums)
-    {
+    int findNumbers(vector<int>& nums) {
         int sum = 0;
-        for (int i = 0; i < nums.size(); i++)
-        {
+        for (int i = 0; i < nums.size(); i++) {
             int number_weight = 1;
-            while (nums.at(i) >= 10)
-            {
+            while (nums.at(i) >= 10) {
                 number_weight++;
                 nums.at(i) = nums.at(i) / 10;
             }
-            if (number_weight % 2 == 0)
-            {
+            if (number_weight % 2 == 0) {
                 sum++;
             }
             /* code */

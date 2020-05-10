@@ -43,27 +43,7 @@ title: About
 
 Non-exhaustive list of stuff I work on:
 
-<span class="project">
-<a href="https://feng-w.cn">  &nbsp Personal Homepage &nbsp </a> >>  using <a href="https://vuejs.org">Vue's</a> static site generator 
-<a href="https://vuepress.vuejs.org/">VuePress </a>. &nbsp  
-</span>
-
-
-
-</br>
-
-
-
-<span class="project">
-<a href="https://github.com/fengwei2002/wakatime-box">  &nbsp Wakatime Box &nbsp </a> >> 📊 Update a pinned 
-<a href="https://gist.github.com/fengwei2002/4e0a4c7d83a9c47ff03755f20b656de4">gist</a> 
-to contain your 
-<a href="https://wakatime.com/dashboard">weekly WakaTime stats</a>
- . &nbsp  
-</span>
-
-</br>
-
+..
 
 ## 🍀 Blog
 

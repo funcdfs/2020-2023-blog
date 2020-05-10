@@ -17,7 +17,7 @@ title: About
 </span>
 
 <span class="contact">
-<a href="https://github.com/fengwei2002"> &nbsp Github &nbsp </a>
+<a href="https://github.com/fengwei2002"> &nbsp github &nbsp </a>
 </span>
 
 <span class="contact">
@@ -29,11 +29,11 @@ title: About
 </span>
 
 <span class="contact">
-<a href="https://www.zhihu.com/people/kwmwmwnw"> &nbsp zhihu &nbsp </a>
+<a href="https://zhuanlan.zhihu.com/fengwei2002"> &nbsp zhuanlan.zhihu &nbsp </a>
 </span>
 
 <span class="contact">
-<a href="http://music.163.com/m/user/home?id=440040659">  &nbsp NetEase Cloud Music &nbsp </a>
+<a href="http://music.163.com/m/user/home?id=440040659">  &nbsp netEase cloud music &nbsp </a>
 </span>
 
 </br>

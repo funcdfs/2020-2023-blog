@@ -2,9 +2,7 @@
 title: TODO
 date: 2020-05-11
 top: true
-category: Life
-tags:
-  - Experience
+category: TODO
 ---
 
 <!--置顶文章的链接不应该显示时间戳-->
@@ -23,10 +21,11 @@ tags:
 
 ***
 
-- [ ] JavaScript
+- [ ] JavaScript $\Leftarrow$
 - [ ] node.js
-- [ ] css MDN
+- [ ] css MDN  $\Leftarrow$
 - [ ] vue.js
+- [ ] python
 - [ ] go
 - [ ] gin
 
@@ -55,7 +54,7 @@ tags:
 
 easy:
 
-- [ ] leetcode array easy  🥇
+- [ ] leetcode array easy   $\Leftarrow$
 - [ ] leetcode linked list easy
 - [ ] leetcode binary tree easy
 - [ ] leetcode stack easy
@@ -87,6 +86,8 @@ hard:
 大一马上过完了。我发现很多时间并没有真正意义上的学到了什么，所以把想到的全部列出来，警示一下自己，用这个槽点记录一下历程吧 !
 
 大三毕业前要是可以把上面列出来的除了 leetcode 全部学了就好了
+
+对python的学习没有什么需求，所以先不急
 
 很难。加油吧 , 还有两年找实习，记得锻炼身体和调整心态
 

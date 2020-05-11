@@ -4,6 +4,8 @@ title: About
 
 ## 📌 Contact 
 
+</br>
+
 <span class="contact">
 <a href="https://pic4.zhimg.com/v2-6cd96e76699f0459b35aa58ff3577267_r.jpg"> &nbsp Wechat &nbsp  </a>
 </span>
@@ -12,12 +14,25 @@ title: About
 <a href="https://pic1.zhimg.com/v2-65f5e198d3f046fdb668f8d4838b4050_r.jpg"> &nbsp QQ &nbsp </a>
 </span>
 
+
 <span class="contact">
-<a href="https://leetcode-cn.com/u/fengwei2002/"> &nbsp leetcode.cn &nbsp </a>
+<a href="https://zhuanlan.zhihu.com/fengwei2002"> &nbsp zhuanlan.zhihu &nbsp </a>
 </span>
 
 <span class="contact">
+<a href="http://music.163.com/m/user/home?id=440040659">  &nbsp netease cloud music &nbsp </a>
+</span>
+
+</br>
+
+</br>
+
+<span class="contact">
 <a href="https://github.com/fengwei2002"> &nbsp github &nbsp </a>
+</span>
+
+<span class="contact">
+<a href="https://leetcode-cn.com/u/fengwei2002/"> &nbsp leetcode.cn &nbsp </a>
 </span>
 
 <span class="contact">
@@ -28,13 +43,7 @@ title: About
 <a href="http://codeforces.com/profile/KONNG#"> &nbsp codeforce &nbsp </a>
 </span>
 
-<span class="contact">
-<a href="https://zhuanlan.zhihu.com/fengwei2002"> &nbsp zhuanlan.zhihu &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="http://music.163.com/m/user/home?id=440040659">  &nbsp netEase cloud music &nbsp </a>
-</span>
+</br>
 
 </br>
 

@@ -100,10 +100,10 @@ module.exports = {
           account: 'weirdo',
           link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba',
         },
-        twitter: {
-          account: 'fengwei2002',
-          link: 'https://twitter.com/fengwei67837620',
-        },
+        // twitter: {
+        //   account: 'fengwei2002',
+        //   link: 'https://twitter.com/fengwei67837620',
+        // },
       },
     }, //个人信息
     header: {

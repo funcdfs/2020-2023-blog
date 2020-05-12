@@ -11,8 +11,8 @@ using namespace std;
 
 class Solution {
    public:
+    //返回字符串数组所有的重复字母
     vector<string> commonChars(vector<string>& A) {
-        //返回字符串数组所有的重复字母
         //将一个单词对应的字母出现次数保存下来,
         //然后对第二个单词进行字母次数的映射,将非0的相同的字母频次保存下来继续进行比较
         vector<string> result;

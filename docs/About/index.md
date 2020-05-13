@@ -49,17 +49,17 @@ title: About
 
 <!-- ## 🎈 Project Non-exhaustive list of stuff I work on:.. -->
 
-## 🍀 Blog
+## Blog
 
 This blog has been established {{dist_times}} , and you can find source [here](https://github.com/fengwei2002/feng-w.cn).
 
-## 🎨 Hobby
+## Hobby
 
 Like cat
 ~~Like Games~~
 Like to sleep ~~10.00pm-10.00am is Best~~
 
-## 🍖 Advantages
+## Advantages
 
 I am very young? ~~2002-01-20~~
 I am very tall? ~~187 centimeter~~

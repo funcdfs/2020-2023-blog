@@ -69,17 +69,17 @@ module.exports = {
       perPage: 5,
     }, //每页文章数量
     nav: [{
-      text: '🍀Home',
+      text: 'Home',
       link: '/',
       exact: true
     },
     {
-      text: '🍔Article',
+      text: 'Article',
       link: '/posts/',
       exact: false
     },
     {
-      text: '🎧About',
+      text: 'About',
       link: '/About/',
       exact: false
     },

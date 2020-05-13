@@ -22,8 +22,7 @@
 
 //文章阴影+透明
 .main-div
-    //background-color: rgba(255, 255, 255, 0.65) !important;
-    box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 10px #ccc !important;
 //配合文章的tag透明色
 .post-tag
     background-color: hsla(0, 0%, 100%, 0) !important;
@@ -61,13 +60,10 @@
 /*滚动条效果-end*/
 
 //添加圆角
-blockquote 
-    background:#F3F4F4 !important;
-    color:#000000 !important;
 .content img 
    -webkit-border-radius: 13px !important;
 .header
-   -webkit-border-radius: 10px !important;
+   -webkit-border-radius: 13px !important;
 
 .go-to-top
     display: none;
@@ -88,8 +84,8 @@ blockquote
 //将侧边栏的进度条颜色与主要颜色统一
 .post-nav-card .post-nav-toc>ul::-webkit-scrollbar-thumb
     background-color: #9400D3 !important;
-
-
+body
+    background-color: #F6F6F6 !important;
 //动态右移首页效果
 .posts-list-item {
   vertical-align: middle;
@@ -175,3 +171,7 @@ blockquote
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
+//头像阴影
+.info-card .info-card-header .info-avatar
+   box-shadow: 0 0 15px #918c8c !important;

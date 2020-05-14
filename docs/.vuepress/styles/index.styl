@@ -188,10 +188,14 @@ body  {
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(https://pic4.zhimg.com/v2-35e78e9cabb2f57048b823f39c6e6037_r.jpg);
+}
+@media screen and (orientation:portrait) and (max-width: 720px) {
+     body {
+    background-image: url(https://pic4.zhimg.com/v2-35e78e9cabb2f57048b823f39c6e6037_r.jpg);
+  }
 }
 @media (min-aspect-ratio: 2400/1850) {
   body {
     background-image: url(https://pic3.zhimg.com/v2-7b47f13d957588f0adfe17bfaf558f8e_r.jpg);
-    }
+  }
 }

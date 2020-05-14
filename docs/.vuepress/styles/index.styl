@@ -3,12 +3,11 @@
   .banner
     .container
       h1
-        font-size: 1.6em;
+        font-size: 1.5rem !important;
         color: #fff;
-        text-shadow: 0 0 0.1em, 0 0 0.1em;
 .navbar .navbar-site-name {
     color: #24292e !important;
-    font-size: 1.1rem !important;
+    //font-size: 1.1rem !important;
 }
 .navbar .navbar-link
     font-size: 1rem;
@@ -61,9 +60,9 @@
 
 //添加圆角
 .content img 
+   background-color: rgba(255, 255, 255, 0.1) !important;
    -webkit-border-radius: 13px !important;
-.header
-   -webkit-border-radius: 13px !important;
+
 
 .go-to-top
     display: none;
@@ -175,18 +174,21 @@
    box-shadow: 0 0 15px #918c8c !important;
 //luna
 .main-div
-  background-color: rgba(255, 255, 255, 0.91) !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+.header
+   background-image: linear-gradient(to right , rgba(100,122,172,0.05), rgba(84,100,152,0.85)) !important;
+   background-color: rgba(255, 255, 255, 0.1) !important;
+   -webkit-border-radius: 13px !important;
 body  {
   transition-property: all;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
   min-height: 100%;
-  //display: inline-block;
   background-size: 100% auto;
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  //background-image: url(http://shp.qpic.cn/ishow/2735012115/1548055074_-695593207_32429_sProdImgNo_8.jpg/0);
+  background-image: url(https://pic4.zhimg.com/v2-35e78e9cabb2f57048b823f39c6e6037_r.jpg);
 }
 @media (min-aspect-ratio: 2400/1850) {
   body {

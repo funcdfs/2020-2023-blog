@@ -11,7 +11,7 @@ module.exports = {
         rel: "stylesheet",
         href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
       }
-    ],//katex
+    ], //katex
   ],
   title: 'psychonaut1f',
   logo: '/public/logo.ico',
@@ -29,7 +29,7 @@ module.exports = {
         message: "New Content！",
         buttonText: "Refresh"
       }
-    }],//这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
+    }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
     ["vuepress-plugin-cat"],
     ["cursor-effects"], //鼠标特效
     ["vuepress-plugin-reading-progress"], //进度条
@@ -69,20 +69,20 @@ module.exports = {
       perPage: 5,
     }, //每页文章数量
     nav: [{
-      text: 'Home',
-      link: '/',
-      exact: true
-    },
-    {
-      text: 'Article',
-      link: '/posts/',
-      exact: false
-    },
-    {
-      text: 'About',
-      link: '/About/',
-      exact: false
-    },
+        text: 'Home',
+        link: '/',
+        exact: true
+      },
+      {
+        text: 'Article',
+        link: '/posts/',
+        exact: false
+      },
+      {
+        text: 'About',
+        link: '/About/',
+        exact: false
+      },
     ], //navbar导航栏
     personalInfo: {
       nickname: 'psychonaut1f',
@@ -104,7 +104,8 @@ module.exports = {
     }, //个人信息
     header: {
       background: {
-        url: 'https://pic1.zhimg.com/v2-977206e6259e3cc522db559414843524_r.jpg',
+        useGeo: false,
+        //url: 'https://pic1.zhimg.com/v2-977206e6259e3cc522db559414843524_r.jpg',
       },
       showTitle: true,
     }, //header设置

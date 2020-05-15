@@ -47,8 +47,6 @@ title: About
 
 </br>
 
-<!-- ## 🎈 Project Non-exhaustive list of stuff I work on:.. -->
-
 ## Blog
 
 This blog has been established {{dist_times}} , and you can find source [here](https://github.com/fengwei2002/feng-w.cn).

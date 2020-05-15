@@ -83,6 +83,11 @@ module.exports = {
         link: '/About/',
         exact: false
       },
+      {
+        text: 'Projects',
+        link: '/Projects/',
+        exact: false
+      },
     ], //navbar导航栏
     personalInfo: {
       nickname: 'psychonaut1f',

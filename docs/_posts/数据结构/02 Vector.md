@@ -6,7 +6,7 @@ tags:
   - Data Structure
 --- 
 
-std::vector 的使用和内部实现
+>std::vector 的使用和内部实现
 <!-- more -->
 ## STL 中的 vector
 

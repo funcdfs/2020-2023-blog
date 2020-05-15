@@ -7,7 +7,7 @@ tags:
   - Git
 ---
 
-[waka-box](https://github.com/matchai/waka-box)官方文档
+> [waka-box](https://github.com/matchai/waka-box)官方文档
 
 <!-- more -->
 

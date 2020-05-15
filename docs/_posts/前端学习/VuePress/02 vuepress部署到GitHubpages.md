@@ -7,7 +7,7 @@ date: 2020-04-14
 vssue-title: vuepress to GitHub pages
 ---
 
-将`vuepress`主仓库和展示仓库`.github.io`分离示例：[zeit.co/docs](https://zeit.co/docs)
+>将`vuepress`主仓库和展示仓库`.github.io`分离示例：[zeit.co/docs](https://zeit.co/docs)
 <!-- more -->
 
 ## 本地配置

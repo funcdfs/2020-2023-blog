@@ -5,7 +5,7 @@ category: Tips
 tags:
   - vscode
 ---
-宇宙第一 code tool
+>宇宙第一 code tool
 <!-- more -->
 # vscode 使用技巧
 

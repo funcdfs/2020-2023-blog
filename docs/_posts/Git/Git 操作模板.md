@@ -6,7 +6,9 @@ category: Tips
 tags:
   - Git
 ---
-常用的 Git Bash & GitHub 模板
+
+> 常用的 Git Bash & GitHub 模板
+
 <!-- more -->
 ## 当某次提交出现 bug 后悔时
 

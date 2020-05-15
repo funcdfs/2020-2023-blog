@@ -7,7 +7,7 @@ tags:
 vssue-title: markdown-vuepress-code-snippet-enhanced
 ---
 
-npm 文档：[markdown-vuepress-code-snippet-enhanced](https://www.npmjs.com/package/markdown-it-vuepress-code-snippet-enhanced)
+>npm 文档：[markdown-vuepress-code-snippet-enhanced](https://www.npmjs.com/package/markdown-it-vuepress-code-snippet-enhanced)
 <!-- more -->
 使用这个插件就可以实现文章和代码块分离，挺有用
 ## 安装

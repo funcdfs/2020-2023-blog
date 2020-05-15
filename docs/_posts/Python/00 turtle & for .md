@@ -7,7 +7,7 @@ tags:
   - Python
 ---
 
-从一个小 python 的绘制开始 [turtle 库文档](https://docs.python.org/zh-cn/3/library/turtle.html#special-turtle-methods)
+>从一个小 python 的绘制开始 [turtle 库文档](https://docs.python.org/zh-cn/3/library/turtle.html#special-turtle-methods)
 <!-- more -->
 ```py
 import turtle

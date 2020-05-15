@@ -1,15 +1,12 @@
 ---
-title: css 总结
+title: css 构建
 date: 2020-05-15
 category: Designer
 tags:
   - CSS3
 ---
 
-> 看 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics) 文档的同时，将之前杂乱的 css 笔记重新整理了一遍，
-<!-- more -->
 
-> 再详细过一遍 css 然后开 js, 顺便将常见的链接整理一下，而不是每次用什么搜什么
 ## 选择器
 
 列出选择器的各种写法，以及各种应用后的示例效果链接
@@ -45,3 +42,14 @@ CSS 为控制继承提供了四个特殊的通用属性值。每个 css 属性�
   设置属性值和浏览器默认样式相同。如果浏览器默认样式中未设置且该属性是自然继承的，那么会设置为 inherit 。
 - [unset](https://developer.mozilla.org/zh-CN/docs/Web/CSS/unset)
   将属性重置为自然值，也就是如果属性是自然继承那么就是 inherit，否则和 initial 一样
+
+CSS 的属性 `all` 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个(`inherit, initial, unset, or revert`)。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。
+
+## 盒模型
+
+## 背景与边框
+
+## 处理不同的文本方向
+
+## 溢出的内容
+

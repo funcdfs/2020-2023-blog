@@ -3,7 +3,7 @@ title: STL 中 sort 的使用
 date: 2020-05-08
 category: basics
 tags:
-  - Data Structure
+  - C++
 --- 
 
 >STL 中各种 sort 函数的详细使用方法以及示例

@@ -36,11 +36,15 @@ class Solution {
         }
         for (int i = 0; i < 26; i++) {
             if (last_fre[i] != 0) {
-                char* a = NULL;
-                itoa(last_fre[i], a, 10);
+                char convert = 'a' + last_fre[i];
+                string a(1, convert);
                 result.push_back(a);
             }
         }
+        //这到题返回的答案应该是字符数组，而不是字符串数组
+        //所以也是出题不严谨
+        //这时就需要将数字先转换为 char 类型，然后再转换为 string
+        //因为数字直接转换的话就是将 10 变为了 "10" 并不是最终目标
         return result;
     }
 };

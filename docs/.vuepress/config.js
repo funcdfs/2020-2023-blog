@@ -13,7 +13,7 @@ module.exports = {
       }
     ], //katex
   ],
-  title: 'psychonaut1f',
+  title: '',
   logo: '/public/logo.ico',
 
   plugins: [
@@ -63,28 +63,28 @@ module.exports = {
     lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
       home: `feng-w.cn`,
-      posts: 'Article',
+      posts: 'JOURNAL',
     }), //自定义部分文字
     pagination: {
       perPage: 5,
     }, //每页文章数量
     nav: [{
-        text: 'Home',
+        text: 'HOME',
         link: '/',
         exact: true
       },
       {
-        text: 'Article',
+        text: 'JOURNAL',
         link: '/posts/',
         exact: false
       },
       {
-        text: 'About',
+        text: 'ABOUT',
         link: '/About/',
         exact: false
       },
       {
-        text: 'Projects',
+        text: 'PROJECTS',
         link: '/Projects/',
         exact: false
       },

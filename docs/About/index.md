@@ -48,22 +48,20 @@ title: ABOUT
 </br>
 
 ## Blog
+I built this blog {{dist_times}} ago using [Vue's](https://cn.vuejs.org/index.html) static site generator [Vuepress](https://vuepress.vuejs.org/zh/). 
+and you can find the source [here](https://github.com/fengwei2002/feng-w.cn).
 
-I built this blog using [Vue's](https://cn.vuejs.org/index.html) static site generator [Vuepress](https://vuepress.vuejs.org/zh/). 
-and you can find the source [here](https://github.com/fengwei2002/feng-w.cn)
-
- {{dist_times}}
 
 ## Hobby
 
-Like cat
+Like cat ~~miao\~~~
 ~~Like Games~~
 Like to sleep ~~10.00pm-10.00am is Best~~
 
 ## Advantages
 
 I am very young? ~~2002-01-20~~
-I am very tall? ~~187 centimeter~~
+I am very tall? ~~187+ centimeter~~
 
 <script>
     export default {

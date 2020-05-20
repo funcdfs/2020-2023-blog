@@ -1,5 +1,5 @@
 ---
-title: About
+title: ABOUT
 ---
 
 ## 📌 Contact 
@@ -49,7 +49,10 @@ title: About
 
 ## Blog
 
-This blog has been established {{dist_times}} , and you can find source [here](https://github.com/fengwei2002/feng-w.cn).
+I built this blog using [Vue's](https://cn.vuejs.org/index.html) static site generator [Vuepress](https://vuepress.vuejs.org/zh/). 
+and you can find the source [here](https://github.com/fengwei2002/feng-w.cn)
+
+ {{dist_times}}
 
 ## Hobby
 

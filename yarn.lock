@@ -1139,7 +1139,7 @@
     register-service-worker "^1.7.0"
     workbox-build "^4.3.1"
 
-"@vuepress/plugin-register-components@1.5.0":
+"@vuepress/plugin-register-components@1.5.0", "@vuepress/plugin-register-components@^1.0.0-alpha.0":
   version "1.5.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-register-components/download/@vuepress/plugin-register-components-1.5.0.tgz#0d83956d576e80db7d45e1404e9da9db075245f1"
   integrity sha1-DYOVbVdugNt9ReFATp2p2wdSRfE=
@@ -3099,7 +3099,7 @@ entities@^1.1.1, entities@~1.1.1:
   resolved "https://registry.npm.taobao.org/entities/download/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
   integrity sha1-vfpzUplmTfr9NFKe1PhSKidf6lY=
 
-entities@^2.0.0, entities@~2.0.0:
+entities@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/entities/download/entities-2.0.0.tgz#68d6084cab1b079767540d80e56a39b423e4abf4"
   integrity sha1-aNYITKsbB5dnVA2A5Wo5tCPkq/Q=
@@ -3211,6 +3211,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npm.taobao.org/etag/download/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+eve-raphael@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npm.taobao.org/eve-raphael/download/eve-raphael-0.5.0.tgz#17c754b792beef3fa6684d79cf5a47c63c4cda30"
+  integrity sha1-F8dUt5K+7z+maE15z1pHxjxM2jA=
 
 eventemitter3@^4.0.0:
   version "4.0.0"
@@ -3452,6 +3457,13 @@ find-up@^3.0.0:
   integrity sha1-SRafHXmTQwZG2mHsxa41XCHJe3M=
   dependencies:
     locate-path "^3.0.0"
+
+flowchart.js@^1.11.3:
+  version "1.13.0"
+  resolved "https://registry.npm.taobao.org/flowchart.js/download/flowchart.js-1.13.0.tgz#fd966270bd310ddefb168d6826c792c5f345372f"
+  integrity sha1-/ZZicL0xDd77Fo1oJseSxfNFNy8=
+  dependencies:
+    raphael "2.3.0"
 
 flush-write-stream@^1.0.0:
   version "1.1.1"
@@ -4689,13 +4701,6 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
-linkify-it@^3.0.1:
-  version "3.0.2"
-  resolved "https://registry.npm.taobao.org/linkify-it/download/linkify-it-3.0.2.tgz?cache=0&sync_timestamp=1589972899233&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flinkify-it%2Fdownload%2Flinkify-it-3.0.2.tgz#f55eeb8bc1d3ae754049e124ab3bb56d97797fb8"
-  integrity sha1-9V7ri8HTrnVASeEkqzu1bZd5f7g=
-  dependencies:
-    uc.micro "^1.0.1"
-
 load-script@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/load-script/download/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
@@ -4815,6 +4820,11 @@ lowercase-keys@^2.0.0:
   resolved "https://registry.npm.taobao.org/lowercase-keys/download/lowercase-keys-2.0.0.tgz#2603e78b7b4b0006cbca2fbcc8a3202558ac9479"
   integrity sha1-JgPni3tLAAbLyi+8yKMgJVislHk=
 
+lozad@^1.9.0:
+  version "1.15.0"
+  resolved "https://registry.npm.taobao.org/lozad/download/lozad-1.15.0.tgz#cdab34e0e00eaecd3972129880560f5885a1a7bf"
+  integrity sha1-zas04OAOrs05chKYgFYPWIWhp78=
+
 lru-cache@^4.1.2:
   version "4.1.5"
   resolved "https://registry.npm.taobao.org/lru-cache/download/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
@@ -4891,6 +4901,11 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.npm.taobao.org/markdown-it-emoji/download/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
+markdown-it-img-lazy@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/markdown-it-img-lazy/download/markdown-it-img-lazy-1.0.1.tgz#b9ec7f1da6566f498eb723d5cec3f7a4514b9337"
+  integrity sha1-uex/HaZWb0mOtyPVzsP3pFFLkzc=
+
 markdown-it-imsize@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/markdown-it-imsize/download/markdown-it-imsize-2.0.1.tgz#cca0427905d05338a247cb9ca9d968c5cddd5170"
@@ -4915,17 +4930,6 @@ markdown-it-vuepress-code-snippet-enhanced@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/markdown-it-vuepress-code-snippet-enhanced/download/markdown-it-vuepress-code-snippet-enhanced-1.0.1.tgz#516fda41378ab537453a0f64fc8ec8d80add0518"
   integrity sha1-UW/aQTeKtTdFOg9k/I7I2ArdBRg=
-
-markdown-it@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-11.0.0.tgz#dbfc30363e43d756ebc52c38586b91b90046b876"
-  integrity sha1-2/wwNj5D11brxSw4WGuRuQBGuHY=
-  dependencies:
-    argparse "^1.0.7"
-    entities "~2.0.0"
-    linkify-it "^3.0.1"
-    mdurl "^1.0.1"
-    uc.micro "^1.0.5"
 
 markdown-it@^8.4.1:
   version "8.4.2"
@@ -6257,6 +6261,13 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/range-parser/download/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE=
+
+raphael@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npm.taobao.org/raphael/download/raphael-2.3.0.tgz#eabeb09dba861a1d4cee077eaafb8c53f3131f89"
+  integrity sha1-6r6wnbqGGh1M7gd+qvuMU/MTH4k=
+  dependencies:
+    eve-raphael "0.5.0"
 
 raw-body@2.4.0:
   version "2.4.0"
@@ -7757,6 +7768,13 @@ vuepress-plugin-cat@^1.0.3:
   resolved "https://registry.npm.taobao.org/vuepress-plugin-cat/download/vuepress-plugin-cat-1.0.3.tgz#efbac43981ae4dee55c8726b347b7ba272052654"
   integrity sha1-77rEOYGuTe5VyHJrNHt7onIFJlQ=
 
+vuepress-plugin-code-switcher@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-code-switcher/download/vuepress-plugin-code-switcher-1.0.3.tgz#a0ddb4ec7af1cc8476001b3e0f3e4ba5169da04a"
+  integrity sha1-oN207HrxzIR2ABs+Dz5LpRadoEo=
+  dependencies:
+    "@vuepress/plugin-register-components" "^1.0.0-alpha.0"
+
 vuepress-plugin-container@^2.0.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.1.2.tgz?cache=0&sync_timestamp=1575025498034&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuepress-plugin-container%2Fdownload%2Fvuepress-plugin-container-2.1.2.tgz#688c1e5a9709a1b8658605bcaee580b3abb19d16"
@@ -7764,10 +7782,17 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-container@^2.1.2, vuepress-plugin-container@^2.1.3:
+vuepress-plugin-container@^2.1.2:
   version "2.1.3"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.1.3.tgz#b5873cb8d21b66bd62f7fb15ab254e55dcfeff78"
   integrity sha1-tYc8uNIbZr1i9/sVqyVOVdz+/3g=
+  dependencies:
+    markdown-it-container "^2.0.0"
+
+vuepress-plugin-container@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.1.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuepress-plugin-container%2Fdownload%2Fvuepress-plugin-container-2.1.4.tgz#bd586587ffb303f847e4a6a2e2568171f311493b"
+  integrity sha1-vVhlh/+zA/hH5Kai4laBcfMRSTs=
   dependencies:
     markdown-it-container "^2.0.0"
 
@@ -7782,6 +7807,22 @@ vuepress-plugin-dehydrate@1.1.3:
   integrity sha1-GRRg7Td2YFuUWudNJjlDOMEtXNc=
   dependencies:
     "@vuepress/shared-utils" "^1.2.0"
+
+vuepress-plugin-flowchart@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-flowchart/download/vuepress-plugin-flowchart-1.4.3.tgz#1692807257c9ba02f764ced0caf930c627f65bdb"
+  integrity sha1-FpKAclfJugL3ZM7Qyvkwxif2W9s=
+  dependencies:
+    flowchart.js "^1.11.3"
+
+vuepress-plugin-img-lazy@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-img-lazy/download/vuepress-plugin-img-lazy-1.0.3.tgz#957e3df9a340030744f20e5969ce0e006e35e345"
+  integrity sha1-lX49+aNAAwdE8g5Zac4OAG4140U=
+  dependencies:
+    lozad "^1.9.0"
+    markdown-it-img-lazy "^1.0.0"
+    markdown-it-imsize "^2.0.1"
 
 vuepress-plugin-nprogress@^1.1.6:
   version "1.1.6"

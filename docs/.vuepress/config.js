@@ -1,10 +1,5 @@
 module.exports = {
   head: [
-    // ['script',
-    //   {
-    //     type: 'text/javascript',
-    //     src: 'https://cdn.jsdelivr.net/gh/bmob/hydrogen-js-sdk@2.2.3/dist/Bmob-2.2.3.min.js'
-    //   }],
     [
       "link",
       {
@@ -14,26 +9,7 @@ module.exports = {
     ], //katex
   ],
   title: '',
-  logo: '/public/logo.ico',
-
-  plugins: [
-    //功能添加
-    ['container', { //details容器
-      type: 'details',
-      before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
-      after: () => '</details>\n'
-    }],
-    ['@vuepress/pwa', { //pwa
-      serviceWorker: true,
-      updatePopup: {
-        message: "New Content！",
-        buttonText: "Refresh"
-      }
-    }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，
-    ["vuepress-plugin-cat"],
-    ["cursor-effects"], //鼠标特效
-    ["vuepress-plugin-reading-progress"], //进度条
-  ],
+  logo: '/public/logo.ico', //四叶草
 
   markdown: { //markdown扩展
     lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
@@ -42,19 +18,76 @@ module.exports = {
         html: true
       });
       md.set({
-        breaks: true //去除空格换行
+        breaks: true //去除markdown中的两空格换行
       });
-      md.use(require('markdown-it-mark')); //高亮渲染
       md.use(require('@iktakahiro/markdown-it-katex')); //math渲染
       md.use(require('markdown-it-task-lists')); //todo渲染
+      md.use(require('markdown-it-mark')); //高亮
       md.use(require('markdown-it-imsize')); //自定义图片的大小
       md.use(require("markdown-it-vuepress-code-snippet-enhanced")); //代码块文件引入
     }
   },
+  plugins: [
+    ['flowchart'],
+    ['img-lazy'],
+    ['code-switcher'], //多语言选项卡
+    ["cursor-effects"], //鼠标特效
+    ["vuepress-plugin-reading-progress"], //上方进度条
+    ["vuepress-plugin-cat"], //🐱
+    ['@vuepress/pwa', { //pwa
+      serviceWorker: true,
+      updatePopup: {
+        message: "New Content！",
+        buttonText: "Refresh"
+      }
+    }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
 
+    //容器添加
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'right',
+        defaultTitle: '',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'theorem',
+        before: info => `<div class="theorem"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      { //添加 details 容器
+        type: 'details',
+        before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
+        after: () => '</details>\n'
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      { //添加居中容器
+        type: 'center',
+        before: info => `<div class="customer-container-center">`,
+        after: '</div>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      { //添加居右容器
+        type: 'right',
+        defaultTitle: '',
+      },
+    ],
+  ],
 
   theme: 'meteorlxy',
   themeConfig: { //主题配置项
+    markdown: {
+      enableAll: true,
+    },
     locales: {
       '/': {
         lang: 'en-US',

@@ -4,6 +4,7 @@ title: vuepress 中的高阶 markdown 用法
 category: Designer
 tags:
   - vuepress
+  - markdown
 vssue-title: markdown-vuepress
 ---
 

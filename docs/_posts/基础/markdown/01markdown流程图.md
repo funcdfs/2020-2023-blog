@@ -3,7 +3,7 @@ date: 2020-03-11
 title: flowchart
 category: basics
 tags:
-  - Markdown
+  - markdown
 ---
 
 # flowchart

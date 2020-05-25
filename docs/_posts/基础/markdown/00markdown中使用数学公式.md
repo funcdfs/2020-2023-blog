@@ -3,7 +3,7 @@ date: 2020-03-09
 title: Markdown书写数学公式
 category: basics
 tags:
-  - Markdown
+  - markdown
 ---
 #  Markdown书写数学公式
 > 博客目前就是用来记笔记回顾的一个方式：而笔记中 数学笔记肯定要占居相当比例；而脱离手写后繁杂公式想显示在博文中便有些不易；所以做了这一篇整理；以便查阅

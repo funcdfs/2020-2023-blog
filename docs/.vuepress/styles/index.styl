@@ -1,3 +1,4 @@
+//容器相关 css
 .theorem
   margin 1rem 0
   padding .1rem 1.5rem
@@ -28,7 +29,8 @@
 //文字选中效果
 ::selection
     background-color: #79ffe1;
-
+.pre::selection
+    background-color: white;
 //文章阴影+透明
 .main-div
     box-shadow: 0 0 10px #ccc !important;
@@ -215,3 +217,34 @@ body  {
     background-color: rgba(225, 192, 240,0.15) !important
     margin-left: 0 !important;
 }
+
+//闪烁文字效果
+@-webkit-keyframes shake {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes shake {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+.header
+  .banner
+    .container
+      h1
+    -webkit-animation: shake 2.2s infinite;
+    animation: shake 2.2s infinite;

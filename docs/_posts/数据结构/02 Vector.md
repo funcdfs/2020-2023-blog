@@ -113,6 +113,8 @@ erase(const_iterator start, const_iterator end);//删除迭代器从 start 到 e
 clear();//删除容器中所有元素
 ```
 
+一个具体元素的迭代器通过`(myvector.begin()+5)`类似的语法来获取
+
 ### vector 数据存取
 
 vector 用 at 函数来读取对应元素，更加规范

@@ -128,7 +128,7 @@ module.exports = {
       email: 'psychonaut1f@gmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://pic2.zhimg.com/v2-01d92b9915ed72f7cdc6c66a30449a51_r.jpg',
+      avatar: 'https://pic3.zhimg.com/v2-e6a1ee96d0f4545cd37d864a89ebd5da_r.jpg',
       sns: {
         github: {
           account: 'fengwei2002',

@@ -12,9 +12,18 @@ using namespace std;
 
 class Solution {
    public:
-    int fib(int N) {
-        int a = 0;
-        int b = 1;
+    int fib(int N) {  // 自底向上的方法
+        if (N == 1 || N == 0) {
+            return N;
         }
+        int dp0 = 0;
+        int dp1 = 1;
+        for (int i = 2; i <= N; i++) {
+            int cur = dp0;
+            dp0 = dp1;
+            dp1 = dp0 + cur;
+        }
+        return dp1;
+    }
 };
 // @lc code=end

@@ -217,6 +217,22 @@ p {
 
 <p>咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。</p>
 
+
+## `<table>`
+
+[table](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table)
+
+tr分隔行间元素，th分隔行内元素
+
+表格中不使用特殊的html来规定表格的样式
+而应该统一采用css来规定样式
+
+
+
+
+## <form>
+
+
 ## 元素扩充
 
 ### 添加 class
@@ -311,3 +327,4 @@ p {
 ### 换行与水平分割线
 
 `<br>` 和 `<hr>`
+

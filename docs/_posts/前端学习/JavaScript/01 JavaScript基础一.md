@@ -4,7 +4,6 @@ vssue-title: js 基础语法
 category: Designer
 tags:
   - JavaScript
-vssue-title: JavaScript
 ---
 
 > 基本语法 数据类型和变量 字符串 数组 对象 条件判断 循环 Map 和 Set

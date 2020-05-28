@@ -1,5 +1,6 @@
 ---
 title: （一）JavaScript 基础语法 
+date: 2020-05-28
 vssue-title: js 基础语法
 category: Designer
 tags:

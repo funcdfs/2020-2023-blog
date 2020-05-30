@@ -49,8 +49,6 @@ title: ABOUT
 
 ## Blog
 I built this blog {{dist_times}} ago using [Vue's](https://cn.vuejs.org/index.html) static site generator [Vuepress](https://vuepress.vuejs.org/zh/). 
-and you can find the source [here](https://github.com/fengwei2002/feng-w.cn).
-
 
 ## Hobby
 

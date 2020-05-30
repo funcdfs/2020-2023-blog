@@ -2,7 +2,7 @@
 title: STL
 category: basics
 tags:
-  - Data Structure
+  - STL
 --- 
 
 <!-- more -->

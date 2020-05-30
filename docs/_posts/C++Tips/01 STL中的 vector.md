@@ -1,7 +1,7 @@
 ---
 title: STL 中的 Vector
 date: 2020-05-05
-category: C++
+category: basics
 tags:
   - STL
 --- 

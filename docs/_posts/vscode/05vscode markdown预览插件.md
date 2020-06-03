@@ -24,23 +24,26 @@ Windows 输入 ctrl shift +p 调出命令窗口
 然后开始自定义你的 markdown 渲染格式
 
 ```less
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
 .markdown-preview.markdown-preview {
 
   //将默认字体调成和左侧 markdown 文件大小一样的字体并采用更加合理的颜色
   font-size: 14.5px;
   color: #b4b4b4;
   //背景颜色改为和 atom dark 相同
-  background-color: #282C34;
+  background-color: rgb(29, 35, 37);
 
   //标题调整
   h2 {
     font-size: 19px;
-    color: bisque;
+    color: rgb(214, 191, 164);
   }
 
   h3 {
     font-size: 17px;
-    color: bisque;
+    color: rgb(214, 191, 164);
   }
 
   //代码块中注释的颜色
@@ -50,6 +53,10 @@ Windows 输入 ctrl shift +p 调出命令窗口
   .token.doctype,
   .token.prolog {
     color: #bb7bd6b0;
+  }
+
+  strong {
+    color: rgb(127, 211, 214);
   }
 
   //将代码块的字体和文本大小统一并将颜色调整为更加适宜的颜色
@@ -88,6 +95,7 @@ Windows 输入 ctrl shift +p 调出命令窗口
   ::-webkit-scrollbar-corner {
     background-color: pink;
   }
+
   /*滚动条效果-end*/
 }
 ```

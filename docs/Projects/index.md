@@ -1,7 +1,5 @@
 ---
 title: PROJECTS
-vssue: false
-layout: no-sidebar-layout
 ---
 
 ## Project 

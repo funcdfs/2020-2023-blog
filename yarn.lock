@@ -7831,11 +7831,6 @@ vuepress-plugin-nprogress@^1.1.6:
   dependencies:
     nprogress "^0.2.0"
 
-vuepress-plugin-reading-progress@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-reading-progress/download/vuepress-plugin-reading-progress-1.0.9.tgz#800cef1ed93abe9ab7aae0147d269d1b1359ef32"
-  integrity sha1-gAzvHtk6vpq3quAUfSadGxNZ7zI=
-
 vuepress-plugin-redirect@^1.2.3:
   version "1.2.3"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-redirect/download/vuepress-plugin-redirect-1.2.3.tgz#f0454c7c609f16fa63bb268a0b8e561ee42b2381"

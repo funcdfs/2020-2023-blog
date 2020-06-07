@@ -7796,10 +7796,10 @@ vuepress-plugin-container@^2.1.4:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-cursor-effects@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-cursor-effects/download/vuepress-plugin-cursor-effects-0.0.4.tgz#f8596c9b90da314d46571fc11f11b6b6f634d4a8"
-  integrity sha1-+Flsm5DaMU1GVx/BHxG2tvY01Kg=
+vuepress-plugin-cursor-effects@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-cursor-effects/download/vuepress-plugin-cursor-effects-1.0.0.tgz#47bf74b4fe9fae923b2250ac18d15f5b3fddb6b7"
+  integrity sha1-R790tP6frpI7IlCsGNFfWz/dtrc=
 
 vuepress-plugin-dehydrate@1.1.3:
   version "1.1.3"

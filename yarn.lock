@@ -7626,11 +7626,6 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-plugin-cat@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-cat/download/vuepress-plugin-cat-1.0.3.tgz#efbac43981ae4dee55c8726b347b7ba272052654"
-  integrity sha1-77rEOYGuTe5VyHJrNHt7onIFJlQ=
-
 vuepress-plugin-code-switcher@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-code-switcher/download/vuepress-plugin-code-switcher-1.0.3.tgz#a0ddb4ec7af1cc8476001b3e0f3e4ba5169da04a"

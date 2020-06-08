@@ -32,8 +32,6 @@ module.exports = {
     ['img-lazy'],
     ['code-switcher'], //多语言选项卡
     ["cursor-effects"], //鼠标特效
-    ["vuepress-plugin-reading-progress"], //上方进度条
-    ["vuepress-plugin-cat"], //🐱
     //容器添加
     [
       'vuepress-plugin-container',

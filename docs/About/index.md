@@ -47,6 +47,15 @@ title: ABOUT
 
 </br>
 
+
+## Project 
+
+Non-exhaustive list of stuff I work on:.. 
+::: center
+[vscode-theme-fengwei2002](https://marketplace.visualstudio.com/items?itemName=psychonaut1f.fengwei2002)
+:::
+
+
 ## Blog
 
 I built this blog {{dist_times}} ago using [Vue's](https://cn.vuejs.org/index.html) static site generator [Vuepress](https://vuepress.vuejs.org/zh/). 

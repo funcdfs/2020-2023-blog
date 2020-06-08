@@ -106,11 +106,6 @@ module.exports = {
         link: '/About/',
         exact: false
       },
-      {
-        text: 'PROJECTS',
-        link: '/Projects/',
-        exact: false
-      },
     ], //navbar导航栏
     personalInfo: {
       nickname: 'psychonaut1f',

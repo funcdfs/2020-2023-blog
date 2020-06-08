@@ -34,14 +34,6 @@ module.exports = {
     ["cursor-effects"], //鼠标特效
     ["vuepress-plugin-reading-progress"], //上方进度条
     ["vuepress-plugin-cat"], //🐱
-    ['@vuepress/pwa', { //pwa
-      serviceWorker: true,
-      updatePopup: {
-        message: "New Content！",
-        buttonText: "Refresh"
-      }
-    }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
-
     //容器添加
     [
       'vuepress-plugin-container',

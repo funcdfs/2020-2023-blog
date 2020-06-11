@@ -31,7 +31,9 @@ module.exports = {
     ['flowchart'],
     ['img-lazy'],
     ['code-switcher'], //多语言选项卡
-    ["cursor-effects"], //鼠标特效
+    ["cursor-effects", {
+      shape: ['circle'], // shape of the particle, default: 'star'
+    }], //鼠标特效
     ['@vuepress/pwa', { //pwa
       serviceWorker: true,
       updatePopup: {

@@ -120,7 +120,7 @@ module.exports = {
       email: 'psychonaut1f@gmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://pic4.zhimg.com/v2-523fc1bc6054f9f48d01d55a604ef20b_r.jpg',
+      avatar: 'https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/avatar.jpg',
       sns: {
         github: {
           account: 'fengwei2002',

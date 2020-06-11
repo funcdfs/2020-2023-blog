@@ -7,11 +7,11 @@ title: ABOUT
 </br>
 
 <span class="contact">
-<a href="https://pic4.zhimg.com/v2-873ab35fdca79ee8f623bb8d01d34ab3_r.jpg" title="CIKI1F"> &nbsp Wechat &nbsp  </a>
+<a href="https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/wx.jpg" title="CIKI1F"> &nbsp Wechat &nbsp  </a>
 </span>
 
 <span class="contact">
-<a href="https://pic4.zhimg.com/v2-11cc6df16875e4d7bb482f31d9ad8343_r.jpg" title="2480417969/2928256681"> &nbsp QQ &nbsp </a>
+<a href="https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/QQ.jpg" title="2480417969/2928256681"> &nbsp QQ &nbsp </a>
 </span>
 
 <span class="contact">

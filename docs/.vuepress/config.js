@@ -32,6 +32,13 @@ module.exports = {
     ['img-lazy'],
     ['code-switcher'], //多语言选项卡
     ["cursor-effects"], //鼠标特效
+    ['@vuepress/pwa', { //pwa
+      serviceWorker: true,
+      updatePopup: {
+        message: "New Content！",
+        buttonText: "Refresh"
+      }
+    }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
     //容器添加
     [
       'vuepress-plugin-container',
@@ -113,7 +120,7 @@ module.exports = {
       email: 'psychonaut1f@gmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://pic3.zhimg.com/v2-e6a1ee96d0f4545cd37d864a89ebd5da_r.jpg',
+      avatar: 'https://pic4.zhimg.com/v2-523fc1bc6054f9f48d01d55a604ef20b_r.jpg',
       sns: {
         github: {
           account: 'fengwei2002',

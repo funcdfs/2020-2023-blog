@@ -69,7 +69,7 @@ Like to sleep ~~10.00pm-10.00am is Best~~
 
 ## Advantages
 
-I am very young? ~~2002-01-20~~
+I am very young? ~~2002.01.20~~
 I am very tall? ~~187+ centimeter~~
 
 <script>

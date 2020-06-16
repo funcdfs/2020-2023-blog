@@ -1,9 +1,9 @@
 ---
 date: 2020-05-15
-title: Luna
+title: LUNA：我在你心里留下了一样东西
 category: Life
 tags:
-  - Hobby
+  - Games
 ---
 >给你盖个章！
 <!-- more -->
@@ -45,3 +45,8 @@ tags:
 加油
 
 我应该牢记那些痛感啊，你怎么忘得这么快，嗯？
+***
+
+date: 2020-06-15
+
+哈哈哈，换设备后再认真玩，之前的话好像小屁孩行为h'h'hhhh

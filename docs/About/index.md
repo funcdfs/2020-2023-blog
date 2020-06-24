@@ -2,7 +2,7 @@
 title: ABOUT
 ---
 
-## 📌 Contact 
+## Contact 
 
 </br>
 
@@ -46,20 +46,12 @@ title: ABOUT
 
 </br>
 
+## Plaything
 
-## Project 
-
-Non-exhaustive list of stuff I work on:.. 
 ::: center
 [vscode-theme-fengwei2002](https://marketplace.visualstudio.com/items?itemName=psychonaut1f.fengwei2002)
 :::
 
-
-## Blog
-
-I built this blog {{dist_times}} ago using [Vue's](https://cn.vuejs.org/index.html) static site generator [Vuepress](https://vuepress.vuejs.org/zh/). 
-
-and you can find the source [here](https://github.com/fengwei2002/feng-w.cn).
 
 ## Hobby
 
@@ -70,8 +62,17 @@ Like to sleep ~~10.00pm-10.00am is Best~~
 ## Advantages
 
 I am very young? ~~2002.01.20~~
-I am very tall? ~~187+ centimeter~~
+I am very tall? ~~187+~~
 
+
+::: details 这个网站
+
+>You can find the source [here](https://github.com/fengwei2002/feng-w.cn).
+
+$\qquad$大一查资料看到很多别人的博客很好看，然而技术不允许实现，大一期末考完回家学会了怎么用这个 GitHub 和 Git。磕磕绊绊的看 Jekyll 教程搭建了一个博客，很长时间后想着自己完完全全自定义一个博客（强迫症本症），中途因为 vuepress 中的内置 [markdown 容器语法](https://vuepress.vuejs.org/zh/guide/markdown.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%B9%E5%99%A8)和 [vuepress](https://vuepress.vuejs.org/zh/) 的一些作品，看着官方文档什么都不懂的情况下搭了一个出来，并且还用 zeit.co 代理了这个网站，这个过程中玩GitHub玩的更明明白白了，命令行是什么也有个概念了，npm 的简便性也让我大吃一惊……
+$\qquad$大一期末考试结束了，我的博客也很稳定的的运行了起来（疫情一个寒假直接大二可还行？），现在就是一个新的开始了，学习计算机网路，计算机系统，认真再来一次数据结构，然后完整的过一次 js 和 vue，再写几个 vuepress 主题…………路还长，慢慢走
+> 未完待续$\cdots$ {{dist_times}}
+:::
 <script>
     export default {
         props: ['slot-key'],

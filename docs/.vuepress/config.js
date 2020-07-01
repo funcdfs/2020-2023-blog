@@ -52,8 +52,8 @@ module.exports = {
     [
       'vuepress-plugin-container',
       {
-        type: 'theorem',
-        before: info => `<div class="theorem"><p class="title">${info}</p>`,
+        type: 'today',
+        before: info => `<div class="today"><p class="title">${info}</p>`,
         after: '</div>',
       },
     ],

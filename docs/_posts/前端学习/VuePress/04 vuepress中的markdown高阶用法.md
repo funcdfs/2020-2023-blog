@@ -104,17 +104,14 @@ config.js
 不用添加 CSS/styl
 
 
-## 定理容器
+## 自定义的各种容器
 
-::: theorem 牛顿第一定律
-假若施加于某物体的外力为零，则该物体的运动速度不变。
-
-::: right
-来自 [维基百科](https://zh.wikipedia.org/wiki/%E7%89%9B%E9%A1%BF%E8%BF%90%E5%8A%A8%E5%AE%9A%E5%BE%8B)
+::: today 今日总结
+今天王者荣耀上了荣耀王者
 :::
 
 ```md
-::: theorem 牛顿第一定律
+::: today 牛顿第一定律
 假若施加于某物体的外力为零，则该物体的运动速度不变。
 
 ::: right
@@ -125,7 +122,7 @@ config.js
 index.styl
 
 ```styl
-.theorem
+.today
   margin 1rem 0
   padding .1rem 1.5rem
   border-radius 0.4rem
@@ -139,8 +136,8 @@ config.js
     [
       'vuepress-plugin-container',
       {
-        type: 'theorem',
-        before: info => `<div class="theorem"><p class="title">${info}</p>`,
+        type: 'today',
+        before: info => `<div class="today"><p class="title">${info}</p>`,
         after: '</div>',
       },
     ],
@@ -301,8 +298,8 @@ c2(no)->op2->e
     [
       'vuepress-plugin-container',
       {
-        type: 'theorem',
-        before: info => `<div class="theorem"><p class="title">${info}</p>`,
+        type: 'today',
+        before: info => `<div class="today"><p class="title">${info}</p>`,
         after: '</div>',
       },
     ],

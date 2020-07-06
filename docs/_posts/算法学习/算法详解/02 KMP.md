@@ -2,7 +2,7 @@
 title: KMP算法详解
 category: Algorithm
 tags:
-  - VI Algo
+  - 算法详解
 ---
 
 ## KMP 算法：

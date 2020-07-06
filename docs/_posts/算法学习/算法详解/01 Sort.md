@@ -2,7 +2,7 @@
 title: 排序算法
 category: Algorithm
 tags:
-  - VI Algo
+  - 算法详解
 ---
 
 

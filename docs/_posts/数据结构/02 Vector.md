@@ -1,22 +1,21 @@
 ---
-title: Vector
-
+title: Vector 向量
+date: 2020-07-06
 category: basics
 tags:
   - Data Structure
 --- 
 
->vector 的使用和内部实现
+>线性结构：向量 vector 内部实现
 
 <!-- more -->
 
-回学校带着那本书和邓俊辉的网课再完全过一遍
 
 ## （a）接口与实现
 
 > RAM 模型
 
-用户--->汽车，使用说明书，就是数据结构的设计者和使用者的沟通合作方式<---制造者
+抽象数据类型（STL）和数据结构（）
 
 ### 从数组到向量
 

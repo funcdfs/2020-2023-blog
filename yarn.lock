@@ -834,12 +834,12 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@iktakahiro/markdown-it-katex@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.npm.taobao.org/@iktakahiro/markdown-it-katex/download/@iktakahiro/markdown-it-katex-3.1.0.tgz#cd40c1037f038ab00cbfee2464604435848deae9"
-  integrity sha1-zUDBA38DirAMv+4kZGBENYSN6uk=
+"@iktakahiro/markdown-it-katex@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npm.taobao.org/@iktakahiro/markdown-it-katex/download/@iktakahiro/markdown-it-katex-4.0.0.tgz#a3d585d911d078a78aa0ee8ef17922d3ebdcd1f8"
+  integrity sha1-o9WF2RHQeKeKoO6O8Xki0+vc0fg=
   dependencies:
-    katex "^0.10.0"
+    katex "0.11.1"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -4639,10 +4639,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-katex@^0.10.0:
-  version "0.10.2"
-  resolved "https://registry.npm.taobao.org/katex/download/katex-0.10.2.tgz#39973edbb65eda5b6f9e7f41648781e557dd4932"
-  integrity sha1-OZc+27Ze2ltvnn9BZIeB5VfdSTI=
+katex@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.npm.taobao.org/katex/download/katex-0.11.1.tgz#df30ca40c565c9df01a466a00d53e079e84ffaa2"
+  integrity sha1-3zDKQMVlyd8BpGagDVPgeehP+qI=
   dependencies:
     commander "^2.19.0"
 
@@ -4842,11 +4842,6 @@ lowercase-keys@^2.0.0:
   resolved "https://registry.npm.taobao.org/lowercase-keys/download/lowercase-keys-2.0.0.tgz#2603e78b7b4b0006cbca2fbcc8a3202558ac9479"
   integrity sha1-JgPni3tLAAbLyi+8yKMgJVislHk=
 
-lozad@^1.9.0:
-  version "1.15.0"
-  resolved "https://registry.npm.taobao.org/lozad/download/lozad-1.15.0.tgz#cdab34e0e00eaecd3972129880560f5885a1a7bf"
-  integrity sha1-zas04OAOrs05chKYgFYPWIWhp78=
-
 lru-cache@^4.1.2:
   version "4.1.5"
   resolved "https://registry.npm.taobao.org/lru-cache/download/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
@@ -4923,10 +4918,10 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.npm.taobao.org/markdown-it-emoji/download/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
-markdown-it-img-lazy@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/markdown-it-img-lazy/download/markdown-it-img-lazy-1.0.1.tgz#b9ec7f1da6566f498eb723d5cec3f7a4514b9337"
-  integrity sha1-uex/HaZWb0mOtyPVzsP3pFFLkzc=
+markdown-it-img-lazy@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/markdown-it-img-lazy/download/markdown-it-img-lazy-1.0.2.tgz#3ad4c64cab4fc337e04517793ce06c9c24981af9"
+  integrity sha1-OtTGTKtPwzfgRRd5POBsnCSYGvk=
 
 markdown-it-imsize@^2.0.1:
   version "2.0.1"
@@ -7832,13 +7827,12 @@ vuepress-plugin-flowchart@^1.4.3:
   dependencies:
     flowchart.js "^1.11.3"
 
-vuepress-plugin-img-lazy@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-img-lazy/download/vuepress-plugin-img-lazy-1.0.3.tgz#957e3df9a340030744f20e5969ce0e006e35e345"
-  integrity sha1-lX49+aNAAwdE8g5Zac4OAG4140U=
+vuepress-plugin-img-lazy@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-img-lazy/download/vuepress-plugin-img-lazy-1.0.4.tgz#f444c1e21a2c95117f1bcb97a0962660362fa181"
+  integrity sha1-9ETB4hoslRF/G8uXoJYmYDYvoYE=
   dependencies:
-    lozad "^1.9.0"
-    markdown-it-img-lazy "^1.0.0"
+    markdown-it-img-lazy "^1.0.2"
     markdown-it-imsize "^2.0.1"
 
 vuepress-plugin-nprogress@^1.1.6:

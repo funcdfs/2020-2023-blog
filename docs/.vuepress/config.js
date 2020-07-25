@@ -119,7 +119,7 @@ module.exports = {
     personalInfo: {
       nickname: 'konng',
       description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=28456751&auto=0&height=32"></iframe>',
-      email: 'psychonaut1f@gmail.com',
+      email: 'fengwei2002@foxmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
       avatar: 'https://raw.githubusercontent.com/fengwei2002/feng-w.cn/master/docs/.vuepress/public/ava.jpg',

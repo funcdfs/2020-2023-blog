@@ -1,38 +1,34 @@
 ---
-title: Vector 向量
-date: 2020-07-06
+title: 数据结构：Vector 向量
+date: 2020-07-31
 category: basics
 tags:
   - Data Structure
 --- 
 
->线性结构：向量 vector 内部实现
+>向量是数组的抽象和泛化
+
 
 <!-- more -->
 
 
-## （a）接口与实现
-
-> RAM 模型
-
-抽象数据类型（STL）和数据结构（）
+## 接口与实现
 
 ### 从数组到向量
 
 c/c++中元素与编号一一对应，所以得到编号就能直接访问 (lineer array)
 
-向量是数组的抽象和泛化
 
-迭代器访问
-不限于基本类型，
-参与复杂的算法
+通过迭代器访问
+相比数组来说不限于基本类型，
+可以参与复杂的算法，统一且安全
 有很多接口对于向量内的元素的操作（向量的 ADT 接口）
 
-### ADT 操作实例
-
+### 接口实例
+ 
 ``` cpp
 空向量初始化（从左向右）
-insert(0,9)
+insert(0,9)   //插入位置位置和数值
 insert(0,4)
 insert(1,5)   //4 5 9
 put(1,2)      //修改 4,2,9
@@ -42,19 +38,21 @@ size()
 disordered()  //不是 0 就是无序向量
 find(5)       //返回-1 表示查找失败
 sort()        //排序
-search()      //返回下标或者-1, 或者前一个，
+search(x)     //返回不超过目标值的最大值的秩，或者目标值的秩
 ```
 
 逻辑上和物理上都符合常理要求
 
-### vector 模板类的详细实现
+### vector 模板类框架
 
 ``` cpp
-定义秩
-默认初始容量
-开始定义模板类
-template<typename T>class vector {
-    private: Rank size;int  _capaccity; T* _elem
+typedef int Rank; //定义秩
+#define DEFAULT_CAP 3 //默认初始容量
+
+template<typename T> class vector {//开始定义模板类
+    private: Rank size;
+    int  _capaccity; //容量
+    T* _elem;  //开辟的数据区的指针
     protected: //内部函数
     public: 
     // 构造函数
@@ -66,7 +64,23 @@ template<typename T>class vector {
 vector->interface->applications
 ```
 
-## （b）可扩充向量
+多种构造函数：
+
+![2020-07-31-18-54-03](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-31-18-54-03.png)
+
+析构函数：
+
+![2020-07-31-18-54-41](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-31-18-54-41.png)
+
+### 基于复制的构造
+
+申请二倍的空间 $\rightarrow$ 逐一复制
+
+![2020-07-31-18-56-24](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-31-18-56-24.png)
+
+
+
+## 可扩充向量
 
 分配空间（实际空间是那个的两倍）
 有效规模初始化

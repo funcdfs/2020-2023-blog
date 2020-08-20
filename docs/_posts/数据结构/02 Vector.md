@@ -82,54 +82,49 @@ vector->interface->applications
 
 ## 可扩充向量
 
-应该采取一些聪明的策略达到空间自适应  
-开辟一段连续的内存空间  
+默认就是开辟一段连续的内存空间  
 采用一段连续空间可能出现上溢和下溢（元素寥寥无几，利用率极低）
 一般应用环境不能准确预测空间需求量  
 
 ### 动态空间管理
 
-蝉的哲学，在即将发生上溢时，适当扩大内部空间容量，动态申请一个更大的外壳  
-再将东西 copy 过来，释放原来的空间，将新空间供用户调用  
+在即将发生上溢时，适当扩大内部空间容量，动态申请一个更大的外壳  
+再将东西复制过来，释放原来的小空间，将新空间供用户调用  
 
 ``` cpp
 template<typename T>
 void Vector<T>::expand{//向量空间不足时扩容
-    if(_size<_capcity)return;//尚未满员时，不必扩容
-    _capcity=max(_capcity,DEFAULT_CAPCITY);//不低于最小容量
-    T* oldElem = _elem;_elem = new T[_capcity<<=1]//容量加倍
-    for(int i=0;i<_size;i++){//复制原向量内容
+    if (_size < _capcity) return;//尚未满员时，不必扩容
+    _capcity = max(_capcity,DEFAULT_CAPCITY);//不低于最小容量
+    T* oldElem = _elem;_elem = new T [_capcity << = 1]//左移一位等于容量加倍
+    for(int i = 0; i < _size; i++){//复制原向量内容
         _elem[i]=oldElem[i];
     }
     delete [] oldElem;//释放原空间
 }
 ```
 
-得益于向量的分装，尽管扩容之后数据地址已经改变，却不出现野指针  
+得益于向量的分装，尽管扩容之后数据地址已经改变，却不出现野指针（原先指向具体元素的指针）
 
-### 那为何要加倍空间呢？
+### 为何要加倍空间呢？
 
-递增式扩容  
-追加固定大小的容量  
-最坏情况，就是每经过固定次数次后就需要开始扩容一次  
-//算数级数  
-总体耗时为$O(n^2)$, 每次扩容需要$O(n)$的时间  
+[递增式扩容](https://next.xuetangx.com/learn/THU08091000384/THU08091000384/1516243/video/1387154)$\rightarrow$[加倍式扩容](https://next.xuetangx.com/learn/THU08091000384/THU08091000384/1516243/video/1387155)
 
-容量加倍策略
+使用空间的牺牲，换取了时间上的巨大收益  
 
-最坏情况，在初始量为一的满向量中连续插入  
-//几何级数  
-总体耗时为$O(n)$, 每次扩容的分摊成本为$O(1)$  
-, 使用空间的牺牲，换取了时间上的巨大收益  
-
-### 平均分析和分摊分析
+### 分摊复杂度
 
 ![34D26A3AC10EA77D875667FD5EE4CB26.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/picture34D26A3AC10EA77D875667FD5EE4CB26.jpg)
 
-## （c）无序向量
+## 无序向量
 
-`template<typename T>class vector{}`   
-这种以模板定义的方式就可以使数据结构更加方便的被利用   
+`template <typename T> class vector{}`   
+
+这种以模板定义的方式就可以使数据结构更加方便的被利用
+
+使用的时候就是
+
+`vector<int> myvector`
 
 ### 循秩访问  
 

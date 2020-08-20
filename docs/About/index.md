@@ -19,11 +19,11 @@ title: ABOUT
 </span>
 
 <span class="contact">
-<a href="https://zhuanlan.zhihu.com/fengwei2002" title="weirdo"> &nbsp zhuanlan.zhihu &nbsp </a>
+<a href="https://zhuanlan.zhihu.com/fengwei2002" title="kycu"> &nbsp zhuanlan.zhihu &nbsp </a>
 </span>
 
 <span class="contact">
-<a href="http://music.163.com/m/user/home?id=440040659" title="psychonaut1f">  &nbsp netease cloud music &nbsp </a>
+<a href="http://music.163.com/m/user/home?id=440040659" title="kycu">  &nbsp netease cloud music &nbsp </a>
 </span>
 
 </br>

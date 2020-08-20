@@ -117,19 +117,19 @@ module.exports = {
       },
     ], //navbar导航栏
     personalInfo: {
-      nickname: 'keepyourchipup',
+      nickname: 'kycu',
       description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=28456751&auto=0&height=32"></iframe>',
       email: 'fengwei2002@foxmail.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://raw.githubusercontent.com/fengwei2002/feng-w.cn/master/docs/.vuepress/public/ava.jpg',
+      avatar: 'https://i.loli.net/2020/08/20/HWAaVevO9Ibk4xl.jpg',
       sns: {
         github: {
           account: 'fengwei2002',
           link: 'https://github.com/fengwei2002',
         },
         zhihu: {
-          account: 'weirdo',
+          account: 'kycu',
           link: 'https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba',
         },
       },

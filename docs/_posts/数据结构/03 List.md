@@ -6,6 +6,10 @@ tags:
   - Data Structure
 --- 
 
+> 数据结构列表，list的详细实现
+
+<!-- more -->
+
 ## （a）接口与实现
 
 

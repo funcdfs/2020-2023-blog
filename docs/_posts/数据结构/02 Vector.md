@@ -6,7 +6,7 @@ tags:
   - Data Structure
 --- 
 
->向量是数组的抽象和泛化
+>数据结构向量，vector 的详细实现
 
 
 <!-- more -->

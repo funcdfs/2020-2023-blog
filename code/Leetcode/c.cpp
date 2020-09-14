@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
    public:
     string destCity(vector<vector<string>>& paths) {
-        //所有字符串均由大小写英文字母和空格字符组成
+        //所有字符串均由大小写英文字母和空格字符组成1436
         //遍历第二行字符串，若没有相同字符串在所有字符串里出现，就结束程序
         for (int i = 0; i < paths.size(); i++) {
             bool flag = false;

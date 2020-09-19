@@ -1,53 +1,47 @@
 module.exports = {
-  head: [
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-      }
-    ], //katex
-  ],
-  title: '',
-  logo: '/public/logo.ico', //四叶草
+    head: [
+      [
+        "link",
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        }
+      ], //katex
+    ],
+    title: '',
+    logo: '/public/logo.ico', //四叶草
 
-  markdown: { //markdown扩展
-    lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
-    extendMarkdown: md => {
-      md.set({
-        html: true
-      });
-      md.set({
-        breaks: true //去除markdown中的两空格换行
-      });
-      md.use(require('@iktakahiro/markdown-it-katex')); //math渲染
-      md.use(require('markdown-it-task-lists')); //todo渲染
-      md.use(require('markdown-it-mark')); //高亮
-      md.use(require('markdown-it-imsize')); //自定义图片的大小
-      md.use(require("markdown-it-vuepress-code-snippet-enhanced")); //代码块文件引入
-    }
-  },
-  plugins: [
-    ['flowchart'],
-    ['img-lazy'],
-    ['code-switcher'], //多语言选项卡
-    ["cursor-effects", {
-      shape: ['circle'], // shape of the particle, default: 'star'
-    }], //鼠标特效
-    ['@vuepress/pwa', { //pwa
-      serviceWorker: true,
-      updatePopup: {
-        message: "New Content！",
-        buttonText: "Refresh"
+    markdown: { //markdown扩展
+      lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
+      extendMarkdown: md => {
+        md.set({
+          html: true
+        });
+        md.set({
+          breaks: true //去除markdown中的两空格换行
+        });
+        md.use(require('@iktakahiro/markdown-it-katex')); //math渲染
+        md.use(require('markdown-it-task-lists')); //todo渲染
+        md.use(require('markdown-it-mark')); //高亮
+        md.use(require('markdown-it-imsize')); //自定义图片的大小
+        md.use(require("markdown-it-vuepress-code-snippet-enhanced")); //代码块文件引入
       }
-    }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
-    //容器添加
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'right',
-        defaultTitle: '',
-      },
+    },
+    plugins: [
+      ['flowchart'],
+      ['img-lazy'],
+      ['code-switcher'], //多语言选项卡
+      ["cursor-effects", {
+        shape: ['circle'], // shape of the particle, default: 'star'
+      }], //鼠标特效
+      ['@vuepress/pwa', { //pwa
+        serviceWorker: true,
+        updatePopup: {
+          message: "New Content！",
+          buttonText: "Refresh"
+        }
+      }], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
+      //容器添加
     ],
     [
       'vuepress-plugin-container',

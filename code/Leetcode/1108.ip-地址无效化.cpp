@@ -8,9 +8,19 @@
 #include <iostream>
 
 using namespace std;
-
 class Solution {
    public:
-    string defangIPaddr(string address) {}
+    string defangIPaddr(string address) {
+        string res("1");
+        res.clear();
+        for (int i = 0; i < address.length(); i++) {
+            if (address.at(i) != '.') {
+                res.push_back(address.at(i));
+            } else {
+                res += "[.]";
+            }
+        }
+        return res;
+    }
 };
 // @lc code=end

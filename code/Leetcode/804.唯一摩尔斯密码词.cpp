@@ -8,26 +8,24 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
 class Solution {
    public:
     int uniqueMorseRepresentations(vector<string>& words) {
-        //返回我们可以获得所有词不同单词翻译的数量。
-        //遍历字符串数组，将合成的字符串与之前的作比较并决定是否保存
-        string tem[26] = {".-",   "-...", "-.-.", "-..",  ".",    "..-.", "--.",
-                          "....", "..",   ".---", "-.-",  ".-..", "--",   "-.",
-                          "---",  ".--.", "--.-", ".-.",  "...",  "-",    "..-",
-                          "...-", ".--",  "-..-", "-.--", "--.."};
-        string ans[words.size()] = {0};
-        new* string = for (int i = 0; i < words.size(); i++) {
-            for (int j = 0; j < words.at(i).length(); j++) {
-                int a = words.at(i).at(j) - 'a';
-                ans[i] += tem[a];
+        unordered_set<string> set;
+        vector<string> record{".-",   "-...", "-.-.", "-..",  ".",    "..-.",
+                              "--.",  "....", "..",   ".---", "-.-",  ".-..",
+                              "--",   "-.",   "---",  ".--.", "--.-", ".-.",
+                              "...",  "-",    "..-",  "...-", ".--",  "-..-",
+                              "-.--", "--.."};
+
+        for (auto s : words) {  //对于woeds中的每个单词s
+            string c;
+            for (int i = 0; i < s.size(); i++) {
+                c += record[s[i] - 'a'];
             }
-        }  //无脑遍历先将所有结果放入ans数组中避免单个循环过于复杂
-        for (int i = 0; i < words.size(); i++) {
-            /* code */
+            set.insert(c);  // set的直接插入不会插入相同的元素
         }
+        return (int)set.size();
     }
 };
 // @lc code=end

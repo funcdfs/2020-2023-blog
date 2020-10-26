@@ -223,7 +223,40 @@ h3 {
 strong {
     font-weight: 550;
 }
+//英文字体优化
 
 body{
   font-family: Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif!important;
+}
+
+//代码块颜色优化
+
+pre{
+    background: #FAFAFA !important;
+}
+
+//变量颜色
+.content pre[class*="language-"] code, .content pre code {
+    color: rgb(24, 32, 38) !important;
+    
+}
+//关键字颜色
+.token.selector, .token.important, .token.atrule, .token.keyword, .token.builtin {
+    color: #d9822b !important;
+}
+//zfc
+.token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
+    color: #1d0f0d !important;
+}
+//运算符颜色
+.token.operator, .token.entity, .token.url {
+    color: #106ba3 !important;
+}
+//class
+.token.property, .token.class-name, .token.constant, .token.symbol {
+    color: #402000 !important;
+}
+//括号
+.token.punctuation {
+    color: #FFD700 !important;
 }

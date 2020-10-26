@@ -28,7 +28,7 @@
     "markdown-it-mark": "^3.0.0",
     "markdown-it-task-lists": "^2.1.1",
     "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
-    "vuepress": "^1.7.1",
+    "vuepress": "^1.5.4",
     "vuepress-plugin-code-switcher": "^1.0.3",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-cursor-effects": "^1.0.0",
@@ -36,7 +36,7 @@
     "vuepress-theme-meteorlxy": "^1.9.0"
   },
   "dependencies": {
-    "@vuepress/plugin-pwa": "^1.7.1",
+    "@vuepress/plugin-pwa": "^1.5.4",
     "vuepress-plugin-img-lazy": "^1.0.4"
   }
 }

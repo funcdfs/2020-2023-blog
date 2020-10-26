@@ -7,20 +7,38 @@
 // @lc code=start
 #include <iostream>
 using namespace std;
-
 class Solution {
    public:
-    string sortString(string s) {
-        //双重循环拼接最小元素，双重循环最大元素，两个循环外套一次while循环
-        string ans = {""};
-        char mini = s.at(0);
-        for (int i = 0; i < s.size(); i++) {
-            if (s.at(i) < mini) {
-                mini = s.at(i);
-                s.erase();
+    int h[26];
+
+    inline bool haveChar() {
+        for (int i = 0; i < 26; ++i) {
+            if (h[i]) {
+                return true;
             }
         }
-        ans.push_back(mini);
+        return false;
+    }  //力扣中使用自定义函数的方法，全局中声明
+
+    string sortString(string s) {
+        for (const auto& c : s)
+            ++h[c - 'a'];
+        string ret;
+        auto appendChar = [&](int p) {
+            if (h[p]) {
+                --h[p];
+                ret.push_back(p + 'a');
+            }
+        };
+        while (true) {
+            if (!haveChar())
+                break;
+            for (int i = 0; i < 26; ++i)
+                appendChar(i);
+            for (int i = 25; i >= 0; --i)
+                appendChar(i);
+        }
+        return ret;
     }
 };
 // @lc code=end

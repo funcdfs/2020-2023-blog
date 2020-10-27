@@ -1,9 +1,12 @@
 ---
 title: 第五章：C++ STL再论
+date: 2020-10-27
 category: Algorithm
 tags:
-  - bac2nd
+  - 算法竞赛入门经典（二）
 ---
+
+> 算法竞赛入门经典二书摘
 
 # C++STL在算法中的应用
 

@@ -1,55 +1,61 @@
 ---
-title: Map
+title: 数据结构：Map 图
+
 category: basics
 tags:
   - Data Structure
 --- 
 
+> map 数据结构的具体实现
+
+<!-- more -->
+
+## 以下内容待重写
 
 # 图
 
 （c）广度优先搜索
 （d）深度优先搜索
 
-对数据限定减少,解决的问题规模变大
+对数据限定减少，解决的问题规模变大
 
 ## 术语
 
 一般用 e(edge) 来表示边的总数  用 v(vertex) 表示节点的总数  
 邻接关系 V - V 关联关系 V - e   
-此前的数据结构可以看作其特例(树,列表)   
+此前的数据结构可以看作其特例（树，列表）   
 
 > 自环的边忽略掉不予讨论 
 
-若邻接点 u 和 v 的次序无所谓 则( u , v ) 为无向边 `undirected edge` 
+若邻接点 u 和 v 的次序无所谓 则 ( u , v ) 为无向边 `undirected edge` 
 所有边均无向就叫做无向图   
-若邻接点 u 和 v 的存在固定次序 则( u , v ) 为有向边 `undirected edge` 
+若邻接点 u 和 v 的存在固定次序 则 ( u , v ) 为有向边 `undirected edge` 
 u 称为 tail v 称作 head   
 两者混在一起叫做混合图  
 
 > 路径/环路  
 
-在一条通路中不出现重复节点,称作 `simple path` , 否则叫做 `path` . 回到起始点叫做 `cycle(simple)` 
-有向无环图 (DAG)  所有的有向边在一起都可以构成一个环路(每个边都经过一遍)叫做欧拉环路,经过节点各一次 且仅有一次 叫做哈密尔顿环路
+在一条通路中不出现重复节点，称作 `simple path` , 否则叫做 `path` . 回到起始点叫做 `cycle(simple)` 
+有向无环图 (DAG)  所有的有向边在一起都可以构成一个环路（每个边都经过一遍）叫做欧拉环路，经过节点各一次 且仅有一次 叫做哈密尔顿环路
 
 ## **邻接矩阵**
 
 ### **概念**
 
 邻接矩阵（主要讨论的实现方式 ）   
-用正方形 n x n 的每个点表示格子点之间相互邻接关系(是否存在一条边,有为1,没有为0, 若为有权图对应值则改为 float） 的矩阵
+用正方形 n x n 的每个点表示格子点之间相互邻接关系（是否存在一条边，有为 1, 没有为 0, 若为有权图对应值则改为 float） 的矩阵
 
 关联矩阵   
-n个节点 (n行) e条边(e列) 矩阵中的任何一个单元表示是否存在关联关系,每一列只有两个1其余都是0
+n 个节点 (n 行） e 条边 (e 列） 矩阵中的任何一个单元表示是否存在关联关系，每一列只有两个 1 其余都是 0
 
-邻接矩阵中 单向边在矩阵中保留一份,无向图每一条边都被保存了两次,有些多,所以空间利用率其实不高；例如 无向图的表示沿对角线对称  
+邻接矩阵中 单向边在矩阵中保留一份，无向图每一条边都被保存了两次，有些多，所以空间利用率其实不高；例如 无向图的表示沿对角线对称  
 
-### **Graph模板类**
+### **Graph 模板类**
 
 Graph 模板类的基本构建
 
 ``` cpp
-template <typename Tv,typename Te> class Graph { //顶点类型,边类型
+template <typename Tv,typename Te> class Graph { //顶点类型，边类型
     private:
       void reset(){ //所有顶点和边的 辅助信息复位
           for (int i=0;i< n;i++){ //顶点
@@ -59,7 +65,7 @@ template <typename Tv,typename Te> class Graph { //顶点类型,边类型
                 if (exists(i,j)) status (i,j) = UNDISCOVERED;
           }
       }
-    public: /*顶点操作,边操作,图算法: 无论如何实现,接口必须统一*/
+    public: /*顶点操作，边操作，图算法：无论如何实现，接口必须统一*/
 } //Graph
 ```
 
@@ -70,7 +76,7 @@ template <typename Tv,typename Te> class Graph { //顶点类型,边类型
 ``` cpp
 typedef enum {UNDISCOVERED , DISCOVERED , VISITED } VISITatus;
 template<typename Tv> struct Vertex { //vertex 顶点
-  Tv data; int inDegree, outDegree; // ,记录信息 和出入度数
+  Tv data; int inDegree, outDegree; // , 记录信息 和出入度数
   Vertex (Tv const & d)://使用构造函数构建新节点
     data (d) ,inDegree(0) ,outDegree(0), status(UNDISCOVERED),
     dTime(-1),fTime(-1),         parent(-1),
@@ -109,9 +115,9 @@ template <typename Te> struct Edge { //省去严格分装
 template<typename Tv, typename Te> class Graph_Matrix: public Graph<Tv , Te> {
   private:
     Vector< Vertex<Tv> > V; //顶点集  Vector 读取元素可以在常数时间内完成  
-    Vector< Vector< Edge<Te>* >  > E;//边集 因为每个顶点可能与n个顶点相关联,所以要用二维向量构成一个矩形空间（邻接矩阵）
+    Vector< Vector< Edge<Te>* >  > E;//边集 因为每个顶点可能与 n 个顶点相关联，所以要用二维向量构成一个矩形空间（邻接矩阵）
   public:
-    /*操作接口,顶点相关,边相关*/
+    /*操作接口，顶点相关，边相关*/
     Graph_Matrix() { n = e = 0 ; } //构造函数
     ~Graph_Matrix() { //析构函数
       for (int j = 0; j < n; j++) 
@@ -134,11 +140,11 @@ VISITatus  & status(int i) {return V[i].status;}
 * 那么对于任意节点 i; 如何枚举其所有的邻接顶点 `neighbor` ?
 
 ``` cpp
-int nextNbr(int i,int j) { //若已经枚举至邻居j,则转向下一有效邻居
-  while ( (j>-1) && !exists (i,--j) ); //逆向顺序查找,O(n) //判断边是否存在  抵达-1时越界终止循环
+int nextNbr(int i,int j) { //若已经枚举至邻居 j, 则转向下一有效邻居
+  while ( (j>-1) && !exists (i,--j) ); //逆向顺序查找，O(n) //判断边是否存在  抵达-1 时越界终止循环
   return j; //将新发现的邻居返回
 }//改用邻接表可提高至 O ( 1+outDegree(i) )
-int firstNbr(int i){ return nextNbr(i,n); }//首个邻居 ,虽然编号为 n 的节点不存在 
+int firstNbr(int i){ return nextNbr(i,n); }//首个邻居 , 虽然编号为 n 的节点不存在 
 ```
 
 ### **边操作**
@@ -146,7 +152,7 @@ int firstNbr(int i){ return nextNbr(i,n); }//首个邻居 ,虽然编号为 n 的
 * 判断两个顶点是否存在边
 
 ``` cpp
-bool exists(int i;int j){  ///判断边(i)(j)是否存在
+bool exists(int i;int j){  ///判断边 (i)(j) 是否存在
   return (i>=0) && (n>i) && (j>=0) && (n>j) && E[i][j] != NULL; //短路求值
 }
 ```
@@ -161,9 +167,9 @@ int & weight (int i,int j) {return E[i][j]->weight;}//O(1)  边（i ,j）的权�
   + 将要插入的信息作为模块插入到邻接矩阵对应的单元位置
 
 ``` cpp
-void insert(Te const& edge, int w, int i, int j){ //插入(i,j,w)
+void insert(Te const& edge, int w, int i, int j){ //插入 (i,j,w)
   if (exists(i, j)) return ;  //忽略已经存在的边
-  E[i][j] = new Edge<Te>(edge, w); //创建新边 ,完成物理引入
+  E[i][j] = new Edge<Te>(edge, w); //创建新边 , 完成物理引入
   e++; //更新边计数
   V[i].outDegree++; //更新关联顶点 i 的出度
   V[j].inDegree++;  //更新关联顶点 j 的入度
@@ -171,7 +177,7 @@ void insert(Te const& edge, int w, int i, int j){ //插入(i,j,w)
 ```
 
 * 边删除
-  + 将insert操作颠倒过来, 引用指向空
+  + 将 insert 操作颠倒过来，引用指向空
 
 ``` cpp
 Te remove(int i, int j){ki
@@ -188,7 +194,7 @@ Te remove(int i, int j){ki
 
 那么如何进行顶点的插入和删除呢
   
-因为边的插入和删除邻接矩阵没有空间上的变化,而顶点的变动会引起邻接矩阵大小的变化
+因为边的插入和删除邻接矩阵没有空间上的变化，而顶点的变动会引起邻接矩阵大小的变化
 
 顶点插入
 
@@ -205,7 +211,7 @@ int insert(Tv const & vertex) {
 顶点删除
 
 ``` cpp
-Tv remove(int i) {  //删除顶点及其关联边,返回该顶点信息
+Tv remove(int i) {  //删除顶点及其关联边，返回该顶点信息
   for (int j=0;j<n;j++) {
     if (exists(i,j)) {   //删除所有出边
       delete E[i][j]; V[j].inDegree--;
@@ -223,64 +229,64 @@ Tv remove(int i) {  //删除顶点及其关联边,返回该顶点信息
 
 ### **优缺点**
 
-* 直观,易于理解和实现
-* 适用范围广泛: digraph / network / cyclic / ,尤其适用于稠密图 (dense graph)
+* 直观，易于理解和实现
+* 适用范围广泛：digraph / network / cyclic / , 尤其适用于稠密图 (dense graph)
 * 判断两点是否存在连边：$O(1)$    
 
    获取顶点的出度和入度：$O(1)$      
    添加删除边后更新度数： $O(1)$  
 
-* 扩展性: 得益于 vector 控制策略；空间溢出可以透明处理
+* 扩展性：得益于 vector 控制策略；空间溢出可以透明处理
 
 缺点：
 
-*  $O(n^2)$ 空间,与边数无关；边数往往会远小于$n^2$
+*  $O(n^2)$ 空间，与边数无关；边数往往会远小于$n^2$
 
 > 不相邻的边互不相交的图叫做平面图；使用欧拉公式可以证明：平面图中边的**总数不可能超过**顶点的总数；也就有了$O(n)$<<$O(n^2)$, 所以空间利用率一般为为 $\frac{1}{n}$
 
 ## 广度优先搜索
 
-图中的遍历过程通常目的是针对某一目标,所以叫做搜索, 广度优先搜索用于将所有问题的解求出来, 比较之后获得最优解
+图中的遍历过程通常目的是针对某一目标，所以叫做搜索，广度优先搜索用于将所有问题的解求出来，比较之后获得最优解
 
 > 这样：
 
 ![C2C06A8479FC35379AC4684A29C17EC5.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/image_for_blogC2C06A8479FC35379AC4684A29C17EC5.jpg)
 
-保留原先顶点通往新节点的边,而那些顶点间连有不同的边不予采纳  
+保留原先顶点通往新节点的边，而那些顶点间连有不同的边不予采纳  
 
-像北京环路一样,同一环上的节点连成的边不予考虑,只有不同环上的互相连着的路在广度优先搜索中会被遍历
+像北京环路一样，同一环上的节点连成的边不予考虑，只有不同环上的互相连着的路在广度优先搜索中会被遍历
 
-由于刚才规定的规则,图就变成了这样：
+由于刚才规定的规则，图就变成了这样：
 
 >  
 
 ![6BCB46A5695E0110C5CA0F2EF26709CC.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/image_for_blog6BCB46A5695E0110C5CA0F2EF26709CC.jpg)
 
-一幅巨大的无环图,这么看这个图就变成了一颗树（刚好包含图中的所有节点的树）
+一幅巨大的无环图，这么看这个图就变成了一颗树（刚好包含图中的所有节点的树）
 
-所以这样的一个图遍历过程也就可以实现为在树中学过的层次遍历,所以图的广度优先搜索就是层次遍历的推广
+所以这样的一个图遍历过程也就可以实现为在树中学过的层次遍历，所以图的广度优先搜索就是层次遍历的推广
 
-### **BFS构成的图结构**
+### **BFS 构成的图结构**
 
-> `Graph::BFS` BFS只是图构建的一个基本框架
+> `Graph::BFS` BFS 只是图构建的一个基本框架
 
 Breadth First Search 使用队列构建
 
 ``` cpp
-template<typename Tv,typename Te>   //顶点类型,边类型
+template<typename Tv,typename Te>   //顶点类型，边类型
 void Graph<Tv,Te>::BFS(int V,int & clock){
-  Queue<int> Q; status(v) = DISCOVERED;  Q.enqueue(v); //初始化,依然借助队列完成 当前节点 v 入队
+  Queue<int> Q; status(v) = DISCOVERED;  Q.enqueue(v); //初始化，依然借助队列完成 当前节点 v 入队
   while (!Q.empty() ){   //visit start
     int v = Q.dequeue(); //取出队首顶点赋值给 V
     dTime(v) = ++clock;  //给出时间进度
-    for (int u = firstNbr(v); -1 < u; u = nextNbr(v, u) ) //考察 v 的所有邻居 u ,从第一个邻居开始直至枚举完毕
-          /* ……依据u的状态分别处理……*/
+    for (int u = firstNbr(v); -1 < u; u = nextNbr(v, u) ) //考察 v 的所有邻居 u , 从第一个邻居开始直至枚举完毕
+          /* ……依据 u 的状态分别处理……*/
     status(v) = VISITED;  //visit end 
   }         
 } 
 ```
 
-经过这样的搜索过程,每一个顶点都会由最初的 UNDISCOVERED 变为 DISCOVERED 最终变为 VISITED
+经过这样的搜索过程，每一个顶点都会由最初的 UNDISCOVERED 变为 DISCOVERED 最终变为 VISITED
 
 ### **对于新枚举出来的 u 进行的处理**
 
@@ -289,19 +295,19 @@ void Graph<Tv,Te>::BFS(int V,int & clock){
 while (!Q.empty() ) {  //反复的
   int v = Q.dequeue(); dTime(v) = ++clock;  //取出队首 v 计下时间
   for (int u = firstNbr(v); -1<u; u = nextNbr (v,u) )  //考察下一邻居 u
-    if (UNDISCOVERED == status(u) ) {  //UNDISCOVERED状态的 u
-      status(u) = DISCOVERED; Q.enqueue(u); //发现该顶点,入队
+    if (UNDISCOVERED == status(u) ) {  //UNDISCOVERED 状态的 u
+      status(u) = DISCOVERED; Q.enqueue(u); //发现该顶点，入队
       status(v, u) = TREE; parent(u) = v; //将 UNDETERMINED 状态变为 TREE 构成 BFS 树的一个枝条
     }   
     else { //若已经被发现（正在队列中） 或者已经访问完毕（已出队列）则
       status(v, u) = CROSS; //将 （v ,u）归类于跨边 灰色边
     }
-    status(v) = VISITED; //至此,当前节点访问完毕
+    status(v) = VISITED; //至此，当前节点访问完毕
 }
 //visit end
 ```
 
-访问一个节点就是把邻居全扔到队列中,然后将自己 DISCOVERED 变为 visited,邻居由 UNDISCOVERED 变为 DISCOVERED 每次是队首节点出队,由此循环
+访问一个节点就是把邻居全扔到队列中，然后将自己 DISCOVERED 变为 visited, 邻居由 UNDISCOVERED 变为 DISCOVERED 每次是队首节点出队，由此循环
 
 [搜索过程](http://www.bilibili.com/video/av82410486?p=225&share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583240625901)
 
@@ -309,11 +315,11 @@ while (!Q.empty() ) {  //反复的
 
 ### **Graph::bfs()**
 
-由过程可以看出,与s相连通的每一个顶点迟早都会被访问
+由过程可以看出，与 s 相连通的每一个顶点迟早都会被访问
 
 但并不是每幅图都只包含一个连通域 会有一次 BFS 达不到的连通域
 
-> 这样的,小三幅图构成的一整幅图
+> 这样的，小三幅图构成的一整幅图
 
 ![4A7CB62C6F312E36996795D3C3FCDB3D.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/image_for_blog4A7CB62C6F312E36996795D3C3FCDB3D.jpg)
 
@@ -323,15 +329,15 @@ while (!Q.empty() ) {  //反复的
 template <typename Tv, typename Te> //顶点类型 边类型
 void Graph<Tv, Te>::bfs( int s ) {  //s 为起始顶点
   reset() ; int clock = 0;int v = s;//初始化
-  do //逐一排查所有顶点 ,一旦遇到尚未发现的顶点 
+  do //逐一排查所有顶点 , 一旦遇到尚未发现的顶点 
     if (UNDISCOVERED == status(v) ) 
         BFS ( v, clock );  //就从该顶点出发启动一次 BFS 
   while ( s != ( v = ( ++v % n) ) );
-      //按照序号访问,故可以达到不重不漏
+      //按照序号访问，故可以达到不重不漏
 }
 ```
 
-这样就实现了对多个连通域的统一遍历,每一个连通域都通过某个点都进行了一次遍历
+这样就实现了对多个连通域的统一遍历，每一个连通域都通过某个点都进行了一次遍历
 
 ### **复杂度分析**
 
@@ -339,21 +345,21 @@ void Graph<Tv, Te>::bfs( int s ) {  //s 为起始顶点
 
 ### **最短路径**
 
-顶点 v 的深度（根到节点的唯一通路）,所以可以按照顶点的深度指标划分顶点类型   
-从起始顶点 s 出发,到顶点 v 许多路径中最短的路径 dist(v, ~~s~~) BFS 也是按照距离来区分被发现的先后顺序  
+顶点 v 的深度（根到节点的唯一通路）, 所以可以按照顶点的深度指标划分顶点类型   
+从起始顶点 s 出发，到顶点 v 许多路径中最短的路径 dist(v, ~~s~~) BFS 也是按照距离来区分被发现的先后顺序  
 并且节点与根的通路恰好是 到达顶点的最短通路；
 
 ## **深度优先搜索**
 
-> DFS 与BFS完全对称的一种搜索方法
+> DFS 与 BFS 完全对称的一种搜索方法
 
-功能更强大,实现更复杂,因此也成为许多问题的基本算法的框架, 使用递归找到一个问题的解就返回, 而不用去寻求多个问题的解
+功能更强大，实现更复杂，因此也成为许多问题的基本算法的框架，使用递归找到一个问题的解就返回，而不用去寻求多个问题的解
 
-简述：访问顶点 S 若 S 有未被访问的邻居,则邻居中未访问节点**任取其一** u ；递归执行 DFS(u) 否则；返回
+简述：访问顶点 S 若 S 有未被访问的邻居，则邻居中未访问节点**任取其一** u ；递归执行 DFS(u) 否则；返回
 
 ![CA72103EB56DD8C22DBB2749A8B916A9.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/image_for_blogCA72103EB56DD8C22DBB2749A8B916A9.jpg)
 
-## **DFS的一种实现方式**
+## **DFS 的一种实现方式**
 
 > Graph:: DFS( ) 
 
@@ -362,9 +368,9 @@ template <typename Tv,typename Te>
 void Graph<Tv,Te>::DFS (int v,int & clock) {
   dTime(v) = ++clock; status(v) = DISCOVERED;
   for (int u = firstNbr(v); -1<u; u = nextNbr(v, u) )
-  /*...视 u的状态分别处理*/
-  /*...与BFS不同,含有递归*/
-  status(v) = VISITED; fTime(v) = ++clock; //至此,当前顶点 v 访问完毕 fTime为节点访问完毕的时间
+  /*... 视 u 的状态分别处理*/
+  /*... 与 BFS 不同，含有递归*/
+  status(v) = VISITED; fTime(v) = ++clock; //至此，当前顶点 v 访问完毕 fTime 为节点访问完毕的时间
 }
 ```
 
@@ -375,9 +381,9 @@ void Graph<Tv,Te>::DFS (int v,int & clock) {
     switch ( status(u) ) {
       case UNDISCOVERED; //尚未发现便可以使用这个地方作为支撑进行扩展
         status (v, u) = TREE; parent(u) = v; DFS(u, clock); break;
-      case DISCOVERED: //若发现的节点虽然已经被发现但是未被访问完毕,控制权应该属于被后代指向的祖先 back_track
+      case DISCOVERED: //若发现的节点虽然已经被发现但是未被访问完毕，控制权应该属于被后代指向的祖先 back_track
         status(v, u) = BACKWARD; break;
-      default: //u已经被访问完毕,
+      default: //u 已经被访问完毕，
         status(v, u) = dTime(v) < dTime(u) ? FORWARD : CROSS; break; //看 v 和 u 谁先被发现
     } //switch
 ```
@@ -386,7 +392,6 @@ void Graph<Tv,Te>::DFS (int v,int & clock) {
 
 [DFS_实例解析_有向图](http://www.bilibili.com/video/av82410486?p=233&share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1583324332118)
 
-效仿BFS的补充算法; 再添加一层循环; 达到无一遗漏的处理; 实现多可达域的图遍历算法
-
+效仿 BFS 的补充算法；再添加一层循环；达到无一遗漏的处理；实现多可达域的图遍历算法
 
 [搜索算法的详细解析](https://feng-w.cn/suan-fa/suan-fa-mo-ban/02dfs-shen-du-you-xian-sou-suo-jie-ti-mo-ban.html)

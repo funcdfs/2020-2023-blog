@@ -1,9 +1,9 @@
 ---
 title: 数据结构：Map 图
 
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 
 > map 数据结构的具体实现

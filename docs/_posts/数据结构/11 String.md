@@ -1,8 +1,8 @@
 ---
 title: String
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 
 ## string类:

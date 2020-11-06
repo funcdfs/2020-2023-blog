@@ -1,8 +1,8 @@
 ---
 title: Dictionary
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 
 ## 1. 散列：原理

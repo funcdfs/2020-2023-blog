@@ -1,9 +1,9 @@
 ---
 title: 数据结构：Vector 向量
 date: 2020-07-31
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 
 >数据结构向量，vector 的详细实现

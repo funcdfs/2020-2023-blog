@@ -1,8 +1,8 @@
 ---
 title: Priority queue
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 # 第十章 优先级队列
 

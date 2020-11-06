@@ -1,8 +1,8 @@
 ---
 title: Stack & Queue
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 ## （a）栈接口与实现
 

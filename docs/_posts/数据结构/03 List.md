@@ -1,9 +1,9 @@
 ---
 title: 数据结构：List 列表
 date: 2020-08-05
-category: basics
+category: 计算机基础
 tags:
-  - Data Structure
+  - 数据结构
 --- 
 
 > 数据结构列表，list的详细实现

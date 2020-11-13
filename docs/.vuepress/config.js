@@ -32,6 +32,7 @@ module.exports = {
     ['img-lazy'],
     ['code-switcher'], //多语言选项卡
     ["cursor-effects", {
+      size: 1.5,
       shape: ['circle'], // shape of the particle, default: 'star'
     }], //鼠标特效
     ['@vuepress/pwa', { //pwa

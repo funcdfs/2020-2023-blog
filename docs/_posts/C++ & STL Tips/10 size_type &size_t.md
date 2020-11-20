@@ -1,6 +1,6 @@
 ---
 title: size_type &size_t
-date: 2020-10-28
+date: 2020-11-20
 category: basics
 tags:
   - C++

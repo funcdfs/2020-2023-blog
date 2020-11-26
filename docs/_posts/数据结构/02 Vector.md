@@ -559,4 +559,7 @@ void Vector<T>::merge(Rank lo, Rank mi, Rank hi) {  //三个秩传入
 
 > 注意： 待归并子序列不必等长也可以处理，消耗累计长度时间n
 
-$o(nlog_n)$
+时间复杂度 ：$o(nlog_n)$
+
+[lighthouse](https://feng-w.cn/posts/2020/11/20/_07-lighthouse.html) 中采用归并排序优化时间复杂度
+

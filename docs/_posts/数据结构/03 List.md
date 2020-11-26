@@ -365,7 +365,7 @@ template <typename T>
 void List<T>::insertion_sort(position(T) p, int n) {
     for (int r = 0; r < n; r++) {
         insert_after(search(p->data, r, p), p->data);
-        // search 函数找到不大于 p->data 的最后一个位置，insert_after 将 p 插入
+        // search 函数 R-P  找到不大于 p->data 的最后一个位置，insert_after 将 p 插入
         p = p->succ;
         remove(p->pred);  //转向下一节点
     }                     // p 为需要插入的那张排
@@ -379,21 +379,17 @@ void List<T>::insertion_sort(position(T) p, int n) {
 完全有序时，需要 O(n) 的复杂度，线性时间内完成，最坏还是 $o(n^2)$
 
 当查找算法使用向量 binsearch 时，使用向量虽然查找比较速度会变为 $o(log_n)$, 
-但是当在物理空间上将新元素插入到查找出来的位置时，就会变得很慢很慢
+但是**当在物理空间上将新元素插入到查找出来的位置时**，就会变得很慢很慢
 
 所以改用向量使用此算法就于事无补了 
 
-### 平均性能
-
-6.5.7
-
-（待二刷后添加） 结论：平均复杂度依然是$O(n^2)$
-
 ### 逆序对
 
-从小到大是顺序
-（待二刷后添加）
+如果逆序对规定为后一个元素的属性，那么每次插入一个元素时的比较次数就和逆序对的个数相等
+所以每次插入排序的比较次数总和等于每个元素逆序对数的总和
 
-## 习题：LightHouse
+所以插入排序属于，输入敏感算法，对性能影响非常大
 
-习题解析：
+## [习题：祖玛](https://feng-w.cn/posts/2020/11/19/_06-%E7%A5%96%E7%8E%9B.html)
+## [习题：LightHouse](https://feng-w.cn/posts/2020/11/20/_07-lighthouse.html)
+

@@ -57,6 +57,9 @@ title: ABOUT
 [vscode-theme-KONNG —— || 使用 vsce 创建的 vscode 主题插件](https://marketplace.visualstudio.com/items?itemName=OvO.konng)
 :::
 
+::: center
+[wsublimation —— || 个人公众号](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
+:::
 
 <script>
     export default {

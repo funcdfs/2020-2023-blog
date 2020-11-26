@@ -52,29 +52,6 @@
     backdrop-filter: saturate(180%) blur(5px);
     -webkit-backdrop-filter: saturate(180%) blur(5px);
 
-/*滚动条效果-start*/
-/*控制整个滚动条*/
-::-webkit-scrollbar {
-    background-color: lightgray;
-    width: 5px;
-    height: 5px;
-    background-clip: padding-box;
-}
-/*滚动条两端方向按钮*/
-::-webkit-scrollbar-button {
-    background-color: pink;
-}
-/*滚动条中间滑动部分*/
-::-webkit-scrollbar-thumb {
-    background-color: #9400D3;
-    border-radius: 5px;
-}
-/*滚动条右下角区域*/
-::-webkit-scrollbar-corner {
-    background-color: pink;
-}
-/*滚动条效果-end*/
-
 //添加圆角
 .content img {
     -webkit-border-radius: 13px !important;
@@ -188,9 +165,28 @@
 .info-card .info-card-header .info-avatar
    box-shadow: 0 0 15px #918c8c !important;
 
-//背景色
+//背景
 .main-div
-  background-color: #FFFFFF !important;
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1) !important; 
+    background-color: rgba(255,255,255,.7) !important;
+body{
+    transition-property: width,background-size,transform;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    background-size: 100% auto;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
+}
+@media (min-aspect-ratio: 2400/1850) {
+    .main-div{
+      background-color: rgba(255,255,255,.92) !important;
+    }
+    body {
+      background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+    }
+}
 .header
    background-image: linear-gradient(to right , rgba(255, 38, 148,0.6), rgba(148, 0, 211,0.9)) !important;
    background-color: rgba(255, 255, 255, 0.1) !important;
@@ -228,4 +224,17 @@ strong {
 
 body{
   font-family: Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif!important;
+}
+
+img {
+  display: inline-block;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
 }

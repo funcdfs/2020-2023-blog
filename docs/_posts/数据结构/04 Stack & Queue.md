@@ -147,112 +147,115 @@ $O(n^2)$的时间复杂度
 * 每次 S.pop() 之前，检测 S 是否已经空，或需要弹出的元素在 S 中，却非顶元素则不是栈混洗
 * 过程类似于括号匹配
 
-## 中缀表达式求值
+### 中缀表达式求值
 
 栈结构应用：延迟缓冲 的实例
 
-Linux中： echo
-windows中：set /a 
+Linux 中： echo
+windows 中：set /a 
 输入一个语法正确的表达式，回车后就可以得到相应的结果
 
 计算器直接输入表达式，等号出结果
-7.5.2
 
+因为从前到后进行遍历的时候，并不能确定哪个运算符是可以提前计算滴得到结果的
+存在延迟缓冲的过程，而不是从前到后依次执行运算符就可以得到正确结果的一个过程
 
-### 逆波兰表达式 RPN
-
-[数理逻辑学家 Jan Łukasiewicz](https://zh.wikipedia.org/wiki/%E6%89%AC%C2%B7%E5%8D%A2%E5%8D%A1%E8%A5%BF%E7%BB%B4%E8%8C%A8)
-
-在运算符和操作数组成的表达式中，不使用括号，即可表示带优先级的运算关系，操作时只需要一个操作栈
-
-手工转换法：（普通表达式到逆波兰表达式）
-
-* 用括号显示的表示优先级（中缀表达式
-* 将运算符移动到对应的右括号后
-* 抹去所有括号 （操作数和操作符组成的逆波兰表达式
-* 移动后所有操作数的次序 和中缀表达式的次序不变
-
-实现：infix 到 postfix（待二刷）　　
-Infix expression（中缀表达式） postfix 后缀
-
-``` cpp
-float evaluate( char* S,char * & RPN){ //RPN 转换
-    /*.....................*/
-    while (! optr.empty() ){ //逐个处理各个字符，直至全空
-        if (is_dight (*S) ){ //若当前字符为操作数 ,
-            read_number(S,opnd );append (RPN , opnd.top() );//通过 read number 将操作数读入栈中。然后加入 RPN 尾部
-        }
-        else {//若当前字符为运算符
-            switch (order_between(optr.top() , *S )){
-                /*………………………………………………………………*/
-                case '>': //栈顶可以立即执行时
-                char op = optr.pop();
-                append (RPN ,op ); //接入 RPN
-            }
-        }//case '>'
-    }
-    /*………………………………………………………………*/
-}
-```
-
-## （d）队列接口与实现
-
-### 延时缓冲
-
-表达式求值  
-算法具有单调性，
-求值算法=栈+扫描  
-
-![E9F86A63DB3107612B3735D2B98368BA.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/pictureE9F86A63DB3107612B3735D2B98368BA.jpg)
+所以就可以很好的利用栈结构来实现
+求值算法=两个栈+线性扫描
 
 实现：
 
 ``` cpp
-float evaluate (char* S,char* & RPN){//中缀表达式求值
-    Stack<float> number; Stack<char> Operator;//运算数栈，运算符栈
-    Operator.push('\0');//尾哨兵'\0'也作为头哨兵首先入栈
-    while (!Operator.empty()) { //逐个字符处理，直至栈空
-        if (is_dight(*S))  //若当前字符为操作数，则
-            readNumber(S,number);//完整读入（可能多位的）操作数
-        else //若当前字符为运算符，则视其与栈顶运算符之间优先级的高低
-            switch(orderBetween(Operator.top(),*S)){ 分别处理 }
-    }//while 
-    return number.pop();//弹出并返回最后的计算结果
+float evaluate(char* S, char*& RPN) {  //中缀表达式求值
+    Stack<float> number;
+    Stack<char> Operator;        //运算数栈，运算符栈
+    Operator.push('\0');         //尾哨兵'\0'也作为头哨兵首先入栈
+    while (!Operator.empty()) {  //逐个字符处理，直至栈空
+        if (is_dight(*S))        //若当前字符为操作数，则
+            readNumber(S, number);  //完整读入（可能多位的）操作数
+        else  //若当前字符为运算符，则视其与栈顶运算符之间优先级的高低
+            switch (orderBetween(Operator.top(), *S)) { 分别处理 }
+    }                     // while
+    return number.pop();  //弹出并返回最后的计算结果
 }
 ```
+
+![2020-11-29-18-06-52](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-29-18-06-52.jpg)
 
 不同优先级的处理方法：
 
 ``` cpp
 switch(order_Between(operator.top(), *S){
-    case '<'://栈顶优先级更低
-        operator.push(*S);S++;break;//推入运算符栈中，转到表达式的下一个
-    case '='://（和）  '\0'
-        operator.pop();S++;break;//弹出栈顶运算符，然后跳过当前字符转向下一字符
-    case '>':{//*和+
+    case '<':  //栈顶优先级更低
+        operator.push(*S);
+        S++;
+        break;  //推入运算符栈中，转到表达式的下一个
+    case '=':   //（和）  '\0'
+        operator.pop();
+        S++;
+        break;  //弹出栈顶运算符，然后跳过当前字符转向下一字符
+    case '>': {  //*和+
         char op = operator.pop();
-        if( '!' == op ) number.push(calculate(op ,number.pop() ) );//一元运算符
+        if ('!' == op)
+            number.push(calculate(op, number.pop()));  //一元运算符
         else {
             float pOpnd2 = number.pop(), pOpnd1 = number.pop();
             //弹出两个运算数
-            number.push(calculate (pOpnd1 ,op , pOpnd2 ) );
+            number.push(calculate(pOpnd1, op, pOpnd2));
             //实施结果入栈
         }
     }
 }
 ```
 
-> 思考：为何不直接 将两个 pop 操作加入 calculate 函数中？
+![2020-11-29-18-12-12](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-29-18-12-12.jpg)
 
-[实例解析](http://www.bilibili.com/video/av82410486?p=156&share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1582623533303)
+### 逆波兰表达式 RPN
 
-## 队列接口与实现
+之前的表达式解法：定义混乱，逻辑复杂，验证调试不易
 
-图算法中有广泛应用
+RPN：[数理逻辑学家 Jan Łukasiewicz](https://zh.wikipedia.org/wiki/%E6%89%AC%C2%B7%E5%8D%A2%E5%8D%A1%E8%A5%BF%E7%BB%B4%E8%8C%A8) 操作符谁先出现谁先计算
 
-### 操作与接口
+在运算符和操作数组成的表达式中，不使用括号，即可表示带优先级的运算关系，操作时只需要一个辅助操作栈
 
-机场排好的队伍 First InFirst Out  
+手工转换法：（普通中缀表达式到逆波兰表达式 RPN）
+
+1. 用括号显示的表示每个操作符的优先级`(`，每对括号都对应一个操作符
+2. 将括号相对应的运算符移动到对应的右括号后面（未必都仍然保持原来的相对次序）
+3. 抹去所有括号 （这样就只剩下操作数和操作符组成的逆波兰表达式，操作数仍然保持原来的相对次序）
+4. 移动后所有操作数的次序 和中缀表达式的次序不变，操作符的次序未必不变
+
+实现：infix 到 postfix
+
+中缀表达式求值的过程中，捎带着完成了 RPN 的转换和生成
+
+``` cpp
+float evaluate(char* S, char*& RPN) {  // RPN 转换
+    /*.....................*/
+    while (!optr.empty()) {  //逐个处理各个字符，直至全空
+        if (is_dight(*S)) {  //若当前字符为操作数 ,
+            read_number(S, opnd);
+            append(RPN, opnd.top());  //通过 read number
+                                      //将操作数读入栈中。然后加入 RPN 尾部
+        } else {  //若当前字符为运算符
+            switch (order_between(optr.top(), *S)) {
+                /*………………………………………………………………*/
+                case '>':  //栈顶可以立即执行时
+                    char op = optr.pop();
+                    append(RPN, op);  //接入 RPN
+            }
+        }  // case '>'
+    }
+    /*………………………………………………………………*/
+}
+```
+## 队列
+
+与栈结构对称的一个数据结构，
+因为以后队列在图中和其他算法中还会有广泛应用，所以只先介绍接口的实现
+
+机场排好的队伍 First In First Out  
+像羽毛球桶，一端只能出，一端只能进
 
 只能在队尾插入（查询）enqueue（队尾插入一个元素） + rear()  
 只能在对头删除（查询）dequeue（取出队首的一个元素） + front（查询首元素）  
@@ -260,15 +263,18 @@ size 接口得到当前队列规模
 
 ### 模板类
 
-因为是一种特殊的序列，所以基于向量或列表派生
+因为也是一种特殊的序列，所以基于向量或列表派生
 
 ``` cpp
-template<typename T> class Queue: public List<T>{
-    public: //size() 与 empty 直接沿用
-    void enqueue(T const &e){insert_as_last(e) ; }//入队
-    T dequeue() {return remove (first () );} //出队
-    T & front() {return first()->data;} //队首
-};//以列表首/末端为队列头/尾——颠倒过来呢？
+template <typename T>
+class Queue : public List<T> {
+   public:  // size() 与 empty 直接沿用
+    void enqueue(T const& e) { insert_as_last(e); }  //入队
+    T dequeue() { return remove(first()); }          //出队
+    T& front() { return first()->data; }             //队首
+};  
 ```
 
-使用之前开发的模板实现需求又安全又快速
+所以使用之前开发的模板实现需求，可以又安全又快速 $O(1)$ 完成
+
+代码复用

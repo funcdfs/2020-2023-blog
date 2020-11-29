@@ -61,6 +61,10 @@ title: ABOUT
 [wsublimation —— || 个人公众号](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
 :::
 
+::: center
+[webdoodlejump —— || 网页版涂鸦跳跃](https://fengwei2002.github.io/webdoodlejump/)
+:::
+
 <script>
     export default {
         props: ['slot-key'],

@@ -37,7 +37,8 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "list": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
     "editor.fontFamily": "'Source Code Variable', 'Source Code Variable Italic'",

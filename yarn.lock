@@ -7843,6 +7843,11 @@ vuepress-plugin-flowchart@^1.4.3:
   dependencies:
     flowchart.js "^1.11.3"
 
+vuepress-plugin-go-top@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-go-top/download/vuepress-plugin-go-top-1.0.4.tgz#b2c359d85280e8737c65a43fde6e6d42953878af"
+  integrity sha1-ssNZ2FKA6HN8ZaQ/3m5tQpU4eK8=
+
 vuepress-plugin-img-lazy@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-img-lazy/download/vuepress-plugin-img-lazy-1.0.4.tgz#f444c1e21a2c95117f1bcb97a0962660362fa181"
@@ -7857,6 +7862,11 @@ vuepress-plugin-nprogress@^1.1.6:
   integrity sha1-z+93jZcyO3yJ3mwcnMF+kIX+9Zk=
   dependencies:
     nprogress "^0.2.0"
+
+vuepress-plugin-reading-progress@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-reading-progress/download/vuepress-plugin-reading-progress-1.0.10.tgz#0b9d44e27d583ff20e0307993aa4cbda49f3bdca"
+  integrity sha1-C51E4n1YP/IOAweZOqTL2knzvco=
 
 vuepress-plugin-redirect@^1.2.3:
   version "1.2.3"

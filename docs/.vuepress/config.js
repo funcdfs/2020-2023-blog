@@ -28,6 +28,8 @@ module.exports = {
     }
   },
   plugins: [
+    ['go-top'],
+    ['reading-progress'],
     ['flowchart'],
     ['img-lazy'],
     ['code-switcher'], //多语言选项卡

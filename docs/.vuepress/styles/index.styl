@@ -64,16 +64,19 @@
 .posts-list-item .post-title
     font-size: 1.1rem;
 
-//文字选中效果
+// //文字选中效果
+// ::selection
+//     color: #000;
+//     background-color: #79ffe1;
+// .pre::selection
+//     background-color: white !important; 
 ::selection
-    color: #000;
-    background-color: #79ffe1;
-.pre::selection
-    background-color: white !important; 
+    color: #ffffff;
+    background-color: #000000;
 
 //文章阴影+透明
 .main-div
-    background-color: rgba(255,255,255,.7) !important;
+    background-color: rgba(255,255,255,.9) !important;
     box-shadow: 0 0 10px #ccc !important;
     -webkit-border-radius: 0px !important;
 //配合文章的tag页透明色
@@ -210,25 +213,26 @@ body{
 }
 @media (min-aspect-ratio: 2400/1850) {
     .main-div{
-      background-color: rgba(255,255,255,.82) !important;
+      background-color: rgba(253, 241, 238,0.4) !important;
     }
     body {
-      background-image: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/6d729545-50e1-4ed9-a53a-1435f462f1d1.jpg);
-      // background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+      background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
+      //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
     }
 }
 
 //header 渐变
 .header
-   background-image: linear-gradient(to right , rgba(21,183,255,0.3), rgba(173, 10, 255,0.8)) !important;
-   background-color: rgba(255, 255, 255, 0.1) !important;
+   background-image: linear-gradient(35deg ,rgba(0, 0, 0,0.9) , rgba(82, 3, 161,0.3)) !important;
+   background-color: rgba(255, 255, 255, 0.2) !important;
    -webkit-border-radius: 0px !important;
 
 //引用 作为文章概要
 .content blockquote {
     padding: 0.1 0 0 0 rem !important;
-    border-left: 0.15em solid #af91c9 !important;
-    background-color: rgba(225, 192, 240,0.25) !important
+    // border-left: 0.15em solid #af91c9 !important;
+    background-color: rgba(146,130,162,0.25) !important
+    border-left: 0.15em solid #000000 !important;
     margin-left: 0 !important;
 }
 
@@ -238,17 +242,14 @@ body{
 }
 
 //渐变滚动条
-::-webkit-scrollbar {
+::-webkit-scrollbar
   width: 3px;
   height: 3px;
-}
-::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
-}
-
+::-webkit-scrollbar-thumb
+  background: #000000 !important;
+  //background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
 
 //字体大小更改
-
 .posts-list-item .post-title {
   font-weight: normal !important;
 }
@@ -258,14 +259,24 @@ body{
 
 h2 {
     font-size: 18px !important;
-    color: #081872;
     font-weight: 550 !important;
 }
 h3 {
-    color: #071563;
     font-weight: 550 !important;
     font-size: 16px !important;
 }
 strong {
     font-weight: 550;
 }
+
+
+//标题 明显化
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 
+    text-decoration-line: underline;
+
+//阅读统计进度条
+.reading-progress .progress 
+    height : 2px !important;
+    background: #000000 !important;
+
+

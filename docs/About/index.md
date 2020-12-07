@@ -42,12 +42,16 @@ title: ABOUT
 <a href="http://codeforces.com/profile/KONNG#" title="KONNG"> &nbsp codeforce &nbsp </a>
 </span>
 
+
+<span class="contact">
+<a href="https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg" title="微信公众号"> &nbsp wsublimation &nbsp </a>
+</span>
+
 </br>
 
 </br>
 
 ## Plaything
-
 
 ::: center
 [feng-w.cn —— || 使用 vuepress 搭建的个人博客](https://feng-w.cn)
@@ -57,13 +61,6 @@ title: ABOUT
 [vscode-theme-KONNG —— || 使用 vsce 创建的 vscode 主题插件](https://marketplace.visualstudio.com/items?itemName=OvO.konng)
 :::
 
-::: center
-[wsublimation —— || 个人公众号](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
-:::
-
-::: center
-[webdoodlejump —— || 网页版涂鸦跳跃](https://fengwei2002.github.io/webdoodlejump/)
-:::
 
 <script>
     export default {

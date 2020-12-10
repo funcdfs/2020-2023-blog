@@ -176,11 +176,11 @@ p {
 例如：
 
 ```html
-<blockquote cite="https://feng-w.cn">
+<blockquote cite="https:// konng.now.sh">
   <p> test </p>
 </blockquote>
 ```
-<blockquote cite="https://feng-w.cn">
+<blockquote cite="https:// konng.now.sh">
   <p> test </p>
 </blockquote>
 

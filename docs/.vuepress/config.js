@@ -90,7 +90,7 @@ module.exports = {
     }, //US
     lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-      home: `feng-w.cn`,
+      home: ` konng.now.sh`,
       posts: 'JOURNAL',
     }), //自定义部分文字
     pagination: {

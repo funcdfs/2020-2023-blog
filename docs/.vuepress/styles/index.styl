@@ -204,6 +204,19 @@ body{
     }
 }
 
+//针对移动端的内容块缩进修改
+@media (max-width: 767px){
+  .main-div {
+      padding-top: 1rem;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+      padding-bottom: 1rem;
+  }
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    padding-left: 0.5rem;
+  }
+}
+
 //文章阴影+透明
 article {    
     //background-image: url(https://theeyeopener.com/wp-content/uploads/2019/03/DD-parchment.jpg);
@@ -221,7 +234,7 @@ article {
 .header
   background-image: linear-gradient(180deg,rgba(206, 217, 217,0.99) , rgba(255,255,255,.01))!important;
   background-color: hsla(0,0%,100%,.2)!important;
-  box-shadow: 0 0 10px #ccc !important;
+  box-shadow: 0 0 8px #00000060 !important;
   -webkit-border-radius: 1px !important;
 
 //引用 作为文章概要

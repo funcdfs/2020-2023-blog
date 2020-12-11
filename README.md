@@ -1,13 +1,10 @@
-## [ ](https:// )
+## [konng.now.sh](https://konng.now.sh)
 
-The source for https:// . Built with [vuepress](https://vuepress.vuejs.org/).
+The source for [konng.now.sh](https://konng.now.sh). Built with [vuepress](https://vuepress.vuejs.org/).
 
 ## Local
 
 ```sh
-# Install dependencies
-yarn
-
 # Run locally
 yarn docs:dev
 
@@ -17,4 +14,4 @@ yarn docs:build
 
 ## Deploy
 
-Use [vercel](https://vercel.com/) (zeit.co) cdn and [Tencent Cloud](https://cloud.tencent.com/) Domain
+Github + [vercel](https://vercel.com/)

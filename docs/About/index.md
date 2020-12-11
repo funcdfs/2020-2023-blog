@@ -51,7 +51,7 @@ title: ABOUT
 
 </br>
 
-## Plaything
+## Playthings
 
 ::: center
 [feng-w.cn —— || 使用 vuepress 搭建的个人博客](https://feng-w.cn)

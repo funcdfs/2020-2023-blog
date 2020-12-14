@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "tabnine.tabnine-vscode"
+        "tabnine.tabnine-vscode",
+        "lehni.vscode-fix-checksums"
     ]
 }

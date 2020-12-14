@@ -1,12 +1,11 @@
 ---
 title: Binary Search Tree
 date: 2020-12-06
-category: 计算机基础
 tags:
   - 数据结构
 --- 
 
-> 数据结构：二叉搜索树 BST BBST
+> 数据结构07:二叉搜索树 BST BBST
 
 <!-- more -->
 
@@ -21,11 +20,11 @@ tags:
 借助向量和列表内容的优点完成的一个数据结构
 巧妙之处在于它的一个子集，**平衡二叉搜索树（BBST）**
 
-循关键码访问：  
+循关键码访问:  
 数据项之间，依照各自的关键码彼此区分 `call-by-key` 关键码应该支持 **大小比较**和**相等比对**的操作  
 为了方便我们将整个 数据集合中的数据项 统一的表示和实现为词条 `entry` 形式
 
-### 词条：
+### 词条:
 
 ``` cpp
 template <typename K, typename V>
@@ -45,17 +44,17 @@ struct Entry {
 ### BST
 
 `binary search tree` 
-节点：为了简便，将节点，词条，关键码 三个名词等同起来相互指代，而不加严格的区分
+节点:为了简便，将节点，词条，关键码 三个名词等同起来相互指代，而不加严格的区分
 
-与二叉树的不同：**处处满足顺序性**：任一节点均不小于/不大于其左/右后代
+与二叉树的不同:**处处满足顺序性**:任一节点均不小于/不大于其左/右后代
 
 > 为简化起见。禁止重复词条，但实际应用时极不自然；算法设计过程也没必要避免此情况
 
 顺序性虽然只是对局部特性的刻画；但由此却可以导出某种全局特征；
 
-**单调性：** BST 的中序遍历序列；必然单调非降（树根节点左侧都比树根小，右侧都比树根大；这一性质，也是 BST 的**充要条件**；所有单调节点垂直投影构成的序列就是中序遍历序列，因此只要序列单调变化，则一定是 BST
+**单调性:** BST 的中序遍历序列；必然单调非降（树根节点左侧都比树根小，右侧都比树根大；这一性质，也是 BST 的**充要条件**；所有单调节点垂直投影构成的序列就是中序遍历序列，因此只要序列单调变化，则一定是 BST
 
-### BST 模板类实现：
+### BST 模板类实现:
 
 ``` cpp
 template<typename T> class BST : public Binary_Tree<T> {
@@ -87,7 +86,7 @@ template<typename T> class BST : public Binary_Tree<T> {
 
 > 有序向量中的二分查找
 
-### 查找：实现
+### 查找:实现
 
 search 接口
 
@@ -98,7 +97,7 @@ template <typename T>
 }  //从根节点启动查找 对外的 search 接口调用 searchIn 接口
 ```
 
-searchIn 接口：
+searchIn 接口:
 
 ``` cpp
 static Binary_Node_Position(T) &
@@ -113,13 +112,13 @@ static Binary_Node_Position(T) &
 }  //运行时间正比于返回节点 v 的深度，不超过树高 O(h) 每运行一次递归下降一层
 ```
 
-返回的引用值 _hot：
+返回的引用值 _hot:
 
 * 查找成功时指向一个关键码为 e 且真实存在的节点
 * 查找失败时；指向最后一次试图转向的空节点 NULL （增加哨兵）
-* 所以无论成功与否：返回值总是等效的指向命中节点；而 _hot 总是指向命中节点的父亲
+* 所以无论成功与否:返回值总是等效的指向命中节点；而 _hot 总是指向命中节点的父亲
 
-### 插入算法：
+### 插入算法:
 
 借助 search 接口确定插入位置及方向  返回值_hot 的孩子就是我们该插入的地方 （返回的引用为 NULL；刚好被使用）
 
@@ -136,9 +135,9 @@ Binary_Node_Position(T) BST<T>::insert(const T& e) {
         updateHeightAbove(x);  //更新全树规模；更新 x 及其历代祖先的高度
     }
     return x;  //无论 e 是否存在于原树中；至此总有 x->data == e
-}  //验证：对于首个节点插入之类的边界情况；均可正确处置
+}  //验证:对于首个节点插入之类的边界情况；均可正确处置
 ```
-复杂度：$o(h)$
+复杂度:$o(h)$
 ### 删除算法
 
 相比插入算法更加复杂
@@ -249,7 +248,7 @@ BST 相比于之前的向量列表都无法体现出明显优势
 
 ![2020-12-06-14-47-13](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-06-14-47-13.png)
 
-所以我们利用这种歧义性 可以实现两个不同树之间的转换：
+所以我们利用这种歧义性 可以实现两个不同树之间的转换:
 
 ![实例图](https://raw.githubusercontent.com/fengwei2002/picgotest/master/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200307120214.jpg)
 
@@ -283,14 +282,14 @@ zag 同理；它们都只对两个节点进行操作；所以单个操作需要�
 
 最为经典的一种平衡二叉树；AVL 是发明者的名字简写
 
-优化 BST 高度的问题（CBT 除外：完全平衡二叉树）
+优化 BST 高度的问题（CBT 除外:完全平衡二叉树）
 
-主要有两项任务：
+主要有两项任务:
 - 如何完成平衡的定义
 - 如何进行向适度平衡树的转换
-### 平衡因子：
+### 平衡因子:
 
-AVL 中适度平衡所用到的指标 ：对于任意一个节点 v **左** 子树 **减 右** 子树的高度差
+AVL 中适度平衡所用到的指标 :对于任意一个节点 v **左** 子树 **减 右** 子树的高度差
 
 ``` cpp
 balFac(v) = height( lc(v) ) - height( rc(v) ) -1 0 1 
@@ -304,9 +303,9 @@ balFac(v) = height( lc(v) ) - height( rc(v) ) -1 0 1
 ### AVL 接口
 
 ``` cpp
-#define Balanced(x) \ //理想平衡：左右子树高度完全相等
+#define Balanced(x) \ //理想平衡:左右子树高度完全相等
     ( stature( (x).lChild ) == stature ( (x).rchild ))
-#define BalFac(x) \   //平衡因子：高度差
+#define BalFac(x) \   //平衡因子:高度差
     ( stature( (x).lChild ) - stature( (x).rChild ))
 #define AvlBalanced(x) \ //AVL 平衡条件
     ( ( -2 < BalFac(x) ) && ( BalFac(x) < 2 )) //平衡因子 -1 到 1
@@ -330,11 +329,11 @@ template <typename T> class AVL : public BST<T> { //由 BST 派生
 删除操作造成的影响则修复起来较为复杂
 
 ## AVL 插入操作
-### 插入：单旋
+### 插入:单旋
 
 同时可有多个失衡点
 
-对节点 g 的 zag 操作：
+对节点 g 的 zag 操作:
 
 * 引入临时引用 rc
 * 将 p 的左子树变为 g 的右子树
@@ -355,7 +354,7 @@ g 经过单旋调整后平衡因子复衡；
 因为 gpv 节点都在右面，所以此操作叫做 zagzag 操作 一致向左的叫做 zigzig
 zig 为顺时针旋转；zag 为逆时针旋转
 
-### 插入：双旋
+### 插入:双旋
 
 子孙三代呈现 `>` 形状时；分别叫做 `zigzag` 和 `zagzig` 
 
@@ -391,13 +390,13 @@ template<typename T> Binary_Node_Position(T) AVL<T>::insert( const T & e ){
 要删除的刚刚好是比较短的那一个子树，平衡因子从+1变为+2
 
 > 失衡会向上传播 可能需要$\log_n$次调整 树的高度可能发生变化
-### 删除：单旋
+### 删除:单旋
 
-删除后：  
+删除后:  
 
 ![删除后的样子](https://raw.githubusercontent.com/fengwei2002/picgotest/master/img/230f4e0034aa0ef78a64bcc3e819f2d.jpg)
 
-### 删除：双旋
+### 删除:双旋
 
 ![70020373ab23056f7fecedd1bcc9ff7.jpg](https://raw.githubusercontent.com/fengwei2002/picgotest/master/img/70020373ab23056f7fecedd1bcc9ff7.jpg)
 
@@ -413,13 +412,13 @@ template<typename T> Binary_Node_Position(T) AVL<T>::insert( const T & e ){
 
  将魔方的组件重新拼好一个魔方；而不是用规则 （单旋和双旋） 去还原
 
-* 设 g(x) 为最低的失衡节点，考察祖孙三代：g~p~v  
+* 设 g(x) 为最低的失衡节点，考察祖孙三代:g~p~v  
 
-按照中序遍历次序；将其重命名为：a<b<c
+按照中序遍历次序；将其重命名为:a<b<c
 
 * 它们总共拥有互不相交的四颗（可能为空的子树）  
 
-按中序遍历次序；将其重命名为： $T_0 < T_1 < T_2 < T_3$
+按中序遍历次序；将其重命名为: $T_0 < T_1 < T_2 < T_3$
 三个节点 a,b,c 必然镶嵌于四颗子树之间（按照中序遍历就是上面的顺序）；BST 的单调性
 
 恢复平衡后单调性依旧要保持
@@ -453,7 +452,7 @@ template <typename T> Binary_Node_Position(T) BST<T>::connect34(
 
 那么怎么确定参数顺序从而正确的传给函数呢？
 
-## 统一调整：实现
+## 统一调整:实现
 
 ``` cpp
 template<typename T> Binary_Node_Position(T) BST<T>::rotateAt( Binary_Node_Position(T) v ) {  //传入孙辈节点 v 

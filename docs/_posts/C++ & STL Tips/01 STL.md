@@ -1,10 +1,9 @@
 ---
 title: STL
-category: basics
 tags:
   - STL
 --- 
-
+>未整理
 <!-- more -->
 
 ## Tips
@@ -22,17 +21,17 @@ tags:
 
 1
 
-vector 与 deque 的比较：
+vector 与 deque 的比较:
 1. vector.at() 比 deque.at() 效率高，比如 vector.at(0) 是固定的，deque 的开始位置却是不固定的。
 
 2. 如果有大量释放操作的话，vector 花的时间更少，这跟二者的内部实现有关。deque 支持头部的快速插入与快速移除，这是 deque 的优点。
 
-- vector 的使用场景：比如软件历史操作记录的存储，我们经常要查看历史记录，比如上一次的记录，上上次的记录，但却不会去删除记录，因为记录是事实的描述。
-- deque 的使用场景：比如排队购票系统，对排队者的存储可以采用 deque, 支持头端
+- vector 的使用场景:比如软件历史操作记录的存储，我们经常要查看历史记录，比如上一次的记录，上上次的记录，但却不会去删除记录，因为记录是事实的描述。
+- deque 的使用场景:比如排队购票系统，对排队者的存储可以采用 deque, 支持头端
 的快速移除，尾端的快速添加。如果采用 vector, 则头端移除时，会移动大量的数据，速度慢。
-- list 的使用场景：比如公交车乘客的存储，随时可能有乘客下车，支持频繁的不确实位置元素的移除插入。
-- set 的使用场景：比如对手机游戏的个人得分记录的存储，存储要求从高分到低分的顺序排列。
-- map 的使用场景：比如按 ID 号存储十万个用户，想要快速要通过 ID 查找对应的用户。
+- list 的使用场景:比如公交车乘客的存储，随时可能有乘客下车，支持频繁的不确实位置元素的移除插入。
+- set 的使用场景:比如对手机游戏的个人得分记录的存储，存储要求从高分到低分的顺序排列。
+- map 的使用场景:比如按 ID 号存储十万个用户，想要快速要通过 ID 查找对应的用户。
 
 # 顺序容器
 
@@ -142,7 +141,7 @@ sort(v.began(),v.end(),compare);
 > list 构造函数
 
 ``` cpp
-list<T> lstT;//list 采用采用模板类实现，对象的默认构造形式： 
+list<T> lstT;//list 采用采用模板类实现，对象的默认构造形式: 
 list(beg,end);//构造函数将 [beg, end) 区间中的元素拷贝给本身。 
 list(n,elem);//构造函数将 n 个 elem 拷贝给本身。 
 list(const list &lst);//拷贝构造函数。
@@ -237,7 +236,7 @@ set 即集合，set 中不允许有相同的元素，multiset 中允许存在相
 set 是以 RB-tree（红黑树，平衡二叉树的一种）为底层机制，其查找效率非常好
 
 ``` cpp
-set<T> st;//set 默认构造函数： 
+set<T> st;//set 默认构造函数: 
 mulitset<T> mst; //multiset 默认构造
 set& operator=(const set &st);//重载等号操作符 
 swap(st);//交换两个集合容器
@@ -305,7 +304,7 @@ map 也是以红黑树为底层实现机制。
 > map 构造函数
 
 ``` cpp
-map<T1, T2> mapTT;//map 默认构造函数：
+map<T1, T2> mapTT;//map 默认构造函数:
 //要传入两种模板参数 key value
 map(const map &mp);//拷贝构造函数
 ```
@@ -345,7 +344,7 @@ mapStu[3] = "小刘";
 mapStu[5] = "小王";
 ```
 
-> **key 为对象时：**
+> **key 为对象时:**
 
 ``` cpp
 struct my_compare{
@@ -399,7 +398,7 @@ cout<<ret.first->second;
 > **stack 常用 API**Application Program Interface
 
 ``` cpp
-stack<T> stkT;//stack 采用模板类实现，stack 对象的默认构造形式：
+stack<T> stkT;//stack 采用模板类实现，stack 对象的默认构造形式:
 stack(const stack &stk);//拷贝构造函数
 stack& operator=(const stack &stk);//重载等号操作符
 
@@ -418,7 +417,7 @@ size();//返回堆栈的大小
 队列，插入只可以从尾部进行，检索和修改只允许从头部进行，先进先出
 
 ``` cpp
-queue<T> queT;//queue 采用模板类实现，queue 对象的默认构造形式： 
+queue<T> queT;//queue 采用模板类实现，queue 对象的默认构造形式: 
 queue(const queue &que);//拷贝构造函数
 
 push(elem);//往队尾添加元素 
@@ -465,11 +464,11 @@ size();//返回队列的大小
 (*it)
 ```
 
-`容器类名：:iterator 变量名` 
+`容器类名::iterator 变量名` 
 
 > n. 迭代器；迭代程序
 
 或
-`容器类名：:const_iterator 变量名` 
+`容器类名::const_iterator 变量名` 
 
 访问一个迭代器所指向的元素，`*迭代器变量名`  -->

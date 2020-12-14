@@ -1,7 +1,6 @@
 ---
 date: 2020-04-24
 title: Html5 模板
-category: Designer
 tags:
   - Html5
 vssue-title: Html5 整合
@@ -12,7 +11,7 @@ vssue-title: Html5 整合
 
 ## 框架
 
-元素尽量语义化：
+元素尽量语义化:
 
 ```html
 <!DOCTYPE html>
@@ -42,7 +41,7 @@ vssue-title: Html5 整合
 <base target="_blank">
 <base target="_top" href="http://www.example.com/">  
 ```
-target 的关键字指定特殊的意思：
+target 的关键字指定特殊的意思:
 
 - _self: 载入结果到当前浏览上下文中。（该值是元素的默认值）。
 - _blank: 载入结果到一个新的未命名的浏览上下文。
@@ -52,7 +51,7 @@ target 的关键字指定特殊的意思：
 ### `<meta>`
 
 表示那些不能由其它 HTML 元相关元素 (`<base>`, `<link>`, <`script>`, `<style>` 或 `<title>`) 之一表示的任何元数据信息。
-指定字符编码：`<meta charset="utf-8">`
+指定字符编码:`<meta charset="utf-8">`
 
 指定作者和网站描述
 
@@ -90,7 +89,7 @@ p {
 ```
 ### `<title>`
 
-一个 head 中只拥有一个：`<title>Amazing！</title>`
+一个 head 中只拥有一个:`<title>Amazing！</title>`
 
 ## `<body>`
 
@@ -117,7 +116,7 @@ p {
 使用相对页面链接跳转更快
 
 添加 download 属性就可以指定跳转目标的下载文件默认名字
-例如： `download="firefox-latest-64bit-installer.exe"`
+例如: `download="firefox-latest-64bit-installer.exe"`
 
 ### `<input>`
 
@@ -127,7 +126,7 @@ p {
 
 ### `<Li>`
 
-无序列表：
+无序列表:
 <ul>
   <li>豆浆</li>
   <li>油条</li>
@@ -143,7 +142,7 @@ p {
 </ul>
 ```
 
-有序列表：
+有序列表:
 <ol>
   <li>沿着条路走到头</li>
   <li>右转</li>
@@ -169,11 +168,11 @@ p {
 
 ### `<blockquote>`
 
-块引用：`<blockquote>`
+块引用:`<blockquote>`
 
 其中可以在 cite 属性里用 URL 来指向引用的资源
 
-例如：
+例如:
 
 ```html
 <blockquote cite="https:// konng.now.sh">
@@ -314,7 +313,7 @@ tr分隔行间元素，th分隔行内元素
 
 - `<main>` 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 `<body>` 中。最好不要把它嵌套进其它元素。
 - `<article>` 包围的内容即一篇文章，与页面其它部分无关（比如一篇博文）。
-- `<section>` 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 标题 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
+- `<section>` 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是:以 标题 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
 - `<aside>` 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
 - `<header>` 是简介形式的内容。如果它是 `<body>` 的子元素，那么就是网站的全局页眉。如果它是 `<article>` 或`<section>` 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 标题）。
 - `<nav>` 包含页面主导航功能。其中不应包含二级链接等内容。

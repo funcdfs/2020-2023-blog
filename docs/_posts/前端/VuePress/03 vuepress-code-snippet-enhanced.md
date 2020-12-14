@@ -1,13 +1,12 @@
 ---
 date: 2020-04-22
 title: 在 vuepress 中使用 code-snippet-enhanced
-category: Designer
 tags:
   - vuepress
 vssue-title: markdown-vuepress-code-snippet-enhanced
 ---
 
->npm 文档：[markdown-vuepress-code-snippet-enhanced](https://www.npmjs.com/package/markdown-it-vuepress-code-snippet-enhanced)
+>npm 文档:[markdown-vuepress-code-snippet-enhanced](https://www.npmjs.com/package/markdown-it-vuepress-code-snippet-enhanced)
 <!-- more -->
 使用这个插件就可以实现文章和代码块分离，挺有用
 ## 安装
@@ -35,14 +34,14 @@ markdown: {
 
 ## 基础使用
 
-使用以下语法将代码段导入到 Markdown 文件中：（语句上下都应该留空白行）
+使用以下语法将代码段导入到 Markdown 文件中:（语句上下都应该留空白行）
 
 ```markdown
 @[code](@/code/uva/uva-272.cpp/)
 @[code lang=cpp](@/code/uva/uva-272.cpp/)
 ```
 
-`@[code](@/code/uva/uva-272.cpp/)` 如下的渲染效果：
+`@[code](@/code/uva/uva-272.cpp/)` 如下的渲染效果:
 
 @[code](@/code/uva/uva-272.cpp/)
 
@@ -50,7 +49,7 @@ markdown: {
 
 用 `lang=cpp` 来高亮代码块后
 
-`@[code lang=cpp](@/code/uva/uva-272.cpp/)` 如下的渲染效果：
+`@[code lang=cpp](@/code/uva/uva-272.cpp/)` 如下的渲染效果:
 
 @[code lang=cpp](@/code/uva/uva-272.cpp/)
 
@@ -70,7 +69,7 @@ markdown: {
 
 例如用`:::`包含了 while 循环
 
-所以`@[code lang=cpp transcludeWith=:::](@/code/uva/uva-272.cpp)`渲染效果为：
+所以`@[code lang=cpp transcludeWith=:::](@/code/uva/uva-272.cpp)`渲染效果为:
 
 @[code lang=cpp transcludeWith=:::](@/code/uva/uva-272.cpp)
 
@@ -96,7 +95,7 @@ markdown: {
 @[code transcludeTag=style](@/docs/code.vue)
 ```
 
-例如：
+例如:
 
 ```vue
 <template>
@@ -120,7 +119,7 @@ export default {
 
 `@[code highlight={1-6} transcludeTag=style](@/docs/code.vue)`
 
-渲染结果：
+渲染结果:
 
 ```vue
 <style lang="scss" scoped>

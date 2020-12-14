@@ -1,12 +1,11 @@
 ---
 title: Binary Tree
 date: 2020-11-30
-category: 计算机基础
 tags:
   - 数据结构
 --- 
 
-> 二叉树的具体实现以及相关算法
+> 数据结构05 二叉树 Binary Tree
 
 <!-- more -->
 ## 树
@@ -18,9 +17,9 @@ Tree = $List^2$
 
 ### 树基本结构以及定义
 
-每一个节点都叫做 顶点：`vertex`
+每一个节点都叫做 顶点:`vertex`
 指定任一节点 r 称作有根树 (rooted tree) 
-每一个 vertex 都具有：parent child sibling（兄弟） degree 等
+每一个 vertex 都具有:parent child sibling（兄弟） degree 等
 若将同一节点的孩子们编号，则称作有序树 (ordered tree) （引入父子关系时）
 
 ​树中每个结点的最大度数称为树的度
@@ -34,7 +33,7 @@ Tree = $List^2$
 
 节点之间均有路径，称作连通图 (connected), 不含环路，称作无环图 (acyclic)
 
-故：任一节点 v 与根之间存在唯一路径
+故:任一节点 v 与根之间存在唯一路径
 $$path(v, r)=path(v)$$
 节点拥有的指标便是这条通路的长度 通过指标可以将节点化为几类  
 
@@ -87,7 +86,7 @@ path(V) 上的节点，均为 v 的祖先 (ancestor) v 是他们的后代 (desce
 
 ![添加一些空节点](https://raw.githubusercontent.com/fengwei2002/picture/master/picture75E71F923C483C9403256E58E91CFED6.jpg)
 
-引入很多空节点得到一个新的二叉树：变成一个真二叉树，这样的话相关算法可以更简洁的被实现，被理解
+引入很多空节点得到一个新的二叉树:变成一个真二叉树，这样的话相关算法可以更简洁的被实现，被理解
 （虚拟引入）
 ### 用二叉树描述多叉树
 
@@ -106,10 +105,10 @@ path(V) 上的节点，均为 v 的祖先 (ancestor) v 是他们的后代 (desce
 
 二叉树的基本单位是二叉树的节点叫做 Binary_Node 
 通过 c++的模板类实现
-每个 vertex 的属性：
-* 每个节点的核心：`data` 
-* 每个节点共有三个引用构成树的枝叶：`paren`t ,`L_Child` ,`R_Child` ,
-* 每个节点可能具有的属性：`height`,`color` 
+每个 vertex 的属性:
+* 每个节点的核心:`data` 
+* 每个节点共有三个引用构成树的枝叶:`paren`t ,`L_Child` ,`R_Child` ,
+* 每个节点可能具有的属性:`height`,`color` 
 
 ![2020-11-30-13-20-04](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-30-13-20-04.png)
 ``` cpp
@@ -136,7 +135,7 @@ struct Binary_Node {
 }
 ```
 
-`insert_as_left_child`作为左右节点插入算法的实现：
+`insert_as_left_child`作为左右节点插入算法的实现:
 
 ``` cpp
 template <typename T>
@@ -148,7 +147,7 @@ Binary_Node_Position(T) Binary_Node<T>::insert_as_left_child(T const& e) {
 ```
 Right_child 完全对称
 
-子树规模 `size` 接口：线性时间实现
+子树规模 `size` 接口:线性时间实现
 
 ``` cpp
 template <typename T>
@@ -186,7 +185,7 @@ class Binary_Tree {
 
 ### 高度更新
 
-高度定义：对于节点 x , 在以它为根的子树的叶节点最长路径长度，无子节点 h=0 ,root 的高度为 -1  
+高度定义:对于节点 x , 在以它为根的子树的叶节点最长路径长度，无子节点 h=0 ,root 的高度为 -1  
 左右 child 的高度最大再加一
 
 ``` cpp
@@ -195,7 +194,7 @@ class Binary_Tree {
 template <typename T>
 int Binary_Tree<T>::updateHeight(Binary_Node_Position(T) x) {
     return x->height = 1 + max(stature(x->lChild), stature(x->rChild));
-}  //更新当前节点高度：采用常规二叉树规则，O(1)
+}  //更新当前节点高度:采用常规二叉树规则，O(1)
 
 template <typename T>
 void Binary_Tree<T>::updateHeightAbove(Binary_Node_Position(T) x) {
@@ -231,7 +230,7 @@ Binary_Node_Position(T)  // insert_as_left_child 对称
 
 traverse: 遍历
 
-遍历的意义：按照某种次序，每一个节点都恰好被访问一次，在树中只要根节点和左右子节点可以**确定一种顺序，那么便可以执行下去**
+遍历的意义:按照某种次序，每一个节点都恰好被访问一次，在树中只要根节点和左右子节点可以**确定一种顺序，那么便可以执行下去**
 
 先序中序后序遍历就是根据 **根节点在遍历序列中的先后顺序来区分**的    
 
@@ -277,7 +276,7 @@ template<typename T,
             S.push(x->lChild);
         //存在左孩子也推入栈中，左孩子后入先出
     }
-}  // 妙啊，栈：深度未知的问题
+}  // 妙啊，栈:深度未知的问题
 ```
 
 但这种独特的迭代写法不易于推广至中序遍历，所以
@@ -288,13 +287,13 @@ template<typename T,
 
 先遍历最左侧的一列树，然后遍历每一个左节点对应的右节点
 
-Visit_Along_Left_Branch 实现：
+Visit_Along_Left_Branch 实现:
 
 > 对于每一个三叉小节点来说，也都是从上左右的顺序来的
 
 ``` cpp
 template <typename T, typename VISIT>
-static void Visit_Along_Left_Branch(  //参数列表：
+static void Visit_Along_Left_Branch(  //参数列表:
     Binary_Node_Position(T) x,
     VISIT& visit,
     Stack<Binary_Node_Position(T)>& S) {  //依然创建一个辅助栈，后进先出的次序
@@ -306,7 +305,7 @@ static void Visit_Along_Left_Branch(  //参数列表：
 }
 ```
 
-主算法实现：
+主算法实现:
 对于每一个右叉树都遍历到底部再转入下一个左链树
 
 ``` cpp
@@ -329,7 +328,7 @@ void travPre_II(Binary_Node_Position(T) x,
 先序遍历的迭代写法都要依靠栈结构来完成~
 ## 中序遍历
 
-递归角度：
+递归角度:
 同样 $o(n)$ 的复杂度，但是实际中还是要把递归改写为迭代写法
 
 ``` cpp
@@ -343,7 +342,7 @@ void traverse(Binary_Node_Position(T) x, VISIT& visit) {
 }
 ```
 
-控制权**不断转让**的过程： 
+控制权**不断转让**的过程: 
 
 ![B1F82B041FE46B22A84B46E144D6B5E9.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/pictureB1F82B041FE46B22A84B46E144D6B5E9.jpg)
 
@@ -355,7 +354,7 @@ void traverse(Binary_Node_Position(T) x, VISIT& visit) {
 [思路解析-2](vhttp://www.bilibili.com/video/av82410486?p=199&share_medium=android&share_source=copy_link&bbid=PQk6Cz4KOAtoDjYHewd7infoc&ts=1582977180723
 )
 
-迭代角度：
+迭代角度:
 
 ``` cpp
 template <typename T>
@@ -382,7 +381,7 @@ void traverse_in_I(Binary_Node_Position(T) x, V& visit) {
     }
 }
 ```
-执行顺序图如下：
+执行顺序图如下:
 
 ![2020-11-30-20-32-59](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-30-20-32-59.png)
 
@@ -419,7 +418,7 @@ void Binary_Node<T>::travLevel(VISIT& visit) {    //二叉树层次遍历
 
 由任何一个二叉树，都可以导出三个序列，如何还原他的拓扑结构？
 
-中序 + 先序 || 后序 之一： 即可完整还原二叉树的拓扑结构
+中序 + 先序 || 后序 之一: 即可完整还原二叉树的拓扑结构
 
 ![2020-12-02-12-59-49](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-02-12-59-49.png)
 
@@ -431,9 +430,9 @@ void Binary_Node<T>::travLevel(VISIT& visit) {    //二叉树层次遍历
 
 ![2020-12-02-13-15-08](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-02-13-15-08.png)
 
-那么我们就衍生出了一个子问题：
+那么我们就衍生出了一个子问题:
 
-若有一棵二叉树，先序遍历为：`B D E H I`，中序遍历为：`D B H E I`，构建出的是什么样的二叉树。而这棵构建出来的二叉树就是 A 节点的左子树。
+若有一棵二叉树，先序遍历为:`B D E H I`，中序遍历为:`D B H E I`，构建出的是什么样的二叉树。而这棵构建出来的二叉树就是 A 节点的左子树。
 
 显然，A 节点左子树的根节点是 B 节点，而 B 节点的左节点是 D，右子树包括节点 H、E 、I，且我们知道右子树的先序遍历与中序遍历。
 
@@ -443,11 +442,11 @@ void Binary_Node<T>::travLevel(VISIT& visit) {    //二叉树层次遍历
 
 ![2020-12-02-13-19-09](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-02-13-19-09.png)
 
-同样的，我们可以构建出 A 节点的右子树为：
+同样的，我们可以构建出 A 节点的右子树为:
 
 ![2020-12-02-13-19-29](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-02-13-19-29.png)
 
-所以最后构建出来的二叉树就是：
+所以最后构建出来的二叉树就是:
 
 ![2020-12-02-13-19-53](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-02-13-19-53.png)
 

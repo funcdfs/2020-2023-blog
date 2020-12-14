@@ -1,7 +1,6 @@
 ---
 title: STL 中 sort 的使用
 date: 2020-05-08
-category: basics
 tags:
   - STL
 --- 
@@ -28,7 +27,7 @@ tags:
 | partition         | 使得符合某个条件的元素放在前面                                  |
 | stable_partition  | 相对稳定的使得符合某个条件的元素放在前面                        |
 
-其中 nth_element ，这个函数是用来找出第几个。例如：找出包含 7 个元素的数组中排在中间那个数的值，此时，我可能不关心前面，也不关心后面，我只关心排在第四位的元素值是多少。
+其中 nth_element ，这个函数是用来找出第几个。例如:找出包含 7 个元素的数组中排在中间那个数的值，此时，我可能不关心前面，也不关心后面，我只关心排在第四位的元素值是多少。
 
 ### 自定义比较函数
 
@@ -72,7 +71,7 @@ int main () {
 
 你发现有 sort 和 stable_sort，还有 partition 和 stable_partition， 感到奇怪吧。其中的区别是，带有 stable 的函数可保证相等元素的原本相对次序在排序后保持不变。或许你会问，既然相等，你还管他相对位置呢，也分不清楚谁是谁了？这里需要弄清楚一个问题，这里的相等，是指你提供的函数表示两个元素相等，并不一定是一摸一样的元素。
 
-例如，如果你写一个比较函数：
+例如，如果你写一个比较函数:
 ```cpp
 bool less_len(const string &str1, const string &str2){
         return str1.length() < str2.length();
@@ -177,7 +176,7 @@ the range is sorted!
 
 局部排序其实是为了减少不必要的操作而提供的排序方式。
 
-其用途：班上有 10 万个学生，我想知道分数最低的 5 名是哪些人。如果没有 partial_sort，你就需要用 sort 把所有人排好序，然后再取前 5 个。现在你只需要对分数最低 5 名排序
+其用途:班上有 10 万个学生，我想知道分数最低的 5 名是哪些人。如果没有 partial_sort，你就需要用 sort 把所有人排好序，然后再取前 5 个。现在你只需要对分数最低 5 名排序
 
 ```cpp
 // partial_sort example
@@ -249,7 +248,7 @@ myvector contains: 1 2 3 4 5
 
 ### partition
 
-函数原型：
+函数原型:
 
 ```cpp
 template <class ForwardIterator, class UnaryPredicate>
@@ -302,7 +301,7 @@ even elements: 6 4 8 2
 
 ![2020-05-08-18-34-14](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-08-18-34-14.png)
 
-堆的常用方法：
+堆的常用方法:
 
 - 构建优先队列
 - 支持堆排序
@@ -330,7 +329,7 @@ int main () {
 
   std::sort_heap (v.begin(),v.end());
 
-  std::cout << "最终排序结果：";
+  std::cout << "最终排序结果:";
   for (unsigned i=0; i<v.size(); i++)
     std::cout << ' ' << v[i];
 
@@ -344,6 +343,6 @@ int main () {
 堆中初始最大值 30
 弹出一个元素后的堆中最大值 20
 推入一个元素后的堆中最大值 99
-最终排序结果： 5 10 15 20 99
+最终排序结果: 5 10 15 20 99
 ```
 

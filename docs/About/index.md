@@ -54,7 +54,7 @@ title: ABOUT
 ## Playthings
 
 ::: center
-[feng-w.cn —— || 使用 vuepress 搭建的个人博客](https://feng-w.cn)
+[konng.now.sh —— || 使用 vuepress 搭建的个人博客](https://konng.now.sh)
 :::
 
 ::: center

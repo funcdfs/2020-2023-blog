@@ -1,12 +1,11 @@
 ---
 title: Vector 向量
 date: 2020-11-11
-category: 计算机基础
 tags:
   - 数据结构
 --- 
 
-> 数据结构 vector 的详细实现及其相关算法
+> 数据结构02 vector 
 
 <!-- more -->
 
@@ -57,11 +56,11 @@ template<typename T> class vector {//开始定义模板类
 vector->interface->applications
 ```
 
-多种构造函数：
+多种构造函数:
 
 ![2020-07-31-18-54-03](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-31-18-54-03.png)
 
-析构函数：
+析构函数:
 
 ![2020-07-31-18-54-41](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-31-18-54-41.png)
 
@@ -214,7 +213,7 @@ int vector<T>::deduplicate() {  //繁琐版+错误版
 ```
 
 find() 和 remove() 累计耗费线性时间，故总体复杂度为$O(n^2)$  
-可进一步优化：  
+可进一步优化:  
 
 * 依照 uniquify() 高效版的思路，元素移动次数可降为 O(n), 但比较次数依然是$O(n^2)$, 而且稳定性将被破坏
 * v.sort().uniquify(): 实现最优$O(log_n)$
@@ -248,7 +247,7 @@ int vector<T>::uniquify() {
 }
 ```
 
-其复杂度：  
+其复杂度:  
 因为要调用 remove 操作，最坏情况每次都要调用 remove 操作$O(n^2)$  
 和无序向量复杂度一样，所以不推荐
 
@@ -271,7 +270,7 @@ int vector<T>::uniquify() {
     _size = ++i;
     shrink();      //截取尾部多余元素
     return j - i;  //向量规模变化量，被删除元素总数
-}  //注意：通过 remove(lo,hi) 批量删除，依然不能达到高效率
+}  //注意:通过 remove(lo,hi) 批量删除，依然不能达到高效率
 ```
 ![2020-11-12-11-03-33](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-12-11-03-33.png)
 
@@ -299,7 +298,7 @@ Rank vector<T>::search(T const& e, Rank lo, Rank hi) const {
 
 ### 二分查找
 
-二分查找原理：用轴点将区间分为三个部分  
+二分查找原理:用轴点将区间分为三个部分  
 小于转向左侧区间，大于转向右侧区间，等于 median 则直接返回；  
 不断的缩减问题的规模  
 
@@ -413,7 +412,7 @@ static Rank binsearch(T* A, T const& e, Rank lo, Rank hi) {
 
 ![2020-11-13-12-43-08](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-13-12-43-08.png)
 
-实际可行的方法：
+实际可行的方法:
 首先通过插值查找，将查找范围缩小到一定范围然后再进行二分查找
 
 ## 排序
@@ -421,14 +420,14 @@ static Rank binsearch(T* A, T const& e, Rank lo, Rank hi) {
 ### 稳定性
 
 输入含重复元素时，算法的**稳定性**是更为细致的追求，重复元素在输入，输出时的相对次序，是否保持不变  
-输入：`8, 7(a), 7(b), 6,7(c),9`  
-输出：`6,7(a), 7(b), 7(c),8,9` // `stable`  
-输出：`6,7(b), 7(c), 7(a),8,9` // `unstable`  
+输入:`8, 7(a), 7(b), 6,7(c),9`  
+输出:`6,7(a), 7(b), 7(c),8,9` // `stable`  
+输出:`6,7(b), 7(c), 7(a),8,9` // `unstable`  
 
 在一些算法中有可能对这些有强制追求  
 
-例如：
-对于下面的冒泡排序都是稳定的：
+例如:
+对于下面的冒泡排序都是稳定的:
 因为乱序排列在冒泡排序中必须满足
 * 相同的二者相互接近直至相邻
 * 在接下来的一轮扫描交换中，二者因为逆序而交换位置
@@ -449,7 +448,7 @@ void vector<T>::bubble_sort(Rank lo, Rakn hi) {
 }
 ```
 
-### 改进：提前终止
+### 改进:提前终止
 
 任何一对元素都是顺序的，那么就是有序段，所以每一趟扫描交换都记录下来是否存在逆序元素，如果第一次遍历时没有做过交换，那么今后的从头到尾的所有遍历就都不用考察这一部分元素，实际运行时间就可能会大大减少
 
@@ -469,7 +468,7 @@ bool vector<T>::bubble(Rank lo, Rank hi) {
 
 ![2020-11-13-12-50-57](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-13-12-50-57.png)
 
-### 再改进：提前跳跃
+### 再改进:提前跳跃
 
 若有序段向量在整个无序段向量的后面，那么效率就和普通排序差不多，所以需要提前找出有序段向量的界限，算法就会更快
 
@@ -557,9 +556,9 @@ void Vector<T>::merge(Rank lo, Rank mi, Rank hi) {  //三个秩传入
 
 最后 `j = lb`  `k = lc`  `j + k = n ` 
 
-> 注意： 待归并子序列不必等长也可以处理，消耗累计长度时间n
+> 注意: 待归并子序列不必等长也可以处理，消耗累计长度时间n
 
-时间复杂度 ：$o(nlog_n)$
+时间复杂度 :$o(nlog_n)$
 
-[lighthouse](https://feng-w.cn/posts/2020/11/20/_07-lighthouse.html) 中采用归并排序优化时间复杂度
+[lighthouse](https://konng.now.sh/posts/2020/11/20/_07-lighthouse.html) 中采用归并排序优化时间复杂度
 

@@ -1,7 +1,6 @@
 ---
 title: size_type &size_t
 date: 2020-11-20
-category: basics
 tags:
   - C++
 ---
@@ -16,9 +15,9 @@ tags:
 
 string 抽象意义是字符串， size（）的抽象意义是字符串的尺寸， string::size_type 抽象意义是尺寸单位类型 string::size_type 它在不同的机器上，长度是可以不同的，并非固定的长度。但只要你使用了这个类型，就使得你的程序适合这个机器。与实际机器匹配。
 
-eg:string::size_type 从本质上来说，是一个整型数。关键是由于机器的环境，它的长度有可能不同。 例如：我们在使用 string::find 的函数的时候，它返回的类型就是 string::size_type 类型。而当 find 找不到所要找的字符的时候，它返回的是 npos 的值，这个值是与 size_type 相关的。
+eg:string::size_type 从本质上来说，是一个整型数。关键是由于机器的环境，它的长度有可能不同。 例如:我们在使用 string::find 的函数的时候，它返回的类型就是 string::size_type 类型。而当 find 找不到所要找的字符的时候，它返回的是 npos 的值，这个值是与 size_type 相关的。
 
-假如，你是用 strings; int rc = s.find(…); 然后判断，if ( rc ==string::npos ) 这样在不同的机器平台上表现就不一样了。如果，你的平台的 string::size_type 的长度正好和 int 相匹配，那么这个判断会侥幸正确。但换成另外的平台，有可能 string::size_type 的类型是 64 位长度的，那么判断就完全不正确了。 所以，正确的应该是： 
+假如，你是用 strings; int rc = s.find(…); 然后判断，if ( rc ==string::npos ) 这样在不同的机器平台上表现就不一样了。如果，你的平台的 string::size_type 的长度正好和 int 相匹配，那么这个判断会侥幸正确。但换成另外的平台，有可能 string::size_type 的类型是 64 位长度的，那么判断就完全不正确了。 所以，正确的应该是: 
 
 string::size_type rc = s.find(…); 这个时候使用 if ( rc == string::npos ) 就回正确了
 

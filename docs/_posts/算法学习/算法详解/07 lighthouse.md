@@ -1,6 +1,5 @@
 ---
 title: lighthouse
-category: Algorithm
 date: 2020-11-20
 tags:
   - 算法详解

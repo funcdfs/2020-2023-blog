@@ -1,11 +1,12 @@
 ---
 title: STL 中的 map
 date: 2020-10-29
-category: basics
 tags:
   - C++
 ---
 
+>未整理
+<!-- more -->
 ## STL 中 map 声明方法
  
 ```cpp
@@ -52,7 +53,7 @@ int main() {
         cout << mapStudent[nindex] << endl;
 }
 ```
-输出结果：
+输出结果:
 
 ![2020-10-30-11-14-57](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-10-30-11-14-57.png)
 ### 使用`[]`进行单个插入
@@ -66,7 +67,7 @@ ID_Name[2015] = "Tom";
 
 ### 使用 insert 进行单个和多个插入
 
-insert 共有 4 个重载函数：
+insert 共有 4 个重载函数:
 
 ```cpp
 // 插入单个键值对，并返回插入位置和成功标志，插入位置已经存在值时，插入失败
@@ -114,7 +115,7 @@ int main(){
     std::map<char, int> anothermap;
     anothermap.insert(mymap.begin(), mymap.find('c'));
     //find 函数返回值也是一个迭代器，所以和 begin 作为同类型函数参数
-    //功能：插入 mymap 从 begin 开始直到第一个字符 c 被发现的所有 pair 值
+    //功能:插入 mymap 从 begin 开始直到第一个字符 c 被发现的所有 pair 值
 
     // 列表形式插入
     anothermap.insert({ { 'd', 100 }, {'e', 200} });
@@ -162,9 +163,9 @@ size_t max_size();
 ```
 ###  迭代器
 
-共有八个获取迭代器的函数：`begin`, `end`, `rbegin`,`rend` 以及对应的 `cbegin, cend, crbegin,crend`。
+共有八个获取迭代器的函数:`begin`, `end`, `rbegin`,`rend` 以及对应的 `cbegin, cend, crbegin,crend`。
 
-二者的区别在于，后者一定返回 const_iterator，而前者则根据 map 的类型返回 iterator 或者 const_iterator。const 情况下，不允许对值进行修改。如下面代码所示：
+二者的区别在于，后者一定返回 const_iterator，而前者则根据 map 的类型返回 iterator 或者 const_iterator。const 情况下，不允许对值进行修改。如下面代码所示:
 
 ```cpp
 map<int,int>::iterator it;//（一般只用 begin 和 end，其他位置的迭代器通过加减法得到）
@@ -208,7 +209,7 @@ void swap( map& other );
 key_compare key_comp() const;
 ```
 
-示例：
+示例:
 
 ```cpp
 map<char,int> mymap;

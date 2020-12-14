@@ -1,11 +1,11 @@
 ---
 title: VScode 使用 markdown-formatter 插件
-category: Tips
+date: 2020-02-14
 tags:
   - vscode
 ---
 
-# VScode 使用 markdown-formatter 插件
+> VScode 使用 markdown-formatter 插件
 
 
 ![162P01455-7.jpg](https://raw.githubusercontent.com/fengwei2002/picture/master/fengwei2002/picture162P01455-7.jpg)
@@ -34,7 +34,7 @@ tags:
 // 自动格式化标点
 "markdownFormatter.fullWidthTurnHalfWidth": "auto",
 // 中文标点格式化为英文
-// "markdownFormatter.fullWidthTurnHalfWidth": ",：；!“”‘’（）？。",
+// "markdownFormatter.fullWidthTurnHalfWidth": ",:；!“”‘’（）？。",
 "markdownFormatter.formatOpt": {
   "indent_size": 2
 },
@@ -59,7 +59,7 @@ tags:
 }
 ```
 
-将以上文本复制在安装该插件并且重启 vsc 后的 setting.json 中会报错： `End of file expected.jsonc(0)` 导致配置失败
+将以上文本复制在安装该插件并且重启 vsc 后的 setting.json 中会报错: `End of file expected.jsonc(0)` 导致配置失败
 
 然后我鼠标右键后发现有个格式化文档选项（formatter 的一个小功能）  
 vscode 让我把错误 setting 删除后它自己进行写入操作 然后出现弹窗格式化成功 （在 markdown in one 和 formatter 之间进行选择）
@@ -72,7 +72,7 @@ vscode 让我把错误 setting 删除后它自己进行写入操作 然后出现
 }
 ```
 
-发现代码块的变化：
+发现代码块的变化:
 
 ``` json
 {
@@ -85,7 +85,7 @@ vscode 让我把错误 setting 删除后它自己进行写入操作 然后出现
 }
 ```
 
-我猜测配置项要按照先后顺序排列且都在同一个大括号内完成相关配置；所以我试了一下：
+我猜测配置项要按照先后顺序排列且都在同一个大括号内完成相关配置；所以我试了一下:
 
 * 仿照系统自动生成的做法；将官方示例配置复制到自动添加的对应位置；然后将重复部分
 
@@ -107,10 +107,10 @@ vscode 让我把错误 setting 删除后它自己进行写入操作 然后出现
 
 现在就可以愉快的使用了~
 
-* 插入图片：键入 img
-* 插入表格：键入 tab
-* 插入代码：键入 js , html , css , python , go , java , or code
-* 插入列表：键入 ul （unordered list）
+* 插入图片:键入 img
+* 插入表格:键入 tab
+* 插入代码:键入 js , html , css , python , go , java , or code
+* 插入列表:键入 ul （unordered list）
 
 ``` markdown
 

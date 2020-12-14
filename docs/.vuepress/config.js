@@ -111,6 +111,11 @@ module.exports = {
         link: '/About/',
         exact: false
       },
+      {
+        text: 'BOOK',
+        link: '/Book/',
+        exact: false
+      },
     ], //navbar导航栏
     personalInfo: {
       nickname: 'KONNG',

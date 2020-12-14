@@ -1,13 +1,13 @@
 ---
 title: DFS深度优先搜索练习
-category: Algorithm
-tags:
-  - Algorithm exercises
+category: DFS
 ---
 
+>未整理 
+<!-- more -->
 # DFS深度优先搜索练习
 
-[HDU 1016 B－M](https://feng-w.cn/suan-fa/yi-dui-ti-jie/01-dan-cidfsb-m.html)
+[HDU 1016 B－M](https://konng.now.sh/suan-fa/yi-dui-ti-jie/01-dan-cidfsb-m.html)
 [HDU 1016 素数环]()
 [HDU 2553 N皇后问题]()
 [HDU 1175 连连看]()

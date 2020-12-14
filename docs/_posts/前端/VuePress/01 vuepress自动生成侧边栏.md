@@ -1,7 +1,6 @@
 ---
 title: vuepress 自动生成侧边栏
 date: 2020-04-14
-category: Designer
 tags:
   - vuepress
 ---
@@ -26,11 +25,11 @@ yarn add -D vuepress-plugin-auto-sidebar
 
 ## 配置插件
 
-- 打开如下目录：
+- 打开如下目录:
 
 ![20200326165624.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326165624.png)
 
-- 打开 config.js **插件添加处**添加这三行配置：
+- 打开 config.js **插件添加处**添加这三行配置:
 
 ![20200326165856.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326165856.png)
 
@@ -46,13 +45,13 @@ yarn add -D vuepress-plugin-auto-sidebar
 
 `docs/`下放你的文章**大框架目录**（与。vuepress 同级）
 
-例如：Designer，后端，基础，联系方式，算法
+例如:Designer，后端，基础，联系方式，算法
 
 ![20200326170131.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326170131.png)
 
 然后在大框架内填充**内容文件夹**
 
-例如：
+例如:
 ![20200326170241.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326170241.png)
 
 eg: 现在打开上图编程基础中的数据结构文件夹，就可以放你的第一章，第二章第三章了
@@ -62,14 +61,14 @@ eg: 现在打开上图编程基础中的数据结构文件夹，就可以放你�
 
 ==每个**子文件夹**都应该有一个和博文同级的 RAEADME.md==
 
-例如：
+例如:
 ![20200326170352.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326170352.png)
 
 侧面目录栏将 title 内容填充，而一级标题和二级标题会列在 title 下，也就是`##` `#`开头的标题
 
 三级以及其以下的标题不会被显示在侧边栏
 
-所以每个 markdown 文件都应该长这样：
+所以每个 markdown 文件都应该长这样:
 
 ```markdown
 ---
@@ -92,13 +91,13 @@ title: 啥啥啥
 
 按照如上结构就可以自动生成并且访问了，使用如下 navbar 配置体验更佳
 
-文件结构：
+文件结构:
 ![20200326172312.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326172312.png)
 
-navbar 配置举例：
+navbar 配置举例:
 ![20200326170946.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326170946.png)
 
-展示效果：
+展示效果:
 ![20200326171704.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326171704.png)
 ![20200326171816.png](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20200326171816.png)
 
@@ -107,4 +106,4 @@ navbar 配置举例：
 - navbar 的 url 别写错
 - 每个子文件夹别忘了 README.md 
 - 不识别 markdown 后缀，只识别 md 后缀
-- 折叠可选：config.js 配置：`displayAllHeaders: false,` 即可
+- 折叠可选:config.js 配置:`displayAllHeaders: false,` 即可

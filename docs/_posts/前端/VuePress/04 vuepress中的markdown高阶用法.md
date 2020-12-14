@@ -1,7 +1,6 @@
 ---
 date: 2020-05-25
 title: vuepress 中的高阶 markdown 用法
-category: Designer
 tags:
   - vuepress
   - markdown
@@ -79,7 +78,7 @@ config.js
 ::: details
 下拉容器
 
-语法：
+语法:
 
 ```md
 /::: details
@@ -198,19 +197,19 @@ config.js
 
 `@[code lang=cpp](@/code/leetcode/1295.统计位数为偶数的数字.cpp/)`
 
-详细教程：[在 vuepress 中使用 code-snippet-enhanced](https://feng-w.cn/posts/2020/04/22/_03-vuepress-code-snippet-enhanced.html)
+详细教程:[在 vuepress 中使用 code-snippet-enhanced](https://konng.now.sh/posts/2020/04/22/_03-vuepress-code-snippet-enhanced.html)
 
 ## [代码块多语言](https://github.com/padarom/vuepress-plugin-code-switcher)
 
 也可以用来作为 tab 页使用
 
-语法：
+语法:
 
 ```md
 `<CodeSwitcher :languages="{1:'JavaScript',2:'TypeScript'}">`
 用来说明tab页的所有选项卡，前一项为简称，不可见，后一项为网页渲染的全称
 
-`<template v-slot:1>`  slot：插槽  [VUE2的语法](https://cn.vuejs.org/v2/guide/components-slots.html)
+`<template v-slot:1>`  slot:插槽  [VUE2的语法](https://cn.vuejs.org/v2/guide/components-slots.html)
 在向具名插槽提供内容的时候，我们可以在一个 <template> 元素上使用 v-slot 指令，并以 v-slot 的参数的形式提供其名称 
 
 第一部分的代码内容
@@ -269,7 +268,7 @@ c2(no)->op2->e
 
 ## 示例 config.js
 
-最终配置的插件部分 js 代码示例：
+最终配置的插件部分 js 代码示例:
 
 ```js
   plugins: [

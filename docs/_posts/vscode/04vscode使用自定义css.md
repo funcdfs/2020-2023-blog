@@ -1,13 +1,11 @@
 ---
 title: vscode 使用自定义 css
-category: Tips
 date: 2020-05-10
 tags:
   - vscode
 ---
 
->别人写的主题不一定完全符合你自己的审美，自己开发主题学习成本太大，所以就有了这种方法
-
+> vsc中使用自定义css&js
 <!-- more -->
 
 这种教程类的文章转[知乎](https://zhuanlan.zhihu.com/p/139446791)进行阅读体验比较好

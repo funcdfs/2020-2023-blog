@@ -1,7 +1,6 @@
 ---
 title: css note
 date: 2020-05-16
-category: Designer
 tags:
   - CSS3
 ---
@@ -52,11 +51,11 @@ img + p {
 
 ## 盒模型
 
-CSS 中组成一个块级盒子需要：
+CSS 中组成一个块级盒子需要:
 - Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
 - Padding box: 包围在内容区域外部的空白区域； 大小通过 padding 相关属性设置。 //填充
 - Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。
-  - `border-radius`：创建圆角，可以使用两个长度或百分比作为值，第一个值定义水平半径，第二个值定义垂直半径。
+  - `border-radius`:创建圆角，可以使用两个长度或百分比作为值，第一个值定义水平半径，第二个值定义垂直半径。
   - [border-width](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width)
   - [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style)
   - [border-color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-color)
@@ -100,7 +99,7 @@ display: inline-block
 虽然可以将所有的背景属性简写到一行中，但是我觉得不用比较好
 
 - `background-color`
-- `background-image` （简书：[渐变背景](https://www.jianshu.com/p/58b340a037ea) 的详细使用）
+- `background-image` （简书:[渐变背景](https://www.jianshu.com/p/58b340a037ea) 的详细使用）
   - 默认情况下，大图不会缩小以适应方框，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。
   - 渐变可以与常规的背景图像很好地混合在一起
 - `background-repeat`
@@ -122,7 +121,7 @@ display: inline-block
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/%E5%A4%84%E7%90%86_%E4%B8%8D%E5%90%8C_%E6%96%B9%E5%90%91%E7%9A%84_%E6%96%87%E6%9C%AC) 详细介绍
 
-[writing-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) 的三个值分别是：
+[writing-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) 的三个值分别是:
 
 - horizontal-tb: 块流向从上至下。对应的文本方向是横向的。（正常）
 - vertical-rl: 文字偏左。对应的文本方向是纵向的。
@@ -166,7 +165,7 @@ min，max 宽高的用法，一般使用 min 和 max 规定元素的大小防止
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
 
-vw，vh 单位：
+vw，vh 单位:
 
 ```css
 .box {

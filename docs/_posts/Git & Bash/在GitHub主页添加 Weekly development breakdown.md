@@ -2,9 +2,8 @@
 title: 在 GitHub 主页中添加 📊 Weekly development breakdown (By wakaTIme)
 vusse-title: Git gist
 date: 2020-05-03
-category: Tips
 tags:
-  - Git
+  - Github
 ---
 
 > [waka-box](https://github.com/matchai/waka-box)官方文档
@@ -15,7 +14,7 @@ tags:
 
 >感谢 [@sigure](https://www.sigure.xyz/)
 
-## 效果图：
+## 效果图:
 
 ![2020-05-02-20-28-16](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-02-20-28-16.png)
 

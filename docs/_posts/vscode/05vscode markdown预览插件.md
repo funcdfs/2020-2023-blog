@@ -1,6 +1,5 @@
 ---
 title: 在 vscode 中自定义 markdown 预览效果
-category: Tips
 date: 2020-05-20
 tags:
   - vscode
@@ -101,10 +100,10 @@ Windows 输入 ctrl shift +p 调出命令窗口
 ```
 
 ::: tip vscode 中使用 css 构建你自己的主题
-[知乎专栏：在 vs code 中使用自定义 css 来美化外观](https://zhuanlan.zhihu.com/p/139446791)
+[知乎专栏:在 vs code 中使用自定义 css 来美化外观](https://zhuanlan.zhihu.com/p/139446791)
 :::
 
-主题和 markdown 预览都使用 css 自定义后的效果：
+主题和 markdown 预览都使用 css 自定义后的效果:
 
 ![2020-05-20-17-46-08](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-05-20-17-46-08.png)
 

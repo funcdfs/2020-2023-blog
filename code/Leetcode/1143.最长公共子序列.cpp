@@ -13,8 +13,8 @@ class Solution {
     int longestCommonSubsequence(string text1, string text2) {
         int m = text1.length(), n = text2.length();
         vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
-        // 定义：s1[0..i-1] 和 s2[0..j-1] 的 lcs 长度为 dp[i][j]
-        // 目标：s1[0..m-1] 和 s2[0..n-1] 的 lcs 长度，即 dp[m][n]
+        // 定义:s1[0..i-1] 和 s2[0..j-1] 的 lcs 长度为 dp[i][j]
+        // 目标:s1[0..m-1] 和 s2[0..n-1] 的 lcs 长度，即 dp[m][n]
         // base case: dp[0][..] = dp[..][0] = 0
 
         for (int i = 1; i <= m; i++) {

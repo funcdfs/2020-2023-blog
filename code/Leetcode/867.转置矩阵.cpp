@@ -15,7 +15,7 @@ class Solution {
     // 456  258
     // 789  369
     vector<vector<int>> transpose(vector<vector<int>>& A) {
-        // hanhan题目，初始化一下：
+        // hanhan题目，初始化一下:
         vector<vector<int>> result(A.at(0).size(), vector<int>(A.size(), 0));
         // 遍历一次进行赋值
         for (int i = 0; i < A.size(); i++) {

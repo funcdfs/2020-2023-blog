@@ -1,5 +1,5 @@
 ---
-title: kotlin: hello world
+title: kotlin-hello world
 date: 2020-12-14
 tags:
     - kotlin
@@ -27,5 +27,8 @@ tags:
 
 ## 软件准备
 
-Android studio
-idea
+### Android studio
+
+
+### IDEA 
+

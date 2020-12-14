@@ -1,5 +1,5 @@
 ---
-title: 将 vuepress 部署到 GitHub pages 并启用 ZEIT 加速
+title: GitHub pages + vercel 加速&域名
 category: Designer
 tags:
   - vuepress
@@ -7,9 +7,8 @@ date: 2020-12-10
 vssue-title: vuepress to GitHub pages
 ---
 
->将`vuepress`主仓库和展示仓库`.github.io`分离示例：[zeit.co/docs](https://zeit.co/docs)
-<!-- more -->
-# 将 vuepress 部署到 GitHub pages 并启用 ZEIT/vercel 加速&域名
+>将 vuepress 部署到 GitHub pages 并启用 ZEIT/vercel 加速&域名
+<!-- more --> 
 
 >将`vuepress`主仓库 `repo` 和展示仓库`.github.io`分离示例：
 

@@ -5,9 +5,11 @@ tags:
     - kotlin
 ---
 
-> kotlin01 ：基础语法 🏝️代表 kotlin 代码片段
+> kotlin01 ：基础语法 符号🏝️代表 kotlin 代码片段
 
 <!-- more -->
+
+AS 中的 helloworld 截图：
 
 ![2020-07-18-20-19-20](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-18-20-19-20.png)
 
@@ -147,7 +149,7 @@ fun main(args: Array<String>) {
 ture  
 false
 
-::: Tips
+::: tip
 kotlin 中输出后直接换行，不用手动控制回车符，一个 println 函数就对应一个回车符
 :::
 
@@ -284,7 +286,6 @@ fun main(args: Array<String>) {
 ```
 
 map： 
-
 
 ```kt 
 import java.util.TreeMap

@@ -144,6 +144,100 @@ fun check_face(score:Int):String{
 }
 ```
 
+### when
+
+相比于 `switch`  更加方便的一个结构，在 when 中，else 同 switch 的 default。如果其他分支都不满足条件将会求值 else 分支。
+
+```kt
+fun main(args: Array<String>) {
+   println(check_grade(5))
+}
+fun check_grade(score: Int):String {
+    var ans=""
+    when (score){
+        10-> ans="满分"
+        9-> ans="差一点点"
+        8-> ans="超过了大多数"
+        7-> ans="继续加油"
+        else -> ans ="不太行"
+    }
+    return ans
+}
+```
+
+我们也可以检测一个值在（in）或者不在（!in）一个区间或者集合中：
+
+``` kt 
+when (x) {
+    in 1..10 -> print("x is in the range")
+    in validNumbers -> print("x is valid")
+    !in 10..20 -> print("x is outside the range")
+    else -> print("none of the above")
+}
+```
+
+另一种可能性是检测一个值是（is）或者不是（!is）一个特定类型的值。注意： 由于智能转换，你可以访问该类型的方法和属性而无需 任何额外的检测。
+
+``` kt 
+fun hasPrefix(x: Any) = when(x) {
+    is String -> x.startsWith("prefix")
+    else -> false
+}
+```
+::: tip `startsWith()`
+其中：
+
+作用： 判断其字符串是否由某一个字符或字符串起始。
+参数说明：
+
+char : 起始字符
+prefix : 起始字符串
+ignoreCase : 是否调用 Java 中的此函数。默认为 false
+startIndex : 开始位置
+
+``` kt 
+val str = "kotlin"
+str.startsWith('k')         // 是否有字符`k`起始
+str.startsWith("Kot")       // 是否由字符串`kot`起始
+str.startsWith("lin",3)     // 当起始位置为 3 时，是否由字符串`lin`起始
+```
+输出：
+
+```
+true
+```
+::: 
+
+when 也可以用来取代 `if-else if`链。 如果不提供参数，所有的分支条件都是简单的布尔表达式，而当一个分支的条件为真时则执行该分支：
+
+``` kt 
+when {
+    x.isOdd() -> print("x is odd")
+    x.isEven() -> print("x is even")
+    else -> print("x is funny")
+}
+
+when (x) {
+    in 0..10 -> println("x 在该区间范围内")
+    else -> println("x 不在该区间范围内")
+}
+```
+
+when 中使用 in 运算符来判断集合内是否包含某实例：
+
+```kt 
+fun main(args: Array<String>) {
+    val items = setOf("apple", "banana", "kiwi")
+    when {
+        "orange" in items -> println("juicy")
+        "apple" in items -> println("apple is fine too")
+    }
+}
+```
+输出结果：
+
+`apple is fine too`
+
 ## 字符串比较
 
 == 用来判断字符串是否相等
@@ -216,26 +310,6 @@ lateinit var view: View
 
 `if + for` 等于程序逻辑层的全部 QAQ
 
-### when
-
-相比于 `switch`  更加方便的一个结构
-
-```kt
-fun main(args: Array<String>) {
-   println(check_grade(5))
-}
-fun check_grade(score: Int):String {
-    var ans=""
-    when (score){
-        10-> ans="满分"
-        9-> ans="差一点点"
-        8-> ans="超过了大多数"
-        7-> ans="继续加油"
-        else -> ans ="不太行"
-    }
-    return ans
-}
-```
 ### for
 
 for 循环可以对任何提供迭代器（iterator）的对象进行遍历，语法如下：
@@ -302,19 +376,18 @@ fun main(args: Array<String>) {
 }
 ```
 
-::: tip tip:关于数组逆序输出的一个函数
+::: tip tip: 关于数组逆序输出的一个函数
 正常循环：
-`for (i in 1..4) print(i) // 打印结果为: "1234"`
+`for (i in 1..4) print(i) // 打印结果为："1234"`
 
-如果你需要按反序遍历整数可以使用标准库中的 downTo() 函数:
-`for (i in 4 downTo 1) print(i) // 打印结果为: "4321"`
+如果你需要按反序遍历整数可以使用标准库中的 downTo() 函数：
+`for (i in 4 downTo 1) print(i) // 打印结果为："4321"`
 
 也支持指定步长：
-`for (i in 1..4 step 2) print(i) // 打印结果为: "13"`
-`for (i in 4 downTo 1 step 2) print(i) // 打印结果为: "42"`
+`for (i in 1..4 step 2) print(i) // 打印结果为："13"`
+`for (i in 4 downTo 1 step 2) print(i) // 打印结果为："42"`
 
-如果循环中不要最后一个范围区间的值可以使用 until 函数:
-
+如果循环中不要最后一个范围区间的值可以使用 until 函数：
 ```kt 
 for (i in 1 until 10) { // i in [1, 10), 不包含 10
      println(i)
@@ -324,7 +397,7 @@ for (i in 1 until 10) { // i in [1, 10), 不包含 10
 
 ### while 与 do while
 
-while的基本框架
+while 的基本框架
 ``` kt
 while( 布尔表达式 ) {
   //循环内容
@@ -339,7 +412,7 @@ do…while 循环的基本框架
 ``` kt 
 do {
        //代码语句
-}while(布尔表达式);
+}while（布尔表达式）;
 ```
 
 实例：
@@ -372,7 +445,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-另外还支持标签跳转写法`@`，我觉得类似于goto语句了，不太行
+另外还支持标签跳转写法`@`，我觉得类似于 goto 语句了，不太行
 
 ## list 和 map
 

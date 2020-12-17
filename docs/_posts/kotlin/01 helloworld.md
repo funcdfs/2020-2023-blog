@@ -5,7 +5,7 @@ tags:
     - kotlin
 ---
 
-> kotlin01 ：基础语法 符号 🌴 代表 kotlin 代码片段
+> 🌴 kotlin01 ：基础语法 条件控制 循环控制
 
 <!-- more -->
 ## 运行 kotlin

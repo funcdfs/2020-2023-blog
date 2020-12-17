@@ -8,6 +8,15 @@ tags:
 > kotlin01 ：基础语法 符号🏝️代表 kotlin 代码片段
 
 <!-- more -->
+## 运行 kotlin
+
+官方文档：[在 IDEA 上创建 kotlin 项目](https://www.kotlincn.net/docs/tutorials/jvm-get-started.html)
+
+创建 java 模板，运行 kotlin 文件：[使用IDEA编译运行 kotlin](https://juejin.cn/post/6844903503836479496)
+
+创建项目后，右上角的运行绿色小箭头还是灰色的，右键手动运行一遍当前的kotlin文件， `run` （Ctrl shift f10），之后右上角的绿色运行按钮就可以使用了
+
+![2020-12-17-12-31-39](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-17-12-31-39.png)
 
 AS 中的 helloworld 截图：
 

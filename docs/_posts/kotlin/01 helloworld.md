@@ -5,16 +5,16 @@ tags:
     - kotlin
 ---
 
-> kotlin01 ：基础语法 符号🏝️代表 kotlin 代码片段
+> kotlin01 ：基础语法 符号 🌴 代表 kotlin 代码片段
 
 <!-- more -->
 ## 运行 kotlin
 
 官方文档：[在 IDEA 上创建 kotlin 项目](https://www.kotlincn.net/docs/tutorials/jvm-get-started.html)
 
-创建 java 模板，运行 kotlin 文件：[使用IDEA编译运行 kotlin](https://juejin.cn/post/6844903503836479496)
+创建 java 模板，运行 kotlin 文件：[使用 IDEA 编译运行 kotlin](https://juejin.cn/post/6844903503836479496)
 
-创建项目后，右上角的运行绿色小箭头还是灰色的，右键手动运行一遍当前的kotlin文件， `run` （Ctrl shift f10），之后右上角的绿色运行按钮就可以使用了
+创建项目后，右上角的运行绿色小箭头还是灰色的，右键手动运行一遍当前的 kotlin 文件， `run` （Ctrl shift f10），之后右上角的绿色运行按钮就可以使用了
 
 ![2020-12-17-12-31-39](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-17-12-31-39.png)
 
@@ -124,6 +124,8 @@ fun dairy(place_name:String):String{
 
 ## 条件控制
 
+[菜鸟教程](https://www.runoob.com/kotlin/kotlin-condition-control.html)
+
 当大括号中的语句只存在一行的时候，大括号可以省略 ，也可以把 if else 全部写在一行（无 TAB 缩进）
 
 ``` kt 
@@ -210,9 +212,13 @@ lateinit var view: View
 
 它的作用就是让 IDE 不要对这个变量检查初始化和报错。换句话说，加了这个 `lateinit` 关键字，这个变量的初始化就全靠你自己了，编译器不帮你检查了。
 
-## when
+## 循环控制
 
-相比于 switch  更加方便的一个结构
+`if + for` 等于程序逻辑层的全部 QAQ
+
+### when
+
+相比于 `switch`  更加方便的一个结构
 
 ```kt
 fun main(args: Array<String>) {
@@ -230,9 +236,37 @@ fun check_grade(score: Int):String {
     return ans
 }
 ```
-## for
+### for
 
-相关的 for 循环的使用
+for 循环可以对任何提供迭代器（iterator）的对象进行遍历，语法如下：
+`for (item in collection) print(item)`
+
+循环体可以是一个代码块：
+``` kt
+for (item: Int in ints) {
+    // ……
+}
+```
+
+如上所述，for 可以循环遍历任何提供了迭代器的对象。
+
+如果你想要通过索引遍历一个数组或者一个 list，你可以这么做：
+
+``` kt
+for (i in array.indices) {
+    print(array[i])
+}
+```
+
+注意这种"在区间上遍历"会编译成优化的实现而不会创建额外对象。
+
+或者你可以用库函数 `withIndex`：（这种方式些许丑陋）
+
+```kt
+for ((index, value) in array.withIndex()) {
+    println("the element at $index is $value")
+}
+```
 
 ```kt 
 fun main(args: Array<String>) {
@@ -244,6 +278,7 @@ fun main(args: Array<String>) {
     println("结果：${result}")
 }
 ```
+
 开区间和闭区间 until step 关键字 数组逆序 reversed 和 count 方法
 
 ```kt 
@@ -266,6 +301,78 @@ fun main(args: Array<String>) {
     println(nums1.count())
 }
 ```
+
+::: tip tip:关于数组逆序输出的一个函数
+正常循环：
+`for (i in 1..4) print(i) // 打印结果为: "1234"`
+
+如果你需要按反序遍历整数可以使用标准库中的 downTo() 函数:
+`for (i in 4 downTo 1) print(i) // 打印结果为: "4321"`
+
+也支持指定步长：
+`for (i in 1..4 step 2) print(i) // 打印结果为: "13"`
+`for (i in 4 downTo 1 step 2) print(i) // 打印结果为: "42"`
+
+如果循环中不要最后一个范围区间的值可以使用 until 函数:
+
+```kt 
+for (i in 1 until 10) { // i in [1, 10), 不包含 10
+     println(i)
+}
+```
+:::
+
+### while 与 do while
+
+while的基本框架
+``` kt
+while( 布尔表达式 ) {
+  //循环内容
+}
+```
+do…while 循环 对于 while 语句而言，如果不满足条件，则不能进入循环。但有时候我们需要即使不满足条件，也至少执行一次。
+
+do…while 循环和 while 循环相似，不同的是，do…while 循环至少会执行一次。
+
+do…while 循环的基本框架
+
+``` kt 
+do {
+       //代码语句
+}while(布尔表达式);
+```
+
+实例：
+
+``` kt 
+fun main(args: Array<String>) {
+    println("----while 使用-----")
+    var x = 5
+    while (x > 0) {
+        println( x--)
+    }
+    println("----do...while 使用-----")
+    var y = 5
+    do {
+        println(y--)
+    } while(y>0)
+}
+```
+### break 和 continue
+
+在循环中 Kotlin 支持传统的 break 和 continue 操作符。
+
+``` kt 
+fun main(args: Array<String>) {
+    for (i in 1..10) {
+        if (i==3) continue  // i 为 3 时跳过当前循环，继续下一次循环
+        println(i)
+        if (i>5) break   // i 为 6 时 跳出循环
+    }
+}
+```
+
+另外还支持标签跳转写法`@`，我觉得类似于goto语句了，不太行
 
 ## list 和 map
 
@@ -307,4 +414,33 @@ fun main(args: Array<String>) {
     map["向上"] = "up"
     println(map["好"])
 }
+```
+
+### for + listOf 实例
+
+实例
+对集合进行迭代：
+
+``` kt
+fun main(args: Array<String>) {
+    val items = listOf("apple", "banana", "kiwi")
+    for (item in items) {
+        println(item)
+    }
+
+    for (index in items.indices) {
+        println("item at $index is ${items[index]}")
+    }
+}
+```
+
+输出结果：
+
+```
+apple
+banana
+kiwi
+item at 0 is apple
+item at 1 is banana
+item at 2 is kiwi
 ```

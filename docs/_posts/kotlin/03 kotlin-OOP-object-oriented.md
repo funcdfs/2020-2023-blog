@@ -184,7 +184,7 @@ by 关键字
 
 示例：大头儿子，小头爸爸，围裙妈妈，洗碗的故事（10，1，by）
 
-```kr 
+``` kt 
 interface IWash {
     fun washTheDishes()
 }

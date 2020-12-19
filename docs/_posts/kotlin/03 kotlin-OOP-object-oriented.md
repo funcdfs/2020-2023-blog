@@ -276,7 +276,7 @@ fun main(args: Array<String>) {
     var list = listOf<Son>(s01, s02)
     for (a in list) {
         if (a is Son.小骡子) {
-            println(a.SayHello())
+            a.SayHello()
         }
     }
 }

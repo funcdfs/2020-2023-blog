@@ -1,5 +1,5 @@
 ---
-title: kotlin-hello world
+title: kotlin-basic-syntax
 date: 2020-12-16
 tags:
     - kotlin
@@ -8,13 +8,18 @@ tags:
 > 🌴 kotlin01 ：基础语法 条件控制 循环控制
 
 <!-- more -->
-## 运行 kotlin
 
-官方文档：[在 IDEA 上创建 kotlin 项目](https://www.kotlincn.net/docs/tutorials/jvm-get-started.html)
+## hello kotlin
 
-创建 java 模板，运行 kotlin 文件：[使用 IDEA 编译运行 kotlin](https://juejin.cn/post/6844903503836479496)
+~~需求驱动，我迟早写安卓，所以就不想干其他的事情的时候就学呗~~
 
-创建项目后，右上角的运行绿色小箭头还是灰色的，右键手动运行一遍当前的 kotlin 文件， `run` （Ctrl shift f10），之后右上角的绿色运行按钮就可以使用了
+官方文档创建 kotlin 项目：[在 IDEA 上创建 kotlin 项目](https://www.kotlincn.net/docs/tutorials/jvm-get-started.html)
+
+创建 java 项目，运行 kotlin 文件：[使用 IDEA 编译运行 kotlin](https://juejin.cn/post/6844903503836479496)
+
+创建项目后，右上角的运行绿色小箭头还是灰色的，右键手动运行一遍当前的 kotlin 文件，或者执行右键的`run`当前文件  或者快捷键（Ctrl shift f10），之后本项目中的右上角的绿色运行按钮就可以使用了
+
+IDEA 中的运行截图：
 
 ![2020-12-17-12-31-39](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-17-12-31-39.png)
 
@@ -22,38 +27,75 @@ AS 中的 helloworld 截图：
 
 ![2020-07-18-20-19-20](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-07-18-20-19-20.png)
 
+## 命令行交互
+
+去 [官网](https://github.com/JetBrains/kotlin) 下载最新的 kotlin compiler 
+
+系统环境变量的 path 值中添加 kotlinc/bin 目录的路径 （前提命令行输入 java 后不是报错）
+
+重启 Windows
+
+执行 kotlinc 即可进行编程
+
+![2020-12-16-12-11-24](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-16-12-11-24.png)
+
+可以简单进行加减法判断之类的操作，不怎么用
+
 ## 基本框架
+
+IDEA 中输入 maina 点回车就会自动补全一下内容
 
 ``` kt 
 fun main(args: Array<String>) {
-    println("hello world")
+    //println("hello world")
 }
 ```
 
-## 变量与输出
+熟记即可
 
-`var name = "张三"` （类型推断）
+## 注释
 
-`val `
+Kotlin 支持单行和多行注释，实例如下：
+
+``` kt
+// 这是一个单行注释
+
+/* 这是一个多行的
+   块注释。 */
+```
+
+Kotlin 中的块注释允许嵌套
+
+## 定义常量与变量
+
+可变变量定义：var 关键字
+
+`var <标识符> : <类型> = <初始化值>`
+
+不可变变量定义：val 关键字，只能赋值一次的变量
+
+`val <标识符> : <类型> = <初始化值>`
+
+编译器支持自动类型判断，即声明时可以不指定类型，由编译器判断。
+
+var name = "张三" //（kotlin 存在自动类型推断）
+val a: Int = 1
+val b = 1       // 系统自动推断变量类型为 Int
+val c: Int      // 如果不在声明时初始化则必须提供变量类型
+c = 1           // 明确赋值
+
+var x = 5        // 系统自动推断变量类型为 Int
+x += 1           // 变量可修改
 
 `var name:String = "张三"`（显式类型声明）
 
-Byte Short Int  Long Float Double String
+kotlin 中的变量类型： `Byte Short Int Long Float Double String`
 
-`.MAX_VALUE .MIN_VALUE `
+每一种变量类型都有一些常用方法：例如 `.MAX_VALUE .MIN_VALUE `
 
 `val aByte:Byte = Byte.MAX_VALUE` 字符串没有 `MAX_VALUE`和 `MIN_VALUE`
 
-`println()` 使用 `+` 进行不同内容块的连接
-## 函数
-
-没有像 cpp 中的函数声明，写在后面的函数在 main 函数中也可以进行调用
-
-``` kt
-fun printstar (){
-    println("*")
-}
-```
+`println()` 函数中使用 `+` 进行不同内容块的连接
 
 ## boolean
 
@@ -65,19 +107,11 @@ fun main(args: Array<String>) {
 }
 ```
 
-## 命令行交互
+## 函数
 
-去 [官网](https://github.com/JetBrains/kotlin) 下载最新的 kotlin compiler 
+不用像 cpp 中的函数声明语法规则，写在后面的函数在 main 函数中也可以进行调用，自定义函数和 main 函数不分先后顺序
 
-path 添加 kotlinc/bin 目录 （前提命令行输入 java 后不是报错）
-
-重启 Windows
-
-执行 kotlinc 即可进行编程
-
-![2020-12-16-12-11-24](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-16-12-11-24.png)
-
-## 进一步了解函数
+kotlin 函数框架：
 
 ``` kt
 fun 函数名（参数名：参数类型）：返回值类型 {  
@@ -85,9 +119,16 @@ fun 函数名（参数名：参数类型）：返回值类型 {
 }
 ```
 
-返回值类型为 Unit 代表无返回值，可以省略不写
+定义函数：
 
-示例：
+``` kt
+fun printstar (){ //返回值不写就是 kotlin.Unit
+    println("*")  //返回值类型为 Unit 代表无返回值，可以省略不写
+}
+```
+
+使用函数：
+
 ``` kt
 fun plus(a:Int,b:Int):Int{
     return a+b
@@ -107,7 +148,12 @@ fun sayhello(name:String):String{
 
 ## 字符串模板
 
+`$varName` 表示变量值
+`${varName.fun()} `表示变量的方法返回值
+
+::: tip
 定义多行字符串的时候要用首尾各三个引号`"""`进行包含
+::: 
 
 当需要相同的部分字符串时：
 
@@ -122,9 +168,173 @@ fun dairy(place_name:String):String{
 }
 ```
 
+如果一句话是纯英文滴得时候，就可以省略大括号，但是汉字和变量相间的时候，就要用美元符号加大括号
+不只是可以在 println 函数中使用，可以在 korlin 文件中任意地方使用，用来定义变量等等等
+
+## `is` 类型检测及自动类型转换
+
+[官方文档查看更多](https://www.kotlincn.net/docs/reference/typecasts.html)
+
+is 运算符检测一个表达式是否某类型的一个实例。 如果一个不可变的局部变量或属性已经判断出为某类型，那么检测后的分支中可以直接当作该类型使用，无需显式转换：
+
+``` kt
+fun getStringLength(obj: Any): Int? {
+    if (obj is String) {
+        // `obj` 在该条件分支内自动转换成 `String`
+        return obj.length
+    }
+    // 在离开类型检测分支后，`obj` 仍然是 `Any` 类型
+    return null
+}
+```
+
+或者
+
+``` kt
+fun getStringLength(obj: Any): Int? {
+    if (obj !is String) return null
+    // `obj` 在这一分支自动转换为 `String`
+    return obj.length
+}
+```
+
+或者
+
+``` kt
+fun getStringLength(obj: Any): Int? {
+    // `obj` 在 `&&` 右边自动转换成 `String` 类型
+    if (obj is String && obj.length > 0) {
+      return obj.length
+    }
+
+    return null
+}
+```
+
+## while 循环
+
+``` kt
+val items = listOf("apple", "banana", "kiwifruit")
+var index = 0
+while (index < items.size) {
+    println("item at $index is ${items[index]}")
+    index++
+}
+```
+
+## `in` 使用区间（range）
+
+使用 in 运算符来检测某个数字是否在指定区间内：
+
+``` kt
+val x = 10
+val y = 9
+if (x in 1..y+1) {
+    println("fits in range")
+}
+```
+
+检测某个数字是否在指定区间外：
+``` kt
+val list = listOf("a", "b", "c")
+
+if (-1 !in 0..list.lastIndex) {
+    println("-1 is out of range")
+}
+if (list.size !in list.indices) {
+    println("list size is out of valid list indices range, too")
+}
+```
+
+区间迭代：
+``` kt
+for (x in 1..5) {
+    print(x)  //12345
+}
+```
+
+或数列迭代：
+
+``` kt
+for (x in 1..10 step 2) {
+    print(x)
+}
+println()
+for (x in 9 downTo 0 step 3) {
+    print(x)
+}
+```
+## 集合
+
+对集合进行迭代：
+``` kt
+fun main() {
+    val items = listOf("apple", "banana", "kiwifruit")
+    for (item in items) {
+        println(item)
+    }
+}
+```
+
+使用 in 运算符来判断集合内是否包含某实例：
+
+``` kt
+fun main() {
+    val items = setOf("apple", "banana", "kiwifruit")
+    when {
+        "orange" in items -> println("juicy")
+        "apple" in items -> println("apple is fine too")
+    }
+}
+```
+
+### list 和 map
+
+list：
+
+```kt 
+fun main(args: Array<String>) {
+    var lists= listOf("第一个","第二个","第三个","第四个")
+    for (list in lists){
+        println(list)
+    }
+    for ( (i,e) in lists.withIndex()){
+        println("$i $e")
+    }
+}
+```
+
+```
+第一个
+第二个
+第三个
+第四个
+0 第一个
+1 第二个
+2 第三个
+3 第四个
+```
+
+map： 
+
+```kt 
+import java.util.TreeMap
+
+fun main(args: Array<String>) {
+    var map = TreeMap<String,String>()
+    map["好"] = "good"
+    map["学习"] = "study"
+    map["天"] = "day"
+    map["向上"] = "up"
+    println(map["好"])
+}
+```
+
+[参见集合](https://www.kotlincn.net/docs/reference/collections-overview.html)
+
 ## 条件控制
 
-[菜鸟教程](https://www.runoob.com/kotlin/kotlin-condition-control.html)
+### if else
 
 当大括号中的语句只存在一行的时候，大括号可以省略 ，也可以把 if else 全部写在一行（无 TAB 缩进）
 
@@ -176,6 +386,17 @@ when (x) {
 }
 ```
 
+``` kt
+fun describe(obj: Any): String =
+    when (obj) {
+        1          -> "One"
+        "Hello"    -> "Greeting"
+        is Long    -> "Long"
+        !is String -> "Not a string"
+        else       -> "Unknown"
+    }
+```
+
 另一种可能性是检测一个值是（is）或者不是（!is）一个特定类型的值。注意： 由于智能转换，你可以访问该类型的方法和属性而无需 任何额外的检测。
 
 ``` kt 
@@ -184,6 +405,7 @@ fun hasPrefix(x: Any) = when(x) {
     else -> false
 }
 ```
+
 ::: tip `startsWith()`
 其中：
 
@@ -201,6 +423,7 @@ str.startsWith('k')         // 是否有字符`k`起始
 str.startsWith("Kot")       // 是否由字符串`kot`起始
 str.startsWith("lin",3)     // 当起始位置为 3 时，是否由字符串`lin`起始
 ```
+
 输出：
 
 ```
@@ -234,77 +457,10 @@ fun main(args: Array<String>) {
     }
 }
 ```
+
 输出结果：
 
 `apple is fine too`
-
-## 字符串比较
-
-== 用来判断字符串是否相等
-
-``` kt 
-fun main(args: Array<String>) {
-    var str1 = "aaa"
-    var str2 = "aaa"
-    println(str1.equals(str2)) //equals 函数存在第二个布尔类型的参数，当第二个参数为 true 的时候，忽略即将要比较的两个字符串的大小写
-    println(str1 == str2)
-}
-```
-输出 
-ture  
-false
-
-::: tip
-kotlin 中输出后直接换行，不用手动控制回车符，一个 println 函数就对应一个回车符
-:::
-
-## kotlin 空值处理
-
-在 Kotlin 里面，所有的变量默认都是不允许为空的，如果你给它赋值 null，就会报错，像上面那样。
-
-这种有点强硬的要求，其实是很合理的：既然你声明了一个变量，就是要使用它对吧？那你把它赋值为 null 干嘛？要尽量让它有可用的值啊。Java 在这方面很宽松，我们成了习惯，但 Kotlin 更强的限制其实在你熟悉了之后，是会减少很多运行时的问题的。
-
-```kt
-fun main(args: Array<String>) {
-   heat(null)
-}
-fun heat(str:String):String {
-    return "热$str"
-}
-```
-![2020-12-16-21-47-38](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-16-21-47-38.png)
-
-参数后面加上 ？ 就可以传入 null 
-
-```kt
-fun main(args: Array<String>) {
-   heat(null)
-}
-fun heat(str: String?):String {  //加上问号代表参数可以为空
-    return "热$str"
-}
-```
-![2020-12-16-21-50-54](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-16-21-50-54.png)
-
-对于这些可以为空值的变量，你可以在类型右边加一个 ? 号，解除它的非空限制：
-
-- 变量需要手动初始化，如果不初始化的话会报错；
-- 变量默认非空，所以初始化赋值 null 的话报错，之后再次赋值为 null 也会报错；
-- 变量用 ? 设置为可空的时候，使用的时候因为「可能为空」又报错
-
-```kt
-class User {
-    var name: String? = null
-}
-```
-### 延迟初始化
-
-```kt 
-lateinit var view: View
-```
-这个 `lateinit` 的意思是：告诉编译器我没法第一时间就初始化，但我肯定会在使用它之前完成初始化的。
-
-它的作用就是让 IDE 不要对这个变量检查初始化和报错。换句话说，加了这个 `lateinit` 关键字，这个变量的初始化就全靠你自己了，编译器不帮你检查了。
 
 ## 循环控制
 
@@ -312,25 +468,31 @@ lateinit var view: View
 
 ### for
 
-for 循环可以对任何提供迭代器（iterator）的对象进行遍历，语法如下：
+for 可以循环遍历任何提供了迭代器的对象。
+
+语法如下：
 `for (item in collection) print(item)`
 
-循环体可以是一个代码块：
 ``` kt
-for (item: Int in ints) {
-    // ……
+val items = listOf("apple", "banana", "kiwifruit")
+for (item in items) {
+    println(item)
 }
 ```
 
-如上所述，for 可以循环遍历任何提供了迭代器的对象。
-
-如果你想要通过索引遍历一个数组或者一个 list，你可以这么做：
+或者也用下标，然后用常见的方括号格式使用 list 中的变量
 
 ``` kt
+val items = listOf("apple", "banana", "kiwifruit")
+for (index in items.indices) { //index 的复数 indices
+    println("item at $index is ${items[index]}")
+}
+
 for (i in array.indices) {
     print(array[i])
 }
 ```
+
 
 注意这种"在区间上遍历"会编译成优化的实现而不会创建额外对象。
 
@@ -342,16 +504,13 @@ for ((index, value) in array.withIndex()) {
 }
 ```
 
-```kt 
-fun main(args: Array<String>) {
-    val nums = 1..100   //独特的数组写法
-    var result = 0
-    for (num in nums){  //in 关键字
-       result += +num
-    }
-    println("结果：${result}")
-}
-```
+
+
+
+参见 [for 循环](https://www.kotlincn.net/docs/reference/control-flow.html#for-%E5%BE%AA%E7%8E%AF)
+
+
+### 其他循环相关
 
 开区间和闭区间 until step 关键字 数组逆序 reversed 和 count 方法
 
@@ -363,16 +522,16 @@ fun main(args: Array<String>) {
     }
 
     val nums2 = 1..16
-    for (a in nums2 step 2) {
+    for (a in nums2 step 2) {   // step 
         println(a)
     }  //1 3 5 7 9 11 13 15
 
-    val nums3 = nums2.reversed()
+    val nums3 = nums2.reversed()  //reversed 
     for (a in nums3) {
         println(a)
     }  //倒序输出
 
-    println(nums1.count())
+    println(nums1.count()) //count
 }
 ```
 
@@ -398,6 +557,7 @@ for (i in 1 until 10) { // i in [1, 10), 不包含 10
 ### while 与 do while
 
 while 的基本框架
+
 ``` kt
 while( 布尔表达式 ) {
   //循环内容
@@ -431,6 +591,7 @@ fun main(args: Array<String>) {
     } while(y>0)
 }
 ```
+
 ### break 和 continue
 
 在循环中 Kotlin 支持传统的 break 和 continue 操作符。
@@ -447,47 +608,6 @@ fun main(args: Array<String>) {
 
 另外还支持标签跳转写法`@`，我觉得类似于 goto 语句了，不太行
 
-## list 和 map
-
-list：
-
-```kt 
-fun main(args: Array<String>) {
-    var lists= listOf("第一个","第二个","第三个","第四个")
-    for (list in lists){
-        println(list)
-    }
-    for ( (i,e) in lists.withIndex()){
-        println("$i $e")
-    }
-}
-```
-
-```
-第一个
-第二个
-第三个
-第四个
-0 第一个
-1 第二个
-2 第三个
-3 第四个
-```
-
-map： 
-
-```kt 
-import java.util.TreeMap
-
-fun main(args: Array<String>) {
-    var map = TreeMap<String,String>()
-    map["好"] = "good"
-    map["学习"] = "study"
-    map["天"] = "day"
-    map["向上"] = "up"
-    println(map["好"])
-}
-```
 
 ### for + listOf 实例
 

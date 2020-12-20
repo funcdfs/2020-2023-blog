@@ -66,7 +66,7 @@ Kotlin 支持单行和多行注释，实例如下：
 
 Kotlin 中的块注释允许嵌套
 
-## 定义常量与变量
+## 常量与变量及其运算
 
 可变变量定义：var 关键字
 
@@ -89,7 +89,7 @@ x += 1           // 变量可修改
 
 `var name:String = "张三"`（显式类型声明）
 
-kotlin 中的变量类型： `Byte Short Int Long Float Double String`
+[kotlin 中的基本类型及其运算详细介绍](https://www.kotlincn.net/docs/reference/basic-types.html)： `Byte Short Int Long Float Double String`
 
 每一种变量类型都有一些常用方法：例如 `.MAX_VALUE .MIN_VALUE `
 
@@ -135,7 +135,6 @@ lateinit var view: View
 这个 `lateinit` 的意思是：告诉编译器我没法第一时间就初始化，但我肯定会在使用它之前完成初始化的。
 
 它的作用就是让 IDE 不要对这个变量检查初始化和报错。换句话说，加了这个 `lateinit` 关键字，这个变量的初始化就全靠你自己了，编译器不帮你检查了。一般不用
-
 
 ## 字符串模板
 
@@ -278,6 +277,53 @@ fun main() {
     }
 }
 ```
+### 数组
+
+数组在 Kotlin 中使用 Array 类来表示，它定义了 get 与 set 函数（按照运算符重载约定这会转变为 []）以及 size 属性，以及一些其他有用的成员函数：
+
+``` kt
+class Array<T> private constructor() {
+    val size: Int
+    operator fun get(index: Int): T
+    operator fun set(index: Int, value: T): Unit
+
+    operator fun iterator(): Iterator<T>
+    // ……
+}
+```
+
+我们可以使用库函数 [arrayOf()](https://www.javatpoint.com/kotlin-array) 来创建一个数组并传递元素值给它，这样 arrayOf(1, 2, 3) 创建了 `array [1, 2, 3]`。 或者，库函数 [arrayOfNulls()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/array-of-nulls.html) 可以用于创建一个指定大小的、所有元素都为空的数组。
+
+常用：（开辟一个元素全部初始化为 0 的数组）
+
+``` kt
+var myArray = Array<int>(5){0}  
+val arr = IntArray(5) //第二种方式更简洁
+
+//var myArray02: IntArray = intArrayof(1,1,1,1,1)
+
+for (element in myArray){
+    println(element)
+}
+for (index in myArray.indices){
+    println(myArray[index])
+}
+```
+
+另一个选项是用接受数组大小以及一个函数参数的 Array 构造函数，用作参数的函数能够返回给定索引的每个元素初始值：
+
+### 数组的读取修改
+
+- 直接使用 [] 运算符进行修改读取操作
+
+[数组使用实例](https://www.javatpoint.com/kotlin-array)
+
+- 利用 set() get() 方法
+### String
+
+[文档](https://www.kotlincn.net/docs/reference/basic-types.html#%E5%AD%97%E7%AC%A6%E4%B8%B2)
+
+[实例](https://www.javatpoint.com/kotlin-string)
 
 ### list 和 map
 
@@ -484,7 +530,6 @@ for (i in array.indices) {
 }
 ```
 
-
 注意这种"在区间上遍历"会编译成优化的实现而不会创建额外对象。
 
 或者你可以用库函数 `withIndex`：（这种方式些许丑陋）
@@ -495,11 +540,7 @@ for ((index, value) in array.withIndex()) {
 }
 ```
 
-
-
-
 参见 [for 循环](https://www.kotlincn.net/docs/reference/control-flow.html#for-%E5%BE%AA%E7%8E%AF)
-
 
 ### 其他循环相关
 
@@ -598,7 +639,6 @@ fun main(args: Array<String>) {
 ```
 
 另外还支持标签跳转写法`@`，我觉得类似于 goto 语句了，不太行
-
 
 ### for + listOf 实例
 

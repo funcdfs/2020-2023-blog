@@ -107,44 +107,35 @@ fun main(args: Array<String>) {
 }
 ```
 
-## 函数
+## 字符串比较
 
-不用像 cpp 中的函数声明语法规则，写在后面的函数在 main 函数中也可以进行调用，自定义函数和 main 函数不分先后顺序
+== 用来判断字符串是否相等
 
-kotlin 函数框架：
-
-``` kt
-fun 函数名（参数名：参数类型）：返回值类型 {  
-    函数体  
+``` kt 
+fun main(args: Array<String>) {
+    var str1 = "aaa"
+    var str2 = "aaa"
+    println(str1.equals(str2)) //equals 函数存在第二个布尔类型的参数，当第二个参数为 true 的时候，忽略即将要比较的两个字符串的大小写
+    println(str1 == str2)
 }
 ```
+输出 
+ture  
+false
 
-定义函数：
+::: tip
+kotlin 中输出后直接换行，不用手动控制回车符，一个 println 函数就对应一个回车符
+:::
 
-``` kt
-fun printstar (){ //返回值不写就是 kotlin.Unit
-    println("*")  //返回值类型为 Unit 代表无返回值，可以省略不写
-}
+### 延迟初始化
+
+```kt 
+lateinit var view: View
 ```
+这个 `lateinit` 的意思是：告诉编译器我没法第一时间就初始化，但我肯定会在使用它之前完成初始化的。
 
-使用函数：
+它的作用就是让 IDE 不要对这个变量检查初始化和报错。换句话说，加了这个 `lateinit` 关键字，这个变量的初始化就全靠你自己了，编译器不帮你检查了。一般不用
 
-``` kt
-fun plus(a:Int,b:Int):Int{
-    return a+b
-}
-```
-
-``` kt
-fun main(args: Array<String>){
-    println("hello world")
-    println(sayhello("fengwei"))
-}
-
-fun sayhello(name:String):String{
-    return "hello"+name
-}
-```
 
 ## 字符串模板
 

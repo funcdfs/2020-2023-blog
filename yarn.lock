@@ -7846,6 +7846,11 @@ vuepress-plugin-img-lazy@^1.0.4:
     markdown-it-img-lazy "^1.0.2"
     markdown-it-imsize "^2.0.1"
 
+vuepress-plugin-live2d@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-live2d/download/vuepress-plugin-live2d-0.0.7.tgz#e09d415c018c3fad871c03151d6e5124e7c56946"
+  integrity sha1-4J1BXAGMP62HHAMVHW5RJOfFaUY=
+
 vuepress-plugin-nprogress@^1.1.6:
   version "1.1.6"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-nprogress/download/vuepress-plugin-nprogress-1.1.6.tgz#cfef778d97323b7c89de6c1c9cc17e9085fef599"

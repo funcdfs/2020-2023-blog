@@ -28,6 +28,13 @@ module.exports = {
     }
   },
   plugins: [
+    ["vuepress-plugin-live2d",
+      {
+        "modelName": "tororo",
+        "position": 'left',
+        "mobileShow": false
+      }
+    ],
     ['go-top'],
     ['reading-progress'],
     ['flowchart'],

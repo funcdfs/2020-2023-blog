@@ -1,14 +1,19 @@
 ---
 title: ABOUT
+aside: false
 ---
 
-::: center
-{{dist_times}}
-:::
+
+-><img src="https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-21-10-11-38.jpg" alt="KONNG" style="width:40%;height:20%;"><-
+-> {{dist_times}}  <-
 
 ## Contact 
 
 </br>
+
+<span class="contact">
+<a href="https://github.com/fengwei2002" title="fengwei2002"> &nbsp Github &nbsp </a>
+</span>
 
 <span class="contact">
 <a href="https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/4200E2F1041F9865A7376B934D76600D.jpg" title="CIKI1F"> &nbsp Wechat &nbsp  </a>
@@ -24,10 +29,6 @@ title: ABOUT
 
 <span class="contact">
 <a href="http://music.163.com/m/user/home?id=440040659" title="konngkonng">  &nbsp netease cloud music &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="https://github.com/fengwei2002" title="fengwei2002"> &nbsp github &nbsp </a>
 </span>
 
 <span class="contact">

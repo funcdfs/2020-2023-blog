@@ -1,3 +1,22 @@
+// 鼠标指针
+body
+  background-color #dee
+  cursor url('/cursor/Vista.cur'), auto
+
+body
+  .header
+    .banner
+      cursor url('/cursor/Vista.cur'), auto
+
+.container
+  aside
+    .info-card
+      .info-card-body
+        cursor url('/cursor/Vista.cur'), auto
+
+a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-info-list .post-info-item .icon ,.info-text
+  cursor url('/cursor/link.cur'), auto !important;
+
 //容器相关 css
 //warning 容器css开始
 .custom-block.warning
@@ -346,4 +365,15 @@ strong {
 
 a {
     color: #5EB761;
+}
+
+canvas {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  min-width: 10%;
+  min-height: 10%;
+  height: auto;
+  width: auto;
+  z-index: -1;
 }

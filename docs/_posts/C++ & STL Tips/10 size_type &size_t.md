@@ -15,10 +15,9 @@ tags:
 
 string 抽象意义是字符串， size（）的抽象意义是字符串的尺寸， string::size_type 抽象意义是尺寸单位类型 string::size_type 它在不同的机器上，长度是可以不同的，并非固定的长度。但只要你使用了这个类型，就使得你的程序适合这个机器。与实际机器匹配。
 
-eg:string::size_type 从本质上来说，是一个整型数。关键是由于机器的环境，它的长度有可能不同。 例如:我们在使用 string::find 的函数的时候，它返回的类型就是 string::size_type 类型。而当 find 找不到所要找的字符的时候，它返回的是 npos 的值，这个值是与 size_type 相关的。
+eg:string::size_type 从本质上来说，是一个整型数。关键是由于机器的环境，它的长度有可能不同。 例如：我们在使用 string::find 的函数的时候，它返回的类型就是 string::size_type 类型。而当 find 找不到所要找的字符的时候，它返回的是 npos 的值，这个值是与 size_type 相关的。
 
-假如，你是用 strings; int rc = s.find(…); 然后判断，if ( rc ==string::npos ) 这样在不同的机器平台上表现就不一样了。如果，你的平台的 string::size_type 的长度正好和 int 相匹配，那么这个判断会侥幸正确。但换成另外的平台，有可能 string::size_type 的类型是 64 位长度的，那么判断就完全不正确了。 所以，正确的应该是: 
-
+假如，你是用 strings; int rc = s.find(…); 然后判断，if ( rc ==string::npos ) 这样在不同的机器平台上表现就不一样了。如果，你的平台的 string::size_type 的长度正好和 int 相匹配，那么这个判断会侥幸正确。但换成另外的平台，有可能 string::size_type 的类型是 64 位长度的，那么判断就完全不正确了。 所以，正确的应该是：
 string::size_type rc = s.find(…); 这个时候使用 if ( rc == string::npos ) 就回正确了
 
 ### size_type 在 string 中的 find 应用
@@ -53,3 +52,27 @@ typedef unsigned int size_t;
 数组的定义声明等应当使用 size_t 类型，如果不得不使用 int 作下标，应当使用 unsigned 避免越界。
 
 所以以后一般使用 size_t 代替程序中不是变量的 int
+
+## 坑点
+
+我服了，很 bug 的一个 bug ，~~我以为我眼花了还是电脑卡了，~~
+
+不是 size_t 用来当循环的变量吗，并且他不能为负数，这一点也很合理，因为 for 循环一般用来进行遍历数组的操作
+
+但是吧，当你逆序设定循环变量的时候，你的条件就是 i >=0 结束 ，这是一个死循环！
+
+正常使用：
+
+``` cpp
+for (size_t i = 0; i < counter.size(); i++) {
+    cout << counter.at(i) << ' ';
+  }
+```
+想逆序的时候：
+
+``` cpp
+for (size_t i = counter.size(); i >=0; i--) {
+    cout << counter.at(i) << ' ';
+  }
+```
+他是一个正整数啊！！！，必然大于等于零！！！，所以不太行了，以后当逆序的时候还是用 int 呗哈哈哈

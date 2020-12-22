@@ -203,46 +203,7 @@ config.js
 
 也可以用来作为 tab 页使用
 
-语法:
-
-```md
-`<CodeSwitcher :languages="{1:'JavaScript',2:'TypeScript'}">`
-用来说明tab页的所有选项卡，前一项为简称，不可见，后一项为网页渲染的全称
-
-`<template v-slot:1>`  slot:插槽  [VUE2的语法](https://cn.vuejs.org/v2/guide/components-slots.html)
-在向具名插槽提供内容的时候，我们可以在一个 <template> 元素上使用 v-slot 指令，并以 v-slot 的参数的形式提供其名称 
-
-第一部分的代码内容
-
-`</template>`结束第一部分代码
-
-`<template v-slot:2>`开启第二部分代码
-第二部分代码内容
-`</template>`结束第二部分代码
-`</CodeSwitcher>`整个块的结束标志
-```
-
-<CodeSwitcher :languages="{1:'JavaScript',2:'TypeScript'}">
-<template v-slot:1>
-
-```js
-module.exports = function (str) {
-    return typeof str === 'string' && str.trim() === str
-}
-```
-
-</template>
-<template v-slot:2>
-
-```ts
-export default function isString (str: string) : str is string {
-    return typeof str === 'string' && str.trim() === str
-}
-```
-
-</template>
-</CodeSwitcher>
-
+语法相对复杂，以后自己弄一个简单的语法，这个功能其实不是很常用，看看就好
 
 ## [flowchart 流程图](https://github.com/ulivz/vuepress-plugin-flowchart)
 

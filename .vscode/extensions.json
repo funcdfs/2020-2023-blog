@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "tabnine.tabnine-vscode",
-        "lehni.vscode-fix-checksums"
+        "lehni.vscode-fix-checksums",
+        "koehlma.markdown-math",
+        "robole.markdown-shortcuts"
     ]
 }

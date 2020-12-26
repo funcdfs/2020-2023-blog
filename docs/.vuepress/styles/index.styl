@@ -194,6 +194,23 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
   animation-iteration-count: 1;
 }
 
+.contact::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fc2f70;
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact:hover::before {
+  transform: translate(-50%, 0) scaleX(1);
+}
+
 //头像阴影
 .info-card .info-card-header .info-avatar
    box-shadow: 0 0 15px #918c8c !important;
@@ -365,7 +382,8 @@ strong {
 }
 
 a {
-    color: #5EB761;
+  text-decoration: none !important;
+  color: #5EB761;
 }
 
 // body {

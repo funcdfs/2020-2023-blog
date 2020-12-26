@@ -1,17 +1,20 @@
 ---
 title: ABOUT
-aside: false
 ---
 
 
--><img src="https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-21-10-11-38.jpg" alt="KONNG" style="width:40%;height:20%;"><-
+### 🌴 About
+
+🌈 Hi, I'm [konng](https://konng.now.sh), a student ,2002.
+
 -> {{dist_times}}  <-
 
--> <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=28456751&auto=0&height=32"></iframe> <-
+💬 Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
 
-## Contact 
+-><a href="https://github.com/fengwei2002" target="_blank" rel="noopener" title="image"><img src="http://ghchart.rshah.org/fengwei2002" alt="fengwei2002's Github Chart"></a><-
+->Konng's Github Chart<-
 
-</br>
+### 🍀 Contact 
 
 <span class="contact">
 <a href="https://github.com/fengwei2002" title="fengwei2002"> &nbsp Github &nbsp </a>
@@ -54,7 +57,7 @@ aside: false
 
 </br>
 
-## Playthings
+### 🍓 Playthings
 
 ::: center
 [konng.now.sh —— || 使用 vuepress 搭建的个人博客](https://konng.now.sh)
@@ -64,6 +67,13 @@ aside: false
 [vscode-theme-KONNG —— || 使用 vsce 创建的 vscode 主题插件](https://marketplace.visualstudio.com/items?itemName=OvO.konng)
 :::
 
+::: center
+$\cdots\cdots$ $\cdots\cdots$ $\cdots\cdots$ 
+::: 
+
+::: center
+$\cdots\cdots$
+::: 
 
 <script>
     export default {

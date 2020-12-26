@@ -5476,6 +5476,13 @@ opencollective-postinstall@^2.0.2:
   resolved "https://registry.npm.taobao.org/opencollective-postinstall/download/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
   integrity sha1-Vlfxvt5ptuM6RZObBh61PTxsOok=
 
+openteam-postinstall@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/openteam-postinstall/download/openteam-postinstall-1.0.2.tgz#c31e98eda2c787caa8ce2b3572d665eb08cc9916"
+  integrity sha1-wx6Y7aLHh8qozis1ctZl6wjMmRY=
+  dependencies:
+    lodash "^4.17.15"
+
 opn@^5.4.0, opn@^5.5.0:
   version "5.5.0"
   resolved "https://registry.npm.taobao.org/opn/download/opn-5.5.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fopn%2Fdownload%2Fopn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
@@ -7838,6 +7845,15 @@ vuepress-plugin-go-top@^1.0.4:
   resolved "https://registry.npm.taobao.org/vuepress-plugin-go-top/download/vuepress-plugin-go-top-1.0.4.tgz#b2c359d85280e8737c65a43fde6e6d42953878af"
   integrity sha1-ssNZ2FKA6HN8ZaQ/3m5tQpU4eK8=
 
+vuepress-plugin-helper-live2d@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-helper-live2d/download/vuepress-plugin-helper-live2d-1.0.2.tgz#6ba1c2f0a440c9263078ae5083de26fbbfac0759"
+  integrity sha1-a6HC8KRAySYweK5Qg94m+7+sB1k=
+  dependencies:
+    chalk "^2.4.2"
+    lodash "^4.17.15"
+    openteam-postinstall "^1.0.2"
+
 vuepress-plugin-img-lazy@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-img-lazy/download/vuepress-plugin-img-lazy-1.0.4.tgz#f444c1e21a2c95117f1bcb97a0962660362fa181"
@@ -7845,11 +7861,6 @@ vuepress-plugin-img-lazy@^1.0.4:
   dependencies:
     markdown-it-img-lazy "^1.0.2"
     markdown-it-imsize "^2.0.1"
-
-vuepress-plugin-live2d@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-live2d/download/vuepress-plugin-live2d-0.0.7.tgz#e09d415c018c3fad871c03151d6e5124e7c56946"
-  integrity sha1-4J1BXAGMP62HHAMVHW5RJOfFaUY=
 
 vuepress-plugin-nprogress@^1.1.6:
   version "1.1.6"

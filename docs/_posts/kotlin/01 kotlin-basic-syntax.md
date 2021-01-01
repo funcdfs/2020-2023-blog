@@ -280,7 +280,9 @@ fun main() {
 ```
 ### 数组
 
-数组在 Kotlin 中使用 Array 类来表示，它定义了 get 与 set 函数（按照运算符重载约定这会转变为 []）以及 size 属性，以及一些其他有用的成员函数：
+kotlin相比cpp去除了基本意义上的数组，采用纯对象写法和语义约定
+
+数组在 Kotlin 中使用 Array 类来表示，它定义了 get 与 set 函数（按照运算符重载约定这会转变为 []）以及 size 属性，以及一些其他有用的成员函数：（IDEA中定义一个数组后使用 点运算符就可以看到）
 
 ``` kt
 class Array<T> private constructor() {
@@ -295,21 +297,87 @@ class Array<T> private constructor() {
 
 我们可以使用库函数 [arrayOf()](https://www.javatpoint.com/kotlin-array) 来创建一个数组并传递元素值给它，这样 arrayOf(1, 2, 3) 创建了 `array [1, 2, 3]`。 或者，库函数 [arrayOfNulls()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/array-of-nulls.html) 可以用于创建一个指定大小的、所有元素都为空的数组。
 
-常用：（开辟一个元素全部初始化为 0 的数组）
+### 数组的初始化
+
+创建空数组，只读
 
 ``` kt
-var myArray = Array<int>(5){0}  
-val arr = IntArray(5) //第二种方式更简洁
+val arrayEmpty = emptyArray<String>()
+```
+创建指定长度的可空数组
 
-//var myArray02: IntArray = intArrayof(1,1,1,1,1)
-
-for (element in myArray){
-    println(element)
-}
-for (index in myArray.indices){
-    println(myArray[index])
+``` kt
+val array1 = arrayOfNulls<Int>(5) //使用kotlin成员函数 arrayOfNulls
+for (i in 0..4) {
+    array1[i] = i
 }
 ```
+创建指定长度指定初始化元素数组
+
+``` kt
+val array4 = Array(5, {0})
+var myArray = Array<int>(5){0} //常用
+```
+
+使用闭包创建数组
+
+``` kt
+val array = Array(4, { i -> i * i })  //0,1,4,9,16
+```
+
+使用Kotlin封装方法创建数组
+
+
+``` kt
+val array1 = arrayOf(1, 2, 3, 4)
+val array2 = intArrayOf(1, 2, 3, 4) 
+//不同元素的数组名字也都不一样
+
+/**
+ * Returns an array containing the specified [Double] numbers.
+ */
+public fun doubleArrayOf(vararg elements: Double): DoubleArray
+
+/**
+ * Returns an array containing the specified [Float] numbers.
+ */
+public fun floatArrayOf(vararg elements: Float): FloatArray
+
+/**
+ * Returns an array containing the specified [Long] numbers.
+ */
+public fun longArrayOf(vararg elements: Long): LongArray
+
+/**
+ * Returns an array containing the specified [Int] numbers.
+ */
+public fun intArrayOf(vararg elements: Int): IntArray
+
+/**
+ * Returns an array containing the specified characters.
+ */
+public fun charArrayOf(vararg elements: Char): CharArray
+
+/**
+ * Returns an array containing the specified [Short] numbers.
+ */
+public fun shortArrayOf(vararg elements: Short): ShortArray
+
+/**
+ * Returns an array containing the specified [Byte] numbers.
+ */
+public fun byteArrayOf(vararg elements: Byte): ByteArray
+
+/**
+ * Returns an array containing the specified boolean values.
+ */
+public fun booleanArrayOf(vararg elements: Boolean): BooleanArray
+
+
+//使用方法封装数组的时候在函数返回值的地方会用到:
+return intArrayOf(indexFirst,indexSecond) //内联变量
+```
+
 
 另一个选项是用接受数组大小以及一个函数参数的 Array 构造函数，用作参数的函数能够返回给定索引的每个元素初始值：
 
@@ -320,6 +388,18 @@ for (index in myArray.indices){
 [数组使用实例](https://www.javatpoint.com/kotlin-array)
 
 - 利用 set() get() 方法
+
+常用的遍历方法就是这两种
+
+``` kt
+for (element in myArray){
+    println(element)
+}
+for (index in myArray.indices){
+    println(myArray[index]) //遍历过程中要使用下标值的话
+}
+```
+
 ### String
 
 [文档](https://www.kotlincn.net/docs/reference/basic-types.html#%E5%AD%97%E7%AC%A6%E4%B8%B2)

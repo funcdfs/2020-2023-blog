@@ -135,7 +135,7 @@ module.exports = {
     ], //navbar导航栏
     personalInfo: {
       nickname: 'konng',
-      description: '对神明都不要讲',
+      description: 'konng.now.sh',
       email: 'konng_0120@qq.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',

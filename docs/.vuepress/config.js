@@ -112,34 +112,39 @@ module.exports = {
     lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
       home: ` konng.now.sh`,
-      posts: 'JOURNAL',
+      posts: '文章',
     }), //自定义部分文字
     pagination: {
       perPage: 5,
     }, //每页文章数量
     nav: [{
-        text: 'HOME',
+        text: '主页',
         link: '/',
         exact: true
       },
       {
-        text: 'JOURNAL',
+        text: '标签',
         link: '/posts/',
         exact: false
       },
       {
-        text: 'ABOUT',
+        text: '归档',
+        link: '/timeline/',
+        exact: false
+      },
+      {
+        text: '关于',
         link: '/About/',
         exact: false
       },
     ], //navbar导航栏
     personalInfo: {
       nickname: 'konng',
-      description: 'konng.now.sh',
+      description: '一个人远眺',
       email: 'konng_0120@qq.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://i.loli.net/2020/12/24/kA5qStyFcTlW2xe.jpg',
+      avatar: 'https://i.loli.net/2021/01/21/uTH8P3pkwmrcOKb.jpg',
       sns: {
         github: {
           account: 'fengwei2002',

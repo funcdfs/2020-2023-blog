@@ -28,32 +28,17 @@ module.exports = {
     }
   },
   plugins: [
-    ['vuepress-plugin-helper-live2d', {
-        live2d: {
-          enable: true,
-          // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
-          model: 'haru/01', //haru/01 wanko
-          display: {
-            position: "left", // 显示位置：left/right(default: 'right')
-            width: 135, // 模型的长度(default: 135)
-            height: 300, // 模型的高度(default: 300)
-            hOffset: 35, //  水平偏移(default: 65)
-            vOffset: 0, //  垂直偏移(default: 0)
-          },
-          mobile: {
-            show: false // 是否在移动设备上显示(default: false)
-          },
-          react: {
-            opacity: 0.7 // 模型透明度(default: 0.8)
-          }
-        }
-      }
-    ],
+    ['copy-code', {
+      copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+      copyMessage: 'Copy successfully and then paste it for use.', // default is 'Copy successfully and then paste it for use.'
+      duration: 300, // prompt message display time.
+      showInMobile: true // whether to display on the mobile side, default: false.
+    }],
     ['go-top'],
     ['reading-progress'],
     ['flowchart'],
     ['img-lazy'],
-    ['code-switcher'], //多语言选项卡
+    ['code-switcher'], //多语言选项卡,学习后自定义一个简化后使用
     ["cursor-effects", {
       size: 1.5,
       shape: ['circle'], // shape of the particle, default: 'star'
@@ -128,11 +113,6 @@ module.exports = {
         exact: false
       },
       {
-        text: '归档',
-        link: '/timeline/',
-        exact: false
-      },
-      {
         text: '关于',
         link: '/About/',
         exact: false
@@ -140,7 +120,7 @@ module.exports = {
     ], //navbar导航栏
     personalInfo: {
       nickname: 'konng',
-      description: '一个人远眺',
+      description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id=1297742167&auto=0&height=32"></iframe>',
       email: 'konng_0120@qq.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',

@@ -5476,13 +5476,6 @@ opencollective-postinstall@^2.0.2:
   resolved "https://registry.npm.taobao.org/opencollective-postinstall/download/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
   integrity sha1-Vlfxvt5ptuM6RZObBh61PTxsOok=
 
-openteam-postinstall@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npm.taobao.org/openteam-postinstall/download/openteam-postinstall-1.0.2.tgz#c31e98eda2c787caa8ce2b3572d665eb08cc9916"
-  integrity sha1-wx6Y7aLHh8qozis1ctZl6wjMmRY=
-  dependencies:
-    lodash "^4.17.15"
-
 opn@^5.4.0, opn@^5.5.0:
   version "5.5.0"
   resolved "https://registry.npm.taobao.org/opn/download/opn-5.5.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fopn%2Fdownload%2Fopn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
@@ -7821,6 +7814,11 @@ vuepress-plugin-container@^2.1.5:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
+vuepress-plugin-copy-code@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-copy-code/download/vuepress-plugin-copy-code-0.0.1.tgz#569849f00de8178d5875adc1c11591c82630e6fa"
+  integrity sha1-VphJ8A3oF41Yda3BwRWRyCYw5vo=
+
 vuepress-plugin-cursor-effects@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-cursor-effects/download/vuepress-plugin-cursor-effects-1.0.0.tgz#47bf74b4fe9fae923b2250ac18d15f5b3fddb6b7"
@@ -7844,15 +7842,6 @@ vuepress-plugin-go-top@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-go-top/download/vuepress-plugin-go-top-1.0.4.tgz#b2c359d85280e8737c65a43fde6e6d42953878af"
   integrity sha1-ssNZ2FKA6HN8ZaQ/3m5tQpU4eK8=
-
-vuepress-plugin-helper-live2d@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-helper-live2d/download/vuepress-plugin-helper-live2d-1.0.2.tgz#6ba1c2f0a440c9263078ae5083de26fbbfac0759"
-  integrity sha1-a6HC8KRAySYweK5Qg94m+7+sB1k=
-  dependencies:
-    chalk "^2.4.2"
-    lodash "^4.17.15"
-    openteam-postinstall "^1.0.2"
 
 vuepress-plugin-img-lazy@^1.0.4:
   version "1.0.4"

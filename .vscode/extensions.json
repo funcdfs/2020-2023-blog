@@ -3,6 +3,9 @@
         "tabnine.tabnine-vscode",
         "lehni.vscode-fix-checksums",
         "koehlma.markdown-math",
-        "robole.markdown-shortcuts"
+        "robole.markdown-shortcuts",
+        "yzhang.markdown-all-in-one",
+        "esafirm.kotlin-formatter",
+        "mathiasfrohlich.kotlin"
     ]
 }

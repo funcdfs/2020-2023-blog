@@ -70,13 +70,6 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
   text-align center
 //right center容器结束
 
-
-// //文字选中效果
-// ::selection
-//     color: #000;
-//     background-color: #79ffe1;
-// .pre::selection
-//     background-color: white !important; 
 ::selection
     color: #000;
     background-color#D7D4F0;
@@ -99,7 +92,7 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 //去除白色边框
 .navbar
     border-bottom: 0px solid #eaecef !important;
-    box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
+    //box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
 .banner
     border-bottom: 0px solid #eaecef !important;
 .footer
@@ -213,9 +206,9 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 
 //头像阴影
 .info-card .info-card-header .info-avatar
-   box-shadow: 0 0 15px #918c8c !important;
+  // box-shadow: 0 0 15px #918c8c !important;
 .info-card {
-  background-image: linear-gradient(0deg,rgba(211, 206, 217,0.1) , rgba(255,255,255,.01))!important;
+  //background-image: linear-gradient(0deg,rgba(211, 206, 217,0.1) , rgba(255,255,255,.01))!important;
   background-color: hsla(0,0%,100%,.4)!important;
 }
 
@@ -225,8 +218,8 @@ article {
     display: block;
 }
 .main-div
-    background-color: rgba(255,255,255,.8) !important;
-    box-shadow: 0 0 10px #ccc !important;
+    background-color: hsla(0,0%,100%,.4)!important;
+    //box-shadow: 0 0 10px #ccc !important;
     -webkit-border-radius: 15px !important;
 //配合文章的tag页透明色
 .post-tag
@@ -236,7 +229,7 @@ article {
 .header
   background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
   background-color: hsla(0,0%,100%,.2)!important;
-  box-shadow: 0 0 8px #00000060 !important;
+  //box-shadow: 0 0 8px #00000060 !important;
   -webkit-border-radius: 0px !important;
 
 //引用 作为文章概要
@@ -257,9 +250,6 @@ body{
     background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
 }
 @media (min-aspect-ratio: 2400/1850) {
-    .main-div{
-      background-color: rgba(255,255,255,.8) !important;
-    }
     body {
       //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
       background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
@@ -383,20 +373,4 @@ strong {
 a {
   text-decoration: none !important;
   color: #5EB761;
-}
-
-// body {
-//     font-family: GT Eesti,Futura Std,Futura,Helvetica,sans-serif !important;  一种简洁的英文字体
-//     font-weight: 400 !important;
-//     color: var(--text-color);
-//     background-color: var(--bg-color);
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-//     font-size: 16px !important;
-// }
-
-.live2d-widget-container{
-  position: fixed; 
-  opacity: 0.79 !important;
-  left: 1rem !important; 
 }

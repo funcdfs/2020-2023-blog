@@ -1,6 +1,12 @@
+/*
+ * @Author: https://github.com/fengwei2002 
+ * @Date: 2021-01-25 21:14:19 
+ * @Last Modified by:   https://konng.now.sh 
+ * @Last Modified time: 2021-01-25 21:14:19 
+ */
 ---
 title: vue 基础应用
-date: 2021-01-23
+date: 2021-01-24
 tags:
   - vue.js
 ---
@@ -319,4 +325,4 @@ v-show 操纵的是元素的显示状态，v-if操纵的是dom树，其余使用
     </body>
 </html>
 ```
- 
+vue 本质上是对dom操作的优化，所以还需要回头补一下dom相关，vue暂停

@@ -1,9 +1,3 @@
-/*
- * @Author: https://github.com/fengwei2002 
- * @Date: 2021-01-25 21:14:19 
- * @Last Modified by:   https://konng.now.sh 
- * @Last Modified time: 2021-01-25 21:14:19 
- */
 ---
 title: vue 基础应用
 date: 2021-01-24

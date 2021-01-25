@@ -37,6 +37,9 @@ public:
 
 ### 我的 DFS 
 
+@[code lang=cpp](@/code/leetcode/226.翻转二叉树.cpp/)
+
+<!-- 
 ``` cpp
 class Solution {
    public:
@@ -50,7 +53,7 @@ class Solution {
         return root;
     }
 };
-```
+``` -->
 
 DFS是比较简单的，迭代的BFS就不太会了
 
@@ -60,6 +63,9 @@ DFS是比较简单的，迭代的BFS就不太会了
 
 ### BFS 
 
-@[code lang=cpp](@/code/leetcode/226.翻转二叉树.cpp/)
+
+``` cpp
+
+```
 
 

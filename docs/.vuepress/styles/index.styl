@@ -206,20 +206,15 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 
 //头像阴影
 .info-card .info-card-header .info-avatar
-  // box-shadow: 0 0 15px #918c8c !important;
+  //box-shadow: 0 0 15px #918c8c !important;
 .info-card {
   //background-image: linear-gradient(0deg,rgba(211, 206, 217,0.1) , rgba(255,255,255,.01))!important;
   background-color: hsla(0,0%,100%,.4)!important;
 }
 
 //文章阴影+透明
-article {    
-    //background-image: url(https://theeyeopener.com/wp-content/uploads/2019/03/DD-parchment.jpg);
-    display: block;
-}
 .main-div
     background-color: hsla(0,0%,100%,.4)!important;
-    //box-shadow: 0 0 10px #ccc !important;
     -webkit-border-radius: 15px !important;
 //配合文章的tag页透明色
 .post-tag
@@ -229,14 +224,13 @@ article {
 .header
   background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
   background-color: hsla(0,0%,100%,.2)!important;
-  //box-shadow: 0 0 8px #00000060 !important;
+  //box-shadow: 0px 0px 7px #cbaecd !important;
   -webkit-border-radius: 0px !important;
 
 //引用 作为文章概要
 .content blockquote {
     padding: 0.1 0 0 0 rem !important;
     background-color: rgba(211, 206, 217,0.15) !important;
-    //background-color: rgba(185, 154, 217,0.25) !important
     border-left: 0.3em solid #d3ced9 !important;
     margin-left: 0 !important;
 }
@@ -250,6 +244,9 @@ body{
     //background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
 }
 @media (min-aspect-ratio: 2400/1850) {
+    .main-div{
+      box-shadow: 0px 0px 6px #cbaecd inset !important;
+    }
     body {
       //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
       background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
@@ -261,13 +258,15 @@ body{
 @media (max-width: 767px){
   .main-div {
       -webkit-border-radius: 0px !important;
-      padding-top: 1rem;
-      padding-left: 0.2rem;
-      padding-right: 0.2rem;
-      padding-bottom: 1rem;
   }
-  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    padding-left: 0.5rem;
+  .content {
+    padding-left: 0.4rem;
+  }
+  .container {
+      padding-top: 0rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+      padding-bottom: 0rem;
   }
 }
 
@@ -332,7 +331,7 @@ strong {
     border: 1px solid #3eaf7c;
     border-radius: 3px;
     background-color: rgba(255,255,255,.4) !important;
-    box-shadow: 0 4px 16px var(--pwa-popup-color);
+    //box-shadow: 0 4px 16px var(--pwa-popup-color);
 }
 
 .sw-update-popup>button {
@@ -374,3 +373,12 @@ a {
   text-decoration: none !important;
   color: #5EB761;
 }
+
+.header
+  .banner
+    .container
+      h1
+          filter: brightness(110%);
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e91e63,
+          0 0 35px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63, 0 0 75px #e91e63;
+          animation: #cbaecd 1.5s ease-in-out infinite alternate;

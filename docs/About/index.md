@@ -59,21 +59,10 @@ title: ABOUT
 
 ### 🍓 Playthings
 
-::: center
-[konng.now.sh —— || 使用 vuepress 搭建的个人博客](https://konng.now.sh)
-:::
-
-::: center
-[vscode-theme-KONNG —— || 使用 vsce 创建的 vscode 主题插件](https://marketplace.visualstudio.com/items?itemName=OvO.konng)
-:::
-
-::: center
-$\cdots\cdots$ $\cdots\cdots$ $\cdots\cdots$ 
-::: 
-
-::: center
-$\cdots\cdots$
-::: 
+> Github [fengwei2002](https://github.com/fengwei2002)
+- [konng.now.sh](https://konng.now.sh) 使用 vuepress 搭建的个人博客
+- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng) 使用 vsce 创建的 vscode 主题插件
+- [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) 开发中 vuepress theme konng 
 
 <script>
     export default {

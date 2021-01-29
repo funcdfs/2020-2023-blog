@@ -5,7 +5,7 @@ tags:
   - JavaScript
 ---
 
-> JavaScript 基础
+> JavaScript 基础语法
 
 <!-- more -->
 

@@ -209,12 +209,12 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
   //box-shadow: 0 0 15px #918c8c !important;
 .info-card {
   //background-image: linear-gradient(0deg,rgba(211, 206, 217,0.1) , rgba(255,255,255,.01))!important;
-  background-color: hsla(0,0%,100%,.4)!important;
+  background-color: hsla(0,0%,100%,.8)!important;
 }
 
 //文章阴影+透明
 .main-div
-    background-color: hsla(0,0%,100%,.4)!important;
+    background-color: hsla(0,0%,100%,.8)!important;
     -webkit-border-radius: 15px !important;
 //配合文章的tag页透明色
 .post-tag
@@ -244,12 +244,10 @@ body{
     //background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
 }
 @media (min-aspect-ratio: 2400/1850) {
-    .main-div{
-      box-shadow: 0px 0px 6px #cbaecd inset !important;
-    }
     body {
+      background-color:#fcd5cc;
       //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
-      background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
+      //background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
       //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
     }
 }
@@ -374,11 +372,21 @@ a {
   color: #5EB761;
 }
 
-.header
-  .banner
-    .container
-      h1
-          filter: brightness(110%);
-          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e91e63,
-          0 0 35px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63, 0 0 75px #e91e63;
-          animation: #cbaecd 1.5s ease-in-out infinite alternate;
+.main-div a:hover {
+  color: #9400D3;
+  font-size: 17px;
+}
+
+// .header 霓虹灯字体
+//   .banner
+//     .container
+//       h1
+//           filter: brightness(110%);
+//           text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e91e63,
+//           0 0 35px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63, 0 0 75px #e91e63;
+//           animation: #cbaecd 1.5s ease-in-out infinite alternate;
+
+
+.main-div{
+  box-shadow: 0px 0px 10px #ffffff !important;
+}

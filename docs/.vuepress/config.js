@@ -97,23 +97,27 @@ module.exports = {
     lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
       home: ` konng.now.sh`,
-      posts: '文章',
     }), //自定义部分文字
     pagination: {
       perPage: 5,
     }, //每页文章数量
     nav: [{
-        text: '主页',
+        text: 'home',
         link: '/',
         exact: true
       },
       {
-        text: '标签',
+        text: 'posts',
         link: '/posts/',
         exact: false
       },
       {
-        text: '关于',
+        text: 'notion',
+        link: '/notion/',
+        exact: false
+      },
+      {
+        text: 'about',
         link: '/About/',
         exact: false
       },

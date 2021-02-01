@@ -1,46 +1,83 @@
 ---
-title: css note
-date: 2020-05-16
+title: css3 重点
+date: 2021-01-31
 tags:
   - CSS3
 ---
 
-> [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_Blocks) css3 笔记
+> 列出 CSS3 需要重点掌握的内容
 
 <!-- more -->
 
-之前笔记很乱，乱的不能看，干脆全部重写一遍
+系统的梳理网上有许多，简单的内容也可以直接记忆，正在重新学习CSS，记录一些工程中需要重点掌握的概念和方法
 
-## 继承
+## Chrome调试工具的使用
 
-CSS 为控制继承提供了四个特殊的通用属性值。每个 css 属性都接收这些值。
+左上角箭头用来选定元素
+放大缩小文本方式同VScode
+ctrl+0复原浏览器大小
+上下左右箭头切换像素值
+颜色调整后回车覆盖
 
-- [inherit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/inherit)
-  设置该属性会使子元素属性和父元素相同。实际上，就是 "开启继承".
-- [initial](https://developer.mozilla.org/zh-CN/docs/Web/CSS/initial)
-  设置属性值和浏览器默认样式相同。如果浏览器默认样式中未设置且该属性是自然继承的，那么会设置为 inherit 。
-- [unset](https://developer.mozilla.org/zh-CN/docs/Web/CSS/unset)
-  将属性重置为自然值，也就是如果属性是自然继承那么就是 inherit，否则和 initial 一样
+样式右侧有样式的行数
 
-CSS 的属性 `all` 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个 (`inherit, initial, unset, or revert`)。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。
+## emment语法
 
-## 选择器
+![2021-01-31-14-21-32](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-01-31-14-21-32.png)
+快捷打字的写法，tab键补全
 
-列出选择器的各种写法，以及各种应用后的示例效果链接
+文档：https://docs.emmet.io/cheat-sheet/
 
-| 选择器                                                                                         | 示例                |
-| ---------------------------------------------------------------------------------------------- | ------------------- |
-| 类型选择器                                                                                     | `h1{} `             |
-| 类选择器                                                                                       | `.box{}`            |
-| ID 选择器                                                                                      | `#unique{} `        |
-| [属性选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors)             | `a[title]{}`        |
-| [伪类选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)                  | `p:first-child { }` |
-| [伪元素选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)               | `p::first-line { }` |
-| [后代选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_combinator)           | `article p`         |
-| [子代选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_combinator)                | `article > p`       |
-| [相邻兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            |
-| [通配选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Universal_selectors)             | `*{}`               |
-| [通用兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/General_sibling_combinator)  | `p~span{}`          |
+div*4
+ul>li*3
+.nav
+.demo$*10
+
+## 文字垂直居中
+
+文本的行高等于盒子的高度
+
+## 背景
+
+位置重点掌握 `background-position`
+## CSS 三大特性
+
+- 层叠性
+- 继承性
+- 优先级（重点掌握）
+![2021-01-31-17-12-57](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-01-31-17-12-57.png)
+
+## 盒子模型
+
+
+
+## 常用选择器
+
+==常用的四种选择器写法==
+
+[伪类选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)                   `a:hover` {c} 
+[后代选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_combinator)           `article p`   
+
+并集选择器
+
+``` css
+.nav,
+.boxs{
+  font-size: 16px;
+}
+```
+交集选择器：相交的部分就是要设置属性值的标签
+
+``` css
+.nav.boxs.postcard{
+  /*中间没有任何的分隔符号*/
+}
+```
+
+- [子代选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_combinator)                | `article > p`                |
+- [相邻兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`                     |
+- [通配选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Universal_selectors)             | `*{}`                        |
+- [通用兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/General_sibling_combinator)  | `p~span{}`                   |
 
 ```css
 /* 图片后面紧跟着的段落将被选中，实现类似知乎的图片描述功能 */
@@ -48,14 +85,21 @@ img + p {
   font-style: bold;
 }
 ```
+## 标签显示模式
+
+不同 display 的各种特性需要熟记，在之前比较疏忽
+
+## 行高
+
+
 
 ## 盒模型
 
-CSS 中组成一个块级盒子需要:
+CSS 中组成一个块级盒子需要：
 - Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
 - Padding box: 包围在内容区域外部的空白区域； 大小通过 padding 相关属性设置。 //填充
 - Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。
-  - `border-radius`:创建圆角，可以使用两个长度或百分比作为值，第一个值定义水平半径，第二个值定义垂直半径。
+  - `border-radius`: 创建圆角，可以使用两个长度或百分比作为值，第一个值定义水平半径，第二个值定义垂直半径。
   - [border-width](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width)
   - [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style)
   - [border-color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-color)
@@ -99,7 +143,7 @@ display: inline-block
 虽然可以将所有的背景属性简写到一行中，但是我觉得不用比较好
 
 - `background-color`
-- `background-image` （简书:[渐变背景](https://www.jianshu.com/p/58b340a037ea) 的详细使用）
+- `background-image` （简书：[渐变背景](https://www.jianshu.com/p/58b340a037ea) 的详细使用）
   - 默认情况下，大图不会缩小以适应方框，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。
   - 渐变可以与常规的背景图像很好地混合在一起
 - `background-repeat`
@@ -121,8 +165,7 @@ display: inline-block
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/%E5%A4%84%E7%90%86_%E4%B8%8D%E5%90%8C_%E6%96%B9%E5%90%91%E7%9A%84_%E6%96%87%E6%9C%AC) 详细介绍
 
-[writing-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) 的三个值分别是:
-
+[writing-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) 的三个值分别是：
 - horizontal-tb: 块流向从上至下。对应的文本方向是横向的。（正常）
 - vertical-rl: 文字偏左。对应的文本方向是纵向的。
 - vertical-lr: 文字偏右。对应的文本方向是纵向的。
@@ -165,8 +208,7 @@ min，max 宽高的用法，一般使用 min 和 max 规定元素的大小防止
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
 
-vw，vh 单位:
-
+vw，vh 单位：
 ```css
 .box {
   border: 5px solid darkblue;
@@ -178,7 +220,7 @@ vw，vh 单位:
 
 ## 图像，媒体和表单元素
 
- 使用 [object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性指定[可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element)的内容应该如何适应到其使用的高度和宽度确定的框。
+ 使用 [object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性指定 [可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element) 的内容应该如何适应到其使用的高度和宽度确定的框。
 
 使用 [object-position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-position) 属性来切换被替换元素的内容对象在元素框内的对齐方式。
 

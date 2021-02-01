@@ -13,12 +13,12 @@
             border-collapse: collapse;
             text-align: center;
         }
-        
+
         td,
         th {
             border: 1px solid #333;
         }
-        
+
         thead tr {
             height: 40px;
             background-color: #ccc;
@@ -87,7 +87,7 @@
         // 4. 删除操作 开始 
         var as = document.querySelectorAll('a');
         for (var i = 0; i < as.length; i++) {
-            as[i].onclick = function() {
+            as[i].onclick = function () {
                 // 点击a 删除 当前a 所在的行(链接的爸爸的爸爸)  node.removeChild(child)  
                 tbody.removeChild(this.parentNode.parentNode)
             }

@@ -36,10 +36,9 @@ BOM 比 DOM 更大，它包含 DOM。
 
 ### BOM的构成
 
-![2021-01-31-10-56-01](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-01-31-10-56-01.png)
-### 1.2.3. 顶级对象window
+顶级对象window
 
-![1551319372909](images/1551319372909.png)
+![2021-01-31-10-56-01](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-01-31-10-56-01.png)
 
 ## window对象的常见事件
 

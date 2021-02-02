@@ -3,7 +3,7 @@ title: 使用 GitHub Actions 自动部署 vuepress
 vssue-title: Use-Github-Action-deploy-vuepress
 date: 2021-02-02
 tags:
-    - GIthub Action
+    - Github Action
     - vuepress
 ---
 

@@ -145,11 +145,14 @@ git commit -m 'yarn run deploy'
 git push -f git@github.com:fengwei2002/fengwei2002.github.io.git master
 cd -
 ```
-可以跳转到仓库的 Action 页面查看日志，报错进行修改就好了和命令行一样样的
+
+过程中可以跳转到仓库的 Action 页面查看日志，报错进行修改就好了和命令行一样样的
 
 ![2021-02-02-17-05-05](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-02-02-17-05-05.png)
 
 ![2021-02-02-17-41-36](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-02-02-17-41-36.png)
+
+推送即部署就完成啦~
 
 ## GitHub Actions
 

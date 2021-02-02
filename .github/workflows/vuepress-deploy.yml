@@ -14,5 +14,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: fengwei2002/fengwei2002.github.io
         TARGET_BRANCH: master
-        BUILD_SCRIPT: yarn run deploy
+        BUILD_SCRIPT: yarn && run deploy
         BUILD_DIR: docs/.vuepress/dist/

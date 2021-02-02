@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vuepress dev blog",
-    "build": "vuepress build blog",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
   "repository": {

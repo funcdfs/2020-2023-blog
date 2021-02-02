@@ -1,5 +1,5 @@
 set -e
-npm run docs:build
+npm run build
 cd docs/.vuepress/dist
 # echo 'feng-w.cn' > CNAME
 git init

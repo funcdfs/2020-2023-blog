@@ -99,7 +99,7 @@ module.exports = {
       home: ` konng.now.sh`,
     }), //自定义部分文字
     pagination: {
-      perPage: 5,
+      perPage: 8,
     }, //每页文章数量
     nav: [{
         text: 'home',

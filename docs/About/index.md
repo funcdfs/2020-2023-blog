@@ -10,8 +10,8 @@ title: ABOUT
 -> {{dist_times}}  <-
 
 💬 Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
+
 -><a href="https://github.com/fengwei2002" target="_blank" rel="noopener" title="image"><img src="https://metrics.lecoq.io/fengwei2002?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&isocalendar=1&isocalendar.duration=full-year&config.timezone=Asia%2FShanghai&config.animated=true" alt="fengwei2002's Github Chart"></a><-
-->Konng's Github Chart<-
 
 ### 🍀 Contact 
 

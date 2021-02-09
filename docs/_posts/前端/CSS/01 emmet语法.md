@@ -183,7 +183,7 @@ Emmet 使用类似于 CSS 选择器的语法给元素添加属性：
 
 ## 自定义属性
 
-You can use [attr] notation (as in CSS) to add custom attributes to your element:
+You can use` [attr] `notation (as in CSS) to add custom attributes to your element:
 
 `td[title="Hello world!" colspan=3]`
 ...outputs
@@ -192,11 +192,11 @@ You can use [attr] notation (as in CSS) to add custom attributes to your element
 
 You can place as many attributes as you like inside square brackets.
 方括号内属性数量不限。
-You don’t have to specify attribute values: td[colspan title] will produce <td colspan="" title=""> with tabstops inside each empty attribute (if your editor supports them).
+You don’t have to specify attribute values: `td[colspan title]` will produce `<td colspan="" title="">` with tabstops inside each empty attribute (if your editor supports them).
 没有指定值的属性将生成插入占位（需要编辑器支持）。
 You can use single or double quotes for quoting attribute values.
 属性值使用单引号或双引号。
-You don’t need to quote values if they don’t contain spaces: td[title=hello colspan=3] will work.
+You don’t need to quote values if they don’t contain spaces: `td[title=hello colspan=3]` will work.
 属性值如果不包含空格可以省略引号。
 
 ## $ 编号

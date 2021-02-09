@@ -3,15 +3,18 @@ title: ABOUT
 ---
 
 
+### 🍓 Playthings
+
+> Github [fengwei2002](https://github.com/fengwei2002)
+- [konng.now.sh](https://konng.now.sh) 使用 vuepress 搭建的个人博客 {{dist_times}}  
+- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng) 使用 vsce 创建的 vscode 主题插件
+- [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) 开发中 vuepress theme konng 
+
 ### 🌴 About
 
 🌈 Hi, I'm [konng](https://konng.now.sh), a student ,2002.
 
--> {{dist_times}}  <-
-
 💬 Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
-
--><a href="https://github.com/fengwei2002" target="_blank" rel="noopener" title="image"><img src="https://metrics.lecoq.io/fengwei2002?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&isocalendar=1&isocalendar.duration=full-year&config.timezone=Asia%2FShanghai&config.animated=true" alt="fengwei2002's Github Chart"></a><-
 
 ### 🍀 Contact 
 
@@ -52,16 +55,11 @@ title: ABOUT
 <a href="https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg" title="微信公众号"> &nbsp wsublimation &nbsp </a>
 </span>
 
-</br>
+</br>  
 
 </br>
 
-### 🍓 Playthings
-
-> Github [fengwei2002](https://github.com/fengwei2002)
-- [konng.now.sh](https://konng.now.sh) 使用 vuepress 搭建的个人博客
-- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng) 使用 vsce 创建的 vscode 主题插件
-- [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) 开发中 vuepress theme konng 
+->![](https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/calendar.svg)<-
 
 <script>
     export default {

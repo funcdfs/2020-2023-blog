@@ -9,9 +9,9 @@ tags:
 
 ## 1. Transition
 
-在 CSS 3 引入 Transition（过渡）这个概念之前，CSS 是没有时间轴的。也就是说，所有的状态变化，都是即时完成。
-
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/w5y9jd2h/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+在 CSS 3 引入 Transition（过渡）这个概念之前，CSS 是没有时间轴的。也就是说，所有的状态变化，都是即时完成
+。
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/w5y9jd2h/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 上面是一个演示，当鼠标放置于缩略图之上，缩略图会迅速变大。注意，缩略图的变大是瞬间实现的。相当简单。
 
@@ -25,7 +25,7 @@ img{
 
 上面代码指定，图片放大的过程需要 1 秒，效果如下。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/uxr42kme/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/uxr42kme/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 我们还可以指定 transition 适用的属性，比如只适用于 height。
 
@@ -37,7 +37,7 @@ img{
 
 这样一来，只有 height 的变化需要 1 秒实现，其他变化（主要是 width）依然瞬间实现，效果如下。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/ruanyf/mWaM7/3/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/enx4qrod/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### 1.1. transition-delay
 
@@ -52,7 +52,7 @@ img{
 
 我们希望，让 height 先发生变化，等结束以后，再让 width 发生变化。实现这一点很容易，就是为 width 指定一个 delay 参数。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/fLmob34t/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/fLmob34t/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 delay 的真正意义在于，它指定了动画发生的顺序，使得多个不同的 transition 可以连在一起，形成复杂效果。
 
@@ -84,7 +84,7 @@ img{
 
 上面的代码会产生一个最后阶段放大过度、然后回缩的效果。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/f94hag7v/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/f94hag7v/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### 1.3. transition 的各项属性
 
@@ -142,7 +142,7 @@ div:hover {
 
 上面代码表示，rainbow 效果一共有三个状态，分别为起始（0%）、中点（50%）和结束（100%）。如果有需要，完全可以插入更多状态。效果如下。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/rj67zp3g/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/rj67zp3g/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 默认情况下，动画只播放一次。加入 infinite 关键字，可以让动画无限次播放。
 
@@ -278,7 +278,7 @@ div:hover {
 
 ### 2.5. animation-play-state
 有时，动画播放过程中，会突然停止。这时，默认行为是跳回到动画的开始状态。
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/0qotc6z9/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/0qotc6z9/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 上面动画中，如果鼠标移走，色块立刻回到动画开始状态。
 
@@ -296,7 +296,7 @@ div:hover {
 ```
 上面的代码指定，没有鼠标没有悬停时，动画状态是暂停；一旦悬停，动画状态改为继续播放。效果如下。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/konng/vy6w2hx1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/konng/vy6w2hx1/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### 2.6. 浏览器前缀
 

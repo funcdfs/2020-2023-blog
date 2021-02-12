@@ -3,7 +3,7 @@ title: css3 重点
 draft: true
 date: 2021-01-31
 tags:
-  - CSS3
+  - CSS
 ---
 
 > 列出 CSS3 需要重点掌握的内容

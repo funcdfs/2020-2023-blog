@@ -2,7 +2,7 @@
 title: css 2D动画重点
 date: 2021-02-12
 tags:
-  - CSS3
+  - CSS
 ---
 
 ![动画相关常用属性](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2021-02-08-13-38-29.png)

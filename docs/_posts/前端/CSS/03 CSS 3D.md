@@ -1,6 +1,5 @@
 ---
-title: css 3D动画重点
-draft: true
+title: css 3D 动画
 date: 2021-02-13
 tags:
   - CSS
@@ -8,7 +7,8 @@ tags:
 
 ## perspective 理解
 
-CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的距离，形象点说，就是元素3D效果的强度。CSS3中的3D效果消失点固定，变化的是观者与元素之间的距离。不过perspective数值与3D效果强度是成反比的，数值越大，元素的3D效果越不明显——2000px的视点意味着你看的是远方的物体，而100px则意味着这个物体就在你眼前。
+CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的距离，形象点说，就是元素3D效果的强度。CSS3中的3D效果消失点固定，变化的是观者与元素之间的距离。不过perspective数值与3D效果强度是成反比的，数值越大，元素的3D效果越不明显
+——2000px的视点意味着你看的是远方的物体，而100px则意味着这个物体就在你眼前。
 
 ![20210212225050-2021-02-12](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/20210212225050-2021-02-12.png)
 
@@ -56,15 +56,10 @@ backface-visibility：hidden 是否隐藏元素背面
 3D 位移：在2d的基础上添加 translateZ（），或者使用translate3d（） translateZ（）：以方框中心为原点，变大
 3D 缩放：在2d的基础上添加 scaleZ（），或者使用scale3d（） scaleZ（）和 scale3d（）函数单独使用时没有任何效果
 
-## 效果
+过渡效果写法同2D
 
-### 翻页
+## 3D 效果示例
 
-### 翻页加阴影
+https://fengwei2002.github.io/3d-effects/
 
-### 立方体
-
-### 长方体
-
-,
-
+其实就是改变一下元素的位置，其他的都和平面动画一样

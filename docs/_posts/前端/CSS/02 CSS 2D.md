@@ -1,5 +1,5 @@
 ---
-title: css 2D动画重点
+title: css 2D 动画
 date: 2021-02-12
 tags:
   - CSS
@@ -277,7 +277,9 @@ div:hover {
 实际使用中 ，step 用来实现可控速度的“gif”，一幅很长的图片（width），然后通过 step 进行类似动画帧播放
 
 ### 2.5. animation-play-state
+
 有时，动画播放过程中，会突然停止。这时，默认行为是跳回到动画的开始状态。
+
 <iframe width="100%" height="300" src="//jsfiddle.net/konng/0qotc6z9/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 上面动画中，如果鼠标移走，色块立刻回到动画开始状态。
@@ -297,6 +299,8 @@ div:hover {
 上面的代码指定，没有鼠标没有悬停时，动画状态是暂停；一旦悬停，动画状态改为继续播放。效果如下。
 
 <iframe width="100%" height="300" src="//jsfiddle.net/konng/vy6w2hx1/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+当然也可以变为，默认动画播放，有鼠标悬浮的时候暂停
 
 ### 2.6. 浏览器前缀
 

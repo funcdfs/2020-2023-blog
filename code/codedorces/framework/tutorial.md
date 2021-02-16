@@ -1,7 +1,9 @@
 ---
-title: 
-category: codeforces
+title: 比赛名称
+category: codeforcesGYM
 ---
+
+## links
 
 [GYM 链接]()
 [题目一览](problems)
@@ -17,7 +19,7 @@ category: codeforces
 
 ## A:
 
-## B
+## B:
 
 ## C:
 

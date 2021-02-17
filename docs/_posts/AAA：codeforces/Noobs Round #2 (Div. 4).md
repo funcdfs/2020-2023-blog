@@ -1,7 +1,7 @@
 ---
 title: CodeforcesGYM：Noobs Round#2 (Div.4)
 date: 2021-02-16
-category: codeforcesGYM
+category: Codeforces
 ---
 
 ## links

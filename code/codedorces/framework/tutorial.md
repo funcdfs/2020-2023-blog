@@ -1,13 +1,13 @@
 ---
-title: 比赛名称
-category: codeforcesGYM
+title: Codeforces：
+
+category: Codeforces
 ---
 
 ## links
 
-[GYM 链接]()
-[题目一览](problems)
-[官方题解]()
+[题目一览](https://codeforces.com/contest/1490)
+[官方题解](https://codeforces.com/blog/entry/87874)
 
 ::: today
 
@@ -17,12 +17,12 @@ category: codeforcesGYM
 
 :::
 
-## A:
+## 
 
-## B:
+## 
 
-## C:
+## 
 
-## D:
+## 
 
-## E:
+## 

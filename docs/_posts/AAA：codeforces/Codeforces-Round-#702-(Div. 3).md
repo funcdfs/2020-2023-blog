@@ -1,6 +1,6 @@
 ---
 title: Codeforces：Codeforces-Round-#702-(Div.3)
-date: 2021-02-17
+date: 2021-02-18
 category: Codeforces
 ---
 
@@ -10,22 +10,24 @@ category: Codeforces
 [官方题解](https://codeforces.com/blog/entry/87874)
 
 ::: today
-
+《赘婿》笑死我了，所以这轮比赛缓几天，看样子是贪心，整！
 :::
 
 ::: tip
 
 :::
 
-## A:
+## [A. Dense Array](https://codeforces.com/contest/1490/problem/A)
 
-## B:
+## [B. Balanced Remainders](https://codeforces.com/contest/1490/problem/B)
 
-## C:
+## [C. Sum of Cubes](https://codeforces.com/contest/1490/problem/C)
 
-## D:
+## [D. Permutation Transformation](https://codeforces.com/contest/1490/problem/D)
 
-## E:
+## [E. Accidental Victory](https://codeforces.com/contest/1490/problem/E)
 
+## [F. Equalize the Array](https://codeforces.com/contest/1490/problem/F)
 
+## [G. Old Floppy Drive](https://codeforces.com/contest/1490/problem/G)
 

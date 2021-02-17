@@ -107,11 +107,6 @@ module.exports = {
         exact: true
       },
       {
-        text: 'notion',
-        link: '/notion/',
-        exact: false
-      },
-      {
         text: 'tags',
         link: '/posts/',
         exact: false

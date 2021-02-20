@@ -1,4 +1,4 @@
-// 鼠标指针
+// 01-鼠标指针
 body
   background-color #dee
   cursor url('/cursor/Vista.cur'), auto
@@ -17,8 +17,19 @@ body
 a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-info-list .post-info-item .icon ,.info-text
   cursor url('/cursor/link.cur'), auto
 
-//容器相关 css
-//warning 容器css开始
+// 添加图片圆角
+.content img
+    -webkit-border-radius: 13px !important;
+// 隐藏默认置顶
+.go-to-top
+    display: none;
+
+// 03 文字选中效果
+::selection
+    background-color#D7D4F0;
+//----------------------------------------------------------------------------------------------------------
+// 02-容器插件相关样式代码
+// 02-01 warning 容器
 .custom-block.warning
     border-left-color: #ff9100;
 .custom-block.warning
@@ -32,9 +43,7 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 .custom-block.warning .custom-block-title {
     color: #b29400;
 }
-//warning 容器css结束
-
-//tip 容器css开始
+// 02-02 tip 容器
 .custom-block.tip
     background-color:#f3f5f780;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
@@ -47,9 +56,7 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 .custom-block.tip .custom-block-title {
     color:  #42B983;
 }
-//tip 容器css结束
-
-//today 容器开始
+// 02-03 today 容器开始
 .today
   margin 1rem 0
   padding .1rem 1.5rem
@@ -57,10 +64,8 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
   background-color #f0f4f8
   .title
     font-weight: bold
-//today 容器结束
 
-
-//right center 容器开始
+// 02-04 right 容器开始
 .custom-block
   &.right
     color transparentify($textColor, 0.4)
@@ -68,12 +73,11 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
     text-align right
 .customer-container-center
   text-align center
-//right center容器结束
+// 02-05 right center容器结束
 
-::selection
-    background-color#D7D4F0;
+//主题优化----------------------------------------------------------------------------------------------------
 
-//磨砂导航栏
+// 04 磨砂导航栏
 .navbar
     backdrop-filter: saturate(180%) blur(5px);
     -webkit-backdrop-filter: saturate(180%) blur(5px);
@@ -82,22 +86,15 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
     backdrop-filter: saturate(180%) blur(5px);
     -webkit-backdrop-filter: saturate(180%) blur(5px);
 
-//添加图片圆角
-.content img
-    -webkit-border-radius: 13px !important;
-.go-to-top
-    display: none;
-
-//去除白色边框
+// 05 去除主题默认多处白色边框
 .navbar
     border-bottom: 0px solid #eaecef !important;
-    //box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1) !important;
 .banner
     border-bottom: 0px solid #eaecef !important;
 .footer
     border-top: 0px solid #eaecef !important;
 
-//列表移动
+// 06 列表移动
 .content ul, .content ol
     padding-left: 1.6em;
 
@@ -116,93 +113,6 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
   transform: translateX(8px);
 }
 
-/* Wobble Skew */
-@-webkit-keyframes contact {
-  16.65% {
-    -webkit-transform: skew(-12deg);
-    transform: skew(-12deg);
-  }
-  33.3% {
-    -webkit-transform: skew(10deg);
-    transform: skew(10deg);
-  }
-  49.95% {
-    -webkit-transform: skew(-6deg);
-    transform: skew(-6deg);
-  }
-  66.6% {
-    -webkit-transform: skew(4deg);
-    transform: skew(4deg);
-  }
-  83.25% {
-    -webkit-transform: skew(-2deg);
-    transform: skew(-2deg);
-  }
-  100% {
-    -webkit-transform: skew(0);
-    transform: skew(0);
-  }
-}
-@keyframes contact {
-  16.65% {
-    -webkit-transform: skew(-12deg);
-    transform: skew(-12deg);
-  }
-  33.3% {
-    -webkit-transform: skew(10deg);
-    transform: skew(10deg);
-  }
-  49.95% {
-    -webkit-transform: skew(-6deg);
-    transform: skew(-6deg);
-  }
-  66.6% {
-    -webkit-transform: skew(4deg);
-    transform: skew(4deg);
-  }
-  83.25% {
-    -webkit-transform: skew(-2deg);
-    transform: skew(-2deg);
-  }
-  100% {
-    -webkit-transform: skew(0);
-    transform: skew(0);
-  }
-}
-.contact {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-}
-.contact:hover, .contact:focus, .contact:active {
-  -webkit-animation-name: contact;
-  animation-name: contact;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-.contact::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fc2f70;
-  transform-origin: center;
-  transform: translate(-50%, 0) scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact:hover::before {
-  transform: translate(-50%, 0) scaleX(1);
-}
-
 //头像阴影
 .info-card .info-card-header .info-avatar
   //box-shadow: 0 0 15px #918c8c !important;
@@ -213,6 +123,7 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 
 //文章阴影+透明
 .main-div
+    box-shadow: 0px 0px 10px #ffffff !important;
     background-color: hsla(0,0%,100%,.8)!important;
     -webkit-border-radius: 15px !important;
 //配合文章的tag页透明色
@@ -221,17 +132,25 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 
 //header 渐变
 .header
-  background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
+  //background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
   background-color: hsla(0,0%,100%,.2)!important;
   //box-shadow: 0px 0px 7px #cbaecd !important;
   -webkit-border-radius: 0px !important;
 
-//引用 作为文章概要
+//引用块的样式
 .content blockquote {
     padding: 0.1 0 0 0 rem !important;
     background-color: rgba(211, 206, 217,0.15) !important;
     border-left: 0.3em solid #d3ced9 !important;
     margin-left: 0 !important;
+}
+
+//隐藏文章简要描述
+.post-excerpt {
+  display none;
+  white-space nowrap;
+  overflow hidden;
+  text-overflow: ellipsis;
 }
 
 //背景    
@@ -248,6 +167,9 @@ body{
       //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
       //background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
       //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+    }
+    article {
+        font-size: 16px !important;
     }
 }
 
@@ -266,24 +188,23 @@ body{
       padding-bottom: 0rem;
   }
 }
+//infocard距离调整
+.info-card .info-card-body .info-desc{
+  margin: 0.5rem 0;
+}
 
-
-//字体大小美化
-.header
-  .banner
-    .container
-      h1
-        font-weight: normal !important;
-        font-size: 1.5rem !important;
-        color: #000000;
+//字体--------------------------------------------------------------------------------------------------------------
 .navbar .navbar-link
-    font-size: 1rem;
+    font-size: 1.2rem;
+.navbar-site-name
+    font-size: 1.2rem;
+    font-weight: 500 !important;
 .posts-list-item .post-title
     font-size: 1.1rem;
 //英文字体
 
 body{
-  //font-family: Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif!important;
+  font-family: Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif!important;
 }
 
 //字体大小更改
@@ -306,14 +227,15 @@ strong {
     font-weight: 550;
 }
 
-
-//标题 明显化
+//markdown标题添加下划线
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 
     text-decoration-line: underline;
 
+//---------------------------------------------------------------------------------------------------
+
 //阅读统计进度条
 .reading-progress .progress 
-    height : 2px !important;
+    height : 3px !important;
     //background-image: linear-gradient(225deg, Cyan 0%, Magenta 50%, Yellow 100%) !important;
 
 //渐变滚动条
@@ -335,7 +257,6 @@ strong {
 .sw-update-popup>button {
   position: relative;
 }
-
 .sw-update-popup>button::before, .sw-update-popup>button::after {
   content: '';
   position: absolute;
@@ -367,6 +288,7 @@ strong {
   transform: scaleY(1);
 }
 
+//a链接-----------------------------------------------------------------------------------------------
 a {
   text-decoration: none !important;
   color: #646CFF;
@@ -374,40 +296,118 @@ a {
 
 .main-div a:hover {
   color: #9400D3;
-  font-size: larger;
+  background: -webkit-linear-gradient(left,
+            #ffffff,
+            #ff0000 6.25%,
+            #ff7d00 12.5%,
+            #ffff00 18.75%,
+            #00ff00 25%,
+            #00ffff 31.25%,
+            #0000ff 37.5%,
+            #ff00ff 43.75%,
+            #ffff00 50%,
+            #ff0000 56.25%,
+            #ff7d00 62.5%,
+            #ffff00 68.75%,
+            #00ff00 75%,
+            #00ffff 81.25%,
+            #0000ff 87.5%,
+            #ff00ff 93.75%,
+            #ffff00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: a-hover-masked-animation 2s infinite linear;
 }
 
-// .header 霓虹灯字体
-//   .banner
-//     .container
-//       h1
-//           filter: brightness(110%);
-//           text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e91e63,
-//           0 0 35px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63, 0 0 75px #e91e63;
-//           animation: #cbaecd 1.5s ease-in-out infinite alternate;
-
-
-.main-div{
-  box-shadow: 0px 0px 10px #ffffff !important;
+@keyframes a-hover-masked-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100%, 0;
+    }
 }
-
-.post-excerpt {
-  display none;
-  white-space nowrap;
-  overflow hidden;
-  text-overflow: ellipsis;
+//主界面a恢复默认样式
+.post-link:hover{
+  -webkit-text-fill-color: black !important;
 }
-
-.banner .container .center:hover {
-    transform: scale(1,1) !important;
-    transform: translate(0px,0px) !important;
-}
-
+//代码块-----------------------------------------------------------------------
 div[class*=language-] {
     max-height: 350px;
     overflow: auto;
 }
 
-article {
-  font-size: 17px !important;
+//主标题----------------------------------------------------------------------------------------------
+#vuepress-theme-meteorlxy > header > div.banner > div > div > h1 {
+    font-family: 'Lobster';
+    font-size: 1.7rem;
 }
+
+#vuepress-theme-meteorlxy > header > div.banner > div > div > h1:hover {
+    filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+    animation: orange 15s ease-in-out infinite alternate;
+}
+
+@keyframes orange {
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 7px #ff5722, 0 0 8px #ff5722, 0 0 9px #ff5722, 0 0 10px #ff5722, 0 0 15px #ff5722;
+        
+    }
+    from {
+        filter: brightness(110%);        
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  }
+}
+
+//字体图标---------------------------------------------------------------------------------------
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1613824033816'); /* IE9 */
+  src: url('iconfont.eot?t=1613824033816#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1613824033816') format('woff'),
+  url('iconfont.ttf?t=1613824033816') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1613824033816#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-GitHub:before {
+  content: "\ea09";
+}
+
+.icon-codeforces:before {
+  content: "\e65f";
+}
+
+.icon-QQ:before {
+  content: "\e60e";
+}
+
+.icon-LeetCode:before {
+  content: "\e630";
+}
+
+.icon-weixin3:before {
+  content: "\e505";
+}
+
+.icon-zhihu:before {
+  content: "\eac3";
+}
+
+.icon-gongzhonghao:before {
+  content: "\e569";
+}
+
+.icon-wangyiyun:before {
+  content: "\e502";
+}
+

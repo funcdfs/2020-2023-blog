@@ -32,7 +32,6 @@
     "vuepress": "1.8.0",
     "vuepress-plugin-code-switcher": "^1.0.3",
     "vuepress-plugin-container": "^2.1.5",
-    "vuepress-plugin-copy-code": "^0.0.1",
     "vuepress-plugin-cursor-effects": "^1.0.0",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-go-top": "^1.0.4",

@@ -7827,11 +7827,6 @@ vuepress-plugin-container@^2.1.5:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-copy-code@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-copy-code/download/vuepress-plugin-copy-code-0.0.1.tgz#569849f00de8178d5875adc1c11591c82630e6fa"
-  integrity sha1-VphJ8A3oF41Yda3BwRWRyCYw5vo=
-
 vuepress-plugin-cursor-effects@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-cursor-effects/download/vuepress-plugin-cursor-effects-1.0.0.tgz#47bf74b4fe9fae923b2250ac18d15f5b3fddb6b7"

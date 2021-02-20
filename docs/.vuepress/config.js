@@ -29,10 +29,6 @@ module.exports = {
   },
   plugins: [
     ['pangu'],
-    ['copy-code', {
-      copySelector: "div[class*=language-]", // String or Array
-      copyMessage: 'Copy successfully and then paste it for use.', // default is 'Copy successfully and then paste it for use.'
-    }],
     ['go-top'],
     ['reading-progress'],
     ['flowchart'],

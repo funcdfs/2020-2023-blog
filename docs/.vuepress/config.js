@@ -8,8 +8,8 @@ module.exports = {
       }
     ], //katex
   ],
-  title: '',
-  logo: '/public/logo.ico', //四叶草
+  title: 'konng',
+  logo: '/public/logo.ico', //好不容易扣出来的四叶草
 
   markdown: { //markdown扩展
     lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
@@ -132,7 +132,7 @@ module.exports = {
     header: {
       background: {
         useGeo: false,
-        //url: 'https://pic1.zhimg.com/v2-977206e6259e3cc522db559414843524_r.jpg',
+        url: 'https://pic1.zhimg.com/v2-977206e6259e3cc522db559414843524_r.jpg',
       },
       showTitle: true,
     }, //header设置
@@ -142,6 +142,7 @@ module.exports = {
     }, //fotter
     infoCard: {
       headerBackground: {
+        url: 'https://linbudu.top/assets/img/jp-valery-734900-unsplash.jpg',
         useGeo: false,
       },
     }, //头像后面的背景图

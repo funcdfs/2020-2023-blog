@@ -19,7 +19,8 @@ int main() {
         vector<int> studentsRating;
         for (size_t j = 0; j < n; j++) {
             cin >> tempRate;
-            studentsRating.push_back(tempRate);
+            studentsRating.push_back(
+                tempRate);  //这里可以直接开辟n个数据的空间，然后读入即可
         }
         sort(studentsRating.begin(), studentsRating.end());  //必须排序后操作，
         //因为简单的从前到后遍历回出现两位选手的和值不刚好匹配的情况，不是最佳抉择
@@ -42,7 +43,8 @@ int main() {
                         flag.at(j) = false;
                         flag.at(m) = false;
                         ans = ans + 1;
-                        break;  //这里也不能分身 5 8 || 5 2 3 5 1 答案应该是1而不是2，找到就退出继续寻找的循环块
+                        break;  //这里也不能分身 5 8 || 5 2 3 5 1
+                                //答案应该是1而不是2，找到就退出继续寻找的循环块
                     }
                 }
             }

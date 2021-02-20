@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 #define PSB push_back
@@ -15,18 +17,23 @@ int main() {
 
         int test;
     cin >> test;
+    //读入测试数据组数：要测试几组数据
     while (test--) {
         int n, k, team = 0;
         cin >> n >> k;
+        // n个人，最大值为k
         vector<int> a(n);
         for (int i = 0; i < n; i++)
             cin >> a[i];
         sort(a.begin(), a.end());
-
+        //读入每一个team数据并完成排序
+        //数据类型用ll
         for (ll l = 0, r = n - 1; l <= r;) {
+            // r为数组下标
             if (a[r] >= k) {
                 ++team;
                 --r;
+                //逻辑相同，但是用了一次for循环完成
             } else if (a[r] + a[l] >= k && l != r) {
                 ++team;
                 ++l;
@@ -36,5 +43,6 @@ int main() {
         }
         cout << team << endl;
     }
+
     return 0;
 }

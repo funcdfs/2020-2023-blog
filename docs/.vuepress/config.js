@@ -28,11 +28,10 @@ module.exports = {
     }
   },
   plugins: [
+    ['pangu'],
     ['copy-code', {
-      copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+      copySelector: "div[class*=language-]", // String or Array
       copyMessage: 'Copy successfully and then paste it for use.', // default is 'Copy successfully and then paste it for use.'
-      duration: 300, // prompt message display time.
-      showInMobile: true // whether to display on the mobile side, default: false.
     }],
     ['go-top'],
     ['reading-progress'],
@@ -40,7 +39,6 @@ module.exports = {
     ['img-lazy'],
     ['code-switcher'], //多语言选项卡,学习后自定义一个简化后使用
     ["cursor-effects", {
-      size: 1.5,
       shape: ['circle'], // shape of the particle, default: 'star'
     }], //鼠标特效
     ['@vuepress/pwa', { //pwa

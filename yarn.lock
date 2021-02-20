@@ -4933,6 +4933,14 @@ markdown-it-mark@^3.0.1:
   resolved "https://registry.npm.taobao.org/markdown-it-mark/download/markdown-it-mark-3.0.1.tgz#51257db58787d78aaf46dc13418d99a9f3f0ebd3"
   integrity sha1-USV9tYeH14qvRtwTQY2ZqfPw69M=
 
+markdown-it-pangu@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/markdown-it-pangu/download/markdown-it-pangu-1.0.2.tgz#7f936e3fa05aefc9c40942ab53f8c5792ceb8f42"
+  integrity sha1-f5NuP6Ba78nECUKrU/jFeSzrj0I=
+  dependencies:
+    markdown-it "^8.4.2"
+    pangu "^4.0.7"
+
 markdown-it-table-of-contents@^0.4.0:
   version "0.4.4"
   resolved "https://registry.npm.taobao.org/markdown-it-table-of-contents/download/markdown-it-table-of-contents-0.4.4.tgz#3dc7ce8b8fc17e5981c77cc398d1782319f37fbc"
@@ -4948,7 +4956,7 @@ markdown-it-vuepress-code-snippet-enhanced@^1.0.1:
   resolved "https://registry.npm.taobao.org/markdown-it-vuepress-code-snippet-enhanced/download/markdown-it-vuepress-code-snippet-enhanced-1.0.1.tgz#516fda41378ab537453a0f64fc8ec8d80add0518"
   integrity sha1-UW/aQTeKtTdFOg9k/I7I2ArdBRg=
 
-markdown-it@^8.4.1:
+markdown-it@^8.4.1, markdown-it@^8.4.2:
   version "8.4.2"
   resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-8.4.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarkdown-it%2Fdownload%2Fmarkdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
   integrity sha1-OG+YmY3BWjdyKqdyIIT0Agvdm1Q=
@@ -5577,6 +5585,11 @@ pako@~1.0.5:
   version "1.0.11"
   resolved "https://registry.npm.taobao.org/pako/download/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha1-bJWZ00DVTf05RjgCUqNXBaa5kr8=
+
+pangu@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.npm.taobao.org/pangu/download/pangu-4.0.7.tgz#2a40347733b004a040d011de460cc313c10391c9"
+  integrity sha1-KkA0dzOwBKBA0BHeRgzDE8EDkck=
 
 parallel-transform@^1.1.0:
   version "1.2.0"
@@ -7857,6 +7870,13 @@ vuepress-plugin-nprogress@^1.1.6:
   integrity sha1-z+93jZcyO3yJ3mwcnMF+kIX+9Zk=
   dependencies:
     nprogress "^0.2.0"
+
+vuepress-plugin-pangu@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-pangu/download/vuepress-plugin-pangu-1.0.1.tgz#ad5c4356f094d6f03931cf4cd2548d6343a0e6a5"
+  integrity sha1-rVxDVvCU1vA5Mc9M0lSNY0Og5qU=
+  dependencies:
+    markdown-it-pangu "^1.0.2"
 
 vuepress-plugin-reading-progress@^1.0.10:
   version "1.0.10"

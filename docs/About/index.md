@@ -1,73 +1,44 @@
----
+b---
 title: ABOUT
 header-image: /assets/img/moon.jpg
 ---
 
 ### 🍓 Playthings
 
-> Github [fengwei2002](https://github.com/fengwei2002)
+> Github Profile: [fengwei2002](https://github.com/fengwei2002)
 - [konng.now.sh](https://konng.now.sh) 使用 vuepress 搭建的个人博客 {{dist_times}}  
-- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng) 使用 vsce 创建的 vscode 主题插件
-- [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) 开发中 vuepress theme konng 
+- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  使用 vsce 创建的 vscode 主题插件
+- [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) DOING 
+- $\cdots$
 
 ### 🌴 About
 
-- Hi, I'm [konng](https://konng.now.sh), a student ,2002.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
+- Hi, I'm [fengwei || konng](https://konng.now.sh), a student ,2002.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
+
+->![](https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/calendar.svg)<-
+
+### 🍀 Contact 
+
+- 🔗 Github: [fengwei2002](https://github.com/fengwei2002)
+- 🔗 zhihu: [kycu](https://www.zhihu.com/people/kwmwmwnw)
+- 🔗 codeforces: [KONNG](http://codeforces.com/profile/KONNG#)
+- 🔗 leetcode: [fengwei2002](https://leetcode-cn.com/u/fengwei2002/)
+</br>
+- 🔗 Weibo: [psychonaut1f](http://www.weibo.com/u/7385213104)
+- 🔗 NeteaseCloudMusic: [konngkonng](http://music.163.com/m/user/home?id=440040659)
+- 🔗 Wechat: [CIKI1F](https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/4200E2F1041F9865A7376B934D76600D.jpg)||[wsublimation ](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
+- 🔗 QQ: [ORCode](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/QQ.jpg)
 
 ### 🍓 List Of Notion Links
 
 - [FrontEnd Programmer](https://www.notion.so/fengwei2002/77b610a3952b426faf4c1b4bbfa55129?v=c58e8aa3611d4bd385e27f79ef21191d) Front-end knowledge learning path
 - [Leetcode](https://www.notion.so/fengwei2002/5c485b10d25d40ef906469786f31abec?v=c7944531d7ff4bcbadd94a4072ec00d9) Algorithm training set
 - [Applications Path](https://www.notion.so/fengwei2002/0b6d515768dd461a9b72744e0d82a6c8?v=a142170a448c423290564a1d89c379c5) application developer and designer
-- [Codeforces](https://www.notion.so/fengwei2002/Codeforces-4922e3663cc8483bba2f4ba072e57d48) Can you play cf?
-### 🎧 music
+- [Codeforces](https://www.notion.so/fengwei2002/Codeforces-4922e3663cc8483bba2f4ba072e57d48) Can you play cf? //doge
+### 🎧 Music
 
 <Meting server="netease" type="playlist" mid="5394472457" :lrc-type="3"/>
 
-### 🍀 Contact 
-
-<span class="contact">
-<a href="https://github.com/fengwei2002" title="fengwei2002"> &nbsp Github &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/4200E2F1041F9865A7376B934D76600D.jpg" title="CIKI1F"> &nbsp Wechat &nbsp  </a>
-</span>
-
-<span class="contact">
-<a href="https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/QQ.jpg" title="2480417969/2928256681"> &nbsp QQ &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="https://www.zhihu.com/people/kwmwmwnw" title="kycu"> &nbsp zhihu &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="http://music.163.com/m/user/home?id=440040659" title="konngkonng">  &nbsp netease cloud music &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="https://leetcode-cn.com/u/fengwei2002/" title="fengwei2002"> &nbsp leetcode.cn &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="https://wakatime.com/@fengwei2002" title="fengwei2002"> &nbsp wakatime &nbsp </a>
-</span>
-
-<span class="contact">
-<a href="http://codeforces.com/profile/KONNG#" title="KONNG"> &nbsp codeforce &nbsp </a>
-</span>
-
-
-<span class="contact">
-<a href="https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg" title="微信公众号"> &nbsp wsublimation &nbsp </a>
-</span>
-
-</br>  
-
-</br>
-
-->![](https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/calendar.svg)<-
 
 <script>
     export default {

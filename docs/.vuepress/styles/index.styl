@@ -356,7 +356,10 @@ div[class*=language-] {
     max-height: 350px;
     overflow: auto;
 }
-
+// //纠正行高错位的问题
+pre[class*=language-] {
+    margin: 0rem 0 !important;
+}
 //主标题----------------------------------------------------------------------------------------------
 #vuepress-theme-meteorlxy > header > div.banner > div > div > h1 {
     font-family: 'Lobster';

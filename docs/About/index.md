@@ -1,4 +1,4 @@
-b---
+---
 title: ABOUT
 header-image: /assets/img/moon.jpg
 ---
@@ -15,15 +15,13 @@ header-image: /assets/img/moon.jpg
 
 - Hi, I'm [fengwei || konng](https://konng.now.sh), a student ,2002.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
 
-->![](https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/calendar.svg)<-
-
 ### 🍀 Contact 
 
 - 🔗 Github: [fengwei2002](https://github.com/fengwei2002)
 - 🔗 zhihu: [kycu](https://www.zhihu.com/people/kwmwmwnw)
 - 🔗 codeforces: [KONNG](http://codeforces.com/profile/KONNG#)
 - 🔗 leetcode: [fengwei2002](https://leetcode-cn.com/u/fengwei2002/)
-</br>
+</br>  
 - 🔗 Weibo: [psychonaut1f](http://www.weibo.com/u/7385213104)
 - 🔗 NeteaseCloudMusic: [konngkonng](http://music.163.com/m/user/home?id=440040659)
 - 🔗 Wechat: [CIKI1F](https://raw.githubusercontent.com/fengwei2002/fengwei2002/main/4200E2F1041F9865A7376B934D76600D.jpg)||[wsublimation ](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)

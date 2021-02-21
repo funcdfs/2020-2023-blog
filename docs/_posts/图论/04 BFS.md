@@ -22,7 +22,7 @@ BFS 全称是 [Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first
 
 伪代码:(BFS通常配合队列完成)
 
-```text
+``` cpp
 bfs(s) {
   q = new queue()
   q.push(s), visited[s] = true

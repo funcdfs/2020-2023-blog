@@ -38,10 +38,12 @@ category: Codeforces
 
 ## C:Team
 
-都是仙术cpp代码，从未涉及
+都是仙术cpp代码，从未涉及，了解了宏定义：`FastIO`的使用
 
-@[code lang=cpp](@/code/codedorces/Noobs-Round-#2-(Div.-4)-by-Rudro25/C.-Team.cpp)
+@[code lang=cpp](@/code/codedorces/Noobs-Round-#2-(Div.-4)-by-Rudro25/C.-Team-TLE.cpp)
 
-## D:
+## [D. XOR Game](https://codeforces.com/gym/102942/problem/D)
+
+
 
 ## E:

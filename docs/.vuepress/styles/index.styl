@@ -228,9 +228,28 @@ strong {
 }
 
 //markdown标题添加下划线
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 
-    text-decoration-line: underline;
-
+article .content h2::after{
+content: " ";
+    width: 15%;
+    display: block;
+    // --border-opacity: 1;
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+    border-radius: .25rem;
+    border: 2px solid #718096;
+    border-color: rgba(113,128,150,1);
+}
+article .content h3::after {
+    content: " ";
+    width: 15%;
+    display: block;
+    // --border-opacity: 1;
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+    border-radius: .25rem;
+    border: 2px solid #718096;
+    border-color: rgba(113,128,150,1);
+}
 //---------------------------------------------------------------------------------------------------
 
 //阅读统计进度条

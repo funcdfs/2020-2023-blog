@@ -12,7 +12,7 @@ module.exports = {
   logo: '/public/logo.ico', //好不容易扣出来的四叶草
 
   markdown: { //markdown扩展
-    lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲
+    lineNumbers: true, // 代码行号应该关闭，要不然手机查看很费劲 ,,但是从来不再手机上面看hhh
     extendMarkdown: md => {
       md.set({
         html: true
@@ -28,6 +28,18 @@ module.exports = {
     }
   },
   plugins: [
+    // Meting 插件
+    ['meting', {
+      meting: {
+        server: 'netease',
+        type: 'playlist',
+        mid: '633410465',
+      },
+      aplayer: {
+        lrcType: 3,
+      },
+    }, ],
+    ['demo-code'],
     ['pangu'],
     ['go-top'],
     ['reading-progress'],
@@ -113,11 +125,13 @@ module.exports = {
     ], //navbar导航栏
     personalInfo: {
       nickname: 'konng',
-      description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=1297742167&auto=0&height=32"></iframe>',
+      description: 'Design is Persistent Trying.',
+      // description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=1297742167&auto=0&height=32"></iframe>',
       email: 'konng_0120@qq.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://i.loli.net/2021/01/21/uTH8P3pkwmrcOKb.jpg',
+      avatar: 'https://i.loli.net/2021/02/21/zQ8rWE29aOKJD3q.jpg',
+      // avatar: 'https://i.loli.net/2021/01/21/uTH8P3pkwmrcOKb.jpg',
       sns: {
         github: {
           account: 'fengwei2002',

@@ -60,16 +60,16 @@ module.exports = {
     [
       'vuepress-plugin-container',
       {
-        type: 'today',
-        before: info => `<div class="today"><p class="title">${info}</p>`,
+        type: 'note',
+        before: info => `<div class="note"><p class="title">${info}</p>`,
         after: '</div>',
       },
     ],
     [
       'vuepress-plugin-container',
       { //添加 details 容器
-        type: 'details',
-        before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
+        type: 'showmore',
+        before: info => `<details class="showmore">${info ? `<summary>${info}</summary>` : ''}\n`,
         after: () => '</details>\n'
       },
     ],

@@ -1,5 +1,5 @@
 ---
-title: turtle 库在 python 中的使用 (pycharm 2020-01)
+title: turtle 库在 python 中的使用
 date: 2020-04-25
 vssue-title: turtle
 tags:

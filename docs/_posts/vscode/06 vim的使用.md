@@ -1,4 +1,5 @@
 ---
+darft: true
 title: vim 的常用操作命令
 vssue-title: vim001
 date: 2020-12-14

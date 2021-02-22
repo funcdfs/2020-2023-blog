@@ -75,13 +75,13 @@ config.js
 ```
 ## details 容器
 
-::: details
+::: showmore
 下拉容器
 
 语法:
 
 ```md
-/::: details
+/::: showmore
 /内容
 /:::
 ```
@@ -105,12 +105,12 @@ config.js
 
 ## 自定义的各种容器
 
-::: today 今日总结
+::: note 今日总结
 今天王者荣耀上了荣耀王者
 :::
 
 ```md
-::: today 牛顿第一定律
+::: note 牛顿第一定律
 假若施加于某物体的外力为零，则该物体的运动速度不变。
 
 ::: right

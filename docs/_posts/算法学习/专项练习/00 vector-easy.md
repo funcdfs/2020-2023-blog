@@ -1,4 +1,5 @@
 ---
+darft: true
 title: 数组练习:简单难度
 category: vector
 ---
@@ -711,7 +712,7 @@ Wrong Answer
 我才18岁，我可以成为任何我想成为的人 💪
 
 
-::: today
+::: note
 开学第一刷，先复习了一下之前记录下来的vector的用法:
 https://konng.now.sh/posts/2020/05/05/_01-stl%E4%B8%AD%E7%9A%84-vector.html
 然后开学后的小目标就是把 GitHub 主页染成绿的
@@ -830,7 +831,7 @@ auto关键字用法C++分类下写了详细介绍
 
 不会写啊，想法应该没问题，但不知道哪里出问题了
 
-::: details 错误代码
+::: showmore 错误代码
 ```cpp
 #include <iostream>
 #include <vector>

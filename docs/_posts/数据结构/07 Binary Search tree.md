@@ -1,5 +1,6 @@
 ---
 title: Binary Search Tree
+darft: true
 date: 2020-12-06
 tags:
   - 数据结构

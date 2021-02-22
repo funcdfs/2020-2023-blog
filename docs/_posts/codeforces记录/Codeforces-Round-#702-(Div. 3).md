@@ -10,7 +10,7 @@ header-image: /assets/img/h002.jpg
 [题目一览](https://codeforces.com/contest/1490)
 [官方题解](https://codeforces.com/blog/entry/87874)
 
-::: today
+::: note
 《赘婿》笑死我了，所以这轮比赛缓几天，看样子是贪心，整！
 :::
 

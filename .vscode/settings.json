@@ -38,9 +38,13 @@
         "xstddef": "cpp",
         "xtr1common": "cpp",
         "xtree": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "atomic": "cpp",
+        "compare": "cpp",
+        "iterator": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
-    "editor.fontFamily": "'Source Code Variable', 'Source Code Variable Italic'",
+    "editor.fontFamily": "Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
     "editor.formatOnSave": true,
+    "editor.fontSize": 14.5,
 }

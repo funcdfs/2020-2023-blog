@@ -20,6 +20,7 @@ module.exports = {
       md.set({
         breaks: true //去除markdown中的两空格换行
       });
+      md.use(require('markdown-it-deflist')); // ~汉字列表
       md.use(require('@iktakahiro/markdown-it-katex')); //math渲染
       md.use(require('markdown-it-task-lists')); //todo渲染
       md.use(require('markdown-it-mark')); //高亮

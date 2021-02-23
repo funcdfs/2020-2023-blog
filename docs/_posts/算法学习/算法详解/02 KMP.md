@@ -1,6 +1,6 @@
 ---
 title: KMP算法详解
-darft: true
+draft: true
 tags:
   - 算法详解
 ---

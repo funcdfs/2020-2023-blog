@@ -1,4 +1,4 @@
 ---
-darft: true
+draft: true
 title: github pages 高级使用
 ---

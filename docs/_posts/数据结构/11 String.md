@@ -1,6 +1,6 @@
 ---
 title: String
-darft: true
+draft: true
 tags:
   - 数据结构
 --- 

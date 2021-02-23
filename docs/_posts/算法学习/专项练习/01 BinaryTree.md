@@ -1,5 +1,5 @@
 ---
-darft: true
+draft: true
 title: 树专项练习：简单
 category: BinaryTree
 ---

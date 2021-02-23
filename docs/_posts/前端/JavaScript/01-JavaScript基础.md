@@ -1,6 +1,6 @@
 ---
 title: JavaScript Basic Tips
-darft: true
+draft: true
 date: 2021-01-20
 tags:
   - JavaScript

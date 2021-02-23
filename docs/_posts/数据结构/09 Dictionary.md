@@ -1,6 +1,6 @@
 ---
 title: Dictionary
-darft: true
+draft: true
 tags:
   - 数据结构
 --- 

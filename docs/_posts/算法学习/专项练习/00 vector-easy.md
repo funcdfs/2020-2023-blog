@@ -1,5 +1,5 @@
 ---
-darft: true
+draft: true
 title: 数组练习:简单难度
 category: vector
 ---

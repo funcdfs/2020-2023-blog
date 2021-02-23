@@ -1,5 +1,5 @@
 ---
-darft: true
+draft: true
 title: BFS
 category: BFS
 ---

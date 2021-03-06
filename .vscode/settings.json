@@ -44,7 +44,7 @@
         "iterator": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
-    "editor.fontFamily": "Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
+    "editor.fontFamily": "Source code pro",
     "editor.formatOnSave": true,
     "editor.fontSize": 14.5,
 }

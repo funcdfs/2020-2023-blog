@@ -346,6 +346,6 @@ swing 是建立在 AWT 的基础上的，swing 仅提供能力更强大的用户
 
 ## Swing 图形界面开发
 
-这部分的使用网上有完整的教程，看一遍即可
+这部分的使用网上有完整的教程，大概看一遍即可，用到的时候再进行查阅，目前没有什么使用需求
 
 [Java Swing 图形界面开发（目录）](https://blog.csdn.net/xietansheng/article/details/72814492)

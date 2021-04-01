@@ -131,7 +131,8 @@ module.exports = {
       email: 'konng_0120@qq.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://i.loli.net/2021/02/21/zQ8rWE29aOKJD3q.jpg',
+      avatar: 'https://i.loli.net/2021/04/01/9YhesoyFAuxWprX.jpg',
+      //'https://i.loli.net/2021/02/21/zQ8rWE29aOKJD3q.jpg',
       // avatar: 'https://i.loli.net/2021/01/21/uTH8P3pkwmrcOKb.jpg',
       sns: {
         github: {

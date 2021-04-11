@@ -6,14 +6,14 @@ header-image: /assets/img/moon.jpg
 ### 🍓 Playthings
 
 > Github Profile: [fengwei2002](https://github.com/fengwei2002)
-- [konng.now.sh](https://konng.now.sh) 使用 vuepress 搭建的个人博客 {{dist_times}}  
+- [konng.vercel.app](https://konng.vercel.app) 使用 vuepress 搭建的个人博客 {{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  使用 vsce 创建的 vscode 主题插件
 - [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) DOING 
 - $\cdots$
 
 ### 🌴 About
 
-- Hi, I'm [fengwei || konng](https://konng.now.sh), a student ,2002.01.20.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
+- Hi, I'm [fengwei || konng](https://konng.vercel.app), a student ,2002.01.20.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
 
 ### 🍀 Contact 
 

@@ -1,6 +1,6 @@
-## [konng.now.sh](https://konng.now.sh)
+## [konng.vercel.app](https://konng.vercel.app)
 
-The source for [konng.now.sh](https://konng.now.sh). Built with [vuepress](https://vuepress.vuejs.org/).
+The source for [konng.vercel.app](https://konng.vercel.app). Built with [vuepress](https://vuepress.vuejs.org/).
 
 ## Local
 

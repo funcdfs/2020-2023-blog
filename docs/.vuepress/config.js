@@ -103,7 +103,7 @@ module.exports = {
     }, //US
     lastUpdated: true, //最后更新时间
     lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-      home: ` konng.now.sh`,
+      home: ` konng.vercel.app`,
     }), //自定义部分文字
     pagination: {
       perPage: 8,

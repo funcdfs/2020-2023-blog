@@ -1,5 +1,5 @@
 {
-  "name": "konng.now.sh",
+  "name": "konng.vercel.app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengwei2002/konng.now.sh.git"
+    "url": "git+https://github.com/fengwei2002/konng.vercel.app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fengwei2002/konng.now.sh/issues"
+    "url": "https://github.com/fengwei2002/konng.vercel.app/issues"
   },
-  "homepage": "https://github.com/fengwei2002/konng.now.sh#readme",
+  "homepage": "https://github.com/fengwei2002/konng.vercel.app#readme",
   "devDependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "markdown-it-deflist": "^2.1.0",

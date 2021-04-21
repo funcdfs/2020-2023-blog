@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 数组练习:简单难度
 category: vector
 ---
@@ -709,12 +708,10 @@ Wrong Answer
 > 1480，1108，🎈1221 
 <!-- more -->
 
-我才18岁，我可以成为任何我想成为的人 💪
-
 
 ::: note
 开学第一刷，先复习了一下之前记录下来的vector的用法:
-https://konng.now.sh/posts/2020/05/05/_01-stl%E4%B8%AD%E7%9A%84-vector.html
+https://konng.vercel.app/posts/2020/05/05/_01-stl%E4%B8%AD%E7%9A%84-vector.html
 然后开学后的小目标就是把 GitHub 主页染成绿的
 ![2020-09-07-20-18-33](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-09-07-20-18-33.png)
 

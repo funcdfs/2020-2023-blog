@@ -1,5 +1,4 @@
 ---
-draft: true
 title: DFS深度优先搜索练习
 category: DFS
 ---
@@ -8,7 +7,7 @@ category: DFS
 <!-- more -->
 # DFS深度优先搜索练习
 
-[HDU 1016 B－M](https://konng.now.sh/suan-fa/yi-dui-ti-jie/01-dan-cidfsb-m.html)
+[HDU 1016 B－M](https://konng.vercel.app/suan-fa/yi-dui-ti-jie/01-dan-cidfsb-m.html)
 [HDU 1016 素数环]()
 [HDU 2553 N皇后问题]()
 [HDU 1175 连连看]()

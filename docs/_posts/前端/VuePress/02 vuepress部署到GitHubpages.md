@@ -122,7 +122,7 @@ vercel 进行网页渲染
 
 现在的主域名是
 
-konng.now.sh   
+konng.vercel.app   
 konng.vercel.app
 （当然距离xxs域名过期时间还早，依然可以访问）  
 

@@ -7,7 +7,7 @@ header-image: /assets/img/moon.jpg
 
 > Github Profile: [fengwei2002](https://github.com/fengwei2002)
 - [konng.vercel.app](https://konng.vercel.app) 使用 vuepress 搭建的个人博客 {{dist_times}}  
-- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  使用 vsce 创建的 vscode 主题插件
+- [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  普普通通的 vscode 黑色调自用主题
 - [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) DOING 
 - $\cdots$
 

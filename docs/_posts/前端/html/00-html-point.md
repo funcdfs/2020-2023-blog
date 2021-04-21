@@ -199,11 +199,11 @@ p {
 例如:
 
 ```html
-<blockquote cite="https:// konng.now.sh">
+<blockquote cite="https:// konng.vercel.app">
   <p> test </p>
 </blockquote>
 ```
-<blockquote cite="https:// konng.now.sh">
+<blockquote cite="https:// konng.vercel.app">
   <p> test </p>
 </blockquote>
 

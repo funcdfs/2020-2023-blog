@@ -1001,8 +1001,7 @@ removeChild
 </body>
 ```
 
-### [动态生成表格案例](https://github.com/fengwei2002/konng.now.sh/tree/master/docs/_posts/%E5%89%8D%E7%AB%AF/JavaScript/dynamictable.html)
-
+### 动态生成表格案例
 表格的节点增删案例
 ## 创建元素的三种方式
 

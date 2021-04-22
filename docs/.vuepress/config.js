@@ -12,7 +12,7 @@ module.exports = {
   logo: '/public/logo.ico', //好不容易扣出来的四叶草
 
   markdown: { //markdown扩展
-    lineNumbers: true, // 代码行号应该关闭，要不然手机查看很费劲 ,,但是从来不再手机上面看hhh
+    lineNumbers: false, // 代码行号应该关闭，要不然手机查看很费劲 ,,但是从来不再手机上面看hhh
     extendMarkdown: md => {
       md.set({
         html: true

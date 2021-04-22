@@ -114,7 +114,7 @@ a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-in
 
 //文章阴影+透明
 .main-div
-    box-shadow: 0px 0px 10px #ffffff !important;
+    box-shadow: 0px 0px 10px #FCD5CC !important;
     background-color: hsla(0,0%,100%,.8)!important;
     -webkit-border-radius: 15px !important;
 //配合文章的tag页透明色
@@ -152,13 +152,21 @@ body{
     background-attachment: fixed;
     //background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
 }
+
+body
+  background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==")
+  background-repeat repeat
+  background-attachment fixed
+  min-height 100vh
+
 @media (min-aspect-ratio: 2400/1850) {
-    body {
-      background-color:#fcd5cc;
-      //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
-      //background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
-      //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
-    }
+    // body {
+    //   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==);
+    //   // background-color:#fcd5cc; horniz 主题背景色
+    //   //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
+    //   //background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
+    //   //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+    // }
     article {
         font-size: 16px !important;
     }
@@ -444,4 +452,31 @@ summary {
 
 .content code {
   border: 1px solid #282C34;
+}
+
+// 代码块前置的三个小圆点
+
+div[class*="language-"]::after,
+pre[class*="language-"]::after,
+pre[class*="language-"]::before
+  content '' !important
+  height 10px !important
+  width 10px  !important
+  position absolute !important
+  top 12px !important
+  left 12px !important
+  border-radius 50% !important
+  display inline-block !important
+  background #ff4742 !important
+
+pre[class*="language-"]::before
+  left 27px !important
+  background #b300eb !important
+
+pre[class*="language-"]::after
+  left 42px !important
+  background #fcd019 !important
+
+div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"] {
+    padding: 2rem !important;
 }

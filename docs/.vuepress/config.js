@@ -148,7 +148,7 @@ module.exports = {
     header: {
       background: {
         useGeo: false,
-        url: 'https://pic1.zhimg.com/v2-977206e6259e3cc522db559414843524_r.jpg',
+        url: 'https://i.loli.net/2021/04/26/w7hRAl6PnmyjLIf.jpg',
       },
       showTitle: true,
     }, //header设置
@@ -158,7 +158,7 @@ module.exports = {
     }, //fotter
     infoCard: {
       headerBackground: {
-        url: 'https://linbudu.top/assets/img/jp-valery-734900-unsplash.jpg',
+        url: 'https://i.loli.net/2021/04/26/w7hRAl6PnmyjLIf.jpg',
         useGeo: false,
       },
     }, //头像后面的背景图

@@ -1,6 +1,6 @@
 ---
 title: ABOUT
-header-image: /assets/img/moon.jpg
+header-image: /assets/img/head002.jpg
 ---
 
 ### 🍓 Playthings

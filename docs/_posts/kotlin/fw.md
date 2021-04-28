@@ -1,12 +1,14 @@
 ---
-title: fw.md
-tags: fw
+title: fw
+vssue-title: fw
 date: 2021-04-28
+tags:
+    - fw
 ---
 
 hh
 
-我好f
+我好f 都大二结束了快
 
 没有奖学金
 没有保研绩点

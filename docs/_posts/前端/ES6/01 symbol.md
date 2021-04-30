@@ -6,7 +6,7 @@ tags:
     - JavaScript
 ---
 
-> 主要知识点：创建符号值、使用符号值、共享符号值、符号值转换。检索符号值属性以及知名符号
+> 主要知识点：创建符号值、使用符号值、共享符号值、符号值转换。检索符号值属性以及常用内置符号
 
 ![20210428212005-2021-04-28](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/20210428212005-2021-04-28.png)
 
@@ -29,6 +29,9 @@ console.log(firstName); //Symbol(first Name)
 此代码创建了一个符号类型的 `firstName` 变量，并将它作为 `person` 对象的一个属性，而每次访问该属性都要使用这个符号值。`Symbol` 函数还可以接受一个额外的参数用于描述符号值（只接受这一个参数，类型是数字或者字符串），该描述并不能用来访问对应属性，但它能用于调试。符号的描述信息被存储在内部属性 `[[Description]]` 中，当符号的 `toString() `方法被显式
 或隐式调用时，该属性都会被读取。在本例中， `console.log()` 隐式调用了 `firstName` 变量的 `toString()` 方法，于是描述信息就被输出到日志。此外没有任何办法可以从代码中直接访问 `[[Description]]` 属性。
 
+::: note
+注意只有symbol类型不可以使用new操作符来创建
+:::
 ### 1.2 使用符号值
 
 **可以在任意使用 需计算属性名 的场合中使用符号值，比如在对象字面量中可以使用符号值来作为对象属性，另外还可以在`Object.defineProperty()`方法或`Object.defineProperties()`方法中使用。**
@@ -89,6 +92,8 @@ console.log(String(uid) + "fengwei");
 返回所有的**可枚举属性名**称，而后者则返回**所有属性名称**，无论是否可以可枚举，然而**两者都不能返回符号类型的属性**。因此，在 ES6 中新增了
 `Object.getOwnPropertySymbols()` 方法，以便让你可以检索对象的符号类型属性。
 
+
+``` js
 	let uid = Symbol.for('uid');
 	let person = {};
 	person[uid] = 'hello';
@@ -97,11 +102,21 @@ console.log(String(uid) + "fengwei");
 	console.log(symbols.length); //1
 	console.log(symbols[0]); //Symbol(uid)
 
-## 2. 知名符号 
+```
+## 2. 常用内置符号 
 
-ES6 定义了“知名符号”来代表 JS 中一些公共行为，而这些行为此前被认为只能是内部操作，但在 ES6 中使用了知名符号来暴露了内部方法，提供了更加方便的调用这种公用方法的一种方式。每一个知名符号都对应全局 `Symbol` 对象的一个属性，例如 `Symbol.create `。
+ECMAScript 6 也引入了一批常用内置符号（well-known symbol），用于暴露语言内部行为，开发者
+可以直接访问、重写或模拟这些行为。这些内置符号都以 Symbol 工厂函数字符串属性的形式存在。
+这些内置符号最重要的用途之一是重新定义它们，从而改变原生结构的行为。
 
-知名符号有：
+比如，我们知道
+for-of 循环会在相关对象上使用 Symbol.iterator 属性，那么就可以通过在自定义对象上重新定义
+Symbol.iterator 的值，来改变 for-of 在迭代该对象时的行为。
+这些内置符号也没有什么特别之处，它们就是全局函数 Symbol 的普通字符串属性，提供了更加方便的调用这种公用方法的一种方式，指向一个符号的实例。所有内置符号属性都是不可写、不可枚举、不可配置的
+
+ES6 定义了“常用内置符号”来代表 JS 中一些公共行为，而这些行为此前被认为只能是内部操作，但在 ES6 中使用了常用内置符号来暴露了内部方法，。每一个常用内置符号都对应全局 `Symbol` 对象的一个属性，例如 `Symbol.create `。
+
+常用内置符号有：
 
 - **Symbol.hasInstance** ：供 instanceof 运算符使用的一个方法，用于判断对象继承关系；
 - **Symbol.isConcatSpreadable** ：一个布尔类型值，在集合对象作为参数传递给
@@ -115,6 +130,10 @@ Array.prototype.concat() 方法时，指示是否要将该集合的元素扁平�
 - **Symbol.toPrimitive** ：返回对象所对应的基本类型值的一个方法；
 - **Symbol.toStringTag** ：供 String.prototype.toString() 函数使用的一个方法，用于创建对象的描述信息；
 - **Symbol.unscopables** ：一个对象，该对象的属性指示了哪些属性名不允许被包含在 with 语句中；
+
+::: note
+在提到 ECMAScript 规范时，经常会引用符号在规范中的名称，前缀为@@。比如， `@@iterator` 指的就是 `Symbol.iterator`。
+:::
 
 ### 2.1 Symbol.hasInstance 属性 
 
@@ -178,21 +197,45 @@ console.log(x instanceof MyClass); //false 因为修改了静态方法。x本身
 
 它只出现在特定类型的对象上，用来标示该对象在作为` concat()` 参数时应如何工作，从而有效改变该对象的默认行为。你可以用它来定义任意类型的对象，让该对象在参与 `concat()` 调用时能够表现得像数组一样。
 
-	//Symbol.isConcatSpreadable 属性
-	
-	let collection = {
-		0:'hello',
-		1:'world',
-		length:2,
-		[Symbol.isConcatSpreadable]:true
-	}
-	
-	let arr = ['es6'].concat(collection);
-	console.log(arr); //["es6", "hello", "world"]
+
+``` js
+const alpha = ['a', 'b', 'c'];
+const numeric = [1, 2, 3];
+let alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+console.log("------");
+// expected output: Array ["a", "b", "c", 1, 2, 3]
+
+numeric[Symbol.isConcatSpreadable] = false;
+//关闭第二个数组的可迭代属性
+alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// [
+//     'a',
+//     'b',
+//     'c',
+//     [ 1, 2, 3, [Symbol(Symbol.isConcatSpreadable)]: false ]
+//   ]
+```
+
+
+``` js
+//Symbol.isConcatSpreadable 属性
+let collection = {
+	0:'hello',
+	1:'world',
+	length:2,
+	[Symbol.isConcatSpreadable]:true
+}
+let arr = ['es6'].concat(collection);
+console.log(arr); //["es6", "hello", "world"]
+```
 
 ### 2.3 Symbol.match 、 Symbol.replace 、 Symbol.search 与 Symbol.split 
 
-在 JS 中，字符串与正则表达式有着密切的联系，尤其是字符串具有几个可以接受正则表达式作为参数的方法：
+在 JS 中，字符串与**正则表达式**有着密切的联系，尤其是字符串具有几个可以接受正则表达式作为参数的方法：
 
 - match(regex) ：判断指定字符串是否与一个正则表达式相匹配；
 - replace(regex, replacement) ：对正则表达式的匹配结果进行替换；
@@ -205,6 +248,7 @@ ES6 定义了 4 个符号以及对应的方法，可以将正则表达式作为�
 
 JS 经常在使用特定运算符的时候试图进行隐式转换，以便将对象转换为基本类型值。例如，当你使用相等（`==` ） 运算符来对字符串与对象进行比较的时候，该对象会在比较之前被转换为一个基本类型值。到底转换为什么基本类型值，在此前属于内部操作，而 ES6 则通过`Symbol.toPrimitive` 属性将其暴露出来，以便让对应方法可以被修改。
 
+``` js
 	function Temperature(degrees) {
 		this.degrees = degrees;
 	} 
@@ -223,24 +267,30 @@ JS 经常在使用特定运算符的时候试图进行隐式转换，以便将�
 	console.log(freezing / 2); // 16
 	console.log(String(freezing)); // "32°"
 
+```
 这段脚本定义了一个 Temperature 构造器，并重写了其原型上的`Symbol.toPrimitive` 方法。返回值会依据方法的提示性参数而有所不同，可以使用字符串模式、数值模式或是默认模式，而该提示性参数会在调用时由 JS 引擎自动填写。字符串模式中， Temperature 函数返回的温度会附带着 Unicode 温度符号；数值模式只会返回温度数值；而默认模式中，返回的温度会附带着字符串 "degrees" 。
 
 ### 2.5 Symbol.toStringTag 
 
 ES6 通过 `Symbol.toStringTag` 重定义了相关行为，该符号代表了所有对象的一个属性，定义了 `Object.prototype.toString.call()` 被调用时应当返回什么值。对于数组来说，在`Symbol.toStringTag` 属性中存储了 "Array" 值，于是该函数的返回值也就是 "Array" 。
 
-	function Person(name){
-		this.name = name;
-	}
-	
-	Person.prototype[Symbol.toStringTag] = 'person';
-	let person = new Person('hello world');
-	console.log(person.toString()); //[object person]
 
+``` js
+function Person(name){
+    this.name = name;
+}
+
+Person.prototype[Symbol.toStringTag] = 'string for person';
+let person = new Person('hello world');
+console.log(person.toString());
+// [object string for person]
+```
 ### 2.6 Symbol.unscopables 
 
 `Symbol.unscopables` 符号在 `Array.prototype` 上使用，以指定哪些属性不允许在 `with` 语句内被绑定。 `Symbol.unscopables` 属性是一个对象，当提供该属性时，它的键就是用于忽略`with` 语句绑定的标识符，键值为 `true` 代表屏蔽绑定。以下是数组的 `Symbol.unscopables`属性的默认值：
 
+
+``` js
 	// 默认内置在 ES6 中
 	Array.prototype[Symbol.unscopables] = Object.assign(Object.create(null), {
 		copyWithin: true,
@@ -251,10 +301,16 @@ ES6 通过 `Symbol.toStringTag` 重定义了相关行为，该符号代表了所
 		keys: true,
 		values: true
 	});
+```
+::: note 注意 
+不推荐使用 with，因此也不推荐使用 `Symbol.unscopables`。
+:::
 
 ## 3. 总结 
+
+其他相关内容遇到再进行补充
 
 1. 虽然符号类型的属性不是真正的私有属性，但它们难以被无意修改，因此在需要提供保护以防止开发者改动的场合中，它们非常合适；
 2. 为符号提供描述信息以便更容易地辨识它们的值。当需要在不同代码片段中共享符号，可以是用 S`ymbol.for()`在全局符号注册表中共享符号；
 3. `Object.keys()` 或 `Object.getOwnPropertyNames()` 不会返回符号值，因此 ES6 新增了一个`Object.getOwnPropertySymbols() `方法，允许检索符号类型的对象属性。同时依然可以使用`Object.defineProperty()` 与 `Object.defineProperties()` 方法对符号类型的属性进行修改；
-4. “知名符号”使用了全局符号常量（例如 `Symbol.hasInstance` ） ，为常规对象定义了一些功能，而这些功能原先仅限内部使用。这些符号按规范使用 `Symbol.` 的前缀，允许开发者通过多种方式去修改常规对象的行为。
+4. “常用内置符号”使用了全局符号常量（例如 `Symbol.hasInstance` ） ，为常规对象定义了一些功能，而这些功能原先仅限内部使用。这些符号按规范使用 `Symbol.` 的前缀，允许开发者通过多种方式去修改常规对象的行为。

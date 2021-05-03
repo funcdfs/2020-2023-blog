@@ -188,4 +188,4 @@ KMP相比于蛮力算法的优化图:
 只有字符集种类非常小时, KMP算法的优化才会优势明显
 
 
-在数据结构中查看:[KMP]([../编程基础/数据结构与算法/11字符串.md#KMP算法](https://konng.now.sh/post/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/11-zi-fu-chuan.html#kmp-%E7%AE%97%E6%B3%95%EF%BC%9A))
+在数据结构中查看:[KMP]([../编程基础/数据结构与算法/11字符串.md#KMP算法](https://konng.vercel.app/post/bian-cheng-ji-chu/shu-ju-jie-gou-yu-suan-fa/11-zi-fu-chuan.html#kmp-%E7%AE%97%E6%B3%95%EF%BC%9A))

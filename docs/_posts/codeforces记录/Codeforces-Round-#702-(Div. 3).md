@@ -1,6 +1,6 @@
 ---
 title: Codeforces：Codeforces-Round-#702-(Div.3)
-date: 2021-02-18
+date: 2021-02-19
 category: Codeforces
 header-image: /assets/img/h002.jpg
 ---

@@ -560,5 +560,5 @@ void Vector<T>::merge(Rank lo, Rank mi, Rank hi) {  //三个秩传入
 
 时间复杂度 :$o(nlog_n)$
 
-[lighthouse](https://konng.now.sh/posts/2020/11/20/_07-lighthouse.html) 中采用归并排序优化时间复杂度
+[lighthouse](https://konng.vercel.app/posts/2020/11/20/_07-lighthouse.html) 中采用归并排序优化时间复杂度
 

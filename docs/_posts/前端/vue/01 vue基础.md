@@ -107,7 +107,7 @@ var app = new Vue({  //添加一个 vue 实例
   el: '#app',
   data:{
     // html: "12345",
-    html: "<a href="https://konng.now.sh">blog</a>"
+    html: "<a href="https://konng.vercel.app">blog</a>"
   }
 })
 ```

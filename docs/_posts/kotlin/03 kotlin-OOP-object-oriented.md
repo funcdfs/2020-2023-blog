@@ -280,7 +280,7 @@ class FilledRectangle : Rectangle() {
 }
 ```
 
-在一个内部类中访问外部类的超类，可以通过由外部类名限定的 super 关键字来实现：super@Outer：
+在一个内部类中访问外部类的超类，可以通过由外部类名限定的 `super` 关键字来实现：`super@Outer：`
 
 
 ``` kt
@@ -354,7 +354,7 @@ abstract class Rectangle : Polygon() {
 
 ### 抽象类实例
 
-同 cpp 中的 [virtual 关键字的作用](https://konng.now.sh/posts/2020/11/20/_11-c-virtual.html)
+同 cpp 中的 [virtual 关键字的作用](https://konng.vercel.app/posts/2020/11/20/_11-c-virtual.html)
 
 ``` kt
 fun main(args: Array<String>) {

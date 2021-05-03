@@ -43,8 +43,9 @@
         "compare": "cpp",
         "iterator": "cpp"
     },
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4}",
     "editor.fontFamily": "Source code pro",
     "editor.formatOnSave": true,
     "editor.fontSize": 14.5,
+    "cmake.configureOnOpen": false,
 }

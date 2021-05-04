@@ -1,6 +1,6 @@
 ---
 title: ES6-RegExp 正则表达式
-date: 2021-05-01
+date: 2021-05-03
 tags:
   - ES6
   - JavaScript
@@ -295,5 +295,20 @@ if (pattern.test(text)) {
  console.log(RegExp["$'"]); // summer
  console.log(RegExp["$&"]); // short
  console.log(RegExp["$+"]); // s 
+}  
+```
+
+RegExp 还有其他几个构造函数属性，可以存储最多 9 个捕获组的匹配项。这些属性通过 `RegExp.$1~RegExp.$9` 来访问，分别包含第 1~9 个捕获组的匹配项。在调用 `exec()`或 `test()`时，这些属性就会被填充，然后就可以像下面这样使用它们：
+
+``` js
+let text = "this has been a short summer";
+let pattern = /(..)or(.)/g;
+if (pattern.test(text)) {
+ console.log(RegExp.$1); // sh
+ console.log(RegExp.$2); // t
 } 
 ```
+
+在这个例子中，模式包含两个捕获组。调用 test()搜索字符串之后，因为找到了匹配项所以返回 true，而且可以打印出通过 RegExp 构造函数的`$1` 和`$2` 属性取得的两个捕获组匹配的内容。
+
+注意 RegExp 构造函数的所有属性都没有任何 Web 标准出处，因此不要在生产环境中使用它们。所以了解即可

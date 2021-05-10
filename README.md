@@ -14,4 +14,4 @@ yarn docs:build
 
 ## Deploy
 
-Github + [vercel](https://vercel.com/)
+Github Pages + [vercel.com](https://vercel.com/)

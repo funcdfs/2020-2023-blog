@@ -1,11 +1,12 @@
 ---
 title: 【书】JavaScript 代理与反射
+date: 2021-05-11
 tags:
     - JavaScript 高级程序设计（第四版）
     - JavaScript
 ---
 
-date: 2021-05-11
+date: 2021-05-11 初稿
 
 ## 代理基础
 

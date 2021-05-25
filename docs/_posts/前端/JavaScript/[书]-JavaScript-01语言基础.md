@@ -1,8 +1,9 @@
 ---
-title: JavaScript高级程序设计_语言基础
+title: 【书】JavaScript高级程序设计_语言基础
 date: 2021-04-10
 tags:
-  - JavaScript
+    - JavaScript 高级程序设计（第四版）
+    - JavaScript
 ---
 
 多读书

@@ -33,4 +33,5 @@ title: TODO
 - vscode 插件高糊全局透明 Windows 毛玻璃，安装即用 
 - Windows opacity Vibrancy   VSCE
 - 命令行中的文字每次窗口重新布局后，之前的log就会重新排列变成无法阅读的日志，所以可不可以通过插件来实现这个功能呢，可能比较难吧，可能会好久吧，美好的想法![2020-12-19-19-30-26](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-19-19-30-26.png)
+- vscode置顶插件
 

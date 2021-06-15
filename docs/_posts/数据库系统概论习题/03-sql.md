@@ -32,38 +32,38 @@ tags:
 
 **默认是 RESTRICT**
 
-## 3. 有两个关系 S(A,B,C,D) 和 T(C,D,E,F) ，写出下列查询等价的SQL表达式
+## 3. 有两个关系 S(A,B,C,D) 和 T(C,D,E,F) ，写出下列查询等价的 SQL 表达式
 
 $$\sigma_{A=10}(S)$$
-SELETE * FROM S WHERE A='10';
+SELECT * FROM S WHERE A='10';
 $$\Pi_{A,B}(S)$$
-SELETE A,B FROM S ;
+SELECT A,B FROM S ;
 $$S\bowtie T$$
-SELETE * FROM S,T;
+SELECT * FROM S,T;
 $$S\overset{\bowtie}{_{S.C=T.C}} T$$
-SELETE * FROM S,T WHERE S.C=T.C;
+SELECT * FROM S,T WHERE S.C=T.C;
 $$
 S\overset{\bowtie}{_{A<E}} T
 $$
-SELETE * FROM S,T WHERE S.A<T.E;
+SELECT * FROM S,T WHERE S.A<T.E;
 $$
 \Pi_{C,D}(S)\times T
 $$
-SELETE C,D FROM S CROSS JOIN T;
-SELETE S.C,S.D,T.* FROM S ,T ;
+SELECT C,D FROM S CROSS JOIN T;
+SELECT S.C,S.D,T.* FROM S ,T ;
 
 ::: note
 如果把笛卡尔积看作“乘法”运算，则除法运算可以看作这个“乘法”的逆运算。
 :::
 
-## 4. 用 SQL 语句建立第二章习题 6中的 4 个表。
+## 4. 用 SQL 语句建立第二章习题 6 中的 4 个表。
 
 ![S-P-J-SPJ-2021-06-14](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/S-P-J-SPJ-2021-06-14.png)
 
 ``` sql
 CREATE TABLE s (
     -- 供应商表
-    SNO CHAR(2) UNIQUE NOT NULL PRIMARY KEY,
+    SNO CHAR(2) NOT NULL PRIMARY KEY,
     -- 供应商代码
     SNAME VARCHAR(50) NOT NULL,
     -- 供应商姓名
@@ -74,7 +74,7 @@ CREATE TABLE s (
 
 CREATE TABLE P (
     -- 零件表
-    PNO CHAR(2) UNIQUE NOT NULL PRIMARY KEY,
+    PNO CHAR(2) NOT NULL PRIMARY KEY,
     -- 零件代码
     PNAME VARCHAR(50) NOT NULL,
     -- 零件名字
@@ -85,7 +85,7 @@ CREATE TABLE P (
 
 CREATE TABLE J (
     -- 工程项目表
-    JNO CHAR(2) UNIQUE NOT NULL PRIMARY KEY,
+    JNO CHAR(2) NOT NULL PRIMARY KEY,
     -- 工程项目代码
     JNAME VARCHAR(50) NOT NULL,
     -- 工程项目名
@@ -94,7 +94,7 @@ CREATE TABLE J (
 
 CREATE TABLE SPJ (
     -- 供应情况表
-    SNO CHAR(2) NOT NULL PRIMARY KEY,
+    SNO CHAR(2) NOT NULL,
     -- 供应商代码
     PNO CHAR(2) NOT NULL,
     -- 零件代码
@@ -104,25 +104,98 @@ CREATE TABLE SPJ (
 );
 ```
 
-## 针对4创建的表完成一下各项操作
+插入相应数据的 sql 语句：（四个表）
+
+``` sql
+INSERT INTO
+    J(JNO, JNAME, CITY)
+VALUES
+    (J1, 三建，北京）,
+    (J2, 一汽，长春）,
+    (J3, 弹簧厂，天津）,
+    (J4, 造船厂，天津）,
+    (J5, 机车厂，唐山）,
+    (J6, 无线电厂，常州）,
+    (J7, 半导体厂，南京）
+INSERT INTO
+    P (
+        PNO,
+        [PNAME],
+        [COLOR],
+        [WEIGHT]
+    )
+VALUES
+    -- 除了数字全部用小引号括起来
+    ('P1', '螺母', '红', 12),
+    ('P2', '螺栓', '绿', 17),
+    ('P3', '螺丝刀', '蓝', 14),
+    ('P4', '螺丝刀', '红', 14),
+    ('P5', '凸轮', '蓝', 40),
+    ('P6', '齿轮', '红', 30)
+INSERT INTO
+    S (SNO, SNAME, STATUS, CITY)
+VALUES
+    ('S1', '精益', 20, '天津'),
+    ('S2', '盛锡', 10, '北京'),
+    ('S3', '东方红', 30, '北京'),
+    ('S4', '本泰盛', 20, '天津'),
+    ('S5', '为民', 30, '上海')
+INSERT INTO
+    SPJ (SNO, PNO, JNO, QTY)
+VALUES
+    ('S1', 'P1', 'J1', 200),
+    ('S1', 'P1', 'J3', 100),
+    ('S1', 'P1', 'J4', 700),
+    ('S1', 'P2', 'J2', 100),
+    ('S2', 'P3', 'J1', 400),
+    ('S2', 'P3', 'J2', 200),
+    ('S2', 'P3', 'J4', 500),
+    ('S2', 'P3', 'J5', 400),
+    ('S2', 'P5', 'J1', 400),
+    ('S2', 'P5', 'J2', 100),
+    ('S3', 'P1', 'J1', 200),
+    ('S3', 'P3', 'J1', 200),
+    ('S4', 'P5', 'J1', 100),
+    ('S4', 'P6', 'J3', 300),
+    ('S4', 'P6', 'J4', 200),
+    ('S5', 'P2', 'J4', 100),
+    ('S5', 'P3', 'J1', 200),
+    ('S5', 'P6', 'J2', 200),
+    ('S5', 'P6', 'J4', 500)
+```
+
+## 针对 4 创建的表完成一下各项操作
 
 1. 找出所有供应商的姓名和所在城市
-`SELETE SNAME CITY FROM S;`
+`SELECT SNAME, CITY FROM S;` （注意不同的项之间要用都好隔开，select 的拼写）
 2. 找出所有零件的名字颜色重量
-`SELETE PNAME COLOR WEIGHT FROM P;`
-3. 找出使用供应商s1所供应零件的工程代码
-`SELETE JNO FROM SPJ WHERE SNO = 'S1';`
+`SELECT PNAME, COLOR, WEIGHT FROM P;`
+3. 找出使用供应商 s1 所供应零件的工程代码
+`SELECT JNO FROM SPJ WHERE SNO = 'S1';`
 4. 找出工程项目 j2 使用的各种零件的名称及其数量
-`SELETE JNAME, QTY FROM SPJ ,J WHERE JNO = 'J2' AND J.JNO= SPJ.JNO;`
+
+``` sql
+SELECT
+    JNAME,
+    QTY
+FROM
+    SPJ,
+    J
+WHERE
+    SPJ.JNO = 'J2' 
+    -- 注意这里的每一个变量都应该用对象写法引出
+    --防止名字定义不明确的发生
+    AND J.JNO = SPJ.JNO;
+```
 5. 找出上海厂供应的所有零件号码
-`SELETE PNO FROM S,SPJ WHERE CITY='上海' AND S.SNO=SPJ.SNO;`
+`SELECT PNO FROM S,SPJ WHERE CITY='上海' AND S.SNO=SPJ.SNO;`
 6. 找出使用上海产出的零件的工程名称
 ``` sql
 SELECT
     JNAME
 FROM
-    J,
-    SPJ
+    J
+    -- 注意重复变量名的发生，要声明他的 namespace
 WHERE
     JNO IN (
         SELECT
@@ -136,23 +209,25 @@ WHERE
     )
 ```
 7. 找出没有使用天津生产的零件的工程号码
+
 ``` sql
 SELECT
-    JNO
+    JNAME
 FROM
-    SPJ
+    J
 WHERE
-    NOT EXISTS(
+    J.JNO NOT IN(
         SELECT
-            *
+            DISTINCT JNO
         FROM
             S,
             SPJ
         WHERE
             S.SNO = SPJ.SNO
-            AND S.SNO = '天津'
+            AND S.CITY = '天津'
     )
 ```
+
 8. 把全部红色零件的颜色改成蓝色
 
 ```sql
@@ -163,7 +238,7 @@ SET
 WHERE
     COLOR = '红'
 ```
-9. 由S5供给J4的零件P6改为由S3供应。请做必要的修改
+9. 由 S5 供给 J4 的零件 P6 改为由 S3 供应。请做必要的修改
 ``` sql
 UPDATE
     SPJ
@@ -174,7 +249,7 @@ WHERE
     AND SPJ.SNO = 'S5'
     AND SPJ.PNO = 'P6'
 ```
-10. 从供应商关系中删除供应商号是S2的记录，并从供应情况关系中删除相应的记录。
+10. 从供应商关系中删除供应商号是 S2 的记录，并从供应情况关系中删除相应的记录。
 
 ``` sql
 DELETE FROM
@@ -186,7 +261,7 @@ DELETE FROM
 WHERE
     SPJ.SNO = 'S2'
 ```
-11.  请将(S2，J6，P4，200)插入供应情况关系。
+11.  请将 (S2，J6，P4，200) 插入供应情况关系。
 ``` sql
 INSERT INTO
     SPJ (
@@ -219,9 +294,8 @@ VALUES
 所有的视图是否都可以更新？为什么？
 
 答：
-不是。视图是不实际存储数据的虚表，因此对视图的更新，最终要转换为对基本表的更新。因为有些视图的更新不能惟一有意义地转换成对相应基本表的更新，所以，并不是所有的视图都是可更新的.
-
-## 请为三建工程项目建立一个供应情况的视图，包括供应商代码(SNO)、零件代码(PNO)、供应数量(QTY)。
+不是。视图是不实际存储数据的虚表，因此对视图的更新，最终要转换为对基本表的更新。因为有些视图的更新不能惟一有意义地转换成对相应基本表的更新，所以，并不是所有的视图都是可更新的。
+## 请为三建工程项目建立一个供应情况的视图，包括供应商代码 (SNO)、零件代码 (PNO)、供应数量 (QTY)。（提取供应情况表中的所有 j1 的选项）
 
 和创建表是相同的写法：
 
@@ -239,18 +313,21 @@ WHERE
     AND J.JNAME = '三建'
 ```
 
-针对该视图VSP完成下列查询：
+![20210615160505-2021-06-15](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/20210615160505-2021-06-15.png)
+
+针对该视图 VSP 完成下列查询：
 
 1. 找出三建工程项目使用的各种零件代码及其数量。
 ``` sql
 SELECT
-    JNO,
+    PNO,
     QTY
 FROM
     VSP
 ```
 
-2. 找出供应商S1的供应情况。
+2. 找出供应商 S1 的供应情况。
+
 ``` sql
 SELECT
     *
@@ -259,5 +336,4 @@ FROM
 WHERE
     SNO = 'S1'
 ```
-
-
+相当于多了一个新的可以使用的表！

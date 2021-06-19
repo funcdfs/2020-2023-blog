@@ -337,3 +337,7 @@ WHERE
     SNO = 'S1'
 ```
 相当于多了一个新的可以使用的表！
+
+## 补充
+
+关于 [go 的用法](https://blog.csdn.net/Mary19920410/article/details/77388971)

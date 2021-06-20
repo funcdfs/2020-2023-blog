@@ -4,8 +4,8 @@ header-image: /assets/img/head002.jpg
 ---
 
 ### 🍓 Playthings
-
-> [dribbble profile](https://dribbble.com/fengwei2002)
+<!-- 
+> [dribbble profile](https://dribbble.com/fengwei2002) -->
 - [konng.vercel.app](https://konng.vercel.app) 使用 vuepress 搭建的个人博客 {{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  vscode 黑色调自用主题 绝绝子
 - [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) DOING 
@@ -26,19 +26,6 @@ header-image: /assets/img/head002.jpg
 - 🔗 NeteaseCloudMusic: [konngkonng](http://music.163.com/m/user/home?id=440040659)
 - 🔗 Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)||[wsublimation ](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
 - 🔗 QQ: [ORCode](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/QQ.jpg)
-
-<!-- 
-### 🍓 List Of Notion Links
-
-- [FrontEnd Programmer](https://www.notion.so/fengwei2002/77b610a3952b426faf4c1b4bbfa55129?v=c58e8aa3611d4bd385e27f79ef21191d) Front-end knowledge learning path
-- [Leetcode](https://www.notion.so/fengwei2002/5c485b10d25d40ef906469786f31abec?v=c7944531d7ff4bcbadd94a4072ec00d9) Algorithm training set
-- [Applications Path](https://www.notion.so/fengwei2002/0b6d515768dd461a9b72744e0d82a6c8?v=a142170a448c423290564a1d89c379c5) application developer and designer
-- [Codeforces](https://www.notion.so/fengwei2002/Codeforces-4922e3663cc8483bba2f4ba072e57d48) Can you play cf? //doge I can't hh -->
-- 
-### 🎧 Music
-
-<Meting server="netease" type="playlist" mid="5394472457" :lrc-type="3"/>
-
 
 <script>
     export default {

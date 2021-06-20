@@ -123,6 +123,11 @@ module.exports = {
         link: '/About/',
         exact: false
       },
+      {
+        text: 'algorithm',
+        link: '/Algorithm/',
+        exact: false
+      }
     ], //navbar导航栏
     personalInfo: {
       nickname: 'konng',

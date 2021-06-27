@@ -4,24 +4,18 @@ header-image: /assets/img/head002.jpg
 ---
 
 ### 🌴 Playthings
-<!-- 
-> [dribbble profile](https://dribbble.com/fengwei2002) -->
+<!-- > [dribbble profile](https://dribbble.com/fengwei2002) -->
 - [konng.vercel.app](https://konng.vercel.app) 使用 vuepress 搭建的个人博客 {{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  vscode 黑色调自用主题 绝绝子
 - [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) DOING 
 - $\cdots$
-<!-- 
-###  About
-
-- Hi, I'm [fengwei || konng](https://konng.vercel.app), a student ,2002.01.20.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues). -->
 
 ### 🍀 Contact 
 
 - 🔗 Github: [fengwei2002](https://github.com/fengwei2002)
 - 🔗 zhihu: [kycu](https://www.zhihu.com/people/kwmwmwnw)
-- 🔗 codeforces: [KONNG](http://codeforces.com/profile/KONNG#)
 - 🔗 leetcode: [fengwei2002](https://leetcode-cn.com/u/fengwei2002/)
-</br>  
+- 🔗 codeforces: [KONNG](http://codeforces.com/profile/KONNG#)
 - 🔗 Weibo: [psychonaut1f](http://www.weibo.com/u/7385213104)
 - 🔗 NeteaseCloudMusic: [konngkonng](http://music.163.com/m/user/home?id=440040659)
 - 🔗 Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)||[wsublimation ](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)

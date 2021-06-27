@@ -1,6 +1,6 @@
 ---
 title: Algorithm
-header-image: /assets/img/head002.jpg
+header-image: /assets/img/head003.jpg
 ---
 
 ## ⛏ repository
@@ -18,4 +18,6 @@ https://github.com/fengwei2002/Algorithm
 
 - [AcWing 算法基础课](https://www.notion.so/fengwei2002/AcWing-2ed2f53326b049b8945f6119c83874be)
 - [Acwing 算法提高课](https://www.notion.so/fengwei2002/AcWing-c0498857a5b3428d90a3022b3798c343)
-- [AcWing 蓝桥杯 AB 组辅导课](https://www.notion.so/fengwei2002/ACwing-ff95d446f8d9476181d5213c0253d5eb)
+- [AcWing 蓝桥杯 AB 组辅导课](https://www.notion.so/fengwei2002/ACwing-ff95d446f8d9476181d5213c0253d5eb)  
+
+

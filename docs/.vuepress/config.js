@@ -119,13 +119,13 @@ module.exports = {
         exact: false
       },
       {
-        text: 'about',
-        link: '/About/',
+        text: 'algorithm',
+        link: '/Algorithm/',
         exact: false
       },
       {
-        text: 'algorithm',
-        link: '/Algorithm/',
+        text: 'about',
+        link: '/About/',
         exact: false
       }
     ], //navbar导航栏

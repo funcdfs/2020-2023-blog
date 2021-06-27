@@ -3,17 +3,17 @@ title: ABOUT
 header-image: /assets/img/head002.jpg
 ---
 
-### 🍓 Playthings
+### 🌴 Playthings
 <!-- 
 > [dribbble profile](https://dribbble.com/fengwei2002) -->
 - [konng.vercel.app](https://konng.vercel.app) 使用 vuepress 搭建的个人博客 {{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  vscode 黑色调自用主题 绝绝子
 - [vuepress-theme-konng](https://github.com/fengwei2002/vuepress-theme-konng) DOING 
 - $\cdots$
+<!-- 
+###  About
 
-### 🌴 About
-
-- Hi, I'm [fengwei || konng](https://konng.vercel.app), a student ,2002.01.20.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues).
+- Hi, I'm [fengwei || konng](https://konng.vercel.app), a student ,2002.01.20.  Ask me about anything [here](https://github.com/fengwei2002/fengwei2002/issues). -->
 
 ### 🍀 Contact 
 

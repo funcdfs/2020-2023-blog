@@ -2414,7 +2414,7 @@ codesandbox-import-util-types@^2.2.3:
   resolved "https://registry.nlark.com/codesandbox-import-util-types/download/codesandbox-import-util-types-2.2.3.tgz#b354b2f732ad130e119ebd9ead3bda3be5981a54"
   integrity sha1-s1Sy9zKtEw4Rnr2erTvaO+WYGlQ=
 
-codesandbox-import-utils@^2.1.16:
+codesandbox-import-utils@^2.2.3:
   version "2.2.3"
   resolved "https://registry.nlark.com/codesandbox-import-utils/download/codesandbox-import-utils-2.2.3.tgz#f7b4801245b381cb8c90fe245e336624e19b6c84"
   integrity sha1-97SAEkWzgcuMkP4kXjNmJOGbbIQ=
@@ -6361,12 +6361,17 @@ pretty-time@^1.1.0:
   resolved "https://registry.npm.taobao.org/pretty-time/download/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha1-/7dCmvq7hTXDRqNOQYc63z103Q4=
 
-prismjs@^1.13.0, prismjs@^1.20.0:
+prismjs@^1.13.0:
   version "1.23.0"
   resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
   integrity sha1-07OWf31yRAaQSXZSqdQP8EYGfzM=
   optionalDependencies:
     clipboard "^2.0.0"
+
+prismjs@^1.23.0:
+  version "1.24.0"
+  resolved "https://registry.nlark.com/prismjs/download/prismjs-1.24.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fprismjs%2Fdownload%2Fprismjs-1.24.0.tgz#0409c30068a6c52c89ef7f1089b3ca4de56be2ac"
+  integrity sha1-BAnDAGimxSyJ738QibPKTeVr4qw=
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -8086,14 +8091,14 @@ vuepress-plugin-dehydrate@1.1.5:
   dependencies:
     "@vuepress/shared-utils" "^1.2.0"
 
-vuepress-plugin-demo-code@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.nlark.com/vuepress-plugin-demo-code/download/vuepress-plugin-demo-code-0.5.2.tgz#4bf30e48c38d3093c9641f1db695c8be0b0a038b"
-  integrity sha1-S/MOSMONMJPJZB8dtpXIvgsKA4s=
+vuepress-plugin-demo-code@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.nlark.com/vuepress-plugin-demo-code/download/vuepress-plugin-demo-code-0.6.0.tgz#71bd228eab09a12d8cbb99416658572cb7510a8d"
+  integrity sha1-cb0ijqsJoS2Mu5lBZlhXLLdRCo0=
   dependencies:
-    codesandbox-import-utils "^2.1.16"
+    codesandbox-import-utils "^2.2.3"
     markdown-it-container "^3.0.0"
-    prismjs "^1.20.0"
+    prismjs "^1.23.0"
     vuepress-plugin-code-copy "^1.0.6"
 
 vuepress-plugin-flowchart@^1.4.3:

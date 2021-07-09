@@ -37,7 +37,6 @@
     "vuepress-plugin-demo-code": "^0.6.0",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-go-top": "^1.0.4",
-    "vuepress-plugin-meting": "^0.2.3",
     "vuepress-theme-meteorlxy": "1.9.0"
   },
   "dependencies": {

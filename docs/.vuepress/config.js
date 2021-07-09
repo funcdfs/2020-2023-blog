@@ -30,16 +30,16 @@ module.exports = {
   },
   plugins: [
     // Meting 插件
-    ['meting', {
-      meting: {
-        server: 'netease',
-        type: 'playlist',
-        mid: '5394472457',
-      },
-      aplayer: {
-        lrcType: 3,
-      },
-    }, ],
+    // ['meting', {
+    //   meting: {
+    //     server: 'netease',
+    //     type: 'playlist',
+    //     mid: '5394472457',
+    //   },
+    //   aplayer: {
+    //     lrcType: 3,
+    //   },
+    // }, ],
     ['demo-code'],
     ['pangu'],
     ['go-top'],

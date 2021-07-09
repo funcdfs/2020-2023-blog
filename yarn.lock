@@ -941,13 +941,6 @@
   dependencies:
     katex "^0.12.0"
 
-"@moefe/vue-aplayer@^2.0.0-beta.5":
-  version "2.0.0-beta.5"
-  resolved "https://registry.npm.taobao.org/@moefe/vue-aplayer/download/@moefe/vue-aplayer-2.0.0-beta.5.tgz#f6bbd1802562e8e30ef9106192008a90bed2a354"
-  integrity sha1-9rvRgCVi6OMO+RBhkgCKkL7So1Q=
-  dependencies:
-    vue "^2.5.17"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -8041,7 +8034,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^2.5.17, vue@^2.6.10:
+vue@^2.6.10:
   version "2.6.12"
   resolved "https://registry.nlark.com/vue/download/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
@@ -8120,13 +8113,6 @@ vuepress-plugin-img-lazy@^1.0.4:
   dependencies:
     markdown-it-img-lazy "^1.0.2"
     markdown-it-imsize "^2.0.1"
-
-vuepress-plugin-meting@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.nlark.com/vuepress-plugin-meting/download/vuepress-plugin-meting-0.2.3.tgz#4623124e7e712c936a59d084a143fb0dcb1b7db2"
-  integrity sha1-RiMSTn5xLJNqWdCEoUP7DcsbfbI=
-  dependencies:
-    "@moefe/vue-aplayer" "^2.0.0-beta.5"
 
 vuepress-plugin-nprogress@^1.1.6:
   version "1.1.8"

@@ -1,7 +1,8 @@
 ---
 title: ABOUT
-header-image: /assets/img/head002.jpg
+header-image: /assets/img/head.jpg
 ---
+
 ## 🌴 Playthings
 <!-- > [dribbble profile](https://dribbble.com/fengwei2002) -->
 - [konng.vercel.app](https://konng.vercel.app) 博客，已运行{{dist_times}}  

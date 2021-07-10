@@ -1,6 +1,6 @@
 ---
 title: Algorithm
-header-image: /assets/img/head003.jpg
+header-image: /assets/img/head.jpg
 ---
 
 ## ⛏ repository

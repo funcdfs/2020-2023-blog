@@ -136,7 +136,8 @@ module.exports = {
       email: 'konng_0120@qq.com',
       location: 'Tai\'Yuan, Shan\'Xi, China',
       organization: 'Shan\'Xi University',
-      avatar: 'https://i.loli.net/2021/04/01/9YhesoyFAuxWprX.jpg',
+      avatar: 'https://cdn.acwing.com/media/article/image/2021/07/10/101476_c34b4745e1-16258036212533745c6e0982ac6523e2b8f82c380622b4383.jpg',
+      // 'https://i.loli.net/2021/04/01/9YhesoyFAuxWprX.jpg',
       //'https://i.loli.net/2021/02/21/zQ8rWE29aOKJD3q.jpg',
       // avatar: 'https://i.loli.net/2021/01/21/uTH8P3pkwmrcOKb.jpg',
       sns: {
@@ -153,7 +154,7 @@ module.exports = {
     header: {
       background: {
         useGeo: false,
-        url: 'https://i.loli.net/2021/04/26/w7hRAl6PnmyjLIf.jpg',
+        url: 'https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg',
       },
       showTitle: true,
     }, //header设置
@@ -163,7 +164,7 @@ module.exports = {
     }, //fotter
     infoCard: {
       headerBackground: {
-        url: 'https://i.loli.net/2021/04/26/w7hRAl6PnmyjLIf.jpg',
+        url: 'https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg',
         useGeo: false,
       },
     }, //头像后面的背景图

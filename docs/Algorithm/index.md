@@ -3,8 +3,10 @@ title: Algorithm
 header-image: /assets/img/head.jpg
 ---
 
-## ⛏ repository
+::: note ⛏ repository
 
 https://github.com/fengwei2002/Algorithm
 
-## ⛏$\cdots$
+$\cdots$
+
+:::

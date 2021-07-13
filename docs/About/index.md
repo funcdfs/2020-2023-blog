@@ -3,21 +3,18 @@ title: ABOUT
 header-image: /assets/img/head.jpg
 ---
 
-## 🌴 Playthings
+::: note  🌴 Playthings
 <!-- > [dribbble profile](https://dribbble.com/fengwei2002) -->
 - [konng.vercel.app](https://konng.vercel.app) 博客，已运行{{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  VsCode 主题 
+:::
 
-## 🍀 Contact 
+::: note 🍀 Contact 
 - 🔗 Github: [fengwei2002](https://github.com/fengwei2002)
 - 🔗 zhihu: [kycu](https://www.zhihu.com/people/kwmwmwnw)
-- 🔗 leetcode: [fengwei2002](https://leetcode-cn.com/u/fengwei2002/)
 - 🔗 codeforces: [KONNG](http://codeforces.com/profile/KONNG#)
-- 🔗 Weibo: [psychonaut1f](http://www.weibo.com/u/7385213104)
-- 🔗 NeteaseCloudMusic: [konngkonng](http://music.163.com/m/user/home?id=440040659)
 - 🔗 Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)||[wsublimation ](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
-- 🔗 QQ: [ORCode](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/QQ.jpg)
-
+:::
 <script>
     export default {
         props: ['slot-key'],

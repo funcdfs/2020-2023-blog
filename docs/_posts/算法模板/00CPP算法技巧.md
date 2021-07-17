@@ -67,6 +67,8 @@ int s = x >> i & 1;
 
 ## 十六进制
 
+无穷大：[0x3f3f3f3f](https://zhuanlan.zhihu.com/p/57512786)
+
 ``` cpp 
 int null = 0x3f3f3f3f;
 ```
@@ -77,7 +79,9 @@ if (!strcmp(op, "I")) 更快， 相比于 string == “  efwefwe”
 
 ## memset
 
+// https://www.cplusplus.com/reference/cstring/memset/
+
 ``` cpp 
- memset(h, 0x3f, sizeof h);
+ memset(h, 0x3f, sizeof h); // 快速的将一个数组中的元素全部变为无穷大
 ```
 

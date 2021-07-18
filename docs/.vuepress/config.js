@@ -173,7 +173,7 @@ module.exports = {
       owner: 'fengwei2002',
       repo: 'mygitalk',
       clientId: '215827c9064649c94cc7',
-      clientSecret: '99a3239a0889c4917b47c601f6a642c2cc8e2812',
+      clientSecret: '7f9ed2076c3f96b43dd2a128d0da6a87d83ebf94',
       prefix: '[Comments] ',
       labels: ['comments'],
     }, //vssue配置

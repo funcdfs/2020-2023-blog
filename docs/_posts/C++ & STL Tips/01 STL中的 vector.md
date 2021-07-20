@@ -258,24 +258,3 @@ int main () {
 
 `myvector contains: 10 200 100 20 30 300`
 :::
-
-## vector 数组相互转换
-
-有时候想用数组的算法模板的话，懒得修改模板
-就可以直接无脑将 vector 转换为简单的数组来使用模板
-
-vector 转数组： （当然循环赋值最简单了）
-
-``` cpp
-float *buffer = new float[sizeof(arr)];  
-if (!vec.empty()) {  
-    memcpy(buffer, &vec[0], vec.size()*sizeof(float));  
-}  
-```
-
-数组转换为 vector
-
-``` cpp 
-float arr[] = { 1.68, 2.1, 1.96 };  
-vector<float> vec(arr, arr + sizeof(arr) / sizeof(float));  
-```

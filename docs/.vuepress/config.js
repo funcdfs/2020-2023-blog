@@ -168,14 +168,15 @@ module.exports = {
         useGeo: false,
       },
     }, //头像后面的背景图
-    comments: {
-      platform: 'github',
-      owner: 'fengwei2002',
-      repo: 'mygitalk',
-      clientId: '215827c9064649c94cc7',
-      clientSecret: '5df7e60cb5e98f7bd04c4cec2786e3f7cc65ca75',
-      prefix: '[Comments] ',
-      labels: ['comments'],
-    }, //vssue配置
+    comments: false,
+    // comments: {
+    //   platform: 'github',
+    //   owner: 'fengwei2002',
+    //   repo: 'mygitalk',
+    //   clientId: '215827c9064649c94cc7',
+    //   clientSecret: '5df7e60cb5e98f7bd04c4cec2786e3f7cc65ca75',
+    //   prefix: '[Comments] ',
+    //   labels: ['comments'],
+    // }, //vssue配置
   }
 }

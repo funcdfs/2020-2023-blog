@@ -14,7 +14,7 @@ $\qquad$单链表、双链表、栈、队列、单调栈、单调队列、KMP、
 :::
 
 ::: tip 搜索与图论
-[](https://konng.vercel.app/posts/2021/08/03/_02%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%BE%E8%AE%BA.html)
+[🧱](https://konng.vercel.app/posts/2021/08/03/_02%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%BE%E8%AE%BA.html) DFS，BFS，树与图的深度优先遍历，树与图的广度优先遍历，拓扑排序，Dijkstra，bellman-ford，spfa，Floyd，Prim，Kruskal，染色法判定二分图，匈牙利算法
 :::
 
 ::: tip 数学知识

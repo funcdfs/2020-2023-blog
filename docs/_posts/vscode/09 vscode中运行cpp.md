@@ -1,5 +1,5 @@
 ---
-title: 在 win10 使用 vscode 中运行 cpp
+title: 在 Windows 下使用 vscode 中运行 cpp
 date: 2021-04-06
 tags:
   - vscode
@@ -10,8 +10,8 @@ tags:
 
 ## 原因
 
-由于 tabnine 收费的原因，只有 vacode 中还有可以使用的 tabnine，并且 vscode 好看一些
-所以决定 cpp 平台迁移到 vscode
+由于 tabnine 开始收费的原因，只有 vscode 中还有可以免费使用的 tabnine，并且 vscode 好看一些，并且多种语言可以统一
+所以决定执行 cpp 的平台迁移到 vscode
 
 ## 路径问题
 
@@ -21,7 +21,7 @@ tags:
 
 详情见：https://github.com/formulahendry/vscode-code-runner/issues/296
 
-CTRL + shift + p 打开工作区 json 文件
+`CTRL + shift + p` 打开工作区 json 文件
 
 添加： ![20210406170532-2021-04-06](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/20210406170532-2021-04-06.png)
 
@@ -63,19 +63,88 @@ CTRL + shift + p 打开工作区 json 文件
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Print to console": {
-		"prefix": "cm", 
+	"快速输入输出": {
+		"prefix": "fio",
 		"body": [
+			"/*$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_HOUR-$CURRENT_MINUTE*/",
+			"#include <algorithm>",
 			"#include <iostream>",
+			"#include <vector>",
+			"using namespace std;",
+			"",
+			"const int N = 1e5 + 10;",
+			"const int null = 0x3f3f3f3f;",
+			"",
+			"#define LL long long",
+			"#define ULL unsigned long long",
+			"#define PB push_back",
+			"#define FastIO ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);",
+			"",
+			"void solve() {",
+			"\t$1",
+			"}",
+			"",
+			"int main() {",
+			"\tFastIO",
+			"\tint T;",
+			"\tcin >> T;",
+			"\twhile (T--) {",
+			"\t\tsolve();",
+			"\t}",
+			"\treturn 0;",
+			"}",
+		],
+		"description": "fast IO by codeforces"
+	},
+		"力扣头文件辅助": {
+		"prefix": "lc",
+		"body": [
+			"#include <algorithm>",
+			"#include <iostream>",
+			"#include <vector>",
+			"",
 			"using namespace std;",
 			"/*$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_HOUR-$CURRENT_MINUTE*/",
-			"int main (){",
-			"\t${1:/*code*/}",
-			"\treturn 0;",
-			"}"
+			"// ? 思路解析：",
+			"/* ",
+			" * ",
+			" * ",
+			" * ",
+			" * ",
+			" ! --难点：",
+			" ! --",
+			" ! --",
+			" */",
 		],
-		"description": "Log output to console"
-	}
+		"description": "力扣头文件辅助"
+	},
+	"输出一个空行": {
+		"prefix": "pl",
+		"body": [
+			"puts(\"\");",
+		],
+		"description": "cpp代码中输出一个空行"
+	},
+	"打印调试法 int": {
+		"prefix": "pint",
+		"body": [
+			"printf(\"$1 == %d\\n\", $2);"
+		],
+		"description": "cpp代码中输出一个空行"
+	},
+	"cppListNode": {
+		"prefix": "cpplist",
+		"body": [
+			"struct ListNode {",
+			"\tint val;",
+			"\tListNode *next;",
+			"\tListNode() : val(0), next(nullptr) {}",
+			"\tListNode(int x) : val(x), next(nullptr) {}",
+			"\tListNode(int x, ListNode *next) : val(x), next(next) {}",
+			"};"
+		],
+		"description": "cpp链表，刷 LeetCode 用"
+	},
 }
 ```
 

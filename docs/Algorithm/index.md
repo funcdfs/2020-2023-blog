@@ -18,15 +18,20 @@ $\qquad$单链表、双链表、栈、队列、单调栈、单调队列、KMP、
 :::
 
 ::: tip 数学知识
-[](http://localhost:8080/posts/2021/08/03/_03%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86.html)
+[](http://localhost:8080/posts/2021/08/03/_03%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86.html)包括质数，约数，欧拉函数，快速幂，扩展欧几里得算法，中国剩余定理，高斯消元，求组合数，容斥原理，博弈论
 ::: 
 
 
 ::: tip 动态规划
-[](http://localhost:8080/posts/2021/08/03/_04%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html)
+[🧱](http://localhost:8080/posts/2021/08/03/_04%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html)包括背包问题，线性DP，区间DP，计数类DP，数位统计DP，状态压缩DP，树形DP，记忆化搜索
 ::: 
 
 
 ::: tip 贪心
-[](http://localhost:8080/posts/2021/08/03/_05%E8%B4%AA%E5%BF%83.html)
+[](http://localhost:8080/posts/2021/08/03/_05%E8%B4%AA%E5%BF%83.html)包括区间问题，Huffman树，排序不等式，绝对值不等式，推公式
+::: 
+
+
+::: tip 动态规划高级：
+
 ::: 

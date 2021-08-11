@@ -67,3 +67,6 @@ Windows / Unix: [[Ctrl]] + [[Alt]] + [[o]]
 * 文件名可能出现`(`或者`)`还有`[`或者`]`，导致无法查看图片，这时使用`\`转义相关字符或者保存到本地重新上传即可
 
 
+## update：
+
+GitHub失效：https://github.com/PicGo/vs-picgo/issues/95

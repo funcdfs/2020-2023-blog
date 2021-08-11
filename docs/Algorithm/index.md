@@ -3,6 +3,10 @@ title: Algorithm
 header-image: /assets/img/head.jpg
 ---
 
+::: warning
+闭关刷题 + 磨合一个完整的 vuepress 主题去了
+:::
+
 ::: note ⛏ repository
 [https://github.com/fengwei2002/Algorithm](https://github.com/fengwei2002/Algorithm)
 :::

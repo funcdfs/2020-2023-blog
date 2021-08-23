@@ -1,98 +1,125 @@
 // 01-鼠标指针
 // body
-//   background-color #dee
-//   cursor url('/cursor/Vista.cur'), auto
+// background-color #dee
+// cursor url('/cursor/Vista.cur'), auto
 
 // body
-//   .header
-//     .banner
-//       cursor url('/cursor/Vista.cur'), auto
+// .header
+// .banner
+// cursor url('/cursor/Vista.cur'), auto
 
 // .container
-//   aside
-//     .info-card
-//       .info-card-body
-//         cursor url('/cursor/Vista.cur'), auto
+// aside
+// .info-card
+// .info-card-body
+// cursor url('/cursor/Vista.cur'), auto
 
 // a, button, #goTop, .jump, h1, .info-avatar, .post-tag ,.posts-list-item .post-info-list .post-info-item .icon ,.info-text
-//   cursor url('/cursor/link.cur'), auto
+// cursor url('/cursor/link.cur'), auto
 
 // 添加图片圆角
-.content img
-    -webkit-border-radius: 13px !important;
+.content img {
+  -webkit-border-radius: 13px !important;
+}
+
 // 隐藏默认置顶
-.go-to-top
-    display: none;
+.go-to-top {
+  display: none;
+}
 
 // 03 文字选中效果
-::selection
-    //手写英文字体：-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif
-    // background-color;
-    color: #000 !important;
-    background-color: #D7D4F0;
-//----------------------------------------------------------------------------------------------------------
+::selection {
+  // 手写英文字体：-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif
+  // background-color;
+  color: #000 !important;
+  background-color: #D7D4F0;
+}
+
+// ----------------------------------------------------------------------------------------------------------
 // 02-容器插件相关样式代码
 // 02-01 warning 容器
-.custom-block.warning
-    border-left-color: #ff9100;
-.custom-block.warning
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
-    position: relative;
-    margin: 1.5625em 0;
-    padding: 0 .6rem;
-    border-left: .2rem solid #448aff;
-    border-radius: .1rem;
-    overflow: auto;
+.custom-block.warning {
+  border-left-color: #ff9100;
+}
+
+.custom-block.warning {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 0.6rem;
+  border-left: 0.2rem solid #448aff;
+  border-radius: 0.1rem;
+  overflow: auto;
+}
+
 .custom-block.warning .custom-block-title {
-    color: #b29400;
+  color: #b29400;
 }
+
 // 02-02 tip 容器
-.custom-block.tip
-    background-color:#f3f5f780;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
-    position: relative;
-    margin: 1.5625em 0;
-    padding: 0 .6rem;
-    border-left: .2rem solid #42B983;
-    border-radius: .1rem;
-    overflow: auto;
-.custom-block.tip .custom-block-title {
-    color:  #42B983;
+.custom-block.tip {
+  background-color: #f3f5f780;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 0.6rem;
+  border-left: 0.2rem solid #42B983;
+  border-radius: 0.1rem;
+  overflow: auto;
 }
+
+.custom-block.tip .custom-block-title {
+  color: #42B983;
+}
+
 // 02-04 right 容器开始
-.custom-block
-  &.right
-    color transparentify($textColor, 0.4)
-    font-size 0.9rem
-    text-align right
-.customer-container-center
-  text-align center
+.custom-block {
+  &.right {
+    color: transparentify($textColor, 0.4);
+    font-size: 0.9rem;
+    text-align: right;
+  }
+}
+
+.customer-container-center {
+  text-align: center;
+}
+
 // 02-05 right center容器结束
 
-//主题优化----------------------------------------------------------------------------------------------------
+// 主题优化----------------------------------------------------------------------------------------------------
 
 // 04 磨砂导航栏
-.navbar
-    backdrop-filter: saturate(180%) blur(5px);
-    -webkit-backdrop-filter: saturate(180%) blur(5px);
-.navbar.fixed
-    background-color: rgba(255, 255, 255, 0.25) !important;
-    backdrop-filter: saturate(180%) blur(5px);
-    -webkit-backdrop-filter: saturate(180%) blur(5px);
+.navbar {
+  backdrop-filter: saturate(180%) blur(5px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+}
+
+.navbar.fixed {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: saturate(180%) blur(5px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+}
 
 // 05 去除主题默认多处白色边框
-.navbar
-    border-bottom: 0px solid #eaecef !important;
-.banner
-    border-bottom: 0px solid #eaecef !important;
-.footer
-    border-top: 0px solid #eaecef !important;
+.navbar {
+  border-bottom: 0px solid #eaecef !important;
+}
+
+.banner {
+  border-bottom: 0px solid #eaecef !important;
+}
+
+.footer {
+  border-top: 0px solid #eaecef !important;
+}
 
 // 06 列表移动
-.content ul, .content ol
-    padding-left: 1.6em;
+.content ul, .content ol {
+  padding-left: 1.6em;
+}
 
-//动态右移首页效果
+// 动态右移首页效果
 .posts-list-item {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -102,182 +129,210 @@
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
 .posts-list-item:hover, .posts-list-item:focus, .posts-list-item:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
 }
 
-//头像阴影
-.info-card .info-card-header .info-avatar
-  //box-shadow: 0 0 15px #918c8c !important;
+// 头像阴影
+.info-card .info-card-header .info-avatar {
+  // box-shadow: 0 0 15px #918c8c !important;
+}
+
 .info-card {
-  //background-image: linear-gradient(0deg,rgba(211, 206, 217,0.1) , rgba(255,255,255,.01))!important;
-  background-color: hsla(0,0%,100%,.8)!important;
+  // background-image: linear-gradient(0deg,rgba(211, 206, 217,0.1) , rgba(255,255,255,.01))!important;
+  background-color: hsla(0, 0%, 100%, 0.8) !important;
 }
 
-//文章阴影+透明
-.main-div
-    box-shadow: 0px 0px 10px #FCD5CC !important;
-    background-color: hsla(0,0%,100%,.9)!important;
-    // -webkit-border-radius: 15px !important;
-//配合文章的tag页透明色
-.post-tag
-    background-color: hsla(0, 0%, 100%, 0) !important;
+// 文章阴影+透明
+.main-div {
+  box-shadow: 0px 0px 10px #FCD5CC !important;
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  // -webkit-border-radius: 15px !important;
+}
 
-//header 渐变
-.header
-  //background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
-  background-color: hsla(0,0%,100%,.2)!important;
-  //box-shadow: 0px 0px 7px #cbaecd !important;
+// 配合文章的tag页透明色
+.post-tag {
+  background-color: hsla(0, 0%, 100%, 0) !important;
+}
+
+// header 渐变
+.header {
+  // background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
+  background-color: hsla(0, 0%, 100%, 0.2) !important;
+  // box-shadow: 0px 0px 7px #cbaecd !important;
   -webkit-border-radius: 0px !important;
-
-//引用块的样式
-.content blockquote {
-    padding: 0.1 0 0 0 rem !important;
-    background-color: rgba(211, 206, 217,0.15) !important;
-    border-left: 0.3em solid #d3ced9 !important;
-    margin-left: 0 !important;
 }
 
-//隐藏文章简要描述
+// 引用块的样式
+.content blockquote {
+  padding: 0.1 0 0 0 rem !important;
+  background-color: rgba(211, 206, 217, 0.15) !important;
+  border-left: 0.3em solid #d3ced9 !important;
+  margin-left: 0 !important;
+}
+
+// 隐藏文章简要描述
 .post-excerpt {
-  display none;
-  white-space nowrap;
-  overflow hidden;
+  display: none;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-//背景    
-body{
-    background-size: 100% auto;
-    background-position: 0% 0%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    //background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
+// 背景
+body {
+  background-size: 100% auto;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  // background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
 }
 
-body
+body {
   // 井子格子背景
   // background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==")
-  background-repeat repeat
-  background-attachment fixed
-  min-height 100vh
-
-@media (min-aspect-ratio: 2400/1850) {
-  body{
-    background-image: url(https://candinya.com/images/bg.webp)
-  }
-    // body {
-    //   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==);
-    //   // background-color:#fcd5cc; horniz 主题背景色
-    //   //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
-    //   //background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
-    //   //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
-    // }
-    article {
-        font-size: 16px !important;
-    }
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-//针对移动端的内容块缩进修改
-@media (max-width: 767px){
-  .main-div {
-      -webkit-border-radius: 0px !important;
+@media (min-aspect-ratio: 2400 / 1850) {
+  body {
+    background-image: url('https://candinya.com/images/bg.webp'); // candinya.com/images/bg.webp)
   }
+
+  // body {
+  // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==);
+  // // background-color:#fcd5cc; horniz 主题背景色
+  // //background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
+  // //background-image: url(https://i.loli.net/2020/12/07/tcaO73SQWmInX4E.jpg);
+  // //background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+  // }
+  article {
+    font-size: 16px !important;
+  }
+}
+
+// 针对移动端的内容块缩进修改
+@media (max-width: 767px) {
+  .main-div {
+    -webkit-border-radius: 0px !important;
+  }
+
   .content {
     padding-left: 0.4rem;
   }
+
   .container {
-      padding-top: 0rem;
-      padding-left: 0rem;
-      padding-right: 0rem;
-      padding-bottom: 0rem;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
   }
 }
-//infocard距离调整
-.info-card .info-card-body .info-desc{
+
+// infocard距离调整
+.info-card .info-card-body .info-desc {
   margin: 0.5rem 0;
 }
 
-//字体--------------------------------------------------------------------------------------------------------------
-.navbar .navbar-link
-    font-size: 1.2rem;
-.navbar-site-name
-    font-size: 1.2rem;
-    font-weight: 500 !important;
-.posts-list-item .post-title
-    font-size: 1.1rem;
-//英文字体
+// 字体--------------------------------------------------------------------------------------------------------------
+.navbar .navbar-link {
+  font-size: 1.2rem;
+}
 
-//字体大小更改
+.navbar-site-name {
+  font-size: 1.2rem;
+  font-weight: 500 !important;
+}
+
+.posts-list-item .post-title {
+  font-size: 1.1rem;
+}
+
+// 英文字体
+
+// 字体大小更改
 .posts-list-item .post-title {
   font-weight: normal !important;
 }
-body{
+
+body {
   font-size: 15.5px !important;
 }
 
 h2 {
-    font-size: 18px !important;
-    font-weight: 550 !important;
+  font-size: 18px !important;
+  font-weight: 550 !important;
 }
+
 h3 {
-    font-weight: 550 !important;
-    font-size: 16px !important;
+  font-weight: 550 !important;
+  font-size: 16px !important;
 }
+
 strong {
-    font-weight: 550;
+  font-weight: 550;
 }
 
-//markdown标题添加下划线
-article .content h2::after{
-content: " ";
-    width: 15%;
-    display: block;
-    // --border-opacity: 1;
-    margin-top: .5rem;
-    margin-bottom: .25rem;
-    border-radius: .25rem;
-    border: 2px solid #718096;
-    border-color: rgba(113,128,150,1);
+// markdown标题添加下划线
+article .content h2::after {
+  content: ' ';
+  width: 15%;
+  display: block;
+  // --border-opacity: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
+  border: 2px solid #718096;
+  border-color: rgba(113, 128, 150, 1);
 }
+
 article .content h3::after {
-    content: " ";
-    width: 15%;
-    display: block;
-    // --border-opacity: 1;
-    margin-top: .5rem;
-    margin-bottom: .25rem;
-    border-radius: .25rem;
-    border: 2px solid #718096;
-    border-color: rgba(113,128,150,1);
+  content: ' ';
+  width: 15%;
+  display: block;
+  // --border-opacity: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
+  border: 2px solid #718096;
+  border-color: rgba(113, 128, 150, 1);
 }
-//---------------------------------------------------------------------------------------------------
 
-//阅读统计进度条
-.reading-progress .progress 
-    height : 3px !important;
-    //background-image: linear-gradient(225deg, Cyan 0%, Magenta 50%, Yellow 100%) !important;
+// ---------------------------------------------------------------------------------------------------
 
-//渐变滚动条
-::-webkit-scrollbar
-  width: 3px ;
+// 阅读统计进度条
+.reading-progress .progress {
+  height: 3px !important;
+  // background-image: linear-gradient(225deg, Cyan 0%, Magenta 50%, Yellow 100%) !important;
+}
+
+// 渐变滚动条
+::-webkit-scrollbar {
+  width: 3px;
   height: 3px;
-::-webkit-scrollbar-thumb
-  background: #d3ced9  !important;
+}
 
-//pwa 样式
-.sw-update-popup{
-    position: fixed;
-    border: 1px solid #3eaf7c;
-    border-radius: 3px;
-    background-color: rgba(255,255,255,.4) !important;
-    //box-shadow: 0 4px 16px var(--pwa-popup-color);
+::-webkit-scrollbar-thumb {
+  background: #d3ced9 !important;
+}
+
+// pwa 样式
+.sw-update-popup {
+  position: fixed;
+  border: 1px solid #3eaf7c;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  // box-shadow: 0 4px 16px var(--pwa-popup-color);
 }
 
 .sw-update-popup>button {
   position: relative;
 }
+
 .sw-update-popup>button::before, .sw-update-popup>button::after {
   content: '';
   position: absolute;
@@ -309,7 +364,7 @@ article .content h3::after {
   transform: scaleY(1);
 }
 
-//a链接-----------------------------------------------------------------------------------------------
+// a链接-----------------------------------------------------------------------------------------------
 a {
   text-decoration: none !important;
   color: #646CFF;
@@ -317,24 +372,26 @@ a {
 
 .main-div a:hover {
   color: #9400D3;
-  background: -webkit-linear-gradient(left,
-            #ffffff,
-            #ff0000 6.25%,
-            #ff7d00 12.5%,
-            #ffff00 18.75%,
-            #00ff00 25%,
-            #00ffff 31.25%,
-            #0000ff 37.5%,
-            #ff00ff 43.75%,
-            #ffff00 50%,
-            #ff0000 56.25%,
-            #ff7d00 62.5%,
-            #ffff00 68.75%,
-            #00ff00 75%,
-            #00ffff 81.25%,
-            #0000ff 87.5%,
-            #ff00ff 93.75%,
-            #ffff00 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff,
+    #ff0000 6.25%,
+    #ff7d00 12.5%,
+    #ffff00 18.75%,
+    #00ff00 25%,
+    #00ffff 31.25%,
+    #0000ff 37.5%,
+    #ff00ff 43.75%,
+    #ffff00 50%,
+    #ff0000 56.25%,
+    #ff7d00 62.5%,
+    #ffff00 68.75%,
+    #00ff00 75%,
+    #00ffff 81.25%,
+    #0000ff 87.5%,
+    #ff00ff 93.75%,
+    #ffff00 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
@@ -342,102 +399,109 @@ a {
 }
 
 @keyframes a-hover-masked-animation {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -100%, 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100%, 0;
+  }
 }
-//主界面a恢复默认样式
-.post-link:hover{
+
+// 主界面a恢复默认样式
+.post-link:hover {
   -webkit-text-fill-color: black !important;
 }
-//代码块-----------------------------------------------------------------------
+
+// 代码块-----------------------------------------------------------------------
 div[class*=language-] {
-    max-height: 350px;
-    overflow: auto;
+  max-height: 350px;
+  overflow: auto;
 }
+
 // //纠正行高错位的问题
-pre[class*=language-] {
-    margin: 0rem 0 !important;
-}
-//主标题----------------------------------------------------------------------------------------------
+// pre[class*=language-] {
+// margin: 0rem 0 !important;
+// }
+// 主标题----------------------------------------------------------------------------------------------
 #vuepress-theme-meteorlxy > header > div.banner > div > div > h1 {
-    font-family: 'Lobster';
-    font-size: 1.7rem;
+  font-family: 'Lobster';
+  font-size: 1.7rem;
 }
 
 .banner .container .center:hover {
-    transform: scale(1,1) !important;
+  transform: scale(1, 1) !important;
 }
+
 #vuepress-theme-meteorlxy > header > div.banner > div > div > h1:hover {
-    filter: brightness(110%);
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
-    animation: orange 15s ease-in-out infinite alternate;
+  filter: brightness(110%);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  animation: orange 15s ease-in-out infinite alternate;
 }
 
 @keyframes orange {
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 7px #ff5722, 0 0 8px #ff5722, 0 0 9px #ff5722, 0 0 10px #ff5722, 0 0 15px #ff5722;
-        
-    }
-    from {
-        filter: brightness(110%);        
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 7px #ff5722, 0 0 8px #ff5722, 0 0 9px #ff5722, 0 0 10px #ff5722, 0 0 15px #ff5722;
+  }
+
+  from {
+    filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
   }
 }
-//自定义vue容器阴影样式-----------------------------------------------------------------------------------------------------
-.note
-  margin 1rem 0
-  padding .1rem 1.5rem
-  border-radius 0.4rem
-  background-color #f0f4f8
-  .title
-    font-weight: bold
+
+// 自定义vue容器阴影样式-----------------------------------------------------------------------------------------------------
 .note {
-	position: relative;
-	box-shadow: 0px 1px 4px rgba(0,0,0,0.3),
-				0px 0px 20px rgba(0,0,0,0.1) inset;
+  margin: 1rem 0;
+  padding: 0.1rem 1.5rem;
+  border-radius: 0.4rem;
+  background-color: #f0f4f8;
+
+  .title {
+    font-weight: bold;
+  }
 }
 
-.note::before,
+.note {
+  position: relative;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.1) inset;
+}
+
+.note::before, .note::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.note::before, .note::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+}
+
+.note::before, .note::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  transform: rotate(-3deg);
+}
+
 .note::after {
-   content:"";
-   position:absolute;
-   z-index:-1;
+  right: 10px;
+  left: auto;
+  transform: rotate(3deg);
 }
 
-.note::before,
-.note::after {
-   content:"";
-   position:absolute;
-   z-index:-1;
-   bottom:15px;
-   left:10px;
-   width:50%;
-   height:20%;
-}
-
-.note::before,
-.note::after {
-   content:"";
-   position:absolute;
-   z-index:-1;
-   bottom:15px;
-   left:10px;
-   width:50%;
-   height:20%;
-   box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-   transform:rotate(-3deg);
-}
-
-.note::after{
-   right:10px;
-   left:auto;
-   transform:rotate(3deg);
- }
-//details 容器样式美化-----------------------------------------------------
+// details 容器样式美化-----------------------------------------------------
 details.showmore {
   background-color: #faebd7;
 }
@@ -449,57 +513,58 @@ summary {
   height: 40px;
   line-height: 40px;
 }
-#vuepress-theme-meteorlxy > div > main > div > article > div > details > p{
+
+#vuepress-theme-meteorlxy > div > main > div > article > div > details > p {
   padding-left: 0.75rem;
 }
-//css揭秘的行内代码块背景色
-.content code {
-  // background-color: #F6ECE9 修复bug、之后自己写主题的时候再加
-  border: 1px solid #282C34;
-}
 
-#vuepress-theme-meteorlxy > div > main > div > article > div > div.language-sql.extra-class > pre > code{
-  background-color: #282C34 !important; 
-  //黑代码框内恢复默认边框
-}
+// //css揭秘的行内代码块背景色
+// .content code {
+// // background-color: #F6ECE9 修复bug、之后自己写主题的时候再加
+// border: 1px solid #282C34;
+// }
+
+// #vuepress-theme-meteorlxy > div > main > div > article > div > div.language-sql.extra-class > pre > code{
+// background-color: #282C34 !important;
+// //黑代码框内恢复默认边框
+// }
 
 // 代码块前置的三个小圆点
 
-div[class*="language-"]::after,
-pre[class*="language-"]::after,
-pre[class*="language-"]::before
-  content '' !important
-  height 10px !important
-  width 10px  !important
-  position absolute !important
-  top 12px !important
-  left 12px !important
-  border-radius 50% !important
-  display inline-block !important
-  background #ff4742 !important
+// div[class*="language-"]::after,
+// pre[class*="language-"]::after,
+// pre[class*="language-"]::before
+// content '' !important
+// height 10px !important
+// width 10px  !important
+// position absolute !important
+// top 12px !important
+// left 12px !important
+// border-radius 50% !important
+// display inline-block !important
+// background #ff4742 !important
 
-pre[class*="language-"]::before
-  left 27px !important
-  background #b300eb !important
+// pre[class*="language-"]::before
+// left 27px !important
+// background #b300eb !important
 
-pre[class*="language-"]::after
-  left 42px !important
-  background #fcd019 !important
+// pre[class*="language-"]::after
+// left 42px !important
+// background #fcd019 !important
 
-div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"] {
-    padding: 2rem !important;
-}
-
+// div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"] {
+// padding: 2rem !important;
+// }
 kbd {
-    color: #000;
-    border: 1px solid #d6d6d6;
-    border-bottom: 2px solid #c7c7c7;
-    padding: 2px 4px;
-    background-color: #f0f0f0;
-    border-radius: 3px;
+  color: #000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
 }
 
-body{
-  font-family: LXGW WenKai,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+body {
+  font-family: LXGW WenKai, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   // font-family: Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif!important;
 }

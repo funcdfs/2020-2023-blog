@@ -7,7 +7,7 @@ tags:
 
 tmux 是 linux 工作环境下的基础工具，熟练使用是必须的
 
-![20210825214606-2021-08-25-21-46-11](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210825214606-2021-08-25-21-46-11.png)
+![20210826002716-2021-08-26-00-27-19](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210826002716-2021-08-26-00-27-19.png)
 
 一个 tmux 可以包含多个 session，一个 session 可以包含多个 window，一个 window 可以包含多个 pane。一般使用 session 和 pane 两个环节
 
@@ -41,20 +41,25 @@ tmux 是 linux 工作环境下的基础工具，熟练使用是必须的
 tmux new 创建默认名称的会话
 tmux new -s mysession 创建 mysession 的会话
 tmux ls 以文本形式输出会话列表
+
 tmux a　　连接上一个会话
 tmux a -t mysession　　连接指定会话
+
 tmux rename -t s1 s2　　重命名会话 s1 为 s2
+
 tmux kill-session　　关闭上次打开的会话
 tmux kill-session -t s1　　关闭会话 s1
+tmux kill-session -t 会话名
 tmux kill-session -a -t s1　　关闭除 s1 外的所有会话
 tmux kill-server　　关闭所有会话
+
 ctrl+b s　　列出会话，可进行切换
-ctrl+b $　　重命名会话
+ctrl+b $　　重命名当前会话
 
 ## 其他命令
 
 <kbd>C-b == CTRL + b </kbd>
-
+- C-b z 全屏当前 pane， 再次操作恢复布局
 - C-b ! 把当前窗口变为新窗口
 - C-b q 显示分隔窗口的编号
 - C-b o 跳到下一个分隔窗口
@@ -74,41 +79,58 @@ ctrl+b $　　重命名会话
 - C-b s 以菜单方式显示和选择会话
 - C-b d 退出 tumx，并保存当前会话，这时，tmux 仍在后台运行，可以通过 tmux attach 进入 到指定的会话
 
+## 文本复制模式：
 
-## .tmux
+按下 `PREFIX-[` 进入文本复制模式。可以使用方向键在屏幕中移动光标。默认情况下，方向键是启用的。在配置文件中启用 Vim 键盘布局来切换窗口、调整窗格大小。Tmux 也支持 Vi 模式。要是想启用 Vi 模式，只需要把下面这一行添加到 .tmux.conf 中：
 
-直接 clone 下来用就可以了：
+    setw -g mode-keys vi
+
+启用这条配置后，就可以使用 h、j、k、l 来移动光标了。
+
+想要退出文本复制模式的话，按下回车键就可以了。然后按下 `PREFIX-]` 粘贴刚才复制的文本。
+
+
+## 配置选项：
+
+    # 鼠标支持 - 设置为 on 来启用鼠标(与 2.1 之前的版本有区别，请自行查阅 man page)
+    * set -g mouse on
+
+    # 设置默认终端模式为 256color
+    set -g default-terminal "screen-256color"
+
+    # 启用活动警告
+    setw -g monitor-activity on
+    set -g visual-activity on
+
+    # 居中窗口列表
+    set -g status-justify centre
+
+## 参考配置文件（~/.tmux.conf）：
+
+```bash
+# C-b 有些不合理，prefix 重置为 ctrl a 🤓
+set -g prefix C-a
+
+set -g base-index         1     # 窗口编号从 1 开始计数
+set -g display-panes-time 10000 # PREFIX-Q 显示编号的驻留时长，单位 ms
+set -g mouse              on    # 开启鼠标 🤓
+set -g pane-base-index    1     # 窗格编号从 1 开始计数
+set -g renumber-windows   on    # 关掉某个窗口后，编号重排
+
+setw -g allow-rename      off   # 禁止活动进程修改窗口名
+setw -g automatic-rename  off   # 禁止自动命名新窗口
+setw -g mode-keys         vi    # 进入复制模式的时候使用 vi 键位（默认是 EMACS）🤓
+```
+
+## 懒人 .tmux
+
+![20210825214606-2021-08-25-21-46-11](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210825214606-2021-08-25-21-46-11.png)
+
+github有一个比较花哨的一个，直接 clone 下来用就可以了：,主要优化底部栏，没什么实际用途
 
 https://github.com/gpakosz/.tmux
 
-## 前置按键配置
+## 插件
 
-现在已经可以进行基础的 tmux 分屏使用了， 就像 vim 一样，tmux 也可以进行很多个性化的配置，前置按键换不换都可以
-
-Ubuntu 如何切换为 root 用户并创建文件/etc/.tmux.conf
-https://askubuntu.com/a/446572 [由于 Ubuntu 中弃用 root 权限，使用 `sudo i` 替换 `su/su -`]
-
-然后切换到 /etc 目录下
-
-``` 
-touch .tmux.conf
-vim .tmux.conf
-
-set -g prefix <kbd>CTRL</kbd> + <kbd>b</kbd>
-unbind C-b
-```
-
-或者是在 ~ 目录下，vim .tmux.conf
-set -g prefix <kbd>CTRL</kbd> + <kbd>b</kbd>
-unbind C-b
-
-重启 tmux ctrl + b 输入： source-file ~/.tmux.conf
-
-将 ctrl r 设置为加载配置文件
-
-bind C-r source-file ~/.tmux.conf \; display "Refleshed Configure!"
-
-bind-key k select-pane -U # up
-bind-key j select-pane -D # down
-bind-key h select-pane -L # left
-bind-key l select-pane -R # right
+TODO tmux 插件
+> 工作之后再补吧， vim & tmux 插件相关， 现在已经够用了

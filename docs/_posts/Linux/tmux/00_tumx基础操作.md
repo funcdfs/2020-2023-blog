@@ -7,6 +7,8 @@ tags:
 
 tmux 是 linux 工作环境下的基础工具，熟练使用是必须的
 
+![20210825214606-2021-08-25-21-46-11](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210825214606-2021-08-25-21-46-11.png)
+
 一个 tmux 可以包含多个 session，一个 session 可以包含多个 window，一个 window 可以包含多个 pane。一般使用 session 和 pane 两个环节
 
 ![20210825113051-2021-08-25-11-30-56](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210825113051-2021-08-25-11-30-56.png)
@@ -15,23 +17,23 @@ tmux 是 linux 工作环境下的基础工具，熟练使用是必须的
 
 （一般情况下首先将主操作键 ctrl b 重定义到 ctrl a ）
 
-- C-a C-o 调换终端左右窗口位置，类似与 vim 里的 C-w
-- C-a %（shift + 5） 纵向分隔窗口
-- C-a "（shift + '） 横向分隔窗口
-- C-d：关闭当前 pane；如果当前 window 的所有 pane 均已关闭，则自动关闭 window；如果当前 session 的所有 window 均已关闭，则自动关闭 session。
-- C-a 上下左右：tmux 光标在窗口的移动
-- C-a-上下左右：调整 pane 之间分割线的位置
-- C-a, s：列出 session 目录。
+- <kbd>CTRL</kbd> + <kbd>b</kbd> <kbd>CTRL</kbd>-o 调换终端左右窗口位置，类似与 vim 里的 <kbd>CTRL</kbd>-w
+- <kbd>CTRL</kbd> + <kbd>b</kbd> %（shift + 5） 纵向分隔窗口
+- <kbd>CTRL</kbd> + <kbd>b</kbd> "（shift + '） 横向分隔窗口
+- <kbd>CTRL</kbd>-d：关闭当前 pane；如果当前 window 的所有 pane 均已关闭，则自动关闭 window；如果当前 session 的所有 window 均已关闭，则自动关闭 session。
+- <kbd>CTRL</kbd> + <kbd>b</kbd> 上下左右：tmux 光标在窗口的移动
+- <kbd>CTRL</kbd> + <kbd>b</kbd>-上下左右：调整 pane 之间分割线的位置
+- <kbd>CTRL</kbd> + <kbd>b</kbd>, s：列出 session 目录。
     方向键 —— 上：选择上一项 session/window/pane
     方向键 —— 下：选择下一项 session/window/pane
     方向键 —— 右：展开当前项 session/window
     方向键 —— 左：闭合当前项 session/window
-- C-a, w：列出 Windows 目录
-- C-a, c: 在当前的 session 中新建一个 Windows
-- C-a，d 挂起当前 session
+- <kbd>CTRL</kbd> + <kbd>b</kbd>, w：列出 Windows 目录
+- <kbd>CTRL</kbd> + <kbd>b</kbd>, c: 在当前的 session 中新建一个 Windows
+- <kbd>CTRL</kbd> + <kbd>b</kbd>，d 挂起当前 session
 - tmux a 打开之前挂起的 session
-- C-a, c 在当前的 session 中创建一个新的 Windows 
-- C-a, ？打开帮助文档
+- <kbd>CTRL</kbd> + <kbd>b</kbd>, c 在当前的 session 中创建一个新的 Windows 
+- <kbd>CTRL</kbd> + <kbd>b</kbd>, ？打开帮助文档
 - Alt + 上下， 在 linux 中进行翻页
 
 ## 会话
@@ -50,6 +52,8 @@ ctrl+b s　　列出会话，可进行切换
 ctrl+b $　　重命名会话
 
 ## 其他命令
+
+<kbd>C-b == CTRL + b </kbd>
 
 - C-b ! 把当前窗口变为新窗口
 - C-b q 显示分隔窗口的编号
@@ -70,9 +74,16 @@ ctrl+b $　　重命名会话
 - C-b s 以菜单方式显示和选择会话
 - C-b d 退出 tumx，并保存当前会话，这时，tmux 仍在后台运行，可以通过 tmux attach 进入 到指定的会话
 
-## 配置
 
-现在已经可以进行基础的 tmux 分屏使用了， 就像 vim 一样，tmux 也可以进行很多个性化的配置 
+## .tmux
+
+直接 clone 下来用就可以了：
+
+https://github.com/gpakosz/.tmux
+
+## 前置按键配置
+
+现在已经可以进行基础的 tmux 分屏使用了， 就像 vim 一样，tmux 也可以进行很多个性化的配置，前置按键换不换都可以
 
 Ubuntu 如何切换为 root 用户并创建文件/etc/.tmux.conf
 https://askubuntu.com/a/446572 [由于 Ubuntu 中弃用 root 权限，使用 `sudo i` 替换 `su/su -`]
@@ -83,12 +94,12 @@ https://askubuntu.com/a/446572 [由于 Ubuntu 中弃用 root 权限，使用 `su
 touch .tmux.conf
 vim .tmux.conf
 
-set -g prefix C-a
+set -g prefix <kbd>CTRL</kbd> + <kbd>b</kbd>
 unbind C-b
 ```
 
 或者是在 ~ 目录下，vim .tmux.conf
-set -g prefix C-a
+set -g prefix <kbd>CTRL</kbd> + <kbd>b</kbd>
 unbind C-b
 
 重启 tmux ctrl + b 输入： source-file ~/.tmux.conf

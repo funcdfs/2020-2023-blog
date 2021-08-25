@@ -1,11 +1,13 @@
 ---
-title: VIM 基础使用模板
+title: vim 基础使用模板
 date: 2021-07-10
 tags:
   - vim
 ---
 
 ## 在 vim 中进行打字
+
+![20210824193823-2021-08-24-19-38-27](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210824193823-2021-08-24-19-38-27.png)
 
 <kbd>i</kbd>  从正常模式切换到插入模式，当前方块的前面为具体的插入位置： insert
 
@@ -19,14 +21,12 @@ tags:
 <kbd>:w</kbd> + 文件名 保存文件
 <kbd>:wq</kbd> + 空格 + 文件名 存档后离开
 
-![20210708223403-2021-07-08](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/20210708223403-2021-07-08.png)
 
 ## 在 vim 中进行移动
-tips:
-ctrl + z 将 vim 放在背景
-fg 将 vim 移到前面
 
 <kbd>h j k l</kbd> 上下左右，熟练即可
+
+3 + 空格 向后跳三个光标
 
 <kbd>w</kbd> 跳单词
 <kbd>W</kbd> 跳完全匹配的单词
@@ -35,15 +35,16 @@ fg 将 vim 移到前面
 <kbd>}</kbd> 右边的大括号跳一个段落
 <kbd>{</kbd> 左边的大括号往左侧跳一个段落
 
-<kbd>G</kbd> 跑到文章末尾 Graph （相比滚轮方便很多）
+<kbd>G</kbd> 跑到文章末尾 Graph （相比滚轮方便很多，5G 跳到文本的第五行）
 <kbd>gg</kbd> 两个小写 g 字母跑到文章起始点
 <kbd>0</kbd> 跑到一行的行首
-<kbd>$</kbd> 跑到一行的行尾 （数字 4）
+<kbd>$</kbd> 跑到一行的行尾
 
 gk 进行视图层级的上下移动， （编辑器会对超过规定长度的文字进行折行）
-gj 
+gj
 
-在 insert 模式下不需要移动，打字，离开，移动，插入，打字 $\cdots$
+在 insert 模式下不需要移动，（虽然上下左右可以实现），
+操作流程是：打字，离开，移动，插入，打字 $\cdots$
 
 ## 在文件里面搜寻文字
 
@@ -51,9 +52,9 @@ gj
 
 <kbd>:set hlsearch</kbd> 高亮
 
-<kbd>n</kbd> 向上搜索结果跳动 
+<kbd>n</kbd> 向上跳动搜索结果光标
 
-<kbd>N</kbd> 向上搜索结果跳动
+<kbd>N</kbd> 向下跳动搜索结果光标
 
 问号和斜线在同一个位置，使用不同的按键，n 和 N 的作用相反
 
@@ -64,9 +65,12 @@ gj
 <kbd>f</kbd> + 任意字母，光标跳转到行中出现的第一个字母，
 <kbd>F</kbd> + 任意字母，光标进行向前跳转，
 
-<kbd>zz</kbd> 打字机模式，
-<kbd>zt</kbd> 置顶
-<kbd>zb</kbd> 底部充满查看
+如果要将搜索的内容进行替换
+`:n1,n2s/word1/word2/g:` n1 n2 是数字，在第 n1 行与 n2 行之间寻找 word1 这个字符串，并将这个字符串替换为 word2
+
+`:1,$s/word1/word2/g` 将全文的 word1 替换为 word2
+`:1,$s/word1/word2/gc` 将全文的 word1 替换为 word2， 替换每一个字符串之前向用户进行询问
+
 
 ## 在 vim 中进行复制粘贴
 
@@ -79,6 +83,12 @@ gj
 <kbd>p</kbd> 粘贴，粘贴的时候不用调回 insert 模式，直接在当前模式下进行粘贴即可 paste
 
 <kbd>yy</kbd> 直接 yank 一整行 ，p 进行粘贴即可 yy5p 粘贴五行相同的内容
+
+## vim 布局
+
+<kbd>zz</kbd> 打字机模式，
+<kbd>zt</kbd> 置顶
+<kbd>zb</kbd> 底部充满查看
 
 ## 关于选取复制粘贴的更多内容
 
@@ -100,27 +110,28 @@ gj
 
 ## 编辑文字
 
-<kbd> A</kbd> 跳到行末 用 I 和 A 来替换 0i 和 $a
-<kbd> O</kbd> 在当前行上方插入一行并进入插入模式（小写 o 在下一行开始写）
+<kbd> A </kbd> 跳到行末 用 I 和 A 来替换 0i 和 $a
+<kbd> O </kbd> 在当前行上方插入一行并进入插入模式（小写 o 在下一行开始写）
 
-<kbd> D</kbd> 将光标后面的行中内容全部删除
+<kbd> D </kbd> 将光标后面的行中内容全部删除
 
-<kbd> x</kbd> 删除单个字，放到暂存器中
+<kbd> x </kbd> 删除单个字，放到暂存器中
 
-<kbd> dd</kbd> **删除当前行**
-<kbd> 2dd</kbd> 删除两行
-<kbd> d + h,l</kbd> 删除光标左侧的内容或者删除光标右侧的单个字
-<kbd> dG</kbd> 删除光标之后直到文章末尾
+<kbd> dd </kbd> **删除当前行**
+<kbd> d12 </kbd> 删除当前光标之后的12 个字符
+<kbd> 2dd </kbd> 删除两行
+<kbd> d + h,l </kbd> 删除光标左侧的内容或者删除光标右侧的单个字
+<kbd> dG </kbd> 删除光标之后直到文章末尾
 
-<kbd> c</kbd> 删除选中内容并且把内容放到寄存器，直接进入 insert 模式，参数同 d 
+<kbd> c </kbd> 删除选中内容并且把内容放到寄存器，直接进入 insert 模式，参数同 d 
 
 > 使用 c 的话删除之后会立即进入 insert 模式，可以少打一下键盘，不用删除文字后再使用
 
-<kbd> C</kbd> 和大写<kbd> D</kbd> 的作用相同 （将光标后面的行中内容全部删除，同时进入 insert 模式）
+<kbd> C</kbd> 和大写 <kbd> D </kbd> 的作用相同 （将光标后面的行中内容全部删除，同时进入 insert 模式）
 
-<kbd> r</kbd>：replace 替换单个字母，替换之后仍然处于 normal 状态
+<kbd> r </kbd>：replace 替换单个字母，替换之后仍然处于 normal 状态
 
-<kbd>>> OR <<</kbd> 增加或者减少缩进
+<kbd>>> 或者 <<</kbd> 增加或者减少缩进
 
 将所有内容选中之后，进行 <kbd>=</kbd> 操作，他们会自动格式化代码
 
@@ -193,10 +204,12 @@ i= inner a = around
 
 ## 其他使用技巧
 
+gg=G 进行文件格式化
+
+ctrl + q 取消当前正在执行的命令
+
 <kbd>^</kbd> 6 跳到行首，（去除空格部分）更加方便的开始再次写代码 代替 0 
 正则表达式
-
-10G 跑到 vim 的全局第十行
 
 <kbd>ctrlf</kbd> 往后面翻页
 <kbd>ctrlb</kbd> 往前面翻页
@@ -225,3 +238,4 @@ i= inner a = around
 ## 参考资料
 
 - [即将失传的技艺 vim 【1P-14P】](https://www.bilibili.com/video/BV1fV41187Zr?p=1)
+- [vimtutor zh]()

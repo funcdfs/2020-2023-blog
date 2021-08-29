@@ -1,9 +1,11 @@
 ---
-title: 关于 notion 的用户体验 
+title: Notion 自定义 css 以及使用优化后的客户端 
 date: 2021-08-29
 tags:
   - notion
 ---
+
+关于 notion 的用户体验：
 
 ## 起因
 

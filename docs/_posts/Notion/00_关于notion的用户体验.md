@@ -37,3 +37,8 @@ web 端：（还可以通过 notion boost 插件开启右侧的目录）
 ![20210830010414-2021-08-30-01-04-15](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210830010414-2021-08-30-01-04-15.png)
 
 这样看起来就舒服多了，21世纪老古董会被淘汰的！
+
+## 使用 web 桌面应用程序
+
+参考：这篇文章，可以将网页转成桌面应用程序，简单很多 https://sspai.com/post/50250
+配合 stylus 可以想加什么样式就加什么样式了，不错。

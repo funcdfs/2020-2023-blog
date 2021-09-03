@@ -130,12 +130,12 @@ module.exports = {
         }, //每页文章数量
         nav: [
             {
-                text: "home",
+                text: "HOME",
                 link: "/",
                 exact: true,
             },
             {
-                text: "tags",
+                text: "TAGS",
                 link: "/posts/",
                 exact: false,
             },
@@ -145,13 +145,18 @@ module.exports = {
             //     exact: false,
             // },
             {
-                text: "about",
+                text: "OTHERS",
                 link: "/About/",
+                exact: false,
+            },
+            {
+                text: "WIKIF",
+                link: "https://wikif.vercel.app/",
                 exact: false,
             },
         ], //navbar导航栏
         personalInfo: {
-            nickname: "konng",
+            nickname: "konng.vercel.app",
             description: "Waiting is a lost art.",
             // description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=1297742167&auto=0&height=32"></iframe>',
             email: "konng_0120@qq.com",

@@ -29,7 +29,6 @@ tags:
 
 示例：
 
-
 ``` sh 
 str="Hello World!"
 
@@ -51,7 +50,6 @@ echo `expr substr "$str" 2 3`  # 输出 ell
 `()` 可以提升优先级，但需要用反斜杠转义
 
 示例：
-
 
 ``` sh 
 a=3
@@ -96,33 +94,30 @@ echo `expr $a \| $b`  # 输出 3
 ```
 ## read 命令
 
-
-`read` 命令用于从标准输入中读取单行数据。当读到文件结束符时，`exit code` 为1，否则为0。
+`read` 命令用于从标准输入中读取单行数据。当读到文件结束符时，`exit code` 为 1，否则为 0。
 
 参数说明
 
 - -p: 后面可以接提示信息
 - -t：后面跟秒数，定义输入字符的等待时间，超过等待时间后会自动忽略此命令
 
-
 实例：
 
 ``` sh 
-$ read name   # 读入name的值
+$ read name   # 读入 name 的值
 fengwei2002   # 标准输入
-$ echo $name  # 输出name的值
+$ echo $name  # 输出 name 的值
 fengwei2002   #标准输出
 
-$ read -p "请在 30 s 内输入你的姓名: " -t 30 name  # 读入name的值，等待时间30秒
-请在 30 s 内输入你的姓名:  fengwei2002  # 标准输入
-$ echo $name  # 输出name的值
+$ read -p "请在 30 s 内输入你的姓名：" -t 30 name  # 读入 name 的值，等待时间 30 秒
+请在 30 s 内输入你的姓名：fengwei2002  # 标准输入
+$ echo $name  # 输出 name 的值
 fengwei2002  # 标准输出
 ```
 
 ## echo 命令
 
 `echo` 用于输出字符串。命令格式：
-
 
 ``` sh 
 echo STRING
@@ -166,7 +161,6 @@ Hi
 
 显示不换行
 
-
 ``` sh 
 echo -e "Hi \c" # -e 开启转义 \c 不换行
 echo "12345678"
@@ -179,10 +173,10 @@ echo "12345678"
 显示结果定向至文件
 
 ``` sh 
-echo "Hello World" > output.txt  # 将内容以覆盖的方式输出到output.txt中
+echo "Hello World" > output.txt  # 将内容以覆盖的方式输出到 output.txt 中
 ```
 
-原样输出字符串，不进行转义或取变量(用单引号)
+原样输出字符串，不进行转义或取变量（用单引号）
 
 ``` sh 
 name=acwing
@@ -219,14 +213,13 @@ printf 命令用于格式化输出，类似于 C/C++ 中的 printf 函数。
 脚本内容：
 
 ``` sh 
-printf "%10d!\n" 123            # 占10位，右对齐
-printf "%-10.2f!\n" 123.123321  # 占10位，保留2位小数，左对齐
+printf "%10d!\n" 123            # 占 10 位，右对齐
+printf "%-10.2f!\n" 123.123321  # 占 10 位，保留 2 位小数，左对齐
 printf "myNameIs%s\n" "fengwei2002"        # 格式化输出字符串
 printf "%d * %d = %d\n"  2 3 `expr 2 \* 3` # 表达式的值作为参数
 ```
 
 输出结果：
-
 
 ``` sh 
        123!
@@ -235,20 +228,19 @@ myNameIsfengwei2002
 2 * 3 = 6
 ```
 
-## test命令
+## test 命令
 
 在命令行中输入 `man test`，可以查看 `test` 命令的用法。
 
 **`test`命令用于判断文件类型，以及对变量做比较。**
 
-`test` 命令用 `exit code` 返回结果，而不是使用 stdout。**0表示真，非0表示假。**
+`test` 命令用 `exit code` 返回结果，而不是使用 stdout。**0 表示真，非 0 表示假。**
 
 例如：
 
-
 ``` sh 
-test 2 -lt 3     # 为真，返回值为0
-echo $?          # 输出上个命令的返回值，输出0
+test 2 -lt 3     # 为真，返回值为 0
+echo $?          # 输出上个命令的返回值，输出 0
 $ ls     # 列出当前目录下的所有文件
 test.sh
 $ test -e test.sh && echo "exist" || echo "Not exist"
@@ -261,13 +253,11 @@ Not exist  # testh2.sh 文件不存在
 
 && 表示与，|| 表示或
 二者具有短路原则：
-expr1 && expr2：当expr1为假时，直接忽略expr2
-expr1 || expr2：当expr1为真时，直接忽略expr2
-**表达式的exit code为0，表示真；为非零，表示假。（与C/C++中的定义相反）**
+expr1 && expr2：当 expr1 为假时，直接忽略 expr2
+expr1 || expr2：当 expr1 为真时，直接忽略 expr2
+**表达式的 exit code 为 0，表示真；为非零，表示假。（与 C/C++中的定义相反）**
 
 ---
-
-
 
 ### 文件类型判断
 
@@ -300,22 +290,22 @@ test -r filename  # 判断文件是否可读
 命令格式：
 
 ``` sh 
-test $a -eq $b  # a是否等于b
+test $a -eq $b  # a 是否等于 b
 ```
 
 测试参数	代表意义
--eq	a是否等于b
--ne	a是否不等于b
--gt	a是否大于b
--lt	a是否小于b
--ge	a是否大于等于b
--le	a是否小于等于b
+-eq	a 是否等于 b
+-ne	a 是否不等于 b
+-gt	a 是否大于 b
+-lt	a 是否小于 b
+-ge	a 是否大于等于 b
+-le	a 是否小于等于 b
 ### 字符串比较
 测试参数	代表意义
-test -z STRING	判断STRING是否为空，如果为空，则返回true
-test -n STRING	判断STRING是否非空，如果非空，则返回true（-n可以省略）
-test str1 == str2	判断str1是否等于str2
-test str1 != str2	判断str1是否不等于str2
+test -z STRING	判断 STRING 是否为空，如果为空，则返回 true
+test -n STRING	判断 STRING 是否非空，如果非空，则返回 true（-n 可以省略）
+test str1 == str2	判断 str1 是否等于 str2
+test str1 != str2	判断 str1 是否不等于 str2
 ### 多重条件判定
 命令格式：
 
@@ -326,15 +316,15 @@ test -r filename -a -x filename
 测试参数	代表意义
 -a	两条件是否同时成立
 -o	两条件是否至少一个成立
-!	取反。如 test ! -x file，当file不可执行时，返回true
+!	取反。如 test ! -x file，当 file 不可执行时，返回 true
 ## 判断符号`[]`
-`[]`与test用法几乎一模一样，更常用于if语句中。另外`[[]]`是`[]`的加强版，支持的特性更多。
+`[]`与 test 用法几乎一模一样，更常用于 if 语句中。另外`[[]]`是`[]`的加强版，支持的特性更多。
 
 例如：
 
 ```
-[ 2 -lt 3 ]  # 为真，返回值为0
-echo $?  # 输出上个命令的返回值，输出0
+[ 2 -lt 3 ]  # 为真，返回值为 0
+echo $?  # 输出上个命令的返回值，输出 0
 ~$ ls  # 列出当前目录下的所有文件
 homework  output.txt  test.sh  tmp
 ~$ [ -e test.sh ] && echo "exist" || echo "Not exist"
@@ -358,19 +348,20 @@ name="fengwei2002"
 
 ## exit 命令
 
-exit命令用来退出当前shell进程，并返回一个退出状态；使用`$?`可以接收这个退出状态。
+exit 命令用来退出当前 shell 进程，并返回一个退出状态；使用 `$?` 可以接收这个退出状态。
 
-exit命令可以接受一个整数值作为参数，代表退出状态。如果不指定，默认状态值是 0。
+exit 命令可以接受一个整数值作为参数，代表退出状态。如果不指定，默认状态值是 0。
 
-exit退出状态只能是一个介于 0~255 之间的整数，其中只有 0 表示成功，其它值都表示失败。
+exit 退出状态只能是一个介于 0~255 之间的整数，其中只有 0 表示成功，其它值都表示失败。
 
 示例：
 
-创建脚本test.sh，内容如下：
-```
+创建脚本 `test.sh`，内容如下：
+
+``` sh
 #! /bin/bash
 
-if [ $# -ne 1 ]  # 如果传入参数个数等于1，则正常退出；否则非正常退出。
+if [ $# -ne 1 ]  # 如果传入参数个数等于 1，则正常退出；否则非正常退出。
 then
     echo "arguments not valid"
     exit 1
@@ -379,48 +370,52 @@ else
     exit 0
 fi
 ```
+
 执行该脚本：
-```
-acs@9e0ebfcd82d7:~$ chmod +x test.sh 
-acs@9e0ebfcd82d7:~$ ./test.sh acwing
+
+``` sh
+$ chmod +x test.sh 
+$ ./test.sh acwing
 arguments valid
-acs@9e0ebfcd82d7:~$ echo $?  # 传入一个参数，则正常退出，exit code为0
+acs@9e0ebfcd82d7:~$ echo $?  # 传入一个参数，则正常退出，exit code 为 0
 0
 acs@9e0ebfcd82d7:~$ ./test.sh 
 arguments not valid
-acs@9e0ebfcd82d7:~$ echo $?  # 传入参数个数不是1，则非正常退出，exit code为1
+acs@9e0ebfcd82d7:~$ echo $?  # 传入参数个数不是 1，则非正常退出，exit code 为 1
 1
 ```
 
 ## 文件重定向
 
-每个进程默认打开3个文件描述符：
+每个进程默认打开 3 个文件描述符：
 
-stdin标准输入，从命令行读取数据，文件描述符为0
-stdout标准输出，向命令行输出数据，文件描述符为1
-stderr标准错误输出，向命令行输出数据，文件描述符为2
+stdin 标准输入，从命令行读取数据，文件描述符为 0
+stdout 标准输出，向命令行输出数据，文件描述符为 1
+stderr 标准错误输出，向命令行输出数据，文件描述符为 2
 可以用文件重定向将这三个文件重定向到其他文件中。
 
 重定向命令列表
-命令	说明
-command > file	将stdout重定向到file中
-command < file	将stdin重定向到file中
-command >> file	将stdout以追加方式重定向到file中
-command n> file	将文件描述符n重定向到file中
-command n>> file	将文件描述符n以追加方式重定向到file中
+| 命令             | 说明                                      |
+| ---------------- | ----------------------------------------- |
+| command > file   | 将 stdout 重定向到 file 中                |
+| command < file   | 将 stdin 重定向到 file 中                 |
+| command >> file  | 将 stdout 以追加方式重定向到 file 中      |
+| command n> file  | 将文件描述符 n 重定向到 file 中           |
+| command n>> file | 将文件描述符 n 以追加方式重定向到 file 中 |
 输入和输出重定向
 
-```
-echo -e "Hello \c" > output.txt  # 将stdout重定向到output.txt中
-echo "World" >> output.txt  # 将字符串追加到output.txt中
+``` sh
+echo -e "Hello \c" > output.txt  # 将 stdout 重定向到 output.txt 中
+echo "World" >> output.txt  # 将字符串追加到 output.txt 中
 
-read str < output.txt  # 从output.txt中读取字符串
+read str < output.txt  # 从 output.txt 中读取字符串
 
 echo $str  # 输出结果：Hello World
 ```
-同时重定向stdin和stdout
-创建bash脚本：
-```
+同时重定向 stdin 和 stdout
+创建 bash 脚本：
+
+```  sh
 #! /bin/bash
 
 read a
@@ -428,47 +423,56 @@ read b
 
 echo $(expr "$a" + "$b")
 ```
-创建input.txt，里面的内容为：
-```
+
+创建 input.txt，里面的内容为：
+
+``` sh
 3
 4
 ```
-执行命令：
-```
-acs@9e0ebfcd82d7:~$ chmod +x test.sh  # 添加可执行权限
-acs@9e0ebfcd82d7:~$ ./test.sh < input.txt > output.txt  # 从input.txt中读取内容，将输出写入output.txt中
-acs@9e0ebfcd82d7:~$ cat output.txt  # 查看output.txt中的内容
+
+执行命令：(把输入输出同时重定向)
+
+``` sh
+$ chmod +x test.sh  # 添加可执行权限
+$ ./test.sh < input.txt > output.txt  # 从 input.txt 中读取内容，将输出写入 output.txt 中
+$ cat output.txt  # 查看 output.txt 中的内容
 7
 ```
 
 ## 引入外部脚本
 
-类似于C/C++中的include操作，bash也可以引入其他文件中的代码。
+类似于 C/C++中的 include 操作，bash 也可以引入其他文件中的代码。
 
 语法格式：
 
-. filename  # 注意点和文件名之间有一个空格
+`. filename`  # 注意点和文件名之间有一个空格
 
 或
 
-source filename
+`source filename`
 示例
-创建test1.sh，内容为：
+
+创建 `test1.sh`，内容为：
 ```
 #! /bin/bash
 
-name=yxc  # 定义变量name
-然后创建test2.sh，内容为：
+name=fw  # 定义变量 name
+```
 
+然后创建 `test2.sh`，内容为：
+``` sh
 #! /bin/bash
 
 source test1.sh # 或 . test1.sh
 
-echo My name is: $name  # 可以使用test1.sh中的变量
+echo My name is: $name  # 可以使用 test1.sh 中的变量
 ```
+
 执行命令：
 ```
-acs@9e0ebfcd82d7:~$ chmod +x test2.sh 
-acs@9e0ebfcd82d7:~$ ./test2.sh 
-My name is: yxc
+$ chmod +x test2.sh 
+$ ./test2.sh # 注意 test2.sh 不需要执行权限，可以读就可以了 
+My name is: fw 
 ```
+

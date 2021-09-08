@@ -194,7 +194,7 @@ chmod +x test.sh
 ![20210903170646-2021-09-03-17-06-49](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210903170646-2021-09-03-17-06-49.png)
 
 ::: showmore
-![其他参数相关的变量.png](https://cdn.acwing.com/media/article/image/2021/09/03/101476_236a312e0c-其他参数相关的变量.png)
+![其他参数相关的变量。png](https://cdn.acwing.com/media/article/image/2021/09/03/101476_236a312e0c-其他参数相关的变量。png)
 :::
 
 ## 数组
@@ -269,16 +269,16 @@ echo ${#array[*]}  # 第二种写法
 
 ## if…then 语句
 
-类似于C/C++中的if-else语句。
+类似于 C/C++中的 if-else 语句。
 
-单层if
+单层 if
 命令格式：
 
-```
+``` sh
 if condition
 then
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 fi
 ```
@@ -288,8 +288,7 @@ fi
 a=3
 b=4
 
-
-``` 
+```  sh
 if [ "$a" -lt "$b" ] && [ "$a" -gt 2 ]
 then
     echo ${a}在范围内
@@ -298,31 +297,28 @@ fi
 
 输出结果：
 
-`3在范围内`
+`3 在范围内`
 
-
-### 单层if-else
+### 单层 if-else
 
 命令格式
 
-
-``` 
+```  sh
 if condition
 then
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 else
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 fi
 ```
 
 示例：
 
-
-```
+``` sh
 a=3
 b=4
 
@@ -336,52 +332,50 @@ fi
 
 输出结果：
 
-```
-3小于4
+``` sh
+3 小于 4
 ```
 
-### 多层if-elif-elif-else
+### 多层 if-elif-elif-else
 
 命令格式
 
-
-```
+``` sh
 if condition
 then
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 elif condition
 then
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 elif condition
 then
-    语句1
-    语句2
+    语句 1
+    语句 2
 else
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 fi
 ```
 
 示例：
 
-
-```
+``` sh
 a=4
 
 if [ $a -eq 1 ]
 then
-    echo ${a}等于1
+    echo ${a}等于 1
 elif [ $a -eq 2 ]
 then
-    echo ${a}等于2
+    echo ${a}等于 2
 elif [ $a -eq 3 ]
 then
-    echo ${a}等于3
+    echo ${a}等于 3
 else
     echo 其他
 fi
@@ -389,30 +383,30 @@ fi
 
 输出结果：
 
-```
+``` sh
 其他
 ```
-### case…esac形式
+### case…esac 形式
 
-类似于C/C++中的switch语句。
+类似于 C/C++中的 switch 语句。
 
 命令格式
 
-```
+``` sh
 case $变量名称 in
-    值1)
-        语句1
-        语句2
+    值 1)
+        语句 1
+        语句 2
         ...
-        ;;  # 类似于C/C++中的break
-    值2)
-        语句1
-        语句2
+        ;;  # 类似于 C/C++中的 break
+    值 2)
+        语句 1
+        语句 2
         ...
         ;;
-    *)  # 类似于C/C++中的default
-        语句1
-        语句2
+    *)  # 类似于 C/C++中的 default
+        语句 1
+        语句 2
         ...
         ;;
 esac
@@ -420,19 +414,18 @@ esac
 
 示例：
 
-
-```
+``` sh
 a=4
 
 case $a in
     1)
-        echo ${a}等于1
+        echo ${a}等于 1
         ;;  
     2)
-        echo ${a}等于2
+        echo ${a}等于 2
         ;;  
     3)                                                
-        echo ${a}等于3
+        echo ${a}等于 3
         ;;  
     *)
         echo 其他
@@ -442,7 +435,7 @@ esac
 
 输出结果：
 
-```
+``` sh
 其他
 ```
 
@@ -450,48 +443,45 @@ esac
 
 命令格式：
 
-
-```
+``` sh
 for var in val1 val2 val3
 do
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 done
 ```
 
-示例1，输出a 2 cc，每个元素一行：
+示例 1，输出 a 2 cc，每个元素一行：
 
-
-```
+``` sh
 for i in a 2 cc
 do
     echo $i
 done
 ```
 
-示例2，输出当前路径下的所有文件名，每个文件名一行：
+示例 2，输出当前路径下的所有文件名，每个文件名一行：
 
-```
+``` sh
 for file in `ls`
 do
     echo $file
 done
 ```
 
-示例3，输出1-10
+示例 3，输出 1-10
 
-```
+``` sh
 for i in $(seq 1 10)
 do
     echo $i
 done # seq 只支持数字，不支持字母
 ```
 
-示例4，使用{1..10} 或者 {a..z}
+示例 4，使用{1..10} 或者 {a..z}
 
-
-```
+``` sh
 for i in `{a..z}`
 do
     echo $i
@@ -499,74 +489,82 @@ done
 for ((…;…;…)) do…done
 ```
 
-命令格式：
+命令格式：（和 c++ 中的括号写法一样，并且）
 
-```
+``` sh
 for ((expression; condition; expression))
 do
-    语句1
-    语句2
+    语句 1
+    语句 2
 done
 ```
 
-示例，输出1-10，每个数占一行：
+示例，输出 1-10，每个数占一行：
 
-```
+``` sh 
 for ((i=1; i<=10; i++))
 do
     echo $i
 done
 ```
 
-### while…do…done循环
+### while…do…done 循环
 
 命令格式：
-```
+
+``` sh
 while condition
 do
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 done
 ```
-示例，文件结束符为Ctrl+d，输入文件结束符后read指令返回false。
-```
+
+示例，文件结束符为 Ctrl+d，输入文件结束符后 read 指令返回 false。
+
+``` sh
 while read name
 do
     echo $name
 done
 ```
 
-### until…do…done循环
+### until…do…done 循环（和 while 的逻辑相反）
+
 当条件为真时结束。
 
 命令格式：
 
-```
+``` sh
 until condition
 do
-    语句1
-    语句2
+    语句 1
+    语句 2
     ...
 done
 ```
 
-示例，当用户输入yes或者YES时结束，否则一直等待读入。
-```
+示例，当用户输入 yes 或者 YES 时结束，否则一直等待读入。
+
+``` sh
 until [ "${word}" == "yes" ] || [ "${word}" == "YES" ]
 do
     read -p "Please input yes/YES to stop this program: " word
 done
 ```
-break命令
-跳出当前一层循环，注意与C/C++不同的是：break不能跳出case语句。
 
-示例
-```
+### break 命令
+
+跳出当前一层循环，注意与 C/C++ 不同的是：break 不能跳出 case 语句。
+
+示例：
+
+``` sh
 while read name
 do
-    for ((i=1;i<=10;i++))
-    do
+    for ((i = 1; i <= 10; i++))
+    do 
         case $i in
             8)
                 break
@@ -578,15 +576,18 @@ do
     done
 done
 ```
-该示例每读入非EOF的字符串，会输出一遍1-7。
-该程序可以输入Ctrl+d文件结束符来结束，也可以直接用Ctrl+c杀掉该进程。
 
-### continue命令
+该示例每读入非 EOF 的字符串，会输出一遍 1-7。
+该程序可以输入 Ctrl+d 文件结束符来结束，也可以直接用 Ctrl+c 杀掉该进程。
+
+### continue 命令
+
 跳出当前循环。
 
 示例：
-```
-for ((i=1;i<=10;i++))
+
+``` sh
+for ((i = 1; i <= 10; i++))
 do
     if [ `expr $i % 2` -eq 0 ]
     then
@@ -596,51 +597,56 @@ do
 done
 ```
 
-该程序输出1-10中的所有奇数。
+该程序输出 1-10 中的所有奇数。
 
-死循环的处理方式: 输入Ctrl+c即可。
+死循环的处理方式：输入 Ctrl+c 即可。
 
-否则可以直接关闭进程：
+否则可以直接关闭进程：<kbd>ps aux</kbd> 返回所有的进程
 
-使用top命令找到进程的PID
-输入kill -9 PID即可关掉此进程
+使用 `top` 命令找到进程的 PID
+输入 `kill -9 PID` 即可关掉此进程
 
 ## 函数
 
-bash中的函数类似于C/C++中的函数，**但return的返回值与C/C++不同，返回的是exit code，取值为0-255，0表示正常结束**。
+bash 中的函数类似于 C/C++中的函数，**但 return 的返回值与 C/C++ 不同，返回的是 exit code，取值为 0-255，0 表示正常结束**。
 
-如果想获取函数的输出结果，可以通过echo输出到stdout中，然后通过`$(function_name)`来获取stdout中的结果。
+如果想获取函数的输出结果，可以通过 echo 输出到 stdout 中，然后通过 `$(function_name)` 来获取 stdout 中的结果。
 
-函数的return值可以通过`$?`来获取。
+函数的 return 值可以通过`$?`来获取。
 
 命令格式：
-```
-[function] func_name() {  # function关键字可以省略
-    语句1
-    语句2
+
+``` sh
+[function] func_name() {  # function 关键字可以省略
+    语句 1
+    语句 2
     ...
 }
 ```
-### 不获取 return值和stdout值
+
+### 不获取 return 值和 stdout 值
 
 示例
-```
+
+``` sh
 func() {
     name=fw
     echo "Hello $name"
 }
-func
+func # 运行函数的方式就是直接写上函数名 
 ```
+
 输出结果：
 
 Hello fw
 
-### 获取 return值和stdout值
+### 获取 return 值和 stdout 值
 
-不写return时，默认return 0。
+不写 return 时，默认 return 0。
 
 示例
-```
+
+``` sh
 func() {
     name=fw
     echo "Hello $name"
@@ -655,19 +661,21 @@ echo "output = $output"
 echo "return = $ret"
 ```
 输出结果：
-```
+
+```  sh
 output = Hello fw
 return = 123
 ```
 
 ### 函数的输入参数
 
-在函数内，`$1`表示第一个输入参数，`$2`表示第二个输入参数，依此类推。
+在函数内，`$1` 表示第一个输入参数，`$2` 表示第二个输入参数，依此类推。
 
-**注意：函数内的`$0`仍然是文件名，而不是函数名。**
+**注意：函数内的 `$0` 仍然是 shell 文件名，而不是函数名， 函数内不存在独自的 `$0`。**
 
 示例：
-```
+
+``` sh
 func() {  # 递归计算 $1 + ($1 - 1) + ($1 - 2) + ... + 0
     if [ $1 -le 0 ] 
     then
@@ -675,7 +683,7 @@ func() {  # 递归计算 $1 + ($1 - 1) + ($1 - 2) + ... + 0
         return 0
     fi  
 
-    sum=$(func $(expr $1 - 1))
+    sum=$(func $(expr $1 - 1)) # 可以不使用 $() 也可以使用 ``
     echo $(expr $sum + $1)
 }
 
@@ -694,13 +702,13 @@ echo $(func 10)
 
 命令格式：
 
-```
+``` sh
 local 变量名=变量值
 ```
 
 例如：
 
-```
+``` sh
 #! /bin/bash
 
 func() {
@@ -711,8 +719,9 @@ func
 
 echo $name
 ```
+
 输出结果：
 
 fw
 
-第一行为函数内的name变量，第二行为函数外调用name变量，会发现此时该变量不存在。
+第一行为函数内的 name 变量，第二行为函数外调用 name 变量，会发现此时该变量不存在。

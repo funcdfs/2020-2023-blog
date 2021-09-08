@@ -92,18 +92,19 @@ ctrl+b $　　重命名当前会话
 
 ## 配置选项：
 
-    # 鼠标支持 - 设置为 on 来启用鼠标(与 2.1 之前的版本有区别，请自行查阅 man page)
-    * set -g mouse on
 
-    # 设置默认终端模式为 256color
-    set -g default-terminal "screen-256color"
+``` sh 
+# 鼠标支持 - 设置为 on 来启用鼠标(与 2.1 之前的版本有区别，请自行查阅 man page)
+* set -g mouse on
+# 设置默认终端模式为 256color
+set -g default-terminal "screen-256color"
+# 启用活动警告
+setw -g monitor-activity on
+set -g visual-activity on
+# 居中窗口列表
+set -g status-justify centre
+```
 
-    # 启用活动警告
-    setw -g monitor-activity on
-    set -g visual-activity on
-
-    # 居中窗口列表
-    set -g status-justify centre
 
 ## 参考配置文件（~/.tmux.conf）：
 

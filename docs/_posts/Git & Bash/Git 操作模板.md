@@ -1,27 +1,51 @@
 ---
-title: Git Bash & GitHub Template
-date: 2020-05-06
-vusse-title: Git
+title: Git 模板
+date: 2021-09-22
 tags:
   - Git
 ---
 
-> 常用的 Git Bash & GitHub 模板
+## 1. git 常用命令
 
-<!-- more -->
-## 1. 当某次提交出现 bug 后悔时
+1. `git config --global user.name xxx` 设置全局用户名，信息记录在 `~/.gitconfig` 文件中
+2. `git config --global user.email xxx@xxx.com` 设置全局邮箱地址，信息记录在 `~/.gitconfig` 文件中
+3. `git init` 将当前目录配置成 `git` 仓库，信息记录在隐藏的 `.git` 文件夹中
+4. `git add XX` 将 XX 文件添加到暂存区
+5. `git add .` 将所有待加入暂存区的文件加入暂存区
+6. `git rm --cached XX` 将文件从仓库索引目录中删掉
+7. `git commit -m "给自己看的备注信息"` 将暂存区的内容提交到当前分支
+8. `git status` 查看仓库状态
+9. `git diff XX` 查看 XX 文件相对于暂存区修改了哪些内容
+10. `git log` 查看当前分支的所有版本
+    1.  `git log --pretty=oneline` 将 git log 输出为一行显示
+11. `git reflog` 查看 HEAD 指针的移动历史（包括被回滚的版本，用于版本跳转）
+12. `git reset --hard HEAD^` 或 `git reset --hard HEAD~`：将代码库回滚到上一个版本
+13. `git reset --hard HEAD^^` 往上回滚两次，以此类推
+14. `git reset --hard HEAD~100` 往上回滚 100 个版本
+15. `git reset --hard` 版本号：回滚到某一特定版本 （哈希值取前 7 位数字）
+16. `git checkout — XX` 或 `git restore XX` 将 XX 文件尚未加入暂存区的修改全部撤销
+17. `git remote add origin git@git.acwing.com:xxx/XXX.git` 将本地仓库关联到远程仓库 (后面的是 SCP)
+18. `git push -u` （第一次需要-u 以后不需要）将当前分支推送到远程仓库
+19. `git push origin branch_name`：将本地的某个分支推送到远程仓库 初始化时是 `master/main`
+20. `git clone git@git.acwing.com:xxx/XXX.git` 将远程仓库 XXX 下载到当前目录下
+21. `git checkout -b branch_name`：创建并切换到 branch_name 这个分支
+22. `git branch`：查看所有分支和当前所处分支
+23. `git checkout branch_name`：切换到 branch_name 这个分支
+24. `git merge branch_name`：将分支 branch_name 合并到当前分支上 手动合并冲突内容
+25. `git branch -d branch_name`：删除本地仓库的 branch_name 分支
+26. `git branch branch_name`：创建新分支
+27. `git push --set-upstream origin branch_name`：设置本地的 branch_name 分支对应远程仓库的 branch_name 分支
+28. `git push -d origin branch_name`：删除远程仓库的 branch_name 分支
+29. `git pull`：将远程仓库的当前分支与本地仓库的当前分支合并
+30. `git pull origin branch_name`：将远程仓库的 branch_name 分支与本地仓库的当前分支合并
+31. `git branch --set-upstream-to=origin/branch_name1 branch_name2`：将远程的 branch_name1 分支与本地的 branch_name2 分支对应
+32. `git checkout -t origin/branch_name` 将远程的 branch_name 分支拉取到本地
+33. `git stash`：将工作区和暂存区中尚未提交的修改存入栈中 (stash：藏匿)
+34. `git stash apply`：将栈顶存储的修改恢复到当前分支，但不删除栈顶元素
+35. `git stash drop`：删除栈顶存储的修改
+36. `git stash pop`：将栈顶存储的修改恢复到当前分支，同时删除栈顶元素
+37. `git stash list`：查看栈中所有元素
 
-### 1.1. 强制推送
-
-简单但是不推荐：当确保上一次的提交完全不想要的时候执行
-
-* `git log` 查看历史 ID
-* `git reset --hard` + ID
-* `git push -f origin master` 
-
-### 1.2. 比较文件进行推送
-
-通过 vscode 可视化窗口可以更加方便的查看是否融合指定文件
 
 ## 2. 记录用户名和密码
 
@@ -42,9 +66,10 @@ git config --global user.email [email]
 ssh-keygen -t rsa -C "xxx@qq.com"
 ```
 
-* 然后成功后会在 User 文件夹对应的用户下创建。ssh 文件夹，其中有一个 `id_rsa.pub` 文件，复制其中的 `key`不要删除或者添加字符：
-* 之后返回 github, 进入 Account Settings（账户配置）, 左边选择 `SSH and GPG Keys` 选项，在右上角 new ssh 中填写复制好的 Key
+* 然后成功后会在 User 文件夹对应的用户下创建 `.ssh` 文件夹，其中有一个 `id_rsa.pub` 文件，复制其中的 `key`不要删除或者添加字符：
+* 之后返回 github/gitlab, 进入 Account Settings, 选择 `SSH and GPG Keys` 选项，在右上角 new ssh 中填写复制好的 Key
 * 验证是否绑定本地成功，在 `bash` 中验证，输入指令：
+
 ```sh
 ssh -T git@github.com  
 ```
@@ -54,15 +79,15 @@ ssh -T git@github.com
 HI...
 balabulabula
 
-新生成密钥的时候，git clone或者push的时候，也有可能会报这样的错误：
+新生成密钥的时候，git clone 或者 push 的时候，也有可能会报这样的错误：
 
 The authenticity of host 'github.com (192.30.255.112)' can't be established.
 RSA key fingerprint is ~~乱码~~. 
 
-这个的原因是少了一个known_hosts文件，本来密钥文件应该是三个，现在是两个，便报了这样的错误，此时选择yes回车之后，便可，同时生成了缺少了的known_hosts文件：
+这个的原因是少了一个 known_hosts 文件，本来密钥文件应该是三个，现在是两个，便报了这样的错误，此时选择 yes 回车之后，便可，同时生成了缺少了的 known_hosts 文件：
 
 ``` sh
-Are you sure you want to continue connecting (yes/no)? //输入yes，回车即可正常使用
+Are you sure you want to continue connecting (yes/no)? //输入 yes，回车即可正常使用
 ```
 
 ## 4. Windows LF 和 CRLF 的转换问题
@@ -167,5 +192,3 @@ ncu --upgrade --upgradeAll && yarn upgrade
 yarn upgrade-interactive --latest
 // 需要手动选择升级的依赖包，按空格键选择，a 键切换所有，i 键反选选择
 ```
-
-TODO git clone 提速 胡乱谷歌尝试可以解决，但是没意义，学完计算机网络再来

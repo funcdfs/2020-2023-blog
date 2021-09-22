@@ -13,7 +13,7 @@ tmux 是 linux 工作环境下的基础工具，熟练使用是必须的
 
 ![20210825113051-2021-08-25-11-30-56](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210825113051-2021-08-25-11-30-56.png)
 
-## 主操作
+## 1. 主操作
 
 （一般情况下首先将主操作键 ctrl b 重定义到 ctrl a ）
 
@@ -36,7 +36,7 @@ tmux 是 linux 工作环境下的基础工具，熟练使用是必须的
 - <kbd>CTRL</kbd> + <kbd>b</kbd>, ？打开帮助文档
 - Alt + 上下， 在 linux 中进行翻页
 
-## 会话
+## 2. 会话
 
 tmux new 创建默认名称的会话
 tmux new -s mysession 创建 mysession 的会话
@@ -56,7 +56,7 @@ tmux kill-server　　关闭所有会话
 ctrl+b s　　列出会话，可进行切换
 ctrl+b $　　重命名当前会话
 
-## 其他命令
+## 3. 其他命令
 
 <kbd>C-b == CTRL + b </kbd>
 - C-b z 全屏当前 pane， 再次操作恢复布局
@@ -79,18 +79,26 @@ ctrl+b $　　重命名当前会话
 - C-b s 以菜单方式显示和选择会话
 - C-b d 退出 tumx，并保存当前会话，这时，tmux 仍在后台运行，可以通过 tmux attach 进入 到指定的会话
 
-## 文本复制模式：
+## 4. 文本复制模式：
+
+鼠标模式下：
+<kbd>ctrl</kbd> + <kbd>[</kbd> 进行选中块的复制  
+<kbd>ctrl</kbd> + <kbd>]</kbd> 进行当前位置的粘贴
+
 
 按下 `PREFIX-[` 进入文本复制模式。可以使用方向键在屏幕中移动光标。默认情况下，方向键是启用的。在配置文件中启用 Vim 键盘布局来切换窗口、调整窗格大小。Tmux 也支持 Vi 模式。要是想启用 Vi 模式，只需要把下面这一行添加到 .tmux.conf 中：
 
-    setw -g mode-keys vi
+
+``` 
+setw -g mode-keys vi
+```
 
 启用这条配置后，就可以使用 h、j、k、l 来移动光标了。
 
 想要退出文本复制模式的话，按下回车键就可以了。然后按下 `PREFIX-]` 粘贴刚才复制的文本。
 
 
-## 配置选项：
+## 5. 配置选项：
 
 
 ``` sh 
@@ -106,7 +114,7 @@ set -g status-justify centre
 ```
 
 
-## 参考配置文件（~/.tmux.conf）：
+## 6. 参考配置文件（~/.tmux.conf）：
 
 ```bash
 # C-b 有些不合理，prefix 重置为 ctrl a 🤓
@@ -123,7 +131,7 @@ setw -g automatic-rename  off   # 禁止自动命名新窗口
 setw -g mode-keys         vi    # 进入复制模式的时候使用 vi 键位（默认是 EMACS）🤓
 ```
 
-## 懒人 .tmux
+## 7. 懒人 .tmux
 
 ![20210825214606-2021-08-25-21-46-11](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20210825214606-2021-08-25-21-46-11.png)
 
@@ -131,7 +139,7 @@ github有一个比较花哨的一个，直接 clone 下来用就可以了：,主
 
 https://github.com/gpakosz/.tmux
 
-## 插件
+## 8. 插件
 
 TODO tmux 插件
 > 工作之后再补吧， vim & tmux 插件相关， 现在已经够用了

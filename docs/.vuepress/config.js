@@ -130,12 +130,12 @@ module.exports = {
         }, //每页文章数量
         nav: [
             {
-                text: "HOME",
+                text: "Home",
                 link: "/",
                 exact: true,
             },
             {
-                text: "TAGS",
+                text: "Tags",
                 link: "/posts/",
                 exact: false,
             },
@@ -145,12 +145,12 @@ module.exports = {
             //     exact: false,
             // },
             {
-                text: "OTHERS",
-                link: "/About/",
+                text: "Others",
+                link: "/Others/",
                 exact: false,
             },
             {
-                text: "WIKIF",
+                text: "Wiki",
                 link: "https://wikif.vercel.app/",
                 exact: false,
             },

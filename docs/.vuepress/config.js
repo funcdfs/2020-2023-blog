@@ -145,8 +145,8 @@ module.exports = {
             //     exact: false,
             // },
             {
-                text: "Others",
-                link: "/Others/",
+                text: "Projects",
+                link: "/Projects/",
                 exact: false,
             },
             {

@@ -1,5 +1,5 @@
 ---
-title: Others
+title: Projects
 header-image: /assets/img/head.jpg
 ---
 

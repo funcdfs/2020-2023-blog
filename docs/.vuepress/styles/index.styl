@@ -29,36 +29,16 @@
 
 // 03 文字选中效果
 ::selection {
-  // 手写英文字体：-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif
-  // background-color;
-  color: #000 !important;
-  background-color: #D7D4F0;
+  background-color: black;
+  color: white !important;
 }
 
 // ----------------------------------------------------------------------------------------------------------
 // 02-容器插件相关样式代码
-// 02-01 warning 容器
-.custom-block.warning {
-  border-left-color: #ff9100;
-}
-
-.custom-block.warning {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  position: relative;
-  margin: 1.5625em 0;
-  padding: 0 0.6rem;
-  border-left: 0.2rem solid #448aff;
-  border-radius: 13px;
-  overflow: auto;
-}
-
-.custom-block.warning .custom-block-title {
-  color: #b29400;
-}
 
 // 02-02 tip 容器
 .custom-block.tip {
-  background-color: #f3f5f780;
+  background-color: #272A2A;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   position: relative;
   margin: 1.5625em 0;
@@ -66,10 +46,11 @@
   border-left: 0.2rem solid #42B983;
   border-radius: 13px;
   overflow: auto;
+  color: #CFCCC8;
 }
 
 .custom-block.tip .custom-block-title {
-  color: #42B983;
+  color: #8BBC9C;
 }
 
 // 02-04 right 容器开始
@@ -91,12 +72,13 @@
 
 // 04 磨砂导航栏
 .navbar {
+  background-color: rgba(0, 0, 0, 0.35) !important;
   backdrop-filter: saturate(180%) blur(5px);
   -webkit-backdrop-filter: saturate(180%) blur(5px);
 }
 
 .navbar.fixed {
-  background-color: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.35) !important;
   backdrop-filter: saturate(180%) blur(5px);
   -webkit-backdrop-filter: saturate(180%) blur(5px);
 }
@@ -147,7 +129,7 @@
 
 // 文章阴影+透明
 .main-div {
-  box-shadow: 0px 0px 10px #FCD5CC !important;
+  // box-shadow: 0px 0px 10px #FCD5CC !important;
   background-color: hsla(0, 0%, 100%, 0.9) !important;
 }
 
@@ -159,13 +141,15 @@
 // header 渐变
 .header {
   // background-image: linear-gradient(180deg,rgba(211, 206, 217,0.69) , rgba(255,255,255,.01))!important;
-  background-color: hsla(0, 0%, 100%, 0.2) !important;
+  // background-color: hsla(0, 0%, 100%, 0.2) !important;
   // box-shadow: 0px 0px 7px #cbaecd !important;
   -webkit-border-radius: 0px !important;
 }
 
 // 引用块的样式
 .content blockquote {
+  border-radius: 13px;
+  color: #D7D9DB;
   padding: 0.1 0 0 0 rem !important;
   background-color: rgba(211, 206, 217, 0.15) !important;
   border-left: 0.3em solid #d3ced9 !important;
@@ -186,6 +170,7 @@ body {
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background: url('https://video.acwing.com/image/default/8A2F428E10FB4597B05AF525BB2C4931-6-2.png?auth_key=1633198654-1a7ebe0223-0-8b3ddd365aff38252fe8e4a0c53cb104'); // video.acwing.com/image/default/8A2F428E10FB4597B05AF525BB2C4931-6-2.png?auth_key=1633198654-1a7ebe0223-0-8b3ddd365aff38252fe8e4a0c53cb104);
   // background-image: url(https://i.loli.net/2020/11/26/GszIibHBAd475uw.jpg);
 }
 
@@ -279,7 +264,7 @@ strong {
 // markdown标题添加下划线
 article .content h2::after {
   content: ' ';
-  width: 15%;
+  width: 35%;
   display: block;
   // --border-opacity: 1;
   margin-top: 0.5rem;
@@ -291,7 +276,7 @@ article .content h2::after {
 
 article .content h3::after {
   content: ' ';
-  width: 15%;
+  width: 35%;
   display: block;
   // --border-opacity: 1;
   margin-top: 0.5rem;
@@ -304,19 +289,19 @@ article .content h3::after {
 // ---------------------------------------------------------------------------------------------------
 
 // 阅读统计进度条
-.reading-progress .progress {
-  height: 3px !important;
-  // background-image: linear-gradient(225deg, Cyan 0%, Magenta 50%, Yellow 100%) !important;
-}
+// .reading-progress .progress {
+// height: 3px !important;
+// // background-image: linear-gradient(225deg, Cyan 0%, Magenta 50%, Yellow 100%) !important;
+// }
 
 // 渐变滚动条
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d3ced9 !important;
+  background: #323536 !important;
 }
 
 // pwa 样式
@@ -366,7 +351,6 @@ article .content h3::after {
 // a链接-----------------------------------------------------------------------------------------------
 a {
   text-decoration: none !important;
-  color: #646CFF;
 }
 
 .main-div a:hover {
@@ -409,11 +393,12 @@ a {
 
 // 主界面a恢复默认样式
 .post-link:hover {
-  -webkit-text-fill-color: black !important;
+  -webkit-text-fill-color: white !important;
 }
 
 // 代码块-----------------------------------------------------------------------
 div[class*=language-] {
+  background-color: #323334 !important;
   max-height: 600px;
   overflow: auto;
 }
@@ -422,6 +407,7 @@ div[class*=language-] {
 // pre[class*=language-] {
 // margin: 0rem 0 !important;
 // }
+
 // 主标题----------------------------------------------------------------------------------------------
 #vuepress-theme-meteorlxy > header > div.banner > div > div > h1 {
   // font-family: 'Lobster';
@@ -454,7 +440,7 @@ div[class*=language-] {
   margin: 1rem 0;
   padding: 0.1rem 1.5rem;
   border-radius: 13px;
-  background-color: #f0f4f8;
+  background-color: #323334;
 
   .title {
     font-weight: bold;
@@ -502,15 +488,17 @@ div[class*=language-] {
 
 // details 容器样式美化-----------------------------------------------------
 details.showmore {
-  background-color: #faebd7;
+  background-color: #433037;
+  border-radius: 13px;
 }
 
 summary {
   padding-left: 0.75rem;
-  background-color: #faebd7;
-  width: 100%;
+  background-color: #433037;
+  width: 90%;
   height: 40px;
   line-height: 40px;
+  border-radius: 13px;
 }
 
 #vuepress-theme-meteorlxy > div > main > div > article > div > details > p {
@@ -556,10 +544,10 @@ summary {
 // }
 kbd {
   color: #000;
-  border: 1px solid #d6d6d6;
-  border-bottom: 2px solid #c7c7c7;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
   padding: 2px 4px;
-  background-color: #f0f0f0;
+  background-color: black;
   border-radius: 3px;
 }
 
@@ -584,4 +572,104 @@ div[class*=language-] {
 
 #vuepress-theme-meteorlxy > header > div:nth-child(1) > nav > div > div.navbar-links > a:nth-child(4) > span:nth-child(2) {
   display: none !important;
+}
+
+// 新加暗色模式
+body {
+  color: #B3C1Cd;
+}
+
+.main-div {
+  color: #D7D9DB !important;
+  background-color: #222325 !important;
+}
+
+a {
+  color: #74BF8D !important;
+}
+
+.posts-list-item .post-title {
+  color: #f1f1f1c7 !important;
+}
+
+.posts-list-item .post-title:hover {
+  color: #BDC1C6 !important;
+}
+
+.content h2 {
+  // 去除白色边框
+  border-bottom: 0px solid #eaecef;
+}
+
+.content code {
+  color: rgb(151, 171, 186);
+  background-color: rgba(23, 25, 27, 0.05);
+}
+
+.header {
+  color: #BDC1C6;
+}
+
+.posts-list-item:not(:first-child) {
+  border-top: 1px solid #eaecef38 !important;
+}
+
+.pagination {
+  color: #BDC1C6 !important;
+  border-top: 1px #eaecef38 solid !important;
+}
+
+.page-item {
+  color: #F1F1F137 !important;
+}
+
+.navbar .navbar-site-name {
+  color: #74BF8D !important;
+}
+
+.info-card .info-card-body {
+  cursor: default;
+  padding: 1rem;
+  border-bottom: 1px solid #eaecef38 !important;
+  text-align: center;
+}
+
+.post-tag:hover {
+  color: #74BF8D !important;
+}
+
+.icon {
+  fill: #74BF8D;
+}
+
+.icon:hover, .icon:focus, .icon:active {
+  fill: #74BF8D !important;
+}
+
+// search
+#vuepress-theme-meteorlxy > div > main > div > div:nth-child(1) > div.filter-search > h3 {
+  color: #74BF8D !important;
+}
+
+.search-input input {
+  width: 10rem;
+  /* height: 2rem; */
+  padding: 0 0.7rem;
+  border: 0px solid #BDC1C6 !important;
+  /* border-radius: 2rem; */
+  font-size: 24px;
+  color: #74BF8D;
+  background-color: #222325;
+}
+
+.filter-categories {
+  display: none;
+}
+
+#vuepress-theme-meteorlxy > div > aside > div > div.info-card-body > section.info-contact > section:nth-child(3) > a > span {
+  color: #666666 !important;
+}
+
+#vuepress-theme-meteorlxy > header > div.banner > div > div > h1 {
+  color: black;
 }

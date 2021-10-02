@@ -5,16 +5,16 @@ header-image: /assets/img/head.jpg
 
 ::: note  🌴 Playthings
 <!-- > [dribbble profile](https://dribbble.com/fengwei2002) -->
-- [konng.vercel.app](https://konng.vercel.app) 博客，已运行{{dist_times}}  
+- [konng.vercel.app](https://konng.vercel.app) 已运行 {{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  VsCode 主题 
-- [fengwei2002/Algorithm](https://github.com/fengwei2002/Algorithm) 我的算法笔记仓库
-- [C++ 算法模板](https://www.notion.so/fengwei2002/include-algorithm-2ed2f53326b049b8945f6119c83874be) 我的 C++ 算法模板
+- [fengwei2002/Algorithm](https://github.com/fengwei2002/Algorithm) 算法笔记
+- [C++ 算法模板](https://www.notion.so/fengwei2002/include-algorithm-2ed2f53326b049b8945f6119c83874be) C++ 算法模板
 :::
 
 ::: note 🍀 Contact 
 - 🔗 Github: [fengwei2002](https://github.com/fengwei2002)
 - 🔗 zhihu: [kycu](https://www.zhihu.com/people/kwmwmwnw)
-- 🔗 codeforces: [KONNG](http://codeforces.com/profile/KONNG#)
+- 🔗 LeetCode: [fengwei2002](https://leetcode-cn.com/u/fengwei2002/)
 - 🔗 Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)||[wsublimation ](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
 :::
 

@@ -12,7 +12,7 @@ tags:
 这里的堆使用的数据结构是最小二叉树，即根节点比左边子树和右边子树的所有值都小。   
 go 的堆包只是实现了一个接口，我们看下它的定义：
 
-``` golang
+``` go
 type Interface interface {
     sort.Interface
     Push(x interface{}) // add x as element Len()
@@ -32,7 +32,7 @@ type Interface interface {
 - `Pop() interface{}`
 
 
-``` golang
+``` go
 type IntHeap []int
 
 func (h IntHeap) Len() int           { return len(h) } // 返回 h 的长度
@@ -67,7 +67,7 @@ heap.Pop(h)
 链表就是一个有 `prev` 和 `next` 指针的数组了。它维护两个 `type` ( 注意，这里不是 `interface`)
 
 
-``` golang 
+``` go
 type Element struct {
     next, prev *Element  // 上一个元素和下一个元素
     list *List           // 元素所在链表
@@ -83,7 +83,7 @@ type List struct {
 List 的方法：
 
 
-``` golang
+``` go
 type Element
     func (e *Element) Next() *Element
     func (e *Element) Prev() *Element
@@ -113,7 +113,7 @@ type List
 环的结构有点特殊，环的尾部就是头部，所以每个元素实际上就可以代表自身的这个环。 它不需要像 list 一样保持 list 和 element 两个结构，只需要保持一个结构就行。
 
 
-``` golang 
+``` go
 type Ring struct {
     next, prev *Ring
     Value      interface{}
@@ -122,7 +122,7 @@ type Ring struct {
 
 我们初始化环的时候，需要定义好环的大小，然后对环的每个元素进行赋值。环还提供一个 Do 方法，能遍历一遍环，对每个元素执行一个 `function` 。 看下面的例子：
 
-``` golang 
+``` go
 package main
 
 import (
@@ -152,7 +152,7 @@ func main() {
 
 ring 的方法 
 
-``` golang 
+``` go
 type Ring
     func New(n int) *Ring                   // 初始化环
     func (r *Ring) Do(f func(interface{}))  // 循环环进行操作

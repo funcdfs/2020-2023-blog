@@ -2,7 +2,7 @@
 title: Ubuntu 常用命令
 date: 2021-09-22
 tags:
-  - vim
+  - linux
 ---
 
 ## 新机配置

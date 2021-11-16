@@ -65,3 +65,7 @@ docker version 查看 docker 是否安装完成
 8. `ssh root@localhost -p 20000` 在这个新的服务器中，就可以使用 ssh 登录新创建的 docker 容器
 9. 可以在 `.ssh` 中添加与服务器相同的 ip 地址，但是需要多一行 port 属性，属性值为 20000， 然后 ssh copy id, 别名  
    就可以在本地机，直接连接创建好的 docker，不用再先连到 服务器，在连到 docker
+10. `adduser fw` 创建 fw 用户
+11. `usermod -aG sudo fw` 为 fw 用户增加 sudo 权限
+12. `su fw` 即可正常使用
+

@@ -58,7 +58,7 @@ docker version 查看 docker 是否安装完成
 1. scp 抄一个镜像 tar 到新的服务器
 2. ssh 连接到新的服务器
 3. `docker load -i dockerDemo_1_0.tar` 将那个镜像加载到 docker 镜像目录中
-4. `docker run -p 20000:22 --name my_docker_server -itd dockerlesson:1.0`  创建并运行 `dockerDemo:1.0` 镜像, `-p 20000:22` 是修改端口号映射，将容器中的 22 端口号映射到本地的 20000 端口号，因为本地的 22 端口号已经被用过了，本地需要登录 （服务器需要在网络安全组中放开 20000 端口）
+4. `docker run -p 20000:22 --name django -itd django:1.0`  创建并运行 `django:1.0` 镜像, `-p 20000:22` 是修改端口号映射，将容器中的 22 端口号映射到本地的 20000 端口号，因为本地的 22 端口号已经被用过了，本地需要登录 （服务器需要在网络安全组中放开 20000 端口）
 5. `docker attach my_docker_server`
 6. `passwd laigeoffer` # 设置这一个 docker server 的 root 用户的密码为 `laigeoffer`
 7. `ctrl + p, ctrl + q`, 将这个容器挂起
@@ -68,4 +68,3 @@ docker version 查看 docker 是否安装完成
 10. `adduser fw` 创建 fw 用户
 11. `usermod -aG sudo fw` 为 fw 用户增加 sudo 权限
 12. `su fw` 即可正常使用
-

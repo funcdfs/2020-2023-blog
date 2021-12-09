@@ -7,7 +7,7 @@ header-image: /assets/img/head.jpg
 <!-- > [dribbble profile](https://dribbble.com/fengwei2002) -->
 - [konng.vercel.app](https://konng.vercel.app) 已运行 {{dist_times}}  
 - [vscode-theme-KONNG](https://marketplace.visualstudio.com/items?itemName=OvO.konng)  VsCode 主题 
-- [fengwei2002/Algorithm](https://github.com/fengwei2002/Algorithm) 算法笔记
+- [fengwei2002/Algorithm](https://github.com/fengwei2002/Algorithm) 算法笔记仓库
 - [C++ 算法模板](https://www.notion.so/fengwei2002/include-algorithm-2ed2f53326b049b8945f6119c83874be) C++ 算法模板
 :::
 

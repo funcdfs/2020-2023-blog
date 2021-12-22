@@ -153,6 +153,7 @@ usermod -aG sudo fw
 ```
 
 ## 常用命令
+
 ### 系统状态
 
 - `top`：查看所有进程的信息（Linux的任务管理器）
@@ -203,6 +204,7 @@ usermod -aG sudo fw
   - 可以从命令行参数中读取文件名列表
 - `xargs`：将`stdin`中的数据用空格或回车分割成命令行参数
   - `find . -name '*.py' | xargs cat | wc -l`：统计当前目录下所有 python 文件的总行数
+- `tee`: 用于显示程序的输出并将其复制到一个文件中。demo：`g++ -o a main.cpp && ./a | tee a.txt`
 
 ### 查看文件内容
 

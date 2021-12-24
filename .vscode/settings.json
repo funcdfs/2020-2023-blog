@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.tmpl": "html",
         "vector": "cpp",
         "utility": "cpp",
         "xstring": "cpp",
@@ -41,10 +42,24 @@
         "list": "cpp",
         "atomic": "cpp",
         "compare": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "string": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp",
+        "memory_resource": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4}",
     "editor.formatOnSave": true,
     "editor.fontSize": 14.5,
-    "cmake.configureOnOpen": false,
+    "cmake.configureOnOpen": false
 }

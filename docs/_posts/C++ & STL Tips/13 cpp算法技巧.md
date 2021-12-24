@@ -8,6 +8,17 @@ tags:
 > 写算法题的时候有很多神奇操作，如果不常用的话，用的时候就会忘记那种最方便最快的写法，没理由舍弃更加优美的代码
 > 所以想把很多日月积累的 cpp 在算法中的应用方法记下来，以便熟练运用
 
+## using 
+
+``` cpp 
+using vi = vector<int>;
+using vii = vi::iterator;
+vi myVector{0, 1, 2, 3, 4};
+for (vii iter = myVector.begin(); iter != myVector.end(); iter++) {
+    cout << "the value: " << *iter << endl;
+}
+```
+
 ## 读 char 使用 %s
 
 为了防止题目给出的数据结尾多一个空格或者回车

@@ -21,6 +21,7 @@ docker version 查看 docker 是否安装完成
 - `docker pull ubuntu:20.04`：拉取一个镜像 docker pull 命令就是拉取一个镜像，注意镜像是名字冒号加上版本号
 - `docker images` : 列出本地的所有镜像
 - `docker image rm ubuntu:20.04` 或 `docker rmi ubuntu:20.04`：删除镜像 ubuntu:20.04
+- `docker rmi -f $(docker images -aq)` 删除全部的镜像 `docker images -aq` 可以列出所有镜像的 ID
 - `docker [container] commit CONTAINER IMAGE_NAME:TAG`：创建某个 container  的镜像
 - `docker save -o ubuntu_20_04.tar ubuntu:20.04`：将镜像 ubuntu:20.04 导出到本地文件 ubuntu_20_04.tar 中 （用 scp 在不同服务器中传送 tar 数据包）
 - `docker load -i ubuntu_20_04.tar`：将镜像 ubuntu:20.04 从本地文件 ubuntu_20_04.tar 中加载出来，将一个 tar 变成一个 image
@@ -35,12 +36,17 @@ docker version 查看 docker 是否安装完成
 - `docker [container] stop CONTAINER`：停止容器
 - `docker [container] restart CONTAINER`：重启容器
 - `docker [contaienr] run -itd ubuntu:20.04`：创建并启动一个容器
+- `dcoker run`
+  - `-it` 使用交互方式运行，进入容器查看内容
+  - `-d` 后台方式运行, 容器启动后，发现自己没有提供服务，就会立刻停止,
 - `docker [container] attach CONTAINER`：进入容器，相当于进入了一个服务器
   - `ctrl + P ++ ctrl + Q` 退出容器
   - `ctrl + d` 也可以退出容器，但是会将服务器关掉
 - `docker [container] exec CONTAINER COMMAND`：在容器中执行命令，只有当容器启动的时候，才可以执行命令， container 的位置填写名字或者 id，command 位置填写你要在这个容器中执行的命令，这个命令会将 执行的结果返回到命令行输出中
+  - `docker exec -it container`: 进入某一个容器, 相比于 attach 多开了一个新的终端，可以进行操作，attach 进入容器正在执行的终端
 - `docker [container] rm CONTAINER`：删除容器， 注意和 rmi 的区别，rmi 删除一个镜像，rm 删除一个容器
-- `docker container prune`：删除所有已停止的容器 prune ：动词：修剪，剪裁，修整，精简，缩减
+  - `docker rm -f $(docker ps -aq)` 删除所有容器
+  - `docker container prune`：删除所有已停止的容器 prune ：动词：修剪，剪裁，修整，精简，缩减
 - `docker export -o xxx.rar CONTAINER`：将容器 CONTAINER 导出到本地文件 xxx.tar 中，直接将容器打包，进行导入导出，跳过了打包到镜像的这一步
   - `chmod +r tmp.rar` 为 tmp.tar 增加一个可读权限
 - `docker import xxx.tar image_name:tag`：将本地文件 xxx.tar 导入成镜像，并同时将镜像命名为 `image_name:tag`
@@ -49,9 +55,11 @@ docker version 查看 docker 是否安装完成
   - `save/load` 会保存完整记录，但是体积更大
 - `docker top CONTAINER`：查看某个容器内的所有进程状态，当然也可以先 attach 到 docker 中，使用 top 命令查看，然后在 ctrl p ctrl q 挂起
 - `docker stats`：查看所有容器的统计信息，包括CPU、内存、存储、网络等信息
-- `docker cp xxx CONTAINER:xxx 或 docker cp CONTAINER:xxx xxx`：在本地和容器间复制文件，就和 scp 在不同服务器之间复制文件一样，只是将 scp 换成了 docker cp
+- `docker inspect CONTAINER_ID` 查看容器的信息， json 文件格式进行输出
+- `docker cp local_path CONTAINER:path 或 docker cp CONTAINER:path local_path`：在本地和容器间复制文件，就和 scp 在不同服务器之间复制文件一样，只是将 scp 换成了 docker cp，容器关闭之后也可以进行内容的复制
 - `docker rename CONTAINER1 CONTAINER2`：重命名容器，如果经常使用的话，就不用那个乱码名字了
 - `docker update CONTAINER --memory 500MB`：修改容器限制为 500MB，更多的修改在官网文档
+- `docker logs -tf --tail number CONTAINER_ID` 查看容器中的日志
 
 ## 新机连接
 
@@ -67,4 +75,21 @@ docker version 查看 docker 是否安装完成
    就可以在本地机，直接连接创建好的 docker，不用再先连到 服务器，在连到 docker
 10. `adduser fw` 创建 fw 用户
 11. `usermod -aG sudo fw` 为 fw 用户增加 sudo 权限
-12. `su fw` 即可正常使用
+12. `usermod -aG docker fw` 为 fw 用户增加 docker 权限
+13. `su fw` 即可正常使用
+
+## docker 给容器开放新的端口
+
+第一步：再在服务器端增加容器的映射端口 80 443
+
+然后登录运行容器的服务器：
+
+`docker ps -a` 查看所有的容器，选择要进行更改的容器
+
+``` sh 
+docker commit CONTAINER_NAME IMAGE_NAME:1.0 # 将容器保存成一个新的镜像，将 container name 和 IAMGENAME 换成容器和镜像的名字
+docker stop CONTAINER_NAME # 关闭容器
+docker rm CONTAINER_NAME # 删除之前的容器
+# 使用新建的镜像重新创建一个包含所有目标端口的容器：
+docker run -p 20000:22 -p 8081:8081 -p 80:80 -p 443:443 --name CONTAINER_NAME -itd IMAGE_NAME:1.0
+```

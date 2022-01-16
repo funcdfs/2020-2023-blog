@@ -1,6 +1,6 @@
 ---
-title: golang container
-date: 2021-10-26
+title: slice queue vs container queue 
+date: 2022-01-16
 tags:
     - Go
 ---
@@ -163,3 +163,8 @@ type Ring
     func (r *Ring) Prev() *Ring         // 当前元素的上个元素
     func (r *Ring) Unlink(n int) *Ring  // 从当前元素开始，删除 n 个元素
 ```
+
+
+## container list queue vs slice queue
+
+https://blog.wolfogre.com/posts/slice-queue-vs-list-queue/

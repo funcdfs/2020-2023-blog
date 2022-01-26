@@ -4,7 +4,8 @@ module.exports = {
             "link",
             {
                 rel: "stylesheet",
-                href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
+                href:
+                    "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
             },
         ], //katex
     ],
@@ -119,14 +120,16 @@ module.exports = {
         }, //US
         lastUpdated: true, //最后更新时间
         lang: Object.assign(
-            require("vuepress-theme-meteorlxy/lib/langs/en-US"), {
+            require("vuepress-theme-meteorlxy/lib/langs/en-US"),
+            {
                 home: ` konng.vercel.app`,
             }
         ), //自定义部分文字
         pagination: {
             perPage: 10,
         }, //每页文章数量
-        nav: [{
+        nav: [
+            {
                 text: "Home",
                 link: "/",
                 exact: true,
@@ -159,7 +162,8 @@ module.exports = {
             email: "konng_0120@qq.com",
             location: "Tai'Yuan, Shan'Xi, China",
             organization: "Shan'Xi University",
-            avatar: "https://s2.loli.net/2021/12/09/SG5unjPJftqULgI.jpg",
+            // avatar: "https://s2.loli.net/2021/12/09/SG5unjPJftqULgI.jpg",
+            avatar: "https://s2.loli.net/2022/01/26/egdCNVunqMRoiUY.png",
             sns: {
                 github: {
                     account: "fengwei2002",
@@ -167,14 +171,16 @@ module.exports = {
                 },
                 zhihu: {
                     account: "kycu",
-                    link: "https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba",
+                    link:
+                        "https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba",
                 },
             },
         }, //个人信息
         header: {
             background: {
                 useGeo: false,
-                url: "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
+                url:
+                    "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
             },
             showTitle: true,
         }, //header设置
@@ -184,7 +190,8 @@ module.exports = {
         }, //fotter
         infoCard: {
             headerBackground: {
-                url: "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
+                url:
+                    "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
                 useGeo: false,
             },
         }, //头像后面的背景图

@@ -159,7 +159,7 @@ module.exports = {
             nickname: "konng",
             description: "Waiting is a lost art.",
             // description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=52 src="//music.163.com/outchain/player?type=2&id=1297742167&auto=0&height=32"></iframe>',
-            email: "konng_0120@qq.com",
+            email: "konng0120@gmail.com",
             location: "Tai'Yuan, Shan'Xi, China",
             organization: "Shan'Xi University",
             // avatar: "https://s2.loli.net/2021/12/09/SG5unjPJftqULgI.jpg",

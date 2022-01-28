@@ -29,7 +29,7 @@
 
 // 03 文字选中效果
 ::selection {
-  background-color: #D7D4F0 !important;
+  background-color: #A78BFA !important;  
   color: black !important;
 }
 
@@ -298,8 +298,8 @@ article .content h3::after {
 
 // 渐变滚动条
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -401,7 +401,7 @@ a {
 // 代码块-----------------------------------------------------------------------
 div[class*=language-] {
   background-color: #323334 !important;
-  max-height: 600px;
+  // max-height: 600px;
   overflow: auto;
 }
 
@@ -513,10 +513,7 @@ summary {
 // border: 1px solid #282C34;
 // }
 
-// #vuepress-theme-meteorlxy > div > main > div > article > div > div.language-sql.extra-class > pre > code{
-// background-color: #282C34 !important;
-// //黑代码框内恢复默认边框
-// }
+
 
 // 代码块前置的三个小圆点
 
@@ -560,12 +557,7 @@ body {
   // font-family: Comic Sans MS,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif!important;
 }
 
-// 更改代码块的背景色，并添加圆角
-div[class*=language-] {
-  position: relative;
-  background-color: #002B36;
-  border-radius: 13px;
-}
+
 
 // 修改代码块的周围距离，使内容更加紧凑
 .content pre, .content pre[class*=language-] {
@@ -604,8 +596,24 @@ a {
 }
 
 .content code {
-  color: rgb(151, 171, 186);
+  color: #74BF8D;
+  border: 1px solid #74BF8D;
   background-color: rgba(23, 25, 27, 0.05);
+}
+
+// 更改代码块的背景色，并添加圆角
+div[class*=language-] {
+  position: relative;
+  // background-color: #9400d3 !important;
+  border: 0px solid #74BF8D !important;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -30px 20px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 13px;
+}
+
+div[class*=language-] code {
+  font-size: 14px;
+  border: 0px solid #74BF8D !important;
 }
 
 .header {

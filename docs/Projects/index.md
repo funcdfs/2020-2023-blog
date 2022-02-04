@@ -12,10 +12,8 @@ header-image: /assets/img/head.jpg
 :::
 
 ::: tip 🍀 Contact 
-- Github: [fengwei2002](https://github.com/fengwei2002)  
-- zhihu: [kycu](https://www.zhihu.com/people/kwmwmwnw)  
-- LeetCode: [kycu](https://leetcode-cn.com/u/kycu/)  
-- Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)||[kycu](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-11-24-11-41-33.jpg)
+- Leetcode-cn: [konng0120](https://leetcode-cn.com/u/konng0120/)  
+- Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)
 :::
 
 <script>

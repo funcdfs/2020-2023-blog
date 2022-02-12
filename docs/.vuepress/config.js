@@ -139,18 +139,13 @@ module.exports = {
                 link: "/posts/",
                 exact: false,
             },
-            // {
-            //     text: "algorithm",
-            //     link: "/Algorithm/",
-            //     exact: false,
-            // },
             {
-                text: "Projects",
-                link: "/Projects/",
+                text: "notef",
+                link: "https://notef.vercel.app/",
                 exact: false,
             },
             {
-                text: "Wiki",
+                text: "wikif",
                 link: "https://wikif.vercel.app/",
                 exact: false,
             },

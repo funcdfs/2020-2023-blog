@@ -31,7 +31,6 @@ module.exports = {
         },
     },
     plugins: [
-        // Meting 插件
         // ['meting', {
         //   meting: {
         //     server: 'netease',
@@ -61,8 +60,8 @@ module.exports = {
                 //pwa
                 serviceWorker: true,
                 updatePopup: {
-                    message: "New Content！",
-                    buttonText: "Refresh",
+                    message: "New Content Update!",
+                    buttonText: "Refresh Page",
                 },
             },
         ], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
@@ -127,7 +126,7 @@ module.exports = {
         ), //自定义部分文字
         pagination: {
             perPage: 10,
-        }, //每页文章数量
+        }, //每页文章数量smoothScroll: true,
         nav: [
             {
                 text: "Home",
@@ -158,7 +157,8 @@ module.exports = {
             location: "Tai'Yuan, Shan'Xi, China",
             organization: "Shan'Xi University",
             // avatar: "https://s2.loli.net/2021/12/09/SG5unjPJftqULgI.jpg",
-            avatar: "https://s2.loli.net/2022/01/26/egdCNVunqMRoiUY.png",
+            // avatar: "https://s2.loli.net/2022/01/26/egdCNVunqMRoiUY.png",
+            avatar: "https://s2.loli.net/2022/02/16/jKLc5BhgYMfZkPq.png",
             sns: {
                 github: {
                     account: "fengwei2002",
@@ -174,8 +174,9 @@ module.exports = {
         header: {
             background: {
                 useGeo: false,
-                url:
-                    "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
+                url: "https://s2.loli.net/2022/02/16/pa8cMOXlbjYABTI.png",
+                // url:
+                //     "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
             },
             showTitle: true,
         }, //header设置
@@ -185,20 +186,21 @@ module.exports = {
         }, //fotter
         infoCard: {
             headerBackground: {
+                // url: "https://s2.loli.net/2022/02/16/asudXzCNnkgRHep.jpg",
                 url:
                     "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
                 useGeo: false,
             },
-        }, //头像后面的背景图
+        },
         comments: false,
         // comments: {
-        //   platform: 'github',
-        //   owner: 'fengwei2002',
-        //   repo: 'mygitalk',
-        //   clientId: '215827c9064649c94cc7',
-        //   clientSecret: '5df7e60cb5e98f7bd04c4cec2786e3f7cc65ca75',
-        //   prefix: '[Comments] ',
-        //   labels: ['comments'],
+        //     platform: "github",
+        //     owner: "fengwei2002",
+        //     repo: "mygitalk",
+        //     clientId: "215827c9064649c94cc7",
+        //     clientSecret: "5df7e60cb5e98f7bd04c4cec2786e3f7cc65ca75",
+        //     prefix: "[Comments] ",
+        //     labels: ["comments"],
         // }, //vssue配置
     },
 };

@@ -8,6 +8,15 @@ module.exports = {
                     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
             },
         ], //katex
+        // [
+        //     "script",
+        //     {
+        //         language: "javascript",
+        //         type: "text/javascript",
+        //         src:
+        //             "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js",
+        //     },
+        // ],
     ],
     title: "konng",
     logo: "/public/logo.ico", //好不容易扣出来的四叶草

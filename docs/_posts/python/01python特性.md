@@ -195,7 +195,12 @@ print(pairs)
 
 ## list 
 
+
+
+
 [文档](https://docs.python.org/zh-cn/3/tutorial/datastructures.html#more-on-lists)
+
+列表数据类型支持很多方法
 
 ``` python
 list.append(x)
@@ -207,6 +212,22 @@ list.clear()
 list.index(x, [start [, end]])
 list.count(x)
 ```
+
+### init list 
+
+开辟指定大小的 list
+
+`path = [0 for i in range(n)]`
+
+开辟指定大小的 bool 数组
+
+`used = [False for i in range(n)]`
+
+开辟 n * m 的全零数组
+
+`ans = [[0 for j in range(m)] for i in range(n)]`
+
+[array 文档](https://docs.python.org/zh-cn/3/library/array.html)
 
 ### sort
 
@@ -229,18 +250,6 @@ stack.append(6)
 stack.append(7)
 
 stack.pop()
-```
-
-### queue 
-
-规矩：使用 collections 中的 deque
-
-``` python
-from collections import deque
-
-queue = deque(["Eric", "John", "Michael"])
-queue.append("Terry")
-queue.popleft()  # popleft 全部小写，将删除的值返回
 ```
 
 ### list init
@@ -314,6 +323,119 @@ for k, v in knights.items():
 ```
 
 直接使用 `list(dict)` 得到的是一个包含所有 key 的列表
+
+## queue 
+
+规矩：使用 `collections` 中的 `deque`
+
+返回一个新的双向队列对象
+
+``` python
+from collections import deque
+
+queue = deque(["Eric", "John", "Michael"])
+queue.append("Terry")
+queue.popleft()  # popleft 全部小写，将删除的值返回
+
+queue.clear() # 移除所有元素
+queue.copy()  # 创建一份浅拷贝
+queue.count(x) # 计算队列中等于 x 的个数
+queue.extend() # 添加到队列的右侧
+queue.extendleft() # 添加到队列的左侧
+queue.index(x, [start, end]) 
+# 在 start 之后，stop 之前返回第一个 x 在deque 中的位置
+insert(i, x) 
+# 在位置 i 插入 x 
+pop() # 移除最右侧的那一个
+reverse() # 将队列逆序 
+rotate(n=1)
+# 向右循环移动 n 步。 如果 n 是负数，就向左循环。
+```
+
+## heap 
+
+创建一个堆
+
+
+``` python 
+heap = []
+heap = heapify([])  
+
+heappush(heap, item) 
+# 将 item 的值加入到 heap 中
+
+heappop(heap)   
+# 弹出并返回 heap 的最小的元素，保持堆的不变性。
+# 使用 heap[0] ，可以只访问最小的元素而不弹出它。
+
+heappushpop(heap, item) 
+# 将 item 放入堆中，然后弹出并返回 heap 的最小元素。
+# 该组合操作比先调用 heappush() 再调用 heappop() 运行起来更有效率。
+
+heapreplace(heap, item)
+# 弹出并返回 heap 中最小的一项，同时推入新的 item。 堆的大小不变。
+# 返回的值可能会比添加的 item 更大
+
+nlargest(n, iterable, key=None)
+# 从 iterable 所定义的数据集中返回前 n 个最大元素组成的列表。 
+
+nsmallest(n, iterable, key=None)
+# 从 iterable 所定义的数据集中返回前 n 个最小元素组成的列表。
+# 这两个函数在 n 值较小时性能最好。 
+# 对于更大的值，使用 sorted() 函数会更有效率。 
+# 此外，当 n==1 时，使用内置的 min() 和 max() 函数会更有效率。 
+# 如果需要重复使用这些函数，请考虑将可迭代对象转为真正的堆。
+
+
+```
+
+heap 自定义排序，重写 `__lt__` 方法
+
+
+``` python 
+import heapq
+class P():
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def __lt__(self, other):
+        if self.b<other.b:
+            return True
+        else:
+            return False
+    def p(self):
+        print(self.a,self.b)
+ 
+a = P(3,1)
+b = P(2,3)
+c = P(10,0)
+d = P(3,1)
+ 
+h = []
+heapq.heappush(h,a)
+heapq.heappush(h,b)
+heapq.heappush(h,c)
+heapq.heappop(h).p()
+
+10 0
+```
+
+使用匿名函数
+
+
+``` python 
+laptops = [
+    {'name': 'ThinkPad', 'amount': 100, 'price': 91.1},
+    {'name': 'Mac', 'amount': 50, 'price': 543.22},
+    {'name': 'Surface', 'amount': 200, 'price': 21.09},
+    {'name': 'Alienware', 'amount': 35, 'price': 31.75},
+    {'name': 'Lenovo', 'amount': 45, 'price': 16.35},
+    {'name': 'Huawei', 'amount': 75, 'price': 115.65}
+]
+
+cheap = heapq.nsmallest(3, laptops, key=lambda s: s['price'])
+expensive = heapq.nlargest(3, laptops, key=lambda s: s['price'])
+```
 
 ## string 
 
@@ -487,21 +609,38 @@ sorted("This is a test string from Andrew".split(), key=str.lower)
 
 排序保证是稳定的 
 
-## module
 
-`__name__` 可以获取模块名字
-
-`if __name == "__main__":`
-
-Python 只把含 `__init__.py` 文件的目录当成包。这样可以防止以 `string` 等通用名称命名的目录，无意中屏蔽出现在后方模块搜索路径中的有效模块。 最简情况下，`__init__.py` 只是一个空文件，但该文件也可以执行包的初始化代码，或设置 `__all__` 变量
-
-`__all__` 用来设置使用 `from .. import *` 时具体导入的函数
-
-``` python
-__all__ = ["echo", "surround", "reverse"]
-```
 
 ## IO 
+
+### input 
+
+按照 int 格式输入：
+
+`a = int(input())`
+
+int 数据中间空格分割
+
+`a, b = map(int, input().split(' '))`
+
+读入数组：
+
+`d = list(map(float, input().split(' ')))`
+
+### print
+
+C 格式的 print：
+
+`print("string: %.2lf" % (a))`
+
+输出不换行：
+
+`print(i, end=' ')`
+
+Python 格式的输出：
+
+`print('What is your {0}?  It is {1}.'.format(q, a))`
+
 
 ## class
 
@@ -556,4 +695,19 @@ for char in reverse('golf'):
 >>> yvec = [7, 5, 3]
 >>> sum(x*y for x,y in zip(xvec, yvec))         # dot product
 260
+```
+
+
+## module
+
+`__name__` 可以获取模块名字
+
+`if __name == "__main__":`
+
+Python 只把含 `__init__.py` 文件的目录当成包。这样可以防止以 `string` 等通用名称命名的目录，无意中屏蔽出现在后方模块搜索路径中的有效模块。 最简情况下，`__init__.py` 只是一个空文件，但该文件也可以执行包的初始化代码，或设置 `__all__` 变量
+
+`__all__` 用来设置使用 `from .. import *` 时具体导入的函数
+
+``` python
+__all__ = ["echo", "surround", "reverse"]
 ```

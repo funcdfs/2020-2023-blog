@@ -85,6 +85,15 @@ curl https://raw.githubusercontent.com/fengwei2002/vim-for-server/master/vimrc >
 curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/vimrc > ~/.vimrc
 ```
 
+配置中的 atom-dark 主题
+
+
+``` sh 
+curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark.vim > ~/.vim/colors/atom-dark.vim
+
+curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
+```
+
 ### tmux
 
 使用 https://git.acwing.com/fengwei/tmux-for-server

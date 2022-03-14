@@ -437,6 +437,25 @@ cheap = heapq.nsmallest(3, laptops, key=lambda s: s['price'])
 expensive = heapq.nlargest(3, laptops, key=lambda s: s['price'])
 ```
 
+## hash 
+
+实现一个用来计数的哈希表
+
+
+``` python 
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        freq = collections.Counter(nums)
+        ans = [num for num, occ in freq.items() if occ == 1][0]
+        return ans
+```
+
+获取一个变量的 hash 值
+
+https://www.geeksforgeeks.org/python-hash-method/
+
+
+
 ## string 
 
 `find()`

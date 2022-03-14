@@ -94,6 +94,20 @@ curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark
 curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
 ```
 
+添加 auto-pairs 括号补全
+
+国外：
+
+``` sh 
+curl https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
+```
+
+国内：
+
+``` sh 
+curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
+```
+
 ### tmux
 
 使用 https://git.acwing.com/fengwei/tmux-for-server

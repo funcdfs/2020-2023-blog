@@ -17,9 +17,44 @@ module.exports = {
         //             "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js",
         //     },
         // ],
+        [
+            "meta",
+            {
+                name: "viewport",
+                content: "width=device-width,initial-scale=1,user-scalable=no",
+            },
+        ],
+        ["meta", { property: "og:url", content: "https://konng.vercel.app" }],
+        ["meta", { property: "og:site_name", content: "konng0120" }],
+        ["meta", { property: "og:description", content: "konng0120" }],
+        ["meta", { property: "og:title", content: "konng0120" }],
+        ["link", { rel: "manifest", href: "/manifest.json" }],
+        ["meta", { name: "theme-color", content: "#222222" }],
+        ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+        [
+            "meta",
+            { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+        ],
+        ["link", { rel: "apple-touch-icon", href: "/icons/favicon.ico" }],
+        [
+            "link",
+            {
+                rel: "mask-icon",
+                href: "/icons/favicon.ico",
+                color: "#3eaf7c",
+            },
+        ],
+        [
+            "meta",
+            {
+                name: "msapplication-TileImage",
+                content: "/icons/favicon.ico",
+            },
+        ],
+        ["meta", { name: "msapplication-TileColor", content: "#000000" }],
     ],
     title: "konng",
-    logo: "/public/logo.ico", //好不容易扣出来的四叶草
+    logo: "/public/favicon.ico", //好不容易扣出来的四叶草
 
     markdown: {
         //markdown扩展
@@ -39,6 +74,13 @@ module.exports = {
         },
     },
     plugins: [
+        [
+            "@vuepress/pwa",
+            {
+                serviceWorker: true,
+                updatePopup: true,
+            },
+        ],
         // ['meting', {
         //   meting: {
         //     server: 'netease',
@@ -69,17 +111,6 @@ module.exports = {
                 shape: ["circle"], // shape of the particle, default: 'star'
             },
         ], //鼠标特效
-        [
-            "@vuepress/pwa",
-            {
-                //pwa
-                serviceWorker: true,
-                updatePopup: {
-                    message: "New Content Update!",
-                    buttonText: "Refresh Page",
-                },
-            },
-        ],
         //容器添加
         [
             "vuepress-plugin-container",
@@ -181,8 +212,7 @@ module.exports = {
                 },
                 zhihu: {
                     account: "kycu",
-                    link:
-                        "https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba",
+                    link: "https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba",
                 },
             },
         }, //个人信息
@@ -202,8 +232,7 @@ module.exports = {
         infoCard: {
             headerBackground: {
                 // url: "https://s2.loli.net/2022/02/16/asudXzCNnkgRHep.jpg",
-                url:
-                    "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
+                url: "https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg",
                 useGeo: false,
             },
         },

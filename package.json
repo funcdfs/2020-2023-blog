@@ -1,48 +1,48 @@
 {
-  "name": "konng.vercel.app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "build": "vuepress build",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fengwei2002/konng.vercel.app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fengwei2002/konng.vercel.app/issues"
-  },
-  "homepage": "https://github.com/fengwei2002/konng.vercel.app#readme",
-  "devDependencies": {
-    "@iktakahiro/markdown-it-katex": "^4.0.1",
-    "markdown-it-deflist": "^2.1.0",
-    "markdown-it-imsize": "^2.0.1",
-    "markdown-it-mark": "^3.0.1",
-    "markdown-it-task-lists": "^2.1.1",
-    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
-    "vuepress": "1.9.7",
-    "vuepress-plugin-code-switcher": "^1.1.0",
-    "vuepress-plugin-container": "^2.1.5",
-    "vuepress-plugin-cursor-effects": "^1.0.2",
-    "vuepress-plugin-demo-code": "^0.6.0",
-    "vuepress-plugin-flowchart": "^1.5.0",
-    "vuepress-plugin-go-top": "^1.0.4",
-    "vuepress-theme-meteorlxy": "^1.9.0"
-  },
-  "dependencies": {
-    "@vuepress/plugin-pwa": "^1.9.7",
-    "vuepress-plugin-img-lazy": "^1.0.4",
-    "vuepress-plugin-pangu": "^1.0.1",
-    "vuepress-plugin-reading-progress": "^1.0.10"
-  }
+    "name": "konng.vercel.app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "build": "vuepress build",
+        "docs:build": "vuepress build docs",
+        "deploy": "bash deploy.sh"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fengwei2002/konng.vercel.app.git"
+    },
+    "keywords": [],
+    "author": "konng0120",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fengwei2002/konng.vercel.app/issues"
+    },
+    "homepage": "https://github.com/fengwei2002/konng.vercel.app#readme",
+    "devDependencies": {
+        "@maginapp/vuepress-plugin-katex": "^1.0.11",
+        "markdown-it-deflist": "^2.1.0",
+        "markdown-it-imsize": "^2.0.1",
+        "markdown-it-mark": "^3.0.1",
+        "markdown-it-task-lists": "^2.1.1",
+        "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
+        "vuepress": "1.9.7",
+        "vuepress-plugin-code-switcher": "^1.1.0",
+        "vuepress-plugin-container": "^2.1.5",
+        "vuepress-plugin-cursor-effects": "^1.0.2",
+        "vuepress-plugin-demo-code": "^0.6.0",
+        "vuepress-plugin-flowchart": "^1.5.0",
+        "vuepress-plugin-go-top": "^1.0.4",
+        "vuepress-theme-meteorlxy": "^1.9.0"
+    },
+    "dependencies": {
+        "@vuepress/plugin-pwa": "^1.9.7",
+        "vuepress-plugin-img-lazy": "^1.0.4",
+        "vuepress-plugin-pangu": "^1.0.1",
+        "vuepress-plugin-reading-progress": "^1.0.10"
+    }
 }

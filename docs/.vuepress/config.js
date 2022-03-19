@@ -1,13 +1,13 @@
 module.exports = {
     head: [
-        [
-            "link",
-            {
-                rel: "stylesheet",
-                href:
-                    "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
-            },
-        ], //katex
+        // [
+        //     "link",
+        //     {
+        //         rel: "stylesheet",
+        //         href:
+        //             "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
+        //     },
+        // ], //katex
         // [
         //     "script",
         //     {
@@ -32,7 +32,6 @@ module.exports = {
                 breaks: true, //去除markdown中的两空格换行
             });
             md.use(require("markdown-it-deflist")); // ~汉字列表
-            md.use(require("@iktakahiro/markdown-it-katex")); //math渲染
             md.use(require("markdown-it-task-lists")); //todo渲染
             md.use(require("markdown-it-mark")); //高亮
             md.use(require("markdown-it-imsize")); //自定义图片的大小
@@ -50,11 +49,18 @@ module.exports = {
         //     lrcType: 3,
         //   },
         // }, ],
+        ["@maginapp/vuepress-plugin-katex"],
         ["demo-code"],
         ["pangu"],
         ["go-top"],
         ["reading-progress"],
         ["flowchart"],
+        [
+            "zooming",
+            {
+                selector: ".content :not(a) > img",
+            },
+        ],
         ["img-lazy"],
         ["code-switcher"], //多语言选项卡,学习后自定义一个简化后使用
         [
@@ -73,7 +79,7 @@ module.exports = {
                     buttonText: "Refresh Page",
                 },
             },
-        ], //这是一个bug插件，去除后浏览器还是读取之前的缓存，加上之后就得一直留着了，，并且外观很丑
+        ],
         //容器添加
         [
             "vuepress-plugin-container",
@@ -143,7 +149,7 @@ module.exports = {
                 exact: true,
             },
             {
-                text: "Tags",
+                text: "Posts",
                 link: "/posts/",
                 exact: false,
             },
@@ -166,8 +172,8 @@ module.exports = {
             location: "Tai'Yuan, Shan'Xi, China",
             organization: "Shan'Xi University",
             // avatar: "https://s2.loli.net/2021/12/09/SG5unjPJftqULgI.jpg",
-            avatar: "https://s2.loli.net/2022/01/26/egdCNVunqMRoiUY.png",
-            // avatar: "https://s2.loli.net/2022/02/16/jKLc5BhgYMfZkPq.png",
+            // avatar: "https://s2.loli.net/2022/01/26/egdCNVunqMRoiUY.png",
+            avatar: "https://s2.loli.net/2022/02/16/jKLc5BhgYMfZkPq.png",
             sns: {
                 github: {
                     account: "fengwei2002",
@@ -211,5 +217,10 @@ module.exports = {
         //     prefix: "[Comments] ",
         //     labels: ["comments"],
         // }, //vssue配置
+        // Service Worker 的配置
+        serviceWorker: {
+            updatePopup: true,
+        },
+        sidebar: "auto",
     },
 };

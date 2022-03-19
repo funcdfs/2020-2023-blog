@@ -35,12 +35,12 @@ module.exports = {
             "meta",
             { name: "apple-mobile-web-app-status-bar-style", content: "black" },
         ],
-        ["link", { rel: "apple-touch-icon", href: "/icons/favicon.ico" }],
+        ["link", { rel: "apple-touch-icon", href: "/icons/favicon.png" }],
         [
             "link",
             {
                 rel: "mask-icon",
-                href: "/icons/favicon.ico",
+                href: "/icons/favicon.png",
                 color: "#3eaf7c",
             },
         ],
@@ -48,7 +48,7 @@ module.exports = {
             "meta",
             {
                 name: "msapplication-TileImage",
-                content: "/icons/favicon.ico",
+                content: "/icons/favicon.png",
             },
         ],
         ["meta", { name: "msapplication-TileColor", content: "#000000" }],
@@ -110,8 +110,7 @@ module.exports = {
             {
                 shape: ["circle"], // shape of the particle, default: 'star'
             },
-        ], //鼠标特效
-        //容器添加
+        ],
         [
             "vuepress-plugin-container",
             {

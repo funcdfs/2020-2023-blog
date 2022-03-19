@@ -1,7 +1,7 @@
 {
     "name": "konng0120",
     "short_name": "konng0120",
-    "start_url": "/",
+    "start_url": "https://konng.vercel.app",
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#222222",

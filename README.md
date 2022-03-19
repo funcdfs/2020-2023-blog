@@ -1,3 +1,5 @@
+> Due to previous negligence, users who have visited this website before **2022 03 19 cannot get normal pwa push**, clear browser data and view new website content，:(
+
 ## [konng.vercel.app](https://konng.vercel.app)
 
 The source for [konng.vercel.app](https://konng.vercel.app). Built with [vuepress](https://vuepress.vuejs.org/).

@@ -249,6 +249,5 @@ module.exports = {
         serviceWorker: {
             updatePopup: true,
         },
-        sidebar: "auto",
     },
 };

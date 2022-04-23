@@ -17,9 +17,7 @@ tags:
 
 10-help-text 这个文件使用的是 c 标准的 printf 的格式，注意换行：字符生成来自： [kammerl.de/ascii](https://www.kammerl.de/ascii/AsciiSignature.php)
 
-
 ``` cpp 
- printf "\n"
  printf "\n"
  printf "  _____                                    ___\n"
  printf "_/ ____\\____   ____    ______  _  __ ____ |__|\n"
@@ -38,4 +36,4 @@ tags:
 
 ![20211116221724-2021-11-16-22-17-24](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/images/20211116221724-2021-11-16-22-17-24.png)
 
-在 docker 中修改之后，再打包给别人，广告植入成功hh
+在 docker 中修改之后，再打包给别人，广告植入成功 hh

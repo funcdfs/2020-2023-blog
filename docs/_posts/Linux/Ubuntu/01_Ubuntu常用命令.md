@@ -7,6 +7,17 @@ tags:
 
 ## 新机配置
 
+
+执行更新正常使用 sudo 安装
+
+``` sh
+sudo apt-get update
+sudo apt-get upgrade
+sudo adduser fw
+sudo usermod -aG sudo fw
+sudo usermod -aG docker fw
+```
+
 ### ssh
 
 ``` sh 
@@ -17,11 +28,11 @@ ssh-keygen
 
 ``` sh 
 Host serverName
-    HostName IP地址或域名
+    HostName IP 地址或域名
     User 用户名
 
 Host serverName
-    HostName IP地址或域名
+    HostName IP 地址或域名
     User 用户名
     [Port 20000] # 添加 port 端口用于 ssh 直连 docker 创建的容器
 ```
@@ -39,37 +50,21 @@ ssh-copy-id serverName
 
 ### git 
 
-1. `git config --global user.name xxx` 设置全局用户名，信息记录在 `~/.gitconfig` 文件中
-2. `git config --global user.email xxx@xxx.com` 设置全局邮箱地址，信息记录在 `~/.gitconfig` 文件中
-
+1. `git config --global user.name fengwei2002` 设置全局用户名，信息记录在 `~/.gitconfig` 文件中
+2. `git config --global user.email konng0120@gmail.com` 设置全局邮箱地址，信息记录在 `~/.gitconfig` 文件中
 
 将 `~/.ssh/id_rsa.pub` 复制到 ssh 配置项即可
 
-执行更新正常使用 sudo 安装
-
-``` sh
-apt-get update
-apt-get upgrade
-```
 
 ## vim tmux bash
 
-### bash 相关
-
-省略主机的乱码显示：
-
-https://www.codeleading.com/article/91734369695/
-
-.bashrc 为前缀添加颜色
-
-``` sh 
-PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@\h \[\e[36;40m\]\w\[\e[0m\]\$> " 
-# 显示主机名字
-PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@ \[\e[36;40m\]\w\[\e[0m\]\$> " 
-# 只显示用户名
-```
-
 ### vim 配置
+
+创建基础的 `folder`
+
+``` sh
+cd && mkdir .vim && mkdir .vim/colors && mkdir .vim/plugin
+```
 
 使用 https://github.com/fengwei2002/vim-for-server
 
@@ -86,7 +81,6 @@ curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/vimrc > ~/.vimrc
 ```
 
 配置中的 atom-dark 主题
-
 
 ``` sh 
 curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark.vim > ~/.vim/colors/atom-dark.vim
@@ -108,10 +102,9 @@ curl https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-p
 curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
 ```
 
-### tmux
+### tmux 配置
 
 使用 https://git.acwing.com/fengwei/tmux-for-server
-
 
 国外：
 
@@ -129,7 +122,29 @@ tmux 简洁配置：
 ``` sh
 set -g prefix C-a
 set -g mouse on
-# 其实 tmux 鼠标一开，prefix 设置为 C-a 就可以一般使用了
+# 其实 tmux 鼠标一开，prefix 设置为 C-a 就可以使用了
+```
+
+### bashrc 配置
+
+省略主机的乱码显示：
+
+https://www.codeleading.com/article/91734369695/
+
+.bashrc 为前缀添加颜色
+
+``` sh 
+PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@\h \[\e[36;40m\]\w\[\e[0m\]\$> " 
+# 显示主机名字
+PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@ \[\e[36;40m\]\w\[\e[0m\]\$> " 
+# 只显示用户名
+```
+
+我的常用 bashrc，显示 time 和 用户名
+
+``` sh
+curl https://git.acwing.com/fengwei/bashrc/-/raw/main/.bashrc > ~/.bashrc
+source .bashrc
 ```
 
 ## root 用户相关
@@ -157,7 +172,7 @@ su username # username 是用户名
 
 root 用户创建用户
 
-为了能够创建和删除用户，您需要以root身份或具有sudo权限的用户身份登录。
+为了能够创建和删除用户，您需要以 root 身份或具有 sudo 权限的用户身份登录。
 
 ``` sh
 [sudo] adduser username # 密码是必须的，其他询问信息可选
@@ -179,29 +194,27 @@ usermod -aG sudo fw
 
 ### 系统状态
 
-- `top`：查看所有进程的信息（Linux的任务管理器）
-  - 打开后，输入M：按使用内存排序
-  - 打开后，输入P：按使用CPU排序
-  - 打开后，输入q：退出
+- `top`：查看所有进程的信息（Linux 的任务管理器）
+  - 打开后，输入 M：按使用内存排序
+  - 打开后，输入 P：按使用 CPU 排序
+  - 打开后，输入 q：退出
 - `df -h`：查看硬盘使用情况
 - `free -h`：查看内存使用情况
 - `du -sh`：查看当前目录占用的硬盘空间
 - `ps aux`：查看所有进程
-- `kill -9 pid`：杀死编号为pid的进程
+- `kill -9 pid`：杀死编号为 pid 的进程
   - 传递某个具体的信号：`kill -s SIGTERM pid`
 - `netstat -nt`：查看所有网络连接
 - `w`：列出当前登陆的用户
 - `ping www.baidu.com`：检查是否连网
 
-
 ### 文件权限
 
 - `chmod`：修改文件权限，一般用到 `google` 即可
-  - `chmod +x xxx`：给xxx添加可执行权限
-  - `chmod -x xxx`：去掉xxx的可执行权限
-  - `chmod 777 xxx`：将xxx的权限改成777
+  - `chmod +x xxx`：给 xxx 添加可执行权限
+  - `chmod -x xxx`：去掉 xxx 的可执行权限
+  - `chmod 777 xxx`：将 xxx 的权限改成 777
   - `chmod 777 xxx -R`：递归修改整个文件夹的权限
-
 
 ### 文件检索
 
@@ -215,13 +228,13 @@ usermod -aG sudo fw
 - `tree`：展示当前目录的文件结构
   - `tree /path/to/directory/`：展示某个目录的文件结构
   - `tree -a`：展示隐藏文件
-- `ag xxx`：搜索当前目录下的所有文件，检索xxx字符串
+- `ag xxx`：搜索当前目录下的所有文件，检索 xxx 字符串
 - `cut`：分割一行内容
   - 从 `stdin` 中读入多行数据
-  - `echo $PATH | cut -d ':' -f 3,5`：输出 PATH 用:分割后第3、5列数据
-  - `echo $PATH | cut -d ':' -f 3-5`：输出 PATH 用:分割后第3-5列数据
-  - `echo $PATH | cut -c 3,5`：输出 PATH 的第3、5个字符
-  - `echo $PATH | cut -c 3-5`：输出 PATH 的第3-5个字符
+  - `echo $PATH | cut -d ':' -f 3,5`：输出 PATH 用：分割后第 3、5 列数据
+  - `echo $PATH | cut -d ':' -f 3-5`：输出 PATH 用：分割后第 3-5 列数据
+  - `echo $PATH | cut -c 3,5`：输出 PATH 的第 3、5 个字符
+  - `echo $PATH | cut -c 3-5`：输出 PATH 的第 3-5 个字符
 - `sort`：将每行内容按字典序排序
   - 可以从`stdin`中读取多行数据
   - 可以从命令行参数中读取文件名列表
@@ -236,16 +249,16 @@ usermod -aG sudo fw
   - 空格：下一页
   - b：上一页
   - q：退出
-- `less`：与more类似，功能更全
+- `less`：与 more 类似，功能更全
   - 回车：下一行
   - y：上一行
   - Page Down：下一页
   - Page Up：上一页
   - q：退出
-- `head -3 xxx`：展示xxx的前3行内容
-  - 同时支持从stdin读入内容
-- `tail -3 xxx`：展示xxx末尾3行内容
-  - 同时支持从stdin读入内容
+- `head -3 xxx`：展示 xxx 的前 3 行内容
+  - 同时支持从 stdin 读入内容
+- `tail -3 xxx`：展示 xxx 末尾 3 行内容
+  - 同时支持从 stdin 读入内容
 
 ### 用户相关
 
@@ -253,21 +266,21 @@ usermod -aG sudo fw
 
 ## 工具
 
-- `md5sum`：计算md5哈希值
-  - 可以从stdin读入内容
+- `md5sum`：计算 md5 哈希值
+  - 可以从 stdin 读入内容
   - 也可以在命令行参数中传入文件名列表；
-- `time command`：统计command命令的执行时间
-- `ipython3`：交互式python3环境。可以当做计算器，或者批量管理文件。
-  - `! echo "Hello World"`：!表示执行shell脚本
-- `watch -n 0.1 command`：每0.1秒执行一次command命令
+- `time command`：统计 command 命令的执行时间
+- `ipython3`：交互式 python3 环境。可以当做计算器，或者批量管理文件。
+  - `! echo "Hello World"`：! 表示执行 shell 脚本
+- `watch -n 0.1 command`：每 0.1 秒执行一次 command 命令
 - `tar`：压缩文件
   - `tar -zcvf xxx.tar.gz /path/to/file/*`：压缩
   - `tar -zxvf xxx.tar.gz`：解压缩
-- `diff xxx yyy`：查找文件xxx与yyy的不同点
+- `diff xxx yyy`：查找文件 xxx 与 yyy 的不同点
 
 ### ls
 
-ls可以按照文件大小进行输出排序
+ls 可以按照文件大小进行输出排序
 
 -S sort by file size
 
@@ -278,17 +291,16 @@ ls可以按照文件大小进行输出排序
 
 `ls -Slr`
 
--h，表示”–human-readable”，单位是k或者M ，比较容易看清楚结果。
+-h，表示”–human-readable”，单位是 k 或者 M ，比较容易看清楚结果。
 
 显示子目录结构
 
 `ls -R`
 
-ls按时间排序
+ls 按时间排序
 
 `ls -lt` 从新到旧
 `ls -lrt` 从旧到新
-
 
 ``` sh
 ls -slrh # 满级人类的 ls

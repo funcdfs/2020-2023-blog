@@ -12,7 +12,7 @@ header-image: /assets/img/head.jpg
 :::
 
 ::: tip 🍀 Contact 
-- Leetcode-cn: [konng0120](https://leetcode-cn.com/u/konng0120/)  
+- Leetcode-cn: [konng0120](https://leetcode.cn/u/konng0120/)  
 - Wechat: [konng0120](https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/konng0120-2021-06-19.jpg)
 :::
 

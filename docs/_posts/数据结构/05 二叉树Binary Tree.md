@@ -433,13 +433,13 @@ void traverse(Binary_Node_Position(T) x, VISIT& visit) {
 ```
 
 
-Leetcode官方题解：[ 迭代 & Morris 遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/solution/er-cha-shu-de-hou-xu-bian-li-by-leetcode-solution/)
+Leetcode官方题解：[ 迭代 & Morris 遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/solution/er-cha-shu-de-hou-xu-bian-li-by-leetcode-solution/)
 
-Leetcode：[后序遍历：递归，迭代，取巧](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/solution/di-gui-die-dai-qu-qiao-san-chong-fang-fa-quan-jie-/)
+Leetcode：[后序遍历：递归，迭代，取巧](https://leetcode.cn/problems/binary-tree-postorder-traversal/solution/di-gui-die-dai-qu-qiao-san-chong-fang-fa-quan-jie-/)
 
 ### 迭代写法后序遍历
 
-[迭代写法 后序遍历PPT 演示](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/solution/er-cha-shu-de-hou-xu-bian-li-by-leetcode-solution/)
+[迭代写法 后序遍历PPT 演示](https://leetcode.cn/problems/binary-tree-postorder-traversal/solution/er-cha-shu-de-hou-xu-bian-li-by-leetcode-solution/)
 
 
 ``` cpp

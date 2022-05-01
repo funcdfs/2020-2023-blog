@@ -5,7 +5,7 @@ tags:
     - Go
 ---
 
-刚写完 路径之和，然后理所当然的想着去秒 [path-sum-ii](https://leetcode-cn.com/problems/path-sum-ii/)，
+刚写完 路径之和，然后理所当然的想着去秒 [path-sum-ii](https://leetcode.cn/problems/path-sum-ii/)，
 
 
 >给你二叉树的根节点 root 和一个整数目标和 targetSum ，**找出所有** 从根节点到叶子节点 路径总和等于给定目标和的**路径**。

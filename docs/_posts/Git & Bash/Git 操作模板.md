@@ -7,15 +7,15 @@ tags:
 
 ## 1. git 常用命令
 
-1. `git config --global user.name xxx` 设置全局用户名，信息记录在 `~/.gitconfig` 文件中
-2. `git config --global user.email xxx@xxx.com` 设置全局邮箱地址，信息记录在 `~/.gitconfig` 文件中
+1. `git config --global user.name fengwei2002` 设置全局用户名，信息记录在 `~/.gitconfig` 文件中
+2. `git config --global user.email konng0120@gmail.com` 设置全局邮箱地址，信息记录在 `~/.gitconfig` 文件中
 3. `git init` 将当前目录配置成 `git` 仓库，信息记录在隐藏的 `.git` 文件夹中
-4. `git add XX` 将 XX 文件添加到暂存区
+4. `git add fileName` 将 XX 文件添加到暂存区
 5. `git add .` 将所有待加入暂存区的文件加入暂存区
-6. `git rm --cached XX` 将文件从仓库索引目录中删掉
+6. `git rm --cached fileName` 将文件从仓库索引目录中删掉
 7. `git commit -m "给自己看的备注信息"` 将暂存区的内容提交到当前分支
 8. `git status` 查看仓库状态
-9. `git diff XX` 查看 XX 文件相对于暂存区修改了哪些内容
+9. `git diff fileName` 查看 XX 文件相对于暂存区修改了哪些内容
 10. `git log` 查看当前分支的所有版本
     1.  `git log --pretty=oneline` 将 git log 输出为一行显示
 11. `git reflog` 查看 HEAD 指针的移动历史（包括被回滚的版本，用于版本跳转）
@@ -23,12 +23,12 @@ tags:
 13. `git reset --hard HEAD^^` 往上回滚两次，以此类推
 14. `git reset --hard HEAD~100` 往上回滚 100 个版本
 15. `git reset --hard` 版本号：回滚到某一特定版本 （哈希值取前 7 位数字）
-16. `git restore --staged XX` 将 XX 文件从暂存区中移除
-17. `git checkout — XX`  `git restore XX` 将 XX 文件尚未加入暂存区的修改全部撤销
+16. `git restore --staged fileName` 将 XX 文件从暂存区中移除
+17. `git checkout — fileName`  `git restore fileName` 将 XX 文件尚未加入暂存区的修改全部撤销
 18. `git remote add origin git@git.acwing.com:xxx/XXX.git` 将本地仓库关联到远程仓库 (后面的是 SCP)
 19. `git push -u` （第一次需要-u 以后不需要）将当前分支推送到远程仓库
 20. `git push origin branch_name`：将本地的某个分支推送到远程仓库 初始化时是 `master/main`
-21. `git clone git@git.acwing.com:xxx/XXX.git` 将远程仓库 XXX 下载到当前目录下
+21. `git clone sshLink` 将远程仓库 XXX 下载到当前目录下
 22. `git checkout -b branch_name`：创建并切换到 branch_name 这个分支
 23. `git branch`：查看所有分支和当前所处分支
 24. `git checkout branch_name`：切换到 branch_name 这个分支

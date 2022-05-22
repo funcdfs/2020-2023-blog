@@ -97,31 +97,28 @@ const n = 100;
 
 ## 输入与输出
 
-#### 输入
-
 *   从 HTML 与用户的交互中输入信息，例如通过 `input`、`textarea` 等标签获取用户的键盘输入，通过 `click`、`hover` 等事件获取用户的鼠标输入。
 *   通过 `Ajax` 与 `WebSocket` 从服务器端获取输入
-*   标准输入
+*   标准输入输出
 
 ``` js
-let fs = require('fs');
-let buf = '';
+let buf = "" 
 
-process.stdin.on('readable', function() {
-    let chunk = process.stdin.read();
-    if (chunk) buf += chunk.toString();
-});
+process.stdin.on("readable", function() {
+    let chunk = process.stdin.read() 
+    if (chunk) {
+        buf += chunk.toString() 
+    }
+})
 
-process.stdin.on('end', function() {
-    buf.split('\n').forEach(function(line) {
-        let tokens = line.split(' ').map(function(x) { return parseInt(x); });
-        if (tokens.length != 2) return;
-        console.log(tokens.reduce(function(a, b) { return a + b; }));
-    });
-});
+process.stdin.on("end", function() {
+    let [a, b, c, d] = buf.split('\n').map(x => {
+        return parseInt(x)
+    }) 
+
+    console.log(`formatout: = ${a * b - c * d}`)
+})
 ```
-
-### 输出
 
 *   调试用 `console.log`，会将信息输出到浏览器控制台
 *   改变当前页面的 HTML 与 CSS
@@ -304,14 +301,11 @@ let add = (a, b) => {
 }
 ```
 
-
 ### 返回值
 
 如果未定义返回值，则返回`undefined`。
 
-
 ## 类
-
 
 与`C++`中的`Class`类似。但是不存在私有成员。
 
@@ -344,15 +338,40 @@ console.log(p.toString());
 ### 继承
 
 ```javascript
-class ColorPoint extends Point {
-    constructor(x, y, color) {
-        super(x, y); // 这里的super表示父类的构造函数
-        this.color = color;
+class Point {
+    constructor(x, y) {
+        this.x = x
+        thix.y = y // 成员变量
+    }
+
+    init() { // 成员函数
+        this.sum = this.x + this.y
     }
 
     toString() {
-        return this.color + ' ' + super.toString(); // 调用父类的toString()
+        return `${this.x}, ${this.y}, ${this.sum}`
     }
+}
+
+class ColorPoint extends Point {
+    constructor(x, y, color) {
+        super(x, y) // 调用基类的构造函数  
+        this.color = color  
+        // 必须先调用 super 才可以使用 this 
+    }
+
+    toString() {
+        return this.color + ' ' + super.toString()   
+    } // 调用父类的成员函数。super 指向父类的实例
+}
+ 
+
+let main = function() {
+    let p = new Point(3, 4) 
+}
+
+export {
+    main
 }
 ```
 
@@ -389,64 +408,79 @@ Point.print_class_name();
 p.print_class_name();  // 会报错
 ```
 
+static function and static variable 可以被继承，也就是继承类中也默认拥有属于继承类的 static function and static variable
+
 ### 静态变量
 
-在ES6中，只能通过`class.propname`定义和访问。例如：
+在 ES6 中，只能通过`class.propname`定义和访问。例如：
 
 ```javascript
 class Point {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-
-        Point.cnt++;
+        Point.cnt++
+    } 
+    init() {
+        this.sum = this.x + this.y
     }
-
-    toString() {
-        return '(' + this.x + ', ' + this.y + ')';
+    static print_class_name() {
+        console.log("Point")
     }
 }
+Point.cnt = 0
+// static variable (not function)
 
-Point.cnt = 0;
-
-let p = new Point(1, 2);
-let q = new Point(3, 4);
-
-console.log(Point.cnt);
+let main = function() {
+    Point.print_class_name()
+    // static function
+    for (let i = 0; i < 3; i++) {
+        new Point(1, 1) 
+    }
+    console.log(Point.cnt) // 3 
+}
 ```
-
 
 ## 事件
 
-JavaScript的代码一般通过事件触发。
+JavaScript 的代码一般通过事件触发。
 
-可以通过`addEventListener`函数为元素绑定事件的触发函数。
+可以通过 `addEventListener` 函数为元素绑定事件的触发函数。
 
 常见的触发函数有：
 
-### 鼠标
+### 鼠标事件
 
 *   `click`：鼠标左键点击
 *   `dblclick`：鼠标左键双击
 *   `contextmenu`：鼠标右键点击
 *   `mousedown`：鼠标按下，包括左键、滚轮、右键
-    *   `event.button`：0表示左键，1表示中键，2表示右键
+    *   `event.button`：0 表示左键，1 表示中键，2 表示右键
 *   `mouseup`：鼠标弹起，包括左键、滚轮、右键
-    *   `event.button`：0表示左键，1表示中键，2表示右键
+    *   `event.button`：0 表示左键，1 表示中键，2 表示右键
 
+``` javascript
+let div = document.querySelector('div');
+
+let main = function() {
+    div.addEventListener('click', function() {
+        console.log(event.type);
+    })
+}
+main()
+```
 
 ### 键盘
 
-*   `keydown`：某个键是否被按住，事件会连续触发
+*   `keydown`：某个键是否被按住，事件会连续触发, 长按连续触发
     *   `event.code`：返回按的是哪个键
-    *   `event.altKey`、`event.ctrlKey`、`event.shiftKey`分别表示是否同时按下了alt、ctrl、shift键。
+    *   `event.altKey`、`event.ctrlKey`、`event.shiftKey`分别表示是否同时按下了 alt、ctrl、shift 键。
 *   `keyup`：某个按键是否被释放
     *   `event`常用属性同上
-*   `keypress`：紧跟在`keydown`事件后触发，只有按下字符键时触发。适用于判定用户输入的字符。
+*   `keypress`：紧跟在 `keydown` 事件后触发，只有按下字符键时触发。适用于判定用户输入的字符。`esc` 等功能键不触发
     *   `event`常用属性同上
 
-`keydown`、`keyup`、`keypress`的关系类似于鼠标的`mousedown`、`mouseup`、`click`
-
+`keydown`、`keyup`、`keypress` 的关系类似于鼠标的 `mousedown`、`mouseup`、`click`
 
 ### 表单
 
@@ -456,8 +490,18 @@ JavaScript的代码一般通过事件触发。
 
 ### 窗口
 
-需要作用到`window`元素上。
+需要作用到 `window` 元素上。
 
 *   `resize`：当窗口大小放生变化
 *   `scroll`：滚动指定的元素
 *   `load`：当元素被加载完成
+
+
+``` javascript
+let main = function() {
+    window.addEventListener('scroll', function(e) {
+        console.log('e.type')
+    })
+}
+main()
+```

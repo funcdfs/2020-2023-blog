@@ -304,4 +304,4 @@ JSON 对象用于序列化对象、数组、数值、字符串、布尔值和`nu
 
 [canvas 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 
-常用 canvas 片段：
+常用 canvas 片段：[github.com/fengwei2002/snippets/canvas/](https://github.com/fengwei2002/snippets/tree/main/canvas)

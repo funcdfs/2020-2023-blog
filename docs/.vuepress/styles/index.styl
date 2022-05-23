@@ -306,17 +306,25 @@ article .content h3::after {
 }
 
 // pwa 样式
+
 .sw-update-popup {
   position: fixed;
-  border: 1px solid #3eaf7c;
+  border: 0px solid; 
+  border-left: 1px solid #3eaf7c;
+  border-top: 1px solid #3eaf7c;
   border-radius: 13px;
-  font-color: #3eaf7c;
-  background-color: rgba(255, 255, 255, 0.184) !important;
+  background-color: rgba(255, 255, 255, 0.098) !important;
   box-shadow: 0 4px 16px var(--pwa-popup-color);
 }
 
 .sw-update-popup>button {
-  position: relative;
+    font-size: 16px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.35) !important;
+    backdrop-filter: saturate(180%) blur(5px);
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    color: snow;
+    border: 0px;
 }
 
 .sw-update-popup>button::before, .sw-update-popup>button::after {
@@ -325,7 +333,7 @@ article .content h3::after {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #fc2f70;
+  background-color: #2ffcb1;
   transform: scaleY(0);
   transition: transform 0.5s ease;
 }

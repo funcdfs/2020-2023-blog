@@ -239,8 +239,8 @@ module.exports = {
             platform: "github",
             owner: "fengwei2002",
             repo: "fengwei2002",
-            clientId: "GID",
-            clientSecret: "GS",
+            clientId: "ae660e4e5a0a443150b8",
+            clientSecret: "11549d6bac8cde756269ef43ea705778fb8c385e",
             prefix: "[Comments] ",
             labels: ["comments"],
         }, //vssue配置

@@ -234,7 +234,7 @@ module.exports = {
                 useGeo: false,
             },
         },
-        comments: true,
+        comments: false, // 懒得开了 自己的博客自己看
         comments: {
             platform: "github",
             owner: "fengwei2002",

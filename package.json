@@ -33,8 +33,8 @@
         "vuepress": "1.9.7",
         "vuepress-plugin-code-switcher": "^1.1.0",
         "vuepress-plugin-container": "^2.1.5",
-        "vuepress-plugin-cursor-effects": "^1.0.2",
-        "vuepress-plugin-demo-code": "^0.6.0",
+        "vuepress-plugin-cursor-effects": "^1.1.4",
+        "vuepress-plugin-demo-code": "^1.0.0",
         "vuepress-plugin-flowchart": "^1.5.0",
         "vuepress-plugin-go-top": "^1.0.4",
         "vuepress-theme-meteorlxy": "^1.9.0"

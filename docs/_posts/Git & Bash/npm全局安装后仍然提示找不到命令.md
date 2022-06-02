@@ -27,19 +27,7 @@ win 下的环境变量路径有两个，用户环境变量和系统环境变量
 
 ![2020-12-19-18-27-50](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-19-18-27-50.png)
 
-
-## 解决
-
-所以说，学会搜索也是一个技能
-
-像我就不应该搜 vsce 安装后命令找不到的问题
-而应该像我哥说的
-
-![2020-12-19-18-34-42](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-19-18-34-42.png)
-
-所以我就找到了解决方法
-
-![2020-12-19-18-35-08](https://raw.githubusercontent.com/fengwei2002/Pictures_02/master/img/2020-12-19-18-35-08.png)
+解决方法
 
 命令行执行
 

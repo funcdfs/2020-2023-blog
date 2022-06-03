@@ -246,6 +246,7 @@ module.exports = {
         // }, //vssue配置
         // Service Worker 的配置
         serviceWorker: {
+            serviceWorker: true,
             updatePopup: true,
         },
     },

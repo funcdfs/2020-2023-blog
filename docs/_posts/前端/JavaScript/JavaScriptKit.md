@@ -151,11 +151,11 @@ $.ajax({
 
 ## setTimeout 与 setInterval
 
-#### `setTimeout(func, delay)`
+### `setTimeout(func, delay)`
 
 `delay`毫秒后，执行函数`func()`。
 
-#### `clearTimeout()`
+### `clearTimeout()`
 
 关闭定时器，例如：
 
@@ -167,12 +167,12 @@ let timeout_id = setTimeout(() => {
 clearTimeout(timeout_id);  // 清除定时器
 ```
 
-#### `setInterval(func, delay)`
+### `setInterval(func, delay)`
 
 每隔`delay`毫秒，执行一次函数`func()`。  
 第一次在第`delay`毫秒后执行。
 
-#### `clearInterval()`
+### `clearInterval()`
 
 关闭周期执行的函数，例如：
 
@@ -186,7 +186,7 @@ clearTimeout(interval_id);  // 清除周期执行的函数
 
 ## requestAnimationFrame
 
-#### `requestAnimationFrame(func)`
+### `requestAnimationFrame(func)`
 
 该函数会在下次浏览器刷新页面之前执行一次，通常会用递归写法使其每秒执行 60 次`func`函数。调用时会传入一个参数，表示函数执行的时间戳，单位为毫秒。
 
@@ -210,7 +210,7 @@ requestAnimationFrame(step);
 
 ## Map 与 Set
 
-#### `Map`
+### `Map`
 
 Map 对象保存键值对。
 
@@ -226,7 +226,7 @@ Map 对象保存键值对。
 *   `delete(key)`：删除关键字`key`
 *   `clear()`：删除所有元素
 
-#### `Set`
+### `Set`
 
 Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。
 

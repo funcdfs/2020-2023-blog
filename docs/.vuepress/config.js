@@ -74,13 +74,13 @@ module.exports = {
         },
     },
     plugins: [
-        [
-            "@vuepress/pwa",
-            {
-                serviceWorker: true,
-                updatePopup: true,
-            },
-        ],
+        // [
+        //     "@vuepress/pwa",
+        //     {
+        //         serviceWorker: true,
+        //         updatePopup: true,
+        //     },
+        // ],
         // ['meting', {
         //   meting: {
         //     server: 'netease',
@@ -245,9 +245,9 @@ module.exports = {
         //     labels: ["comments"],
         // }, //vssue配置
         // Service Worker 的配置
-        serviceWorker: {
-            serviceWorker: true,
-            updatePopup: true,
-        },
+        // serviceWorker: {
+        //     serviceWorker: false,
+        //     updatePopup: false,
+        // },
     },
 };

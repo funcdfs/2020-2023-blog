@@ -106,3 +106,4 @@ dist
 
 *.sh
 .vscode/settings.json
+/deploy.sh

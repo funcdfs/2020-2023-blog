@@ -81,16 +81,16 @@ module.exports = {
         //         updatePopup: true,
         //     },
         // ],
-        // ['meting', {
-        //   meting: {
-        //     server: 'netease',
-        //     type: 'playlist',
-        //     mid: '5394472457',
-        //   },
-        //   aplayer: {
-        //     lrcType: 3,
-        //   },
-        // }, ],
+        ['meting', {
+            meting: {
+                server: 'netease',
+                type: 'playlist',
+                mid: '6731938233',
+            }, // 不配置该项的话不会出现全局播放器
+            aplayer: {
+                lrcType: 3,
+            },
+        },],
         ["@maginapp/vuepress-plugin-katex"],
         ["demo-code"],
         ["pangu"],
@@ -105,12 +105,7 @@ module.exports = {
         ],
         ["img-lazy"],
         ["code-switcher"], //多语言选项卡,学习后自定义一个简化后使用
-        [
-            "cursor-effects",
-            {
-                shape: ["circle"], // shape of the particle, default: 'star'
-            },
-        ],
+        ['cursor-effects'],
         [
             "vuepress-plugin-container",
             {

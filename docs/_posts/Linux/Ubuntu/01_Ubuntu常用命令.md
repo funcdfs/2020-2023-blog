@@ -71,21 +71,21 @@ cd && mkdir .vim && mkdir .vim/colors && mkdir .vim/plugin
 国外：
 
 ``` sh
-curl https://raw.githubusercontent.com/fengwei2002/vim-for-server/master/vimrc > ~/.vimrc
+wget https://raw.githubusercontent.com/fengwei2002/vim-for-server/master/vimrc > ~/.vimrc
 ```
 
 国内：
 
 ``` sh 
-curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/vimrc > ~/.vimrc
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/vimrc > ~/.vimrc
 ```
 
 配置中的 atom-dark 主题
 
 ``` sh 
-curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark.vim > ~/.vim/colors/atom-dark.vim
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark.vim > ~/.vim/colors/atom-dark.vim
 
-curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
 ```
 
 添加 auto-pairs 括号补全
@@ -93,13 +93,13 @@ curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark
 国外：
 
 ``` sh 
-curl https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
+wget https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
 ```
 
 国内：
 
 ``` sh 
-curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
 ```
 
 ### tmux 配置
@@ -109,12 +109,12 @@ curl https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pair
 国外：
 
 ``` sh 
-curl https://raw.githubusercontent.com/fengwei2002/tmux-for-server/main/.tmux.conf > ~/.tmux.conf
+wget https://raw.githubusercontent.com/fengwei2002/tmux-for-server/main/.tmux.conf > ~/.tmux.conf
 ```
 
 国内：
 ``` sh 
-curl https://git.acwing.com/fengwei/tmux-for-server/-/raw/main/.tmux.conf > ~/.tmux.conf
+wget https://git.acwing.com/fengwei/tmux-for-server/-/raw/main/.tmux.conf > ~/.tmux.conf
 ```
 
 tmux 简洁配置：
@@ -143,7 +143,7 @@ PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@ \[\e[36;40m\]\w\[\e[0m\]\$> "
 我的常用 bashrc，显示 time 和 用户名
 
 ``` sh
-curl https://git.acwing.com/fengwei/bashrc/-/raw/main/.bashrc > ~/.bashrc
+wget https://git.acwing.com/fengwei/bashrc/-/raw/main/.bashrc > ~/.bashrc
 source .bashrc
 ```
 

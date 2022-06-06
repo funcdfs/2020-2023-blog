@@ -16,7 +16,6 @@ sudo apt-get upgrade
 
 ``` sh 
 wget https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz # or
-curl -LO https://studygolang.com/dl/golang/go1.18.linux-amd64.tar.gz
 ```
 
 tar -C 

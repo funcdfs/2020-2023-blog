@@ -62,30 +62,27 @@ ssh-copy-id serverName
 
 创建基础的 `folder`
 
-``` sh
-cd && mkdir .vim && mkdir .vim/colors && mkdir .vim/plugin
-```
+
 
 使用 https://github.com/fengwei2002/vim-for-server
 
 国外：
 
 ``` sh
-wget https://raw.githubusercontent.com/fengwei2002/vim-for-server/master/vimrc > ~/.vimrc
+wget https://raw.githubusercontent.com/fengwei2002/vim-for-server/master/vimrc
 ```
 
 国内：
 
 ``` sh 
-wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/vimrc > ~/.vimrc
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/vimrc
 ```
 
 配置中的 atom-dark 主题
 
 ``` sh 
-wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark.vim > ~/.vim/colors/atom-dark.vim
-
-wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark.vim
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark-256.vim
 ```
 
 添加 auto-pairs 括号补全
@@ -93,13 +90,22 @@ wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/colors/atom-dark
 国外：
 
 ``` sh 
-wget https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
+wget https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-pairs.vim
 ```
 
 国内：
 
 ``` sh 
-wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim > ~/.vim/plugin/auto-pairs.vim
+wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim
+```
+
+``` sh
+cd && mkdir .vim && mkdir .vim/colors && mkdir .vim/plugin
+rm .vimrc
+mv vimrc .vimrc
+mv auto-pairs.vim .vim/plugin/auto-pairs.vim
+mv atom-dark-256.vim .vim/colors/atom-dark-256.vim
+mv atom-dark.vim .vim/colors/atom-dark.vim
 ```
 
 ### tmux 配置
@@ -109,12 +115,12 @@ wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pair
 国外：
 
 ``` sh 
-wget https://raw.githubusercontent.com/fengwei2002/tmux-for-server/main/.tmux.conf > ~/.tmux.conf
+wget https://raw.githubusercontent.com/fengwei2002/tmux-for-server/main/.tmux.conf
 ```
 
 国内：
 ``` sh 
-wget https://git.acwing.com/fengwei/tmux-for-server/-/raw/main/.tmux.conf > ~/.tmux.conf
+wget https://git.acwing.com/fengwei/tmux-for-server/-/raw/main/.tmux.conf
 ```
 
 tmux 简洁配置：

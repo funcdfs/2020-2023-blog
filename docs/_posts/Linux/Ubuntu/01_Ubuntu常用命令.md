@@ -60,9 +60,6 @@ ssh-copy-id serverName
 
 ### vim 配置
 
-创建基础的 `folder`
-
-
 
 使用 https://github.com/fengwei2002/vim-for-server
 
@@ -99,6 +96,8 @@ wget https://raw.githubusercontent.com/jiangmiao/auto-pairs/master/plugin/auto-p
 wget https://git.acwing.com/fengwei/vim-for-server/-/raw/master/plugin/auto-pairs.vim
 ```
 
+创建基础的 `folder`
+
 ``` sh
 cd && mkdir .vim && mkdir .vim/colors && mkdir .vim/plugin
 rm .vimrc
@@ -133,23 +132,9 @@ set -g mouse on
 
 ### bashrc 配置
 
-省略主机的乱码显示：
-
-https://www.codeleading.com/article/91734369695/
-
-.bashrc 为前缀添加颜色
-
-``` sh 
-PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@\h \[\e[36;40m\]\w\[\e[0m\]\$> " 
-# 显示主机名字
-PS1="\[\e[37;40m\]\[\e[32;40m\]\u\[\e[37;40m\]@ \[\e[36;40m\]\w\[\e[0m\]\$> " 
-# 只显示用户名
-```
-
-我的常用 bashrc，显示 time 和 用户名
-
 ``` sh
-wget https://git.acwing.com/fengwei/bashrc/-/raw/main/.bashrc > ~/.bashrc
+rm .bashrc
+wget https://git.acwing.com/fengwei/bashrc/-/raw/main/.bashrc
 source .bashrc
 ```
 
@@ -181,10 +166,9 @@ root 用户创建用户
 为了能够创建和删除用户，您需要以 root 身份或具有 sudo 权限的用户身份登录。
 
 ``` sh
-[sudo] adduser username # 密码是必须的，其他询问信息可选
+sudo adduser konng
+passwd konng
 ```
-
-`[]` 代表可选
 
 该命令将创建新用户的家目录，并将文件从 `/etc/skel` 目录复制到用户的主目录。在主目录中，用户可以编写，编辑和删除文件和目录。
 
@@ -193,7 +177,7 @@ root 用户创建用户
 希望新创建的用户具有管理权限，所以将用户添加到 sudo 组：
 
 ``` sh 
-usermod -aG sudo fw
+usermod -aG sudo konng
 ```
 
 ## 常用命令

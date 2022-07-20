@@ -136,9 +136,17 @@ go get: 将包按照版本不同分别存到 `gopath/pkg/mod` 下面的不同路
 
 go.mod 文件中描述了这个 module 的名字，而不需要借助 `$GOPATH` 路径，所以 `module` 项目是不需要放到 `$GOPATH` 下的，可以放在任何位置，编译时也不依赖 `$GOPATH/src` 下存放的包。至此，module 基本摆脱了了对 `$GOPATH` 的依赖，只是需要借 `$GOPATH/pkg/mod` 这个位置存一下文件而已，算不得什么。
 
+## after go 1.18 
+
+出现了一个叫做 go work 的东西
+
+对本地项目使用子文件夹中的 package 的情况提供了方便，不用手动在 go mod 文件中添加一些 replace 字段或者是上传到云端进行调试
+
+可以直接在本地 go work use 来使用这个子目录的 package 
 
 ---
 
 参考：
 - https://github.com/wolfogre
 - https://blog.wolfogre.com/posts/golang-package-history/
+- https://go.dev/doc/tutorial/workspaces

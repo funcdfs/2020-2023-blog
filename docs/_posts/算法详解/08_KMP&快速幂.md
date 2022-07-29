@@ -1,9 +1,11 @@
 ---
-title: KMP 算法
+title: KMP & 快速幂
 date: 2021-09-12
 tags:
   - 算法详解
 ---
+
+## KMP 
 
 `p[1, j] = p[i - j + 1, i]`
 
@@ -59,4 +61,72 @@ int main() {
 
     return 0;
 }
+```
+
+## 快速幂
+
+
+快速幂：
+
+快速的求出来 $a^k \mod \ p$ 的结果 
+
+算法原理： 
+
+预处理出来 $a^{2^0} \mod \ p$, $a^{2^1} \mod \ p$, $a^{2^2} \mod \ p$
+
+一直到 $a^{2^{log_k}} \mod \ p$ 的结果
+
+--- 
+
+然后使用这个预处理得到的一系列值，得到 $a^{k} \mod \ p$ 的值
+
+$$
+a^k = a^{2^i} * a^{2^j} * a^{2^k} = a^{2^i + {2^j} + {2^k}}
+$$
+
+这一步只要将 $k$ 转换为 二进制即可
+
+---
+
+如何预处理？ 
+
+---
+
+反复平方法： 
+
+后一个预处理的值是前一个预处理的值 乘 $a$ 
+
+预处理之后，直接拆一下 $k$ 就可以了
+
+
+```cpp
+int qmi(int a, int k, int p) {
+    int ans = 1;
+    while (k) {
+        if (k & 1) ans = (LL)ans * a % p;
+        k >>= 1;
+        a = (LL)a * a % p;
+    }
+    return ans;
+}
+```
+
+在本题中
+
+```cpp
+class Solution {
+public:
+    double myPow(double x, int n) {
+        typedef long long LL; 
+        bool is_minus = n < 0; 
+        double ans = 1; 
+        for (LL k = abs(LL(n)); k; k >>= 1) {
+            if (k & 1) ans = ans * x; 
+            x = x * x; 
+        } 
+        
+        if (is_minus) ans = 1 / ans; 
+        return ans; 
+    }
+};
 ```

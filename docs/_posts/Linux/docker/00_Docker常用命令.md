@@ -68,7 +68,7 @@ docker version 查看 docker 是否安装完成
 3. `docker load -i dockerDemo_1_0.tar` 将那个镜像加载到 docker 镜像目录中
 4. `docker run -p 20000:22 --name django -itd django:1.0`  创建并运行 `django:1.0` 镜像, `-p 20000:22` 是修改端口号映射，将容器中的 22 端口号映射到本地的 20000 端口号，因为本地的 22 端口号已经被用过了，本地需要登录 （服务器需要在网络安全组中放开 20000 端口）
 5. `docker attach my_docker_server`
-6. `passwd laigeoffer` # 设置这一个 docker server 的 root 用户的密码为 `laigeoffer`
+6. `passwd 111` # 设置这一个 docker server 的 root 用户的密码为 `111`
 7. `ctrl + p, ctrl + q`, 将这个容器挂起
 8. `ssh root@localhost -p 20000` 在这个新的服务器中，就可以使用 ssh 登录新创建的 docker 容器
 9. 可以在 `.ssh` 中添加与服务器相同的 ip 地址，但是需要多一行 port 属性，属性值为 20000， 然后 ssh copy id, 别名  
@@ -93,3 +93,5 @@ docker rm CONTAINER_NAME # 删除之前的容器
 # 使用新建的镜像重新创建一个包含所有目标端口的容器：
 docker run -p 20000:22 -p 8081:8081 -p 80:80 -p 443:443 --name CONTAINER_NAME -itd IMAGE_NAME:1.0
 ```
+
+如果提示端口被占用，执行命令 `ps aux | grep -i manage` 查看占用该端口进程的 pid，然后执行命令 `kill -9 具体的pid` 即可 

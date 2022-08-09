@@ -55,6 +55,7 @@ tmux kill-server　　关闭所有会话
 
 ctrl+b s　　列出会话，可进行切换
 ctrl+b $　　重命名当前会话
+`ctrl+b + s` 加上下方向键切换 `session`
 
 ## 3. 其他命令
 

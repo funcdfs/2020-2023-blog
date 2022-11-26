@@ -196,7 +196,7 @@ module.exports = {
             location: "Tai'Yuan, Shan'Xi, China",
             organization: "Shan'Xi University",
             // avatar: "https://s2.loli.net/2021/12/09/SG5unjPJftqULgI.jpg",
-            avatar: "https://s2.loli.net/2022/01/26/egdCNVunqMRoiUY.png",
+            avatar: "https://cdn.acwing.com/media/article/image/2022/11/26/101476_52a1364c6d-1.jpg",
             // avatar: "https://s2.loli.net/2022/02/16/jKLc5BhgYMfZkPq.png",
             sns: {
                 github: {

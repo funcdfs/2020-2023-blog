@@ -193,3 +193,26 @@ ncu --upgrade --upgradeAll && yarn upgrade
 yarn upgrade-interactive --latest
 // 需要手动选择升级的依赖包，按空格键选择，a 键切换所有，i 键反选选择
 ```
+
+当出现了 go install fatal: username 的错误的时候
+[link1](https://medium.com/@pavelgordon/today-i-learned-solving-terminal-prompts-disabled-problem-with-go-and-gitlab-31124e796077)
+[link2](https://christina04.hatenablog.com/entry/handle-error-when-go-get-private-repo)
+
+以 uuzu 为例:
+
+.gitconfig
+
+```sh
+[user]
+        name = 封伟(封伟)
+        email = wfeng@yoozoo.com
+[core]
+        autocrlf = input
+        safecrlf = warn
+[credential]
+        helper = manager
+[url "ssh://git@gitlab.uuzu.com/"]
+    insteadOf = https://gitlab.uuzu.com/
+```
+
+最后两行写入配置就可以了

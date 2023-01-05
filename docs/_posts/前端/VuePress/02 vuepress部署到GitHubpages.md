@@ -122,8 +122,8 @@ vercel 进行网页渲染
 
 现在的主域名是
 
-konng.vercel.app   
-konng.vercel.app
+fengwei2002.github.io   
+fengwei2002.github.io
 （当然距离xxs域名过期时间还早，依然可以访问）  
 
 第一个域名后缀也很帅的

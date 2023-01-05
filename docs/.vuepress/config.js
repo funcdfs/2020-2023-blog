@@ -24,7 +24,7 @@ module.exports = {
                 content: "width=device-width,initial-scale=1,user-scalable=no",
             },
         ],
-        ["meta", { property: "og:url", content: "https://konng.vercel.app" }],
+        ["meta", { property: "og:url", content: "https://fengwei2002.github.io" }],
         ["meta", { property: "og:site_name", content: "konng0120" }],
         ["meta", { property: "og:description", content: "konng0120" }],
         ["meta", { property: "og:title", content: "konng0120" }],
@@ -160,7 +160,7 @@ module.exports = {
         lang: Object.assign(
             require("vuepress-theme-meteorlxy/lib/langs/en-US"),
             {
-                home: ` konng.vercel.app`,
+                home: ` fengwei2002.github.io`,
             }
         ), //自定义部分文字
         pagination: {

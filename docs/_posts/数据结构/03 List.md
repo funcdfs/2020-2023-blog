@@ -389,6 +389,6 @@ void List<T>::insertion_sort(position(T) p, int n) {
 
 所以插入排序属于，输入敏感算法，对性能影响非常大
 
-## [习题:祖玛](https://konng.vercel.app/posts/2020/11/19/_06-%E7%A5%96%E7%8E%9B.html)
-## [习题:LightHouse](https://konng.vercel.app/posts/2020/11/20/_07-lighthouse.html)
+## [习题:祖玛](https://fengwei2002.github.io/posts/2020/11/19/_06-%E7%A5%96%E7%8E%9B.html)
+## [习题:LightHouse](https://fengwei2002.github.io/posts/2020/11/20/_07-lighthouse.html)
 

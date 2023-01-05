@@ -197,7 +197,7 @@ config.js
 
 `@[code lang=cpp](@/code/leetcode/1295.统计位数为偶数的数字.cpp/)`
 
-详细教程:[在 vuepress 中使用 code-snippet-enhanced](https://konng.vercel.app/posts/2020/04/22/_03-vuepress-code-snippet-enhanced.html)
+详细教程:[在 vuepress 中使用 code-snippet-enhanced](https://fengwei2002.github.io/posts/2020/04/22/_03-vuepress-code-snippet-enhanced.html)
 
 ## [代码块多语言](https://github.com/padarom/vuepress-plugin-code-switcher)
 

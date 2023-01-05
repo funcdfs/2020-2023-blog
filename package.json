@@ -1,5 +1,5 @@
 {
-    "name": "konng.vercel.app",
+    "name": "fengwei2002.github.io",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -14,15 +14,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fengwei2002/konng.vercel.app.git"
+        "url": "git+https://github.com/fengwei2002/fengwei2002.github.io.git"
     },
     "keywords": [],
     "author": "konng0120",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/fengwei2002/konng.vercel.app/issues"
+        "url": "https://github.com/fengwei2002/fengwei2002.github.io/issues"
     },
-    "homepage": "https://github.com/fengwei2002/konng.vercel.app#readme",
+    "homepage": "https://github.com/fengwei2002/fengwei2002.github.io#readme",
     "devDependencies": {
         "@maginapp/vuepress-plugin-katex": "^1.0.11",
         "markdown-it-deflist": "^2.1.0",

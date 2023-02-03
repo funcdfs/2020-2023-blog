@@ -41,11 +41,13 @@ tags:
 31. `git pull origin branch_name`：将远程仓库的 branch_name 分支与本地仓库的当前分支合并
 32. `git branch --set-upstream-to=origin/branch_name1 branch_name2`：将远程的 branch_name1 分支与本地的 branch_name2 分支对应
 33. `git checkout -t origin/branch_name` 将远程的 branch_name 分支拉取到本地
-34. `git stash`：将工作区和暂存区中尚未提交的修改存入栈中 (stash：藏匿)
+34. `git stash [save "save message"]`：将工作区和暂存区中尚未提交的修改存入栈中 (stash：藏匿)
 35. `git stash apply`：将栈顶存储的修改恢复到当前分支，但不删除栈顶元素
 36. `git stash drop`：删除栈顶存储的修改
 37. `git stash pop`：将栈顶存储的修改恢复到当前分支，同时删除栈顶元素
 38. `git stash list`：查看栈中所有元素
+39. `git stash show`: 显示做了哪些改动， 默认show第一个存储，如果要显示其他存储，后面加 stash@{num}, 比如第二个额git stash show stash@{1}
+40. `git stash clear`: 删除所有缓存的 stash
 
 
 ## 2. 记录用户名和密码
